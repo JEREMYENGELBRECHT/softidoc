@@ -1,0 +1,85 @@
+﻿<div ng-controller='WorkflowServices.Tasks.Controllers.UnassignedTaskController'>
+    <ol class="breadcrumb">
+        <li ng-repeat="item in historyItems"><a href ng-click="activateBreadCrumb(item)"><strong>{{item.Name}}</strong></a></li>
+        <li class="active"><strong>{{activeBreadCrumb.Name}}</strong></li>
+    </ol>
+    <span class="h4"><strong>{{CurrentLocation}}</strong></span>
+
+    <div class="col-md-3 panel panel-default" ng-show="selectedRole == null">
+        <table class="table table-hover">
+            <thead>
+                <tr class="active text-muted">
+                    <th class="h4">
+                        Roles
+                    </th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="item in userBaskets" ng-click="selectRole(item)">
+                    <td class="h6"><strong class="text-info">{{item.Role}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3 panel panel-default" ng-show="selectedRole != null && selectedUnAssignedTaskQueue == null">
+        <table class="table table-hover">
+            <thead>
+                <tr class="active text-muted">
+                    <th class="h4">
+                        Tasks
+                    </th>
+                    <th class="h4"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="cursor: pointer" ng-repeat="item in selectedRole.TaskBaskets | orderBy:'TaskTemplateName'" ng-click="selectUnassignedQueue(item)">
+                    <td class="h6"><strong class="text-info">{{item.TaskTemplateName}}</strong></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-3 panel panel-default" ng-show="selectedUnAssignedTaskQueue != null && selectedRole!=null">
+        <table class="table table-hover">
+            <thead>
+                <tr class="active text-muted">
+                    <th class="h4">
+                        Queues
+                    </th>
+                    <th class="h4"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="cursor: pointer" ng-repeat="item in selectedUnAssignedTaskQueue" ng-class="isSelected(item.Key) ? 'bg-success' : '' " ng-click="selectUnassignedQueueList(item,1)">
+                    <td class="h6"><strong class="text-info">{{item.Status}}</strong></td>
+                    <td class="h6 text-info"><span class="badge pull-right" ng-class="item.Total == 0 ? 'badge-outline' : 'badge-outline-bold'">{{item.Total}}</span></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="col-md-9 panel panel-default" ng-show="shouldShowEmptyTaskList()">
+        <div class="alert alert-info">
+            <span>No Tasks Available</span>
+        </div>
+    </div>
+    <div class="col-md-9 panel panel-default" ng-show="shouldShowUnassignedQueue()">
+        <table class="table table-hover">
+            <thead>
+                <tr class="text-muted active">
+                    <th class="hidden-md hidden-sm hidden-xs" ng-repeat="displayField in taskQueueFields">{{displayField.Label}}</th>
+                    <th class="">Created</th>
+                    <th class="">Modified</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="cursor: pointer" ng-repeat="item in selectedUnassignedQueueData | orderBy:'Created':false" ng-click="selectTask(item)">
+                    <td class="hidden-md hidden-sm hidden-xs" ng-repeat="displayField in taskQueueFields"><strong class="text-info" ng-bind="getFieldValue(item.DisplayMetadata,displayField.MappedValue);"></strong></td>
+                    <td class=""><small class="text-muted">{{item.Created}}</small></td>
+                    <td class=""><small class="text-muted">{{item.Modified}}</small></td>
+                    <td class=""><span class="glyphicon glyphicon-chevron-right pull-right text-info"></span></td>
+                </tr>
+            </tbody>
+        </table>
+        <pagination total-items="totalUnassignedItems" page="currentUnassignedPage" items-per-page="itemsPerPage" max-size="maxSize" class="pagination-sm" boundary-links="true" rotate="false" ng-click="setUnassignedPage(currentUnassignedPage)"></pagination>
+    </div>
+</div>

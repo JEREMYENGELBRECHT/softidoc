@@ -1,0 +1,26 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Government Departments</h3>
+</div>
+<div class="modal-body" ng-init="loadDepartmentNames()">
+
+    <div ng-show='model.loadError'>There was an error loading your content, please contact an administrator.</div>
+    <div ng-show="model.loading" class="row-fluid ui-corner-all" style="padding: 0.7em;">
+        <div class="loadingContent"><p><img alt="Loading  Content" src="/Content/ajax-loader.gif" />&nbsp;Loading Departments</p></div>
+    </div>
+
+    <div ng-hide="model.loading">
+        <ui-select ng-model="model.selected"
+                   reset-search-input="true">
+            <ui-select-match placeholder="Select">{{$select.selected.Department}}</ui-select-match>
+            <ui-select-choices repeat="department in model.Items | filter: $select.search | orderBy:'Name'">
+                <small ng-bind-html="department.Department"></small>
+            </ui-select-choices>
+        </ui-select>
+    </div>
+
+</div>
+<div class="modal-footer">
+    <a class="btn btn-default pull-left" ng-click="clear()"><span class="glyphicon glyphicon-trash text-warning">&nbsp;Clear</span></a>
+    <a class="btn btn-default" ng-click="ok()"><span class="glyphicon glyphicon-ok text-success">&nbsp;OK</span></a>
+    <a class="btn btn-default" ng-click="cancel()"><span class="glyphicon glyphicon-remove text-danger">&nbsp;Cancel</span></a>
+</div>

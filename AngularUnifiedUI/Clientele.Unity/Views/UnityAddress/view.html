@@ -1,0 +1,36 @@
+﻿<div class="panel panel-default well">
+    
+    <button ng-show="enableEdit" class="btn btn-sm btn-primary pull-right" ng-click="updateAddress()">Update {{addressType}}</button>
+
+    <div class="panel-heading"><strong>{{addressType}}</strong></div>
+
+    <div class="panel-body">
+
+        <div class="row">
+            <label class="col-md-4">Validated</label>
+            <div class="col-md-8">{{isValid | boolYesNo}}</div>
+        </div>
+        
+        <div class="row">
+            <label class="col-md-4">Address Line 1</label>
+            <div class="col-md-8">{{addressLine1}}</div>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4">Address Line 2</label>
+            <div class="col-md-8">{{addressLine2}}</div>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4">Address Line 3</label>
+            <div class="col-md-8">{{addressLine3}}</div>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4">Postal Code</label>
+            <div class="col-md-8">{{postalCode}}</div>
+        </div>
+
+    </div>
+
+</div>

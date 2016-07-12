@@ -1,0 +1,43 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Edit Address</h3>
+</div>
+<div class="modal-body">
+    <form name="updateAddressForm" class="form-horizontal" role="form" novalidate>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Address Line 1</label>
+            <div class="col-md-8">
+                <input type="text" ng-change="resetValidation()" ng-model="address.addressLine1" class="form-control" placeholder="Address Line 1" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Address Line 2</label>
+            <div class="col-md-8">
+                <input type="text" ng-change="resetValidation()" ng-model="address.addressLine2" class="form-control" placeholder="Address Line 2" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Address Line 3</label>
+            <div class="col-md-8">
+                <input type="text" ng-change="resetValidation()" ng-model="address.addressLine3" class="form-control" placeholder="Address Line 3" />
+            </div>
+        </div>
+        <div class="form-group">
+            <label class="col-md-4 control-label">Postal Code</label>
+            <div class="col-md-8">
+                <input type="text" ng-change="resetValidation()" ng-model="address.postalCode" class="form-control" placeholder="Postal Code" />
+            </div>
+        </div>
+        <br />
+        <div ng-class="validationInfoColour" style="padding-top: 2%; padding-bottom: 2%; padding-left: 2%;padding-right: 2%">
+            <small><strong>Validation Result:</strong> {{address.validationResultDescription}} </small><br />
+            <small><strong>Validation Message:</strong> {{address.validationMessage}} </small>
+        </div>
+    </form>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="validate()">Validate</button>
+    <button class="btn btn-primary" ng-click="ok()" ng-disabled="!address.isValid">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
+
+

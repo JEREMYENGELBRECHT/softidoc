@@ -1,0 +1,28 @@
+﻿<form class="form-horizontal" name="closeForm" novalidate role="form">
+    <div class="modal-header">
+        <button type="button" class="close" aria-hidden="true" ng-click="cancel()">&times;</button>
+        <h3 class="modal-title"><span>{{header}}</span></h3>
+    </div>
+    <div class="modal-body">
+        <form class="form-horizontal" role="form">
+            <div class="form-group">
+                <label class="col-sm-2 control-label"><span>{{label}}</span></label>
+                <div class="col-sm-10" ng-class="{'has-error': closeForm.inputValue.$invalid}">
+                    <input type="text" name="inputValue" ng-required="true" class="form-control input-sm" ng-model="model.InputValue" />
+                </div>
+            </div>
+            <div class="form-group">
+                <label class="col-sm-2 control-label">Reason</label>
+                <div class="col-sm-10" ng-class="{'has-error': closeForm.reason.$invalid}">
+                    <select name="reason" required class="form-control input-sm" ng-model="model.Reason" ng-options="option.Reason for option in model.Reasons">
+                        <option value="">-- choose reason --</option>
+                    </select>
+                </div>
+            </div>
+        </form>
+    </div>
+    <div class="modal-footer">
+        <a class="btn btn-primary" ng-disabled="closeForm.$invalid" ng-click="ok()">&nbsp;OK</a>
+        <a class="btn btn-warning" ng-click="cancel()">&nbsp;Cancel</a>
+    </div>
+</form>

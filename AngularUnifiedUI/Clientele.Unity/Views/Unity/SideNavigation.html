@@ -1,0 +1,11 @@
+﻿
+<ul class="nav nav-sidebar" style="margin: 0px;padding:0px;">
+    <li ng-show="iconSource != ''" style="text-align: center">
+        <!-- Icon for the current application -->
+        <img width="80" height="80" src="{{iconSource}}" />
+    </li>
+    <!-- Navigation for applications in the system -->
+    <li ng-repeat="application in applications" class="btn-sm">
+        <div class="btn-link btn-default" ng-click="ChangeUrl(application);">{{application.applicationName}}</div>
+    </li>
+</ul>

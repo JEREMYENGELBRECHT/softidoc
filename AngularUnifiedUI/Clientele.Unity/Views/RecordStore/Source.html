@@ -1,0 +1,21 @@
+﻿<!--<authorise-access sectionname="Record Sources" claim-required="Clientele.RecordStore.Sources.Read" redirect="true">  -->
+    <h2>Record Sources</h2>
+    <div loading-widget>
+        <div id="recordResultContainer" >
+            <table class="table table-striped table-condensed table-bordered">
+                <tr>
+                    <td><b>Source System</b></td>
+                    <td><b>Number of Files</b></td>
+                    <td class=""><b>Size</b></td>
+                </tr>
+                <tr ng-repeat="source in Sources" ng-controller="recordSourceItemController">
+                    <td><a href="#/RecordStore{{source.RecordsUrl}}">{{source.SourceName}}</a></td>
+                    <td>{{ source.RecordCount  || 0  }}
+                    </td>
+                    <td>{{source.SpaceUtilised | fileSize}}</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+<!--</authorise-access>-->
+

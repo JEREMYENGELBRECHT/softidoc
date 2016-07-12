@@ -1,0 +1,41 @@
+﻿<div id="recordResultContainer">
+    <table class="table table-striped table-bordered table-condensed">
+        <tr>
+            <th>Name</th>
+            <th>Original Name</th>
+            <th style="width: 90px;">Size</th>
+            <th style="width: 170px;">Date Added</th>
+            <th style="width: 170px;">Date Modified</th>
+            <th>Contributer</th>
+            <th>Belongs To</th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        <tbody>
+            <tr ng-repeat="record in Records">
+                <td>{{record.FileName}}</td>
+                <td>{{record.OriginalFileName}}</td>
+                <td>{{record.FileSize | fileSize}}</td>
+                <td>{{record.DateAdded | date:'yyyy-MM-dd H:mm a'}}</td>
+                <td>{{record.DateModified | date:'yyyy-MM-dd H:mm a'}}</td>
+                <td>{{record.User}}</td>
+                <td>{{record.IntendedSystem}}</td>
+                <td>
+                    <span ng-if="isPdf(record.FileName)">
+                        <a href="#/RecordStore{{record.ViewUrl}}">View</a>
+                    </span>
+                </td>
+                <td><a href="#/RecordStore{{record.EditUrl}}">Edit</a></td>
+                <td><a ng-click="GetFile()">Download</a></td>
+            </tr>
+            <tr>
+                <td colspan="10" class="text-center">
+                    <pagination on-select-page="pageChanged(page)" max-size="10" direction-links="true" boundary-links="true" total-items="recordTotal" items-per-page="pageSize" page="currentPage"></pagination>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form method="GET" id="downloadForm" name="downloadForm"></form>
+</div>
