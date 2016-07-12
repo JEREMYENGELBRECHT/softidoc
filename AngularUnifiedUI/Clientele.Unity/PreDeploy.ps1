@@ -54,6 +54,8 @@ $GsdApiUrl = $OctopusGsdApiUrl
 $GsdAdminUnityUrl = $OctopusGsdAdminUnityUrl
 $MediaManagementApiUrl = $OctopusMediaManagementApiUrl
 $MediaManagementApplicationUrl = $OctopusMediaManagementApplicationUrl
+$FraudRiskApiUrl = $OctopusFraudRiskUrl
+$FraudRiskUnityUrl = $OctupusFraudRiskUnityUrl
 
 set-content Configuration/serverConfiguration.json "`
 {`
@@ -111,5 +113,7 @@ set-content Configuration/serverConfiguration.json "`
 ""gsdApiUrl"":""$GsdApiUrl""`,
 ""gsdAdminUnityUrl"": { ""ApplicationId"": ""Clientele.GsdAdmin"", ""UnityUrl"": ""$GsdAdminUnityUrl""}, `
 ""mediaManagementApiUrl"":""$MediaManagementApiUrl""`,
-""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""} `
+""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""}, `
+""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
+""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} `
 }"
