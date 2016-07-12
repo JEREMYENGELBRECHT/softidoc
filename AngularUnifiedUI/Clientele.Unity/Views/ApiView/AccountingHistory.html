@@ -1,0 +1,31 @@
+﻿<div class="row">
+    <div class="panel panel-default">
+        <div class="panel panel-heading">
+            Get Accounting History
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label for="policyNumber" class="col-md-2 control-label">Policy Number</label>
+                    <div class="col-md-4">
+                        <input type="text" class="form-control" id="policyNumber" ng-model="policyNumber" placeholder="Policy Number">
+                    </div>
+                    <div class="col-md-2">
+                        <button type="button" class="btn btn-primary" ng-click="fetchAccountingHistorySummary()">Search</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<div class="row">
+    <div class="panel panel-default">
+        <div class="panel panel-heading">
+            Accounting History Results
+        </div>
+        <div class="panel-body">
+            <accounting-history-summary load-event="'accountingHistorySummaryRequested'" policy-number="policyNumber"></accounting-history-summary>
+        </div>
+    </div>
+</div>
+

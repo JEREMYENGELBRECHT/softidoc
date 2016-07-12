@@ -1,0 +1,45 @@
+﻿<div class="panel panel-default well">
+
+    <button ng-show="enableEdit" class="btn btn-sm btn-primary pull-right" ng-click="updateBankDetails()">Update Bank Details</button>
+    <button ng-show="enableEditAvsr" class="btn btn-sm btn-primary pull-right" ng-click="doAVSRCheck()">Do AVSR check </button>
+
+
+    <div class="panel-heading">
+        <strong>Bank Detail</strong><span class="col-md-offset-2 label label-warning">{{warningHeaderMessage}}</span>
+    </div>
+
+    <div class="panel-body">
+        
+        <div class="row">
+            <label class="col-md-4">Account Type</label>
+            <div class="col-md-8">{{accountType}}</div>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4">Account Name</label>
+            <div class="col-md-8">{{accountName}}</div>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4">Account Number</label>
+            <div class="col-md-8">{{accountNumber}}</div>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4">Bank Name</label>
+            <div class="col-md-8">{{bankName}}</div>
+        </div>
+
+        <div class="row">
+            <label class="col-md-4">Branch Code</label>
+            <div class="col-md-8">{{branchCode}}</div>
+        </div>
+
+        <!--<div class="row">
+            <label class="col-md-4">Branch Code Name</label>
+            <div class="col-md-8">{{branchCodeName}}</div>
+        </div>-->
+
+    </div>
+
+</div>

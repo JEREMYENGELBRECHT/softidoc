@@ -1,0 +1,8 @@
+﻿<h1>Workflow api viewer</h1>
+<div class="panel panel-info">
+    <div class="panel panel-heading">
+        <button class="btn btn-primary" ng-click="loadTeams();">Manually Load Teams</button>&nbsp;<b>Note: </b>A regular controller view would fire the load on a $viewContentLoaded event causing the content to load.
+    </div>
+</div>
+
+<workflow-team-list load-event="'loadworkFlowTeams'"></workflow-team-list>

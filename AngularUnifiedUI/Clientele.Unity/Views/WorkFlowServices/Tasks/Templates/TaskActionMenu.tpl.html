@@ -1,0 +1,43 @@
+﻿<nav class="navbar navbar-default navbar-static-top" role="navigation">
+    <div class="navbar-left">
+        <ul class="nav navbar navbar-nav">
+            <li class=""><a href ng-click="taskService.viewOwnershipHistory(task.Id)">Ownership History</a></li>
+            <li class=""><a href ng-click="taskService.viewStatusHistory(task.Id)">Status History</a></li>
+        </ul>
+    </div>
+    <div class="navbar-right">
+        <ul class="nav navbar navbar-nav">
+            <li class="dropdown" ng-hide="allowedActionCount == 0">
+                <a href class="dropdown-toggle" data-toggle="dropdown">Task<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class=""><a ng-if="canClaim" style="cursor: pointer" ng-click="taskService.claimTask(task)">Claim</a></li>
+                    <li class=""><a ng-if="canRevoke" style="cursor: pointer" ng-click="taskService.revoke(task.Id)">Revoke</a></li>
+                    <li class=""><a ng-if="canPostpone" style="cursor: pointer" ng-click="taskService.postponeTask(task)">Postpone</a></li>
+                    <li class=""><a ng-if="canAccept" style="cursor: pointer" ng-click="taskService.acceptTask(task.Id)">Accept</a></li>
+                    <li class=""><a ng-if="canResume" style="cursor: pointer" ng-click="taskService.resumeTask(task.Id)">Resume</a></li>
+                    <li class=""><a ng-if="canAssign" style="cursor: pointer" ng-click="taskService.assignTask(task.Id)">Assign</a></li>
+                    <li class=""><a ng-if="canDelegate" style="cursor: pointer" ng-click="taskService.delegateTask(task)">Delegate</a></li>
+                    <li class=""><a ng-if="canClose" style="cursor: pointer" ng-click="taskService.closeTask(task)">Close</a></li>
+                </ul>
+            </li>
+            <li class="dropdown" ng-show="ShowCustomMenu(actionMenuLabel)">
+                <a href class=" dropdown-toggle" data-toggle="dropdown">
+                    {{actionMenuLabel}}<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class="" ng-repeat="customAction in additionalActions"><a href ng-if="customAction.CanPerformAction(task)" ng-click="customAction.Action(task)">{{customAction.Label}}</a></li>
+                </ul>
+            </li>
+            <li class="dropdown">
+                <a href class="dropdown-toggle" data-toggle="dropdown">Comments<span class="caret"></span></a>
+                <ul class="dropdown-menu" role="menu">
+                    <li class=""><a style="cursor: pointer" ng-click="taskService.addComment(task.Id);">Add</a></li>
+                    <li class=""><a style="cursor: pointer" ng-click="taskService.getCommentsByTaskId(task.Id);">View</a></li>
+                </ul>
+            </li>
+            <li>
+                <button ng-show="CanGetNextTask" class="btn btn-primary btn-sm" ng-click="ClaimNextTask()">Get Next Unclaimed Task</button>
+            </li>
+        </ul>
+    </div>
+</nav>

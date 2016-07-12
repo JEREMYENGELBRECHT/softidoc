@@ -1,0 +1,144 @@
+﻿<h1>Policy Query Api</h1>
+<div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                Get Policy
+            </div>
+            <div class="panel-body">
+                <div ng-controller="getPolicyController">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="policyNumber" class="col-md-2 control-label">Retrieve Policy</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="policyNumber" ng-model="policyNumber" placeholder="Policy Number">
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary" ng-click="getPolicySearch()">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                Standard Search for Policies
+            </div>
+            <div class="panel-body">
+                <div ng-controller="policyQueryStdSearchController">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label for="stdPolicySearch" class="col-md-2 control-label">Search for Policies</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="stdPolicySearch" ng-model="searchText" placeholder="IFA Number OR ID Number OR Client Number OR Surname" />
+                            </div>
+                            <div class="col-md-2">
+                                <button type="button" class="btn btn-primary" ng-click="policyQueryStdSearch()">Search</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                Advanced Search for Policies
+            </div>
+            <div class="panel-body">
+                <div ng-controller="policyQueryAdvSearchController">
+                    <form class="form-horizontal" role="form">
+
+                        <div class="form-group">
+                            <label for="advSearchPolicyNumber" class="col-md-2 control-label">Policy Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchPolicyNumber" ng-model="advSearchPolicyNumber" placeholder="Policy number">
+                            </div>
+                            <label for="advSearchIfaNumber" class="col-md-2 control-label">IFA Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchIfaNumber" ng-model="advSearchIfaNumber" placeholder="IFA Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="advSearchIdNumber" class="col-md-2 control-label">ID Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchIdNumber" ng-model="advSearchIdNumber" placeholder="ID Number">
+                            </div>
+                            <label for="advSearchPassport" class="col-md-2 control-label">Passport Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchPassport" ng-model="advSearchPassport" placeholder="Passport Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="advSearchClientNumber" class="col-md-2 control-label">Client Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchClientNumber" ng-model="advSearchClientNumber" placeholder="Client Number">
+                            </div>
+                            <label for="advSearchBankAccountNumber" class="col-md-2 control-label">Bank Account Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchBankAccountNumber" ng-model="advSearchBankAccountNumber" placeholder="Bank Account Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="advSearchSurname" class="col-md-2 control-label">Surname</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchSurname" ng-model="advSearchSurname" placeholder="Surname">
+                            </div>
+                            <label for="advSearchMobileNumber" class="col-md-2 control-label">Mobile Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchMobileNumber" ng-model="advSearchMobileNumber" placeholder="Mobile Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="advSearchHomeNumber" class="col-md-2 control-label">Home Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchHomeNumber" ng-model="advSearchHomeNumber" placeholder="Home Number">
+                            </div>
+                            <label for="advSearchWorkNumber" class="col-md-2 control-label">Work Number</label>
+                            <div class="col-md-4">
+                                <input type="text" class="form-control" id="advSearchWorkNumber" ng-model="advSearchWorkNumber" placeholder="Work Number">
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="advSearchDob" class="col-md-2 control-label">Date of Birth</label>
+                            <div class="col-md-4">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" id="advSearchDob" datepicker-popup="{{format}}" datepicker-options="dateOptions" ng-model="advSearchDob" is-open="opened" placeholder="Date of Birth" />
+                                    <span class="input-group-btn">
+                                        <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-md-offset-2 col-md-10">
+                            <button type="button" class="btn btn-primary" ng-click="policyQueryAdvSearch()">Search</button>
+                        </div>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel panel-heading">
+                {{ showResultsFor }} Results
+            </div>
+            <div class="panel-body">
+                <policy load-event="'policyRequested'"  error-occured-event="'apiViewPolicyError'" policy-number="policyNumber" ng-show="showPolicyFind"></policy>
+                <std-policy-search load-event="'stdPolicySearchRequestedBroadcast'" error-occured-event="'apiViewStdPolicyError'" search-text="searchText" ng-show="showStdSearch"></std-policy-search>
+                <adv-policy-search load-event="'advPolicySearchRequestedBroadcast'" error-occured-event="'apiViewAdvPolicyError'" search-params="searchParams" ng-show="showAdvSearch"></adv-policy-search>
+            </div>
+        </div>
+    </div>
+</div>

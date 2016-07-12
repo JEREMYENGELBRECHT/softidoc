@@ -1,0 +1,16 @@
+﻿<h2>Edit Record</h2>
+<div    >
+    <div src="'/views/recordstore/recordData.html'" ng-include></div>
+
+    <table class="table table-striped table-bordered table-condensed">
+        <tr>
+            <td style="width: 50%">
+                <div ng-controller="metaDataController" ng-init="getParameter('RecordId');setEdit(true);" src="metaDataTemplate" ng-include></div>
+            </td>
+            <!--<td authorise-access sectionname="Activity History" claim-required="Clientele.RecordStore.RecordActivityHistory.Read" suppress-message="false" redirect="false">
+                --><td>
+                <div ng-controller="activityHistoryController" ng-init="getParameter('RecordId')" src="activityHistoryTemplate" ng-include></div>
+            </td>
+        </tr>
+    </table>
+</div>

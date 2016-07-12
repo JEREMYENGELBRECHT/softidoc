@@ -1,0 +1,39 @@
+﻿<h2>Workflow Teams</h2>
+
+<div class="panel panel-default">
+    <div class="panel panel-heading">
+        <label>Manage teams</label>
+    </div>
+    <div loading-widget class="panel-body">
+        <div class="col-md-12">
+            <table class="table table-bordered table-striped table-responsive ">
+                <tr>
+                    <td class="col-md-12">
+                        <label>Team name</label>
+
+                        <a class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="ShowAddNewTeam()"><span class="glyphicon glyphicon-plus"></span></a>
+                    </td>
+                </tr>
+                <tr ng-show="newTeam.Show">
+                    <td class="col-md-12">
+                        <div class="col-md-4"><label>Team Name</label></div>
+                        <div class="col-md-4"><input type="text" class="form-control" ng-model="newTeam.TeamName"/></div>
+                        <div class="col-md-4"><button class="btn btn-primary" ng-click="AddTeam()"  ng-disabled="newTeam.TeamName == ''">Save new team</button></div>
+                    </td>
+                </tr>
+                <tr ng-repeat="team in teams">
+                    <td class="col-md-5" ng-controller="workflowTeamRowController">
+                        <div class="col-md-12">
+                            <a href="#" onbeforesave="saveTeam($data,team)" editable-text="team.Name">{{team.Name}}</a>
+                            <a ng-show="team.membersCollapsed" style="margin-left: 10px;" ng-click="assignMembers(team)" class="pull-right btn btn-primary btn-xs" data-nodrag><span class="glyphicon glyphicon-user"></span></a>
+                            <a ng-hide="team.membersCollapsed" style="margin-left: 10px;" ng-click="assignMembers(team)" class="pull-right btn btn-primary btn-xs" data-nodrag><span class="glyphicon glyphicon-chevron-up"></span></a>
+                        </div>
+                        <div ng-hide="team.membersCollapsed" class="col-md-12">
+                            <workflow-team-member-list load-event="'loadTeamMembers'" error-occured-event="'teamMemberError'"></workflow-team-member-list>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>

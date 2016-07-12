@@ -1,0 +1,16 @@
+﻿<div style="padding-top: 15px">
+    <tabset>
+        <tab style="cursor: pointer">
+            <tab-heading>
+                <span>Team Tasks</span>
+            </tab-heading>
+            <ng-include src="'/views/WorkflowServices/Tasks/Dashboard/teamTaskManagement.tpl.html'" ng-controller="WorkflowServices.Tasks.Controllers.AdvancedDashboardController"></ng-include>
+        </tab>
+        <tab style="cursor: pointer">
+            <tab-heading>
+                <span>Unassigned Tasks</span>
+            </tab-heading>
+            <ng-include src="'/views/WorkflowServices/Tasks/Dashboard/unassignedTaskManagement.tpl.html'" ng-controller="WorkflowServices.Tasks.Controllers.UnassignedTaskController"></ng-include>
+        </tab>
+    </tabset>
+</div>

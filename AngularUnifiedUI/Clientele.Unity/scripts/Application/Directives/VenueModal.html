@@ -1,0 +1,16 @@
+﻿<div class="modal-header">
+    <h3 class="modal-title">Presentation Venue Results</h3>
+</div>
+<div class="modal-body">
+    <div class="info">No results was found for your search.</div>
+    <div>
+        Filter : 
+        <input type="text" ng-model="venueName" placeholder="Venue Name" /><br>
+    </div>
+
+    <select class="form-control input-sm" ng-model="selected.item" ng-options="option.VenueCode + ' ' + option.VenueName for option in items |filter:venueName"></select>
+</div>
+<div class="modal-footer">
+    <button class="btn btn-primary" ng-click="ok()">OK</button>
+    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+</div>
