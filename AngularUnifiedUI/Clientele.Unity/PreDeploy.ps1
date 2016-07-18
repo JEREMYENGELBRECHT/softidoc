@@ -115,5 +115,7 @@ set-content Configuration/serverConfiguration.json "`
 ""mediaManagementApiUrl"":""$MediaManagementApiUrl""`,
 ""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""}, `
 ""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
-""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} `
+""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} `,
+""outboundCommunicationApplicationUrl"":""$OutboundCommunicationApiUrl""`,
+""outboundCommunicationApiUrl"": { ""ApplicationId"": ""ApplicationId": "Clientele.OutboundCommunication"", ""UnityUrl"": ""$OutboundCommunicationUnityUrl""} `
 }"

@@ -46,6 +46,8 @@
     "gsdApplicationUrl": { "ApplicationId": "Clientele.GsdAdmin", "UnityUrl": "http://localhost:49070/" },
     "MediaManagementApplicationUrl": { "ApplicationId": "Clientele.MediaManagement", "UnityUrl": "http://localhost:51603/" },
     "MediaManagementApiUrl": "http://mediamanagementapitest.clientele.local/api/",
-     "trainingApiUrl": "http://trainingapitest.clientele.local/api/",
-    "trainingUnityUrl": { "ApplicationId": "Clientele.Training", "UnityUrl": "http://trainingunitytest.clientele.local/" }
+    "trainingApiUrl": "http://trainingapitest.clientele.local/api/",
+    "trainingUnityUrl": {    "ApplicationId": "Clientele.Training",    "UnityUrl": "http://trainingunitytest.clientele.local/" },
+    "outboundCommunicationApplicationUrl": { "ApplicationId": "Clientele.OutboundCommunication", "UnityUrl": "http://localhost:38183/" },
+    "outboundCommunicationApiUrl": "http://localhost:52342/api/"
 }
