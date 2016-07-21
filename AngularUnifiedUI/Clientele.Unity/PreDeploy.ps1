@@ -56,6 +56,8 @@ $MediaManagementApiUrl = $OctopusMediaManagementApiUrl
 $MediaManagementApplicationUrl = $OctopusMediaManagementApplicationUrl
 $FraudRiskApiUrl = $OctopusFraudRiskUrl
 $FraudRiskUnityUrl = $OctupusFraudRiskUnityUrl
+$OutboundCommunicationApiUrl = $OctopusOutboundCommunicationApiUrl
+$OutboundCommunicationUnityUrl = $OctopusOutboundCommunicationUnityUrl
 
 set-content Configuration/serverConfiguration.json "`
 {`
@@ -100,7 +102,7 @@ set-content Configuration/serverConfiguration.json "`
 ""clienteleGatewayApiUrl"":""$ClienteleGatewayApiUrl"",`
 ""bankValidationUnityUrl"": { ""ApplicationId"": ""Clientele.BankAccountValidation"", ""UnityUrl"": ""$BankValUrl""}, `
 ""bankAccountValidationApiUrl"":""$BankValApiUrl"", `
-""documentDigitizerApplicationUrl"": { ""ApplicationId"": ""Clientele.DocumentDigitizer"", ""UnityUrl"": ""$DocumentDigitizerUnityUrl"" }, `
+""documentDigitizerApplicationUrl"": { ""ApplicationId"": ""Clientele.DocumentDigitizer"", ""UnityUrl"": ""$DocumentDigitizerUnityUrl"" },
 ""documentDigitizerApiUrl"": ""$DocumentDigitizerApiUrl"", `
 ""policyAdministrationApplicationUrl"": { ""ApplicationId"": ""Clientele.PolicyAdministration"", ""UnityUrl"": ""$PolicyAdministrationApplicationUrl"" }, `
 ""policyAdministrationApiUrl"": ""$PolicyAdministrationApiUrl"",`
@@ -114,8 +116,11 @@ set-content Configuration/serverConfiguration.json "`
 ""gsdAdminUnityUrl"": { ""ApplicationId"": ""Clientele.GsdAdmin"", ""UnityUrl"": ""$GsdAdminUnityUrl""}, `
 ""mediaManagementApiUrl"":""$MediaManagementApiUrl""`,
 ""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""},`
+
 ""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
-""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} `
-"outboundCommunicationApplicationUrl": { "ApplicationId": "Clientele.OutboundCommunication", "UnityUrl": "http://localhost:38183/" },
-"outboundCommunicationApiUrl": "http://localhost:52342/api/"
+""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} ,`
+
+""outboundCommunicationApiUrl"": ""$OutboundCommunicationApiUrl""`,
+""outboundCommunicationApplicationUrl"": { ""ApplicationId"": ""Clientele.OutboundCommunication"", ""UnityUrl"" : ""$OutboundCommunicationUnityUrl" }`
+
 }"
