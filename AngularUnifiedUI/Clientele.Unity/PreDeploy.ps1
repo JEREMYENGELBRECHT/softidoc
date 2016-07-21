@@ -121,6 +121,6 @@ set-content Configuration/serverConfiguration.json "`
 ""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} ,`
 
 ""outboundCommunicationApiUrl"": ""$OutboundCommunicationApiUrl""`,
-""outboundCommunicationApplicationUrl"": { ""ApplicationId"": ""Clientele.OutboundCommunication"", ""UnityUrl"" : ""$OutboundCommunicationUnityUrl" }`
+""outboundCommunicationApplicationUrl"": { ""ApplicationId"": ""Clientele.OutboundCommunication"", ""UnityUrl"" : ""$OutboundCommunicationUnityUrl"" }`
 
 }"
