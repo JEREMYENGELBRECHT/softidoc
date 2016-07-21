@@ -64,8 +64,7 @@ var bootstrap = function () {
     // define the installed applications
     var resourceUrls = [];
     resourceUrls.push('self');
-    resourceUrls.push(['**']);
-
+    
     var applicationIds = [];
 
     for (var i = 0; i < applicationHost.registeredApplications.length; i++) {
