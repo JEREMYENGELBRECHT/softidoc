@@ -116,4 +116,6 @@ set-content Configuration/serverConfiguration.json "`
 ""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""},`
 ""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
 ""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} `
+"outboundCommunicationApplicationUrl": { "ApplicationId": "Clientele.OutboundCommunication", "UnityUrl": "http://localhost:38183/" },
+"outboundCommunicationApiUrl": "http://localhost:52342/api/"
 }"
