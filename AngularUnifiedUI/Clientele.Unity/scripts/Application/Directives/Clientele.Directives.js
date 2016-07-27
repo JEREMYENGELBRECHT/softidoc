@@ -497,6 +497,11 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                  return {
                      pre: function preLink(scope, iElement, iAttrs, controller) {
                          var fieldType = scope.field.Type;
+                         var placeHolder = scope.field.PlaceHolder;
+
+                         if (placeHolder == undefined) {
+                             placeHolder = 'dd/MM/yyyy';
+                         }
 
                          var validationType = getValidationDirective(scope.field.ValidationType);
 
@@ -528,7 +533,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                  break;
 
                              case "Date":
-                                 el = el.replace("{{fieldControl}}", "<input " + validationType + " name='fieldControl' type='text' placeholder='dd/MM/yyyy' class='form-control input-sm' min='minDate' datepicker-popup='dd/MM/yyyy' ng-model='field.Value' close-text='Close'/>");
+                                     el = el.replace("{{fieldControl}}", "<input " + validationType + " name='fieldControl' type='text' placeholder='"+placeHolder+"' class='form-control input-sm' min='minDate' datepicker-popup='dd/MM/yyyy' ng-model='field.Value' close-text='Close'/>"); 
                                  break;
 
                              case "DateTime":
