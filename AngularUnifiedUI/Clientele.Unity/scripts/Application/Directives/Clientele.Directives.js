@@ -579,7 +579,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                  el = "<div ng-if='field.Filter != null' class='form-group'><label class='col-sm-3 control-label'>{{field.Filter.DisplayName}}</label><div class='col-sm-9'><select name='fieldControl' class='form-control input-sm' ng-model='field.SelectedFilter' ng-options='option for option in field.Filter.Options'></select></div></div>" +
                                  "<br/>" +
                                  "<div style='max-height: 420px; overflow-y: auto;'>" +
-                                 "<table class='table table-condensed'>" +
+                                 "<table class='table table-condensed' style='margin-bottom=100px;'>" +
                                  "<thead>" +
                                      "<tr class='active text-muted'>" +
                                          "<th ng-repeat='column in field.Columns'>" +
