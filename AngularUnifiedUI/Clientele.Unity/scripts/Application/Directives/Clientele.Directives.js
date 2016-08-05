@@ -473,6 +473,19 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
             };
         }
     ])
+    .directive('date', function (dateFilter) {
+        return {
+            require: 'ngModel',
+            link: function (scope, elm, attrs, ctrl) {
+
+                var dateFormat = attrs['date'] || 'yyyy-MM-dd';
+
+                ctrl.$formatters.unshift(function (modelValue) {
+                    return dateFilter(modelValue, dateFormat);
+                });
+            }
+        };
+    })
      .directive("easyModalField", function ($compile) {
          return {
              compile: function (iElement) {
@@ -609,6 +622,12 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                                  "</div>" +
                                                  "<div ng-switch-when='Checkbox'>" +
                                                     "<input type='Checkbox' class='form-control input-sm' ng-model='row[column.Name]'/>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-when='Date'>" +
+                                                    "<span ng-bind='(row[column.Name] | date :\"dd-MM-yyyy\" )'></span>" +
+                                                 "</div>" +
+												 "<div ng-switch-when='Time'>" +
+                                                    "<span ng-bind='(row[column.Name] | date : \"HH:mm:ss\")'></span>" +
                                                  "</div>" +
                                                  "<div ng-switch-when='Text'>" +
                                                      "<input type='text' class='form-control input-sm' ng-model='row[column.Name]'/>" +
