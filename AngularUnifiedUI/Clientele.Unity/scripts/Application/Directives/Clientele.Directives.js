@@ -585,7 +585,8 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                          "<th ng-repeat='column in field.Columns'>" +
                                              "<div ng-switch='column.Type'>" +
                                              "<div ng-switch-when='Hidden'></div>" +
-                                             "<div ng-switch-default>{{column.Name}}</div>" +
+                                             "<div ng-if='column.DisplayName == null' ng-switch-default>{{column.Name}}</div>" +
+                                             "<div ng-if='column.DisplayName != null' ng-switch-default>{{column.DisplayName}}</div>" +
                                              "</div>" +
                                          "</th>" +
                                      "</tr>" +
