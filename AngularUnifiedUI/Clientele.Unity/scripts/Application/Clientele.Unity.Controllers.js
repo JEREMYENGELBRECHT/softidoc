@@ -446,10 +446,10 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
                 $scope.$emit("AVSRCheckCompleted", { event: eventData });
             });
 
-            
+
         };
 
-        
+
     }])
     .controller("BankDetailEditModalInstanceCtrl", ['$scope', '$modalInstance', 'bankAcc', function ($scope, $modalInstance, bankAcc) {
         $scope.bankAcc = bankAcc;
@@ -494,7 +494,7 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         $scope.$on("avsrCheck", function (event, eventData) {
             $modalInstance.close(eventData);
         });
-        
+
     }])
 .controller('Clientele.Gsd.Controllers.DepartmentNameSelectController', [
     '$scope', 'uiLoader', 'ajaxJsonService', '$modal', function ($scope, uiLoader, ajaxJsonService, $modal) {

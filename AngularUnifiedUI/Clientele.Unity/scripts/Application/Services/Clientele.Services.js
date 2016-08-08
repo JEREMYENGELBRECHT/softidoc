@@ -656,7 +656,7 @@
                 var deferred = $q.defer();
 
                 var modalSize = 'easy-modal-window';
-
+                
                 if (input.Size != null && input.Size.toLowerCase() === 'small')
                     modalSize = 'easy-modal-window-small';
 
