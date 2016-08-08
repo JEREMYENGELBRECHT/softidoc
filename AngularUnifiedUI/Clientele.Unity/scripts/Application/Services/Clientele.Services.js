@@ -655,11 +655,19 @@
             function showModalAsync(input) {
                 var deferred = $q.defer();
 
+                var modalSize = 'easy-modal-window';
+
+                if (input.Size != null && input.Size.toLowerCase() === 'small')
+                    modalSize = 'easy-modal-window-small';
+
+                if (input.Size != null && input.Size.toLowerCase() === 'large')
+                    modalSize = 'easy-modal-window-large';
+
                 var modalInstance = $modal.open({
                     templateUrl: 'Views/EasyModal/EasyModal.html',
                     controller: 'EasyModalAsyncController',
                     size: 'lg',
-                    windowClass: 'easy-modal-window-large',
+                    windowClass: modalSize,
                     resolve: {
                         model: function () {
                             return { input: input }

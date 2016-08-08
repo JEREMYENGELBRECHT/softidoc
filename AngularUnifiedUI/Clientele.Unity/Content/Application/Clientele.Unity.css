@@ -7,6 +7,10 @@
     font-weight: bold;
 }
 
+.easy-modal-window-small .modal-dialog {
+    width: 30%;
+}
+
 .easy-modal-window .modal-dialog {
     width: 70%;
 }
