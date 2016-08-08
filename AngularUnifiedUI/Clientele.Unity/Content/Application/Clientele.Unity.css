@@ -11,6 +11,10 @@
     width: 70%;
 }
 
+.easy-modal-window-large .modal-dialog {
+    width: 90%;
+}
+
 /* Select2 theme */
 
 

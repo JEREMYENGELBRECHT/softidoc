@@ -659,7 +659,7 @@
                     templateUrl: 'Views/EasyModal/EasyModal.html',
                     controller: 'EasyModalAsyncController',
                     size: 'lg',
-                    windowClass: 'easy-modal-window',
+                    windowClass: 'easy-modal-window-large',
                     resolve: {
                         model: function () {
                             return { input: input }
