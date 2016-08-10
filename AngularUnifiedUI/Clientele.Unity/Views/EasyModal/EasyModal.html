@@ -4,7 +4,7 @@
     <br/>
     <br/>
     <div style="text-align: right">
-        <button ng-disabled="mainForm.$invalid || $Invalid" ng-repeat="button in buttons" class="btn btn-primary" ng-click="buttonClicked(button)">{{button.Name}}</button>
+        <button ng-disabled="mainForm.$invalid || $Invalid" ng-repeat="button in visibleButtons" class="btn btn-primary" ng-click="buttonClicked(button)">{{button.Name}}</button>
         <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
     </div>
 </div>
@@ -24,6 +24,7 @@
         </form>
     </div>
     <div class="modal-footer">
-        <button ng-disabled="mainForm.$invalid || $Invalid" ng-repeat="button in buttons" class="btn btn-primary" ng-click="buttonClicked(button)">{{button.Name}}</button>
+        <button ng-disabled="mainForm.$invalid || $Invalid" ng-repeat="button in visibleButtons" class="btn btn-primary" ng-click="buttonClicked(button)">{{button.Name}}</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
     </div>
 </div>

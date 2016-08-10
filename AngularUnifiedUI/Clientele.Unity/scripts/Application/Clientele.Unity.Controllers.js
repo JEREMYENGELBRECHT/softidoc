@@ -572,8 +572,14 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         $scope.title = model.input.Title;
         $scope.buttons = model.input.Buttons;
 
+        $scope.visibleButtons = Enumerable.From(model.input.Buttons)
+            .Where(function (x) {
+                return x.Name.toLowerCase() !== 'cancel';
+            })
+            .ToArray();
+
         if ($scope.buttons == null || $scope.buttons.length === 0) {
-            $scope.buttons = [
+            $scope.visibleButtons = [
                 {
                     Name: "Ok"
                 }
@@ -596,8 +602,6 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
                 return x.$Invalid;
             });
         }
-
-        var defaultWidth = "50px";
 
         Enumerable.From(model.input.Fields).ForEach(function (x) {
 
@@ -651,7 +655,15 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         };
 
         $scope.cancel = function () {
-            $modalInstance.dismiss('cancel');
+
+            var cancelButtons = Enumerable.From($scope.buttons).Where(function (x) {
+                return x.Name.toLowerCase() === 'cancel';
+            }).ToArray();
+
+            if (cancelButtons.length > 0)
+                $modalInstance.close({ Fields: filterFields(), Action: function () { return cancelButtons[0].Action(filterFields()) } });
+            else
+                $modalInstance.dismiss('cancel');
         }
 
         $scope.onFileSelect = function (field, $files) {
