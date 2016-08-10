@@ -58,6 +58,8 @@ $FraudRiskApiUrl = $OctopusFraudRiskUrl
 $FraudRiskUnityUrl = $OctupusFraudRiskUnityUrl
 $OutboundCommunicationApiUrl = $OctopusOutboundCommunicationApiUrl
 $OutboundCommunicationUnityUrl = $OctopusOutboundCommunicationUnityUrl
+$QualityAssuranceApplicationUrl= $OctopusQualityAssuranceApplicationUrl
+$QualityAssuranceApiUrl= $OctopusQualityAssuranceApiUrl
 
 set-content Configuration/serverConfiguration.json "`
 {`
