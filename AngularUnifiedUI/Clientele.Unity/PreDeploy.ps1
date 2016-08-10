@@ -116,7 +116,8 @@ set-content Configuration/serverConfiguration.json "`
 ""gsdAdminUnityUrl"": { ""ApplicationId"": ""Clientele.GsdAdmin"", ""UnityUrl"": ""$GsdAdminUnityUrl""}, `
 ""mediaManagementApiUrl"":""$MediaManagementApiUrl""`,
 ""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""},`
-
+""qualityAssuranceApiUrl"":""$QualityAssuranceApiUrl""`,
+""qualityAssuranceApplicationUrl"": { ""ApplicationId"": ""Clientele.QualityAssurance"", ""UnityUrl"": ""$QualityAssuranceApplicationUrl""}, `
 ""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
 ""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} ,`
 
