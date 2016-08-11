@@ -570,12 +570,12 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                  break;
 
                              case "SelectTagging":
-
-                                 el = el.replace("{{fieldControl}}", "<ui-select tagging " + validationType + " ng-model='field.Value' name='fieldControl' reset-search-input='true'>" +
-                                     "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
-                                     "<ui-select-choices repeat='option.Key as option in field.Options | filter: $select.search'>" +
-                                         "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
-                                     "</ui-select-choices>" +
+                                 
+                                 el = el.replace("{{fieldControl}}", "<ui-select tagging " + validationType + " ng-model='field.Value' name='fieldControl'>" +
+                                 "<ui-select-match placeholder='Select'>{{$select.selected}}</ui-select-match>" +
+                                 "<ui-select-choices repeat='option in field.Options | filter: $select.search | limitTo: 5'>" +
+                                 "<small ng-bind-html='option | highlight: $select.search'></small>" +
+                                 "</ui-select-choices>" +
                                  "</ui-select>");
                                  break;
 
