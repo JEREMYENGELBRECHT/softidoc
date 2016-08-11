@@ -643,7 +643,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                                  "<div ng-switch-when='SelectTagging'>" +
                                                      "<ui-select tagging ng-model='row[column.Name]' name='fieldControl'>" +
                                                          "<ui-select-match placeholder='Select'>{{$select.selected}}</ui-select-match>" +
-                                                         "<ui-select-choices repeat='option in column.Options | filter: $select.search'>" +
+                                                         "<ui-select-choices repeat='option in column.Options | filter: $select.search | limitTo: 5'>" +
                                                          "<small ng-bind-html='option | highlight: $select.search'></small>" +
                                                          "</ui-select-choices>" +
                                                      "</ui-select>" +
