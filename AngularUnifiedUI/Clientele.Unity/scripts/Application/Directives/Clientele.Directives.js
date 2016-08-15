@@ -563,7 +563,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
 
                                  el = el.replace("{{fieldControl}}", "<ui-select " + validationType + " ng-model='field.Value' name='fieldControl' reset-search-input='true'>" +
                                      "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
-                                     "<ui-select-choices repeat='option.Key as option in field.Options | filter: $select.search'>" +
+                                     "<ui-select-choices repeat='option.Key as option in field.Options | filter: $select.search | limitTo: 5'>" +
                                          "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
                                      "</ui-select-choices>" +
                                  "</ui-select>");
@@ -573,7 +573,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
 
                                  el = el.replace("{{fieldControl}}", "<ui-select tagging " + validationType + " ng-model='field.Value' name='fieldControl' reset-search-input='true'>" +
                                      "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
-                                     "<ui-select-choices repeat='option.Key as option in field.Options | filter: $select.search'>" +
+                                     "<ui-select-choices repeat='option.Key as option in field.Options | filter: $select.search | limitTo: 5'>" +
                                          "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
                                      "</ui-select-choices>" +
                                  "</ui-select>");
@@ -635,7 +635,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                                   "<div ng-switch-when='SelectKeyValue' style='min-width=50px;'>" +
                                                      "<ui-select ng-model='row[column.Name]' style='width:200px;' name='fieldControl' reset-search-input='true'>" +
                                                          "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
-                                                         "<ui-select-choices repeat='option.Key as option in column.Options | filter: $select.search'>" +
+                                                         "<ui-select-choices repeat='option.Key as option in column.Options | filter: $select.search | limitTo: 5'>" +
                                                          "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
                                                          "</ui-select-choices>" +
                                                      "</ui-select>" +
