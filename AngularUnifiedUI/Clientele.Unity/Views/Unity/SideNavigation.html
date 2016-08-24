@@ -5,7 +5,7 @@
         <img width="80" height="80" src="{{iconSource}}" />
     </li>
     <!-- Navigation for applications in the system -->
-    <li ng-repeat="application in applications" class="btn-sm">
+    <li ng-repeat="application in applications| orderBy:'applicationName'" class="btn-sm">
         <div class="btn-link btn-default" ng-click="ChangeUrl(application);">{{application.applicationName}}</div>
     </li>
 </ul>
