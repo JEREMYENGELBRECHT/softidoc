@@ -11,6 +11,7 @@
   "signalRHubUrl": "http://localhost:63142/",
   "invalidsApiUrl": "http://localhost:51491/api/",
   "applicationFormsUrl": "http://applicationformsapitest.clientele.local/api/",
+  "brokerApplicationFormsUrl": "http://localhost:58907/api/",
   "policyInformationApiUrl": "http://localhost:56711/api/",
   "serviceErrorApiUrl": "http://ServiceErrorDev.clientele.local/api/",
   "applicationFormTrackingSearchUrl": "http://applicationformssearchapitest.clientele.local/api/",
@@ -42,6 +43,10 @@
   },
   "applicationFormsCapturePresentationUrl": {
     "ApplicationId": "Clientele.ApplicationFormsCapture",
+    "UnityUrl": "http://localhost:51678/"
+  },
+  "brokerApplicationFormsCapturePresentationUrl": {
+    "ApplicationId": "Clientele.BrokerApplicationFormsCapture",
     "UnityUrl": "http://localhost:51678/"
   },
   "applicationFormSearchIntegrationUrl": {
