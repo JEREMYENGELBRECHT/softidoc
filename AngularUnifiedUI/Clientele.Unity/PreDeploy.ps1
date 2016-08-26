@@ -56,13 +56,11 @@ $MediaManagementApiUrl = $OctopusMediaManagementApiUrl
 $MediaManagementApplicationUrl = $OctopusMediaManagementApplicationUrl
 $FraudRiskApiUrl = $OctopusFraudRiskUrl
 $FraudRiskUnityUrl = $OctupusFraudRiskUnityUrl
-<<<<<<< HEAD
-=======
 $OutboundCommunicationApiUrl = $OctopusOutboundCommunicationApiUrl
 $OutboundCommunicationUnityUrl = $OctopusOutboundCommunicationUnityUrl
 $QualityAssuranceApplicationUrl= $OctopusQualityAssuranceApplicationUrl
 $QualityAssuranceApiUrl= $OctopusQualityAssuranceApiUrl
->>>>>>> b3e9a91f1cf207d1eb3e15ba5d166457c856b0bb
+
 
 set-content Configuration/serverConfiguration.json "`
 {`
@@ -120,21 +118,13 @@ set-content Configuration/serverConfiguration.json "`
 ""gsdApiUrl"":""$GsdApiUrl""`,
 ""gsdAdminUnityUrl"": { ""ApplicationId"": ""Clientele.GsdAdmin"", ""UnityUrl"": ""$GsdAdminUnityUrl""}, `
 ""mediaManagementApiUrl"":""$MediaManagementApiUrl""`,
-<<<<<<< HEAD
-""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""}, `
-""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
-""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} `,
-""outboundCommunicationApplicationUrl"":""$OutboundCommunicationApiUrl""`,
-""outboundCommunicationApiUrl"": { ""ApplicationId"": ""ApplicationId": "Clientele.OutboundCommunication"", ""UnityUrl"": ""$OutboundCommunicationUnityUrl""} `
-=======
 ""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""},`
 ""qualityAssuranceApiUrl"":""$QualityAssuranceApiUrl""`,
 ""qualityAssuranceApplicationUrl"": { ""ApplicationId"": ""Clientele.QualityAssurance"", ""UnityUrl"": ""$QualityAssuranceApplicationUrl""}, `
 ""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
 ""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} ,`
-
 ""outboundCommunicationApiUrl"": ""$OutboundCommunicationApiUrl""`,
 ""outboundCommunicationApplicationUrl"": { ""ApplicationId"": ""Clientele.OutboundCommunication"", ""UnityUrl"" : ""$OutboundCommunicationUnityUrl"" }`
 
->>>>>>> b3e9a91f1cf207d1eb3e15ba5d166457c856b0bb
+
 }"
