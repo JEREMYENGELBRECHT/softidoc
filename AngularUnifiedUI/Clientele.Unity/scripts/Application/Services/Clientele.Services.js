@@ -650,48 +650,41 @@
         };
     })
     .service("EasyModalService", [
-        '$modal', function ($modal) {
+        '$modal', '$q', function ($modal, $q) {
 
-            function showModal(input, resultAction) {
+            function showModalAsync(input) {
+                var deferred = $q.defer();
+
+                var modalSize = 'easy-modal-window';
+                
+                if (input.Size != null && input.Size.toLowerCase() === 'small')
+                    modalSize = 'easy-modal-window-small';
+
+                if (input.Size != null && input.Size.toLowerCase() === 'large')
+                    modalSize = 'easy-modal-window-large';
+
                 var modalInstance = $modal.open({
                     templateUrl: 'Views/EasyModal/EasyModal.html',
-                    controller: 'EasyModalController',
+                    controller: 'EasyModalAsyncController',
                     size: 'lg',
-                    windowClass: 'easy-modal-window',
+                    windowClass: modalSize,
                     resolve: {
                         model: function () {
-                            return { input: input, action: resultAction }
+                            return { input: input }
                         }
                     }
                 });
 
-                modalInstance.result.then(function (returnResult) {
+                modalInstance.result.then(function (returnResult) { deferred.resolve(returnResult); }, null);
 
-                    var result = {};
-
-                    Enumerable.From(returnResult.fields).ForEach(function (x) {
-
-                        if (x.Type === "SelectKeyValue") {
-                            var selectedOptionValue = Enumerable.From(x.Options).First(function (y) { return y.Key === x.Value; });
-                            result[x.Name] = { Value: selectedOptionValue.Value, Key: selectedOptionValue.Key };
-
-                        }
-                        else if (x.Type === "ReadonlyTable") {
-                            result[x.Name] = x.Rows;
-                        } else {
-                            result[x.Name] = x.Value;
-                        }
-
-                    });
-
-                    returnResult.action(result);
-                }, null);
+                return deferred.promise;
             }
 
             return {
-                showModal: function (input, action) {
-                    return showModal(input, action);
+                showModalAsync: function (input) {
+                    return showModalAsync(input);
                 }
+
             }
         }
     ])

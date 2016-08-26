@@ -316,16 +316,22 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                 branchCodeName: '=?',
                 warningHeaderMessage: "=?",
                 enableEdit: '=?',
+                enableEditAvsr: '=?',
                 isPayable: '=?',
                 loadEvent: '=?',
                 cacheData: '=?',
                 dataLoadedEmitEvent: '=?',
-                overrideTemplate: '=?'
+                overrideTemplate: '=?',
+                checkSoftyComp: '=?',
+                checkFraudster: '=?',
+                checkD3: '=?',
+                allowDebitsStoppedOnAccount: '=?',
+                skipD3ForDebitsStoppedOnAccount: '=?'
             },
             controller: 'UnityBankDetailViewController',
             compile: function (tElement, tAtrrs) {
                 if (!angular.isUndefined(tAtrrs.overrideTemplate)) {
-                    if (tAtrrs.overrideTemplate != "") {
+                    if (tAtrrs.overrideTemplate !== "") {
                         if (eval(tAtrrs.overrideTemplate)) {
                             tElement.html("");
                         }
@@ -467,6 +473,19 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
             };
         }
     ])
+    .directive('date', function (dateFilter) {
+        return {
+            require: 'ngModel',
+            link: function (scope, elm, attrs, ctrl) {
+
+                var dateFormat = attrs['date'] || 'yyyy-MM-dd';
+
+                ctrl.$formatters.unshift(function (modelValue) {
+                    return dateFilter(modelValue, dateFormat);
+                });
+            }
+        };
+    })
      .directive("easyModalField", function ($compile) {
          return {
              compile: function (iElement) {
@@ -491,6 +510,11 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                  return {
                      pre: function preLink(scope, iElement, iAttrs, controller) {
                          var fieldType = scope.field.Type;
+                         var placeHolder = scope.field.PlaceHolder;
+
+                         if (placeHolder == undefined) {
+                             placeHolder = 'dd/MM/yyyy';
+                         }
 
                          var validationType = getValidationDirective(scope.field.ValidationType);
 
@@ -517,8 +541,12 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                  el = el.replace("{{fieldControl}}", '<input type="number" name="fieldControl" class="form-control" ng-model="field.Value">');
                                  break;
 
+                             case "Label":
+                                 el = el.replace("{{fieldControl}}", "<label class='control-label'>{{field.Value}}</label>");
+                                 break;
+
                              case "Date":
-                                 el = el.replace("{{fieldControl}}", "<input " + validationType + " name='fieldControl' type='text' placeholder='dd/MM/yyyy' class='form-control input-sm' min='minDate' datepicker-popup='dd/MM/yyyy' ng-model='field.Value' close-text='Close'/>");
+                                 el = el.replace("{{fieldControl}}", "<input " + validationType + " name='fieldControl' type='text' placeholder='" + placeHolder + "' class='form-control input-sm' min='minDate' datepicker-popup='dd/MM/yyyy' ng-model='field.Value' close-text='Close'/>");
                                  break;
 
                              case "DateTime":
@@ -541,44 +569,94 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                  "</ui-select>");
                                  break;
 
+                             case "SelectTagging":
+                                 
+                                 el = el.replace("{{fieldControl}}", "<ui-select tagging " + validationType + " ng-model='field.Value' name='fieldControl'>" +
+                                 "<ui-select-match placeholder='Select'>{{$select.selected}}</ui-select-match>" +
+                                 "<ui-select-choices repeat='option in field.Options | filter: $select.search | limitTo: 5'>" +
+                                 "<small ng-bind-html='option | highlight: $select.search'></small>" +
+                                 "</ui-select-choices>" +
+                                 "</ui-select>");
+                                 break;
+
+                             case "TextArea":
+                                 el = el.replace("{{fieldControl}}", '<textarea msd-elastic=/"\n/" ' + validationType + ' name="fieldControl" class="form-control" ng-model="field.Value">');
+                                 break;
+
+                             case "UiGrid":
+
+                                 el = el.replace("{{fieldControl}}", ' <div id="grid1" ui-grid="field.gridOptions" ui-grid-edit class="grid"></div>');
+                                 break;
+
                              case "ReadonlyTable":
                                  el = "<div ng-if='field.Filter != null' class='form-group'><label class='col-sm-3 control-label'>{{field.Filter.DisplayName}}</label><div class='col-sm-9'><select name='fieldControl' class='form-control input-sm' ng-model='field.SelectedFilter' ng-options='option for option in field.Filter.Options'></select></div></div>" +
                                  "<br/>" +
                                  "<div style='max-height: 420px; overflow-y: auto;'>" +
-                                 "<table class='table table-condensed'>" +
+                                 "<table class='table table-condensed' style='margin-bottom:100px;'>" +
                                  "<thead>" +
-                                 "<tr class='active text-muted'>" +
-                                 "<th ng-repeat='column in field.Columns'>" +
-                                 "<div ng-switch='column.Type'>" +
-                                 "<div ng-switch-when='Hidden'></div>" +
-                                 "<div ng-switch-default>{{column.Name}}</div>" +
-                                 "</div>" +
-                                 "</th>" +
-                                 "</tr>" +
+                                     "<tr class='active text-muted'>" +
+                                         "<th ng-repeat='column in field.Columns'>" +
+                                             "<div ng-switch='column.Type'>" +
+                                             "<div ng-switch-when='Hidden'></div>" +
+                                             "<div ng-if='column.DisplayName == null' ng-switch-default>{{column.Name}}</div>" +
+                                             "<div ng-if='column.DisplayName != null' ng-switch-default>{{column.DisplayName}}</div>" +
+                                             "</div>" +
+                                         "</th>" +
+                                     "</tr>" +
                                  "</thead>" +
                                  "<tbody>" +
-                                 "<tr ng-repeat='row in field.Rows | filter: field.SelectedFilter'>" +
-                                 "<td ng-repeat='column in field.Columns'>" +
-                                 "<div ng-switch='column.Type'>" +
-                                 "<div ng-switch-when='Button'>" +
-                                 "<div class='btn-group'>" +
-                                 "<div class='btn btn-sm btn-default' ng-click='buttonClicked(column.Action(row))'><span ng-class='column.Glyphicon'></span></div>" +
-                                 "</div>" +
-                                 "</div>" +
-                                 "<div ng-switch-when='Hidden'>" +
-                                 "</div>" +
-                                 "<div ng-switch-when='Checkbox'>" +
-                                 "<input type='Checkbox' class='form-control input-sm' ng-model='row[column.Name]'/>" +
-                                 "</div>" +
-                                  "<div ng-switch-when='Text'>" +
-                                 "<input type='text' class='form-control input-sm' ng-model='row[column.Name]'/>" +
-                                 "</div>" +
-                                 "<div ng-switch-default>{{row[column.Name]}}</div>" +
-                                 "</div>" +
-                                 "</td>" +
-                                 "</tr>" +
+                                     "<tr ng-repeat='row in field.Rows | filter: field.SelectedFilter'>" +
+                                         "<td ng-repeat='column in field.Columns'>" +
+                                             "<div ng-switch='column.Type'>" +
+                                              "<div ng-switch-when='InlineButton'>" +
+                                             "<div class='btn-group'>" +
+                                                 "<div class='btn btn-sm btn-default' ng-click='inlineButtonClicked(column,row)'><span ng-class='column.Glyphicon'></span></div>" +
+                                                 "</div>" +
+                                                 "</div>" +
+                                             "<div ng-switch-when='Button'>" +
+                                             "<div class='btn-group'>" +
+                                                 "<div class='btn btn-sm btn-default' ng-click='buttonClicked(column,row)'><span ng-class='column.Glyphicon'></span></div>" +
+                                                 "</div>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-when='Hidden'>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-when='Checkbox'>" +
+                                                    "<input type='Checkbox' class='form-control input-sm' ng-model='row[column.Name]'/>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-when='DateTime'>" +
+                                                    "<span ng-bind='(row[column.Name] | date :\"yyyy-MM-dd HH:mm\" )'></span>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-when='Date'>" +
+                                                    "<span ng-bind='(row[column.Name] | date :\"dd-MM-yyyy\" )'></span>" +
+                                                 "</div>" +
+												 "<div ng-switch-when='Time'>" +
+                                                    "<span ng-bind='(row[column.Name] | date : \"HH:mm:ss\")'></span>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-when='Text'>" +
+                                                     "<input type='text' class='form-control input-sm' ng-model='row[column.Name]'/>" +
+                                                 "</div>" +
+                                                  "<div ng-switch-when='SelectKeyValue' style='min-width=50px;'>" +
+                                                     "<ui-select ng-model='row[column.Name]' style='width:200px;' name='fieldControl' reset-search-input='true'>" +
+                                                         "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
+                                                         "<ui-select-choices repeat='option.Key as option in column.Options | filter: $select.search'>" +
+                                                         "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
+                                                         "</ui-select-choices>" +
+                                                     "</ui-select>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-when='SelectTagging'>" +
+                                                     "<ui-select tagging ng-model='row[column.Name]' name='fieldControl'>" +
+                                                         "<ui-select-match placeholder='Select'>{{$select.selected}}</ui-select-match>" +
+                                                         "<ui-select-choices repeat='option in column.Options | filter: $select.search | limitTo: 5'>" +
+                                                         "<small ng-bind-html='option | highlight: $select.search'></small>" +
+                                                         "</ui-select-choices>" +
+                                                     "</ui-select>" +
+                                                 "</div>" +
+                                                 "<div ng-switch-default>{{row[column.Name]}}</div>" +
+                                             "</div>" +
+                                         "</td>" +
+                                     "</tr>" +
                                  "</tbody>" +
-                                 "</table>" + 
+                                 "</table>" +
                                  "</div>";
                                  break;
 

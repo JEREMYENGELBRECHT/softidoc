@@ -1,6 +1,8 @@
 ﻿<div class="panel panel-default well">
-    
+
     <button ng-show="enableEdit" class="btn btn-sm btn-primary pull-right" ng-click="updateBankDetails()">Update Bank Details</button>
+    <button ng-show="enableEditAvsr" class="btn btn-sm btn-primary pull-right" ng-click="doAVSRCheck()">Do AVSR check </button>
+
 
     <div class="panel-heading">
         <strong>Bank Detail</strong><span class="col-md-offset-2 label label-warning">{{warningHeaderMessage}}</span>

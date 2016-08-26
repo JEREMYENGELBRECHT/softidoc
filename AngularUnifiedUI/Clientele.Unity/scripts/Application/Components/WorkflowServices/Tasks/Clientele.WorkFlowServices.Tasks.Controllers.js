@@ -1158,7 +1158,10 @@
         $scope.teams = {};
 
         $scope.selectTeam = function () {
-            $scope.selectedTeamMembers = $scope.model.selectedTeam.TeamMembers;
+            $scope.selectedTeamMembers = Enumerable.From($scope.model.selectedTeam.TeamMembers)
+                                                   .Where(function (x) { return x.IsActive && !x.IsDeleted; })
+                                                   .ToArray();
+
         };
 
         ajaxJsonService.Get(model.ResourceUri).then(function (data) {

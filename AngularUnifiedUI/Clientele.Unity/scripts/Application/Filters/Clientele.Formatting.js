@@ -90,20 +90,50 @@ angular.module('Clientele.Formatting', ['ReferenceNumbers'])
 .filter('saCurrency', function () {
     return function (input) {
         if (input === null) {
-            return 'R ' + parseFloat(0).toFixed(2);
+        	return 'R ' + parseFloat(0).toFixed(2);
         };
         return 'R ' + parseFloat(input).toFixed(2);
     };
 })
-    .filter('stdDateTimeFromUtc', function ($filter) {
-        return function (input) {
-            if (input == null) { return ""; }
+.filter('saCurrencyWithSpaces', function() {
+	return function (input) {
+		if (input === null || typeof input === "undefined")
+			input = 0;
 
-            var date = $filter('date')(convertUTCDateToLocalDate(new Date(input)), 'dd MMMM yyyy hh:mm:ss a');
+		input = parseFloat(input).toFixed(2);
 
-            return date;
-        };
-    })
+		var delimiter = " ";
+		var a = input.split('.', 2);
+		var d = a[1];
+		var i = parseInt(a[0]);
+		if (isNaN(i)) { return ''; }
+		var minus = '';
+		if (i < 0) { minus = '-'; }
+		i = Math.abs(i);
+		var n = new String(i);
+		var a = [];
+		while (n.length > 3) {
+			var nn = n.substr(n.length - 3);
+			a.unshift(nn);
+			n = n.substr(0, n.length - 3);
+		}
+		if (n.length > 0) { a.unshift(n); }
+		n = a.join(delimiter);
+		if (d.length < 1) { input = n; }
+		else { input = n + '.' + d; }
+		input = minus + input;
+		return 'R ' + input;
+	};
+})
+.filter('stdDateTimeFromUtc', function ($filter) {
+    return function (input) {
+        if (input == null) { return ""; }
+
+        var date = $filter('date')(convertUTCDateToLocalDate(new Date(input)), 'dd MMMM yyyy hh:mm:ss a');
+
+        return date;
+    };
+})
 .filter('stdDateFromUtc', function ($filter) {
     return function (input) {
         if (input == null) { return ""; }

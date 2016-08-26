@@ -252,3 +252,4 @@ buildartifacts
 /ApplicationForms/Src/ApplicationForms.InvalidsTracking/Configurations/ConnectionStrings.config
 /OutboundCommunication/OutboundCommunication.Sms.WebApi/Configurations/AppSettings.config
 /OutboundCommunication/OutboundCommunication.Sms.WebApi/Configurations/ConnectionStrings.config
+/AngularUnifiedUI/.vs/config/applicationhost.config

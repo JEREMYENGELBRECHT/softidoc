@@ -7,8 +7,16 @@
     font-weight: bold;
 }
 
+.easy-modal-window-small .modal-dialog {
+    width: 30%;
+}
+
 .easy-modal-window .modal-dialog {
     width: 70%;
+}
+
+.easy-modal-window-large .modal-dialog {
+    width: 90%;
 }
 
 /* Select2 theme */

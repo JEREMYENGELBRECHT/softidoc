@@ -131,6 +131,7 @@
     <Content Include="Views\ApiView\PolicyStatusHistory.html" />
     <Content Include="Views\ApiView\Riders.html" />
     <Content Include="Views\EasyModal\EasyModal.html" />
+    <Content Include="Views\EasyModal\UiGridSelect.html" />
     <Content Include="Views\Gsd\departmentSelectModal.html" />
     <Content Include="Views\SearchService\historyViewer.tpl.html" />
     <Content Include="Views\SearchService\viewDocument.tpl.html" />
@@ -417,6 +418,7 @@
     <Content Include="Views\SearchService\SearchAppForms.html" />
     <Content Include="Views\UnityAddress\Modal\Edit.html" />
     <Content Include="Views\UnityAddress\View.html" />
+    <Content Include="Views\UnityBankDetails\Modal\AVSRModal.html" />
     <Content Include="Views\UnityBankDetails\Modal\Edit.html" />
     <Content Include="Views\UnityBankDetails\View.html" />
     <Content Include="Views\WorkFlowServices\Tasks\Dashboard\AdvancedDashboard.tpl.html" />
@@ -496,7 +498,9 @@
     <Content Include="scripts\Application\Components\RecordStore\Clientele.RecordStore.Services.js" />
     <Content Include="PreDeploy.ps1" />
     <Content Include="Configuration\Permissions.json" />
-    <None Include="Configuration\serverConfiguration.json" />
+    <Content Include="Configuration\serverConfiguration.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="scripts\Angular\errors.json" />
     <Content Include="scripts\Angular\version.json" />
     <Content Include="scripts\Application\Components\WorkflowServices\Clientele.WorkFlowServices.js" />

@@ -64,7 +64,7 @@ var bootstrap = function () {
     // define the installed applications
     var resourceUrls = [];
     resourceUrls.push('self');
-
+    
     var applicationIds = [];
 
     for (var i = 0; i < applicationHost.registeredApplications.length; i++) {
@@ -78,7 +78,7 @@ var bootstrap = function () {
     angular.module('InstalledApplications', applicationIds);
 
     // register the main module and its dependencies
-    angular.module('Clientele.Unity', ['Clientele.Unity.Routes', 'Clientele.Authentication', 'Clientele.UI', 'InstalledApplications', 'Clientele.Directives', 'Clientele.Services', 'LocalStorageModule', 'ngResource'])
+    angular.module('Clientele.Unity', ['Clientele.Unity.Routes', 'Clientele.Authentication', 'Clientele.UI', 'InstalledApplications', 'Clientele.Directives', 'Clientele.Services', 'LocalStorageModule', 'ngResource', 'ui.grid', 'ui.grid.edit'])
         .config(window.$QDecorator)
         .config(function ($httpProvider, $provide, uiSelectConfig, $sceDelegateProvider) {
 
@@ -140,7 +140,7 @@ var bootstrap = function () {
 
                         if (config.method === 'GET' && $templateCache.get(config.url) !== undefined)
                             return config;
-                        
+
                         var currentTime = new Date();
                         var currentMonth = currentTime.getMonth();
                         var currentDay = currentTime.getDay();
@@ -158,7 +158,7 @@ var bootstrap = function () {
                                 window.location = document.location.origin;
                             }
                         }
-                    
+
                         if (urlMustBeCached(config.url)) {
                             // Return the config or wrap it in a promise if7 blank.
                             return config || $q.when(config);

@@ -389,13 +389,23 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
     .controller("UnityBankDetailViewController", ['$scope', '$modal', function ($scope, $modal) {
 
         $scope.updateBankDetails = function () {
+
+            $scope.validationParameters = {
+                CheckSoftyComp: $scope.checkSoftyComp,
+                CheckFraudster: $scope.checkFraudster,
+                CheckD3: $scope.checkD3,
+                AllowDebitsStoppedOnAccount: $scope.allowDebitsStoppedOnAccount,
+                SkipD3ForDebitsStoppedOnAccount: $scope.skipD3ForDebitsStoppedOnAccount
+            };
+
             $scope.bankAcc = {
                 accountType: $scope.accountType,
                 accountName: $scope.accountName,
                 accountNumber: $scope.accountNumber,
                 bankName: $scope.bankName,
                 branchCode: $scope.branchCode,
-                branchCodeName: $scope.branchCodeName
+                branchCodeName: $scope.branchCodeName,
+                AccountValidationParameters: $scope.validationParameters
             };
 
             var modalInstance = $modal.open({
@@ -413,6 +423,33 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
                 $scope.$emit("BankDetailsUpdated", bankAcc);
             });
         };
+
+        $scope.doAVSRCheck = function () {
+            $scope.bankAcc = {
+                bankAccountId: $scope.bankAccountId,
+                AVSRResults: null
+            };
+
+            var modalInstance = $modal.open({
+                templateUrl: 'Views/UnityBankDetails/Modal/AVSRModal.html',
+                controller: 'AVSRCheckModalInstanceCtrl',
+                size: 'modal-lg',
+                resolve: {
+                    bankAcc: function () {
+                        return $scope.bankAcc;
+                    }
+                }
+            });
+
+            modalInstance.result.then(function (eventData) {
+                console.log(eventData);
+                $scope.$emit("AVSRCheckCompleted", { event: eventData });
+            });
+
+
+        };
+
+
     }])
     .controller("BankDetailEditModalInstanceCtrl", ['$scope', '$modalInstance', 'bankAcc', function ($scope, $modalInstance, bankAcc) {
         $scope.bankAcc = bankAcc;
@@ -439,6 +476,23 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         $scope.$on("registerBankDetailsFail", function (event, eventData) {
             alert(eventData.data.Message);
 
+        });
+
+    }])
+    .controller("AVSRCheckModalInstanceCtrl", ['$scope', '$modalInstance', 'bankAcc', function ($scope, $modalInstance, bankAcc) {
+        $scope.bankAcc = bankAcc;
+
+        $scope.ok = function () {
+            $modalInstance.close($scope.bankAcc);
+        };
+
+        $scope.cancel = function () {
+            $modalInstance.dismiss("cancel");
+        };
+
+
+        $scope.$on("avsrCheck", function (event, eventData) {
+            $modalInstance.close(eventData);
         });
 
     }])
@@ -509,21 +563,25 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
          $modalInstance.dismiss('cancel');
      };
  }])
-   .controller("EasyModalController", [
+  .controller("EasyModalAsyncController", [
     '$scope',
     '$modalInstance',
     "model",
     function ($scope, $modalInstance, model) {
         $scope.fields = model.input.Fields;
-        $scope.action = model.action;
         $scope.title = model.input.Title;
         $scope.buttons = model.input.Buttons;
 
+        $scope.visibleButtons = Enumerable.From(model.input.Buttons)
+            .Where(function (x) {
+                return x.Name.toLowerCase() !== 'cancel';
+            })
+            .ToArray();
+
         if ($scope.buttons == null || $scope.buttons.length === 0) {
-            $scope.buttons = [
+            $scope.visibleButtons = [
                 {
-                    Name: "Ok",
-                    Action: $scope.action
+                    Name: "Ok"
                 }
             ];
         }
@@ -545,7 +603,46 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
             });
         }
 
+        Enumerable.From(model.input.Fields).ForEach(function (x) {
+
+            if (x.Type === "UiGrid") {
+
+                var columnDefinitions = [];
+
+                Enumerable.From(x.Columns).ForEach(function (column) {
+                    switch (column.Type) {
+                        case "Hidden":
+                            break;
+                        case "SelectTagging":
+                            columnDefinitions.push({
+                                field: column.Name, editableCellTemplate: '/Views/EasyModal/UiGridSelect.html', editDropdownOptionsArray: column.Options
+                            });
+                            break;
+                        default:
+                            columnDefinitions.push({ field: column.Name, enableCellEdit: false });
+                            break;
+                    }
+                });
+
+                x.gridOptions = {
+                    enableSorting: true,
+                    enableGridMenu: false,
+                    flatEntityAccess: true,
+                    enableFiltering: false,
+                    enableColumnResizing: false,
+                    enableColumnMenus: false,
+                    enableCellEditOnFocus: true,
+                    data: x.Rows,
+                    columnDefs: columnDefinitions
+                };
+            }
+        });
+
         $scope.option = {};
+
+        $scope.tagTransform = function (value) {
+            return value;
+        }
 
         $scope.dateChanged = function (field) {
 
@@ -558,7 +655,15 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         };
 
         $scope.cancel = function () {
-            $modalInstance.dismiss('cancel');
+
+            var cancelButtons = Enumerable.From($scope.buttons).Where(function (x) {
+                return x.Name.toLowerCase() === 'cancel';
+            }).ToArray();
+
+            if (cancelButtons.length > 0)
+                $modalInstance.close({ Fields: filterFields(), Action: function () { return cancelButtons[0].Action(filterFields()) } });
+            else
+                $modalInstance.dismiss('cancel');
         }
 
         $scope.onFileSelect = function (field, $files) {
@@ -568,12 +673,41 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         }
 
         $scope.ok = function () {
-            $modalInstance.close({ fields: $scope.fields, action: $scope.action });
+            $modalInstance.close({ fields: $scope.fields });
         }
 
-        $scope.buttonClicked = function (action) {
-            $modalInstance.close({ fields: $scope.fields, action: action });
+        function filterFields() {
+            var result = {};
+
+            Enumerable.From($scope.fields).ForEach(function (x) {
+
+                if (x.Type === "SelectKeyValue") {
+                    var selectedOptionValue = Enumerable.From(x.Options).First(function (y) { return y.Key === x.Value; });
+                    result[x.Name] = { Value: selectedOptionValue.Value, Key: selectedOptionValue.Key };
+
+                }
+                else if (x.Type === "ReadonlyTable" || x.Type === "UiGrid") {
+                    result[x.Name] = x.Rows;
+                } else {
+                    result[x.Name] = x.Value;
+                }
+
+            });
+
+            return result;
+        }
+
+        $scope.inlineButtonClicked = function (column, row) {
+            column.Action(row);
+        }
+
+        $scope.buttonClicked = function (column, row) {
+
+            if (row == null)
+                $modalInstance.close({ Fields: filterFields(), Action: function () { return column.Action == null ? null : column.Action(filterFields()) } });
+            else
+                $modalInstance.close({ Fields: filterFields(), Action: function () { return column.Action == null ? null : column.Action(row) } });
         }
     }
-   ]);
+  ]);
 /**********************************************************************************************/
