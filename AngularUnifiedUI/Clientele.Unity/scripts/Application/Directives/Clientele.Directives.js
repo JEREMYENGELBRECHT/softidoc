@@ -570,8 +570,8 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                  break;
 
                              case "SelectTagging":
-                                 
-                                 el = el.replace("{{fieldControl}}", "<ui-select tagging " + validationType + " ng-model='field.Value' name='fieldControl'>" +
+
+                                 el = el.replace("{{fieldControl}}", "<ui-select tagging " + validationType + " on-select='addItemToDropdown($item,$model,field)' ng-model='field.Value' name='fieldControl'>" +
                                  "<ui-select-match placeholder='Select'>{{$select.selected}}</ui-select-match>" +
                                  "<ui-select-choices repeat='option in field.Options | filter: $select.search | limitTo: 5'>" +
                                  "<small ng-bind-html='option | highlight: $select.search'></small>" +
@@ -644,7 +644,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                                      "</ui-select>" +
                                                  "</div>" +
                                                  "<div ng-switch-when='SelectTagging'>" +
-                                                     "<ui-select tagging ng-model='row[column.Name]' name='fieldControl'>" +
+                                                     "<ui-select tagging ng-model='row[column.Name]' on-select='addItemToDropdown($item,$model,column)' name='fieldControl'>" +
                                                          "<ui-select-match placeholder='Select'>{{$select.selected}}</ui-select-match>" +
                                                          "<ui-select-choices repeat='option in column.Options | filter: $select.search | limitTo: 5'>" +
                                                          "<small ng-bind-html='option | highlight: $select.search'></small>" +

@@ -567,7 +567,8 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
     '$scope',
     '$modalInstance',
     "model",
-    function ($scope, $modalInstance, model) {
+    "$q",
+    function ($scope, $modalInstance, model, $q) {
         $scope.fields = model.input.Fields;
         $scope.title = model.input.Title;
         $scope.buttons = model.input.Buttons;
@@ -604,6 +605,12 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         }
 
         Enumerable.From(model.input.Fields).ForEach(function (x) {
+
+            if (x.Type === "SelectTagging") {
+                $q.resolve(x.Options).then(function (data) {
+                    x.Options = data.data == null ? data : data.data;
+                });
+            }
 
             if (x.Type === "UiGrid") {
 
@@ -653,6 +660,10 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
 
             field.Value = date;
         };
+
+        $scope.addItemToDropdown = function (item, model, column) {
+            column.Options.push(item);
+        }
 
         $scope.cancel = function () {
 
