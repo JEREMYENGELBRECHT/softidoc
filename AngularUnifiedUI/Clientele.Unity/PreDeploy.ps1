@@ -61,6 +61,7 @@ $OutboundCommunicationUnityUrl = $OctopusOutboundCommunicationUnityUrl
 $QualityAssuranceApplicationUrl= $OctopusQualityAssuranceApplicationUrl
 $QualityAssuranceApiUrl= $OctopusQualityAssuranceApiUrl
 
+
 set-content Configuration/serverConfiguration.json "`
 {`
 ""runningMode"": ""$runningMode"", ""applicationId"": {},`
@@ -122,8 +123,8 @@ set-content Configuration/serverConfiguration.json "`
 ""qualityAssuranceApplicationUrl"": { ""ApplicationId"": ""Clientele.QualityAssurance"", ""UnityUrl"": ""$QualityAssuranceApplicationUrl""}, `
 ""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
 ""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} ,`
-
 ""outboundCommunicationApiUrl"": ""$OutboundCommunicationApiUrl""`,
 ""outboundCommunicationApplicationUrl"": { ""ApplicationId"": ""Clientele.OutboundCommunication"", ""UnityUrl"" : ""$OutboundCommunicationUnityUrl"" }`
+
 
 }"
