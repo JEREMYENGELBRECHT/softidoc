@@ -644,9 +644,9 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                                      "</ui-select>" +
                                                  "</div>" +
                                                  "<div ng-switch-when='SelectTagging'>" +
-                                                     "<ui-select tagging ng-model='row[column.Name]' on-select='addItemToDropdown($item,$model,column)' name='fieldControl'>" +
+                                                     "<ui-select tagging ng-model='row[column.Name]' on-select='addItemToDropdown($item,$model,column)' name='fieldControl' ng-click='clearOptions(column)'>" +
                                                          "<ui-select-match placeholder='Select'>{{$select.selected}}</ui-select-match>" +
-                                                         "<ui-select-choices repeat='option in column.Options | filter: $select.search | limitTo: 5'>" +
+                                                         "<ui-select-choices repeat='option in column.FilteredOptions | filter: $select.search | limitTo: 5' refresh='refreshOptions($select.search,column)' refresh-delay='0'>" +
                                                          "<small ng-bind-html='option | highlight: $select.search'></small>" +
                                                          "</ui-select-choices>" +
                                                      "</ui-select>" +
