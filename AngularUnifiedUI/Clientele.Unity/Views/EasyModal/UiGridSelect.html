@@ -1,6 +1,6 @@
 ﻿<ui-select ng-model="MODEL_COL_FIELD" append-to-body="true">
-    <ui-select-match placeholder="Select Value">{{ COL_FIELD }}</ui-select-match>
-    <ui-select-choices repeat="item in col.colDef.editDropdownOptionsArray | filter: $select.search | limitTo: 5">
-        <span>{{ item }}</span>
+    <ui-select-match placeholder="Select Value">{{$select.selected.Value}}</ui-select-match>
+    <ui-select-choices repeat="item.Key as item in col.colDef.editDropdownOptionsArray | filter: $select.search | limitTo: 5">
+        <span>{{ item.Value }}</span>
     </ui-select-choices>
 </ui-select>

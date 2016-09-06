@@ -131,6 +131,7 @@
     <Content Include="Views\ApiView\PolicyStatusHistory.html" />
     <Content Include="Views\ApiView\Riders.html" />
     <Content Include="Views\EasyModal\EasyModal.html" />
+    <Content Include="Views\EasyModal\UiGridSelectTagging.html" />
     <Content Include="Views\EasyModal\UiGridSelect.html" />
     <Content Include="Views\Gsd\departmentSelectModal.html" />
     <Content Include="Views\SearchService\historyViewer.tpl.html" />

@@ -522,8 +522,11 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
 
                          if (fieldType === "ReadonlyTable") {
                              el = "";
-
-                         } else {
+                         }
+                         else if (fieldType === "UiGrid") {
+                             el = "";
+                         }
+                         else {
                              el = "<div ng-if='field.Type != \"Hidden\"' class='form-group'>" +
                                  "<label class='col-sm-3 control-label'>{{field.DisplayName}}</label>" +
                                  "<div class='col-sm-9' ng-class='{\"has-error\": innerForm.fieldControl.$invalid || field.$Invalid}'>" +
@@ -585,7 +588,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
 
                              case "UiGrid":
 
-                                 el = el.replace("{{fieldControl}}", ' <div id="grid1" ui-grid="field.gridOptions" ui-grid-edit class="grid"></div>');
+                                 el = '<div id="grid1" ui-grid="field.gridOptions" ui-grid-edit></div>';
                                  break;
 
                              case "ReadonlyTable":
@@ -636,9 +639,9 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                                      "<input type='text' class='form-control input-sm' ng-model='row[column.Name]'/>" +
                                                  "</div>" +
                                                   "<div ng-switch-when='SelectKeyValue' style='min-width=50px;'>" +
-                                                     "<ui-select ng-model='row[column.Name]' style='width:200px;' name='fieldControl' reset-search-input='true'>" +
+                                                     "<ui-select ng-model='row[column.Name]' style='width:200px;' name='fieldControl' reset-search-input='true' ng-click='clearOptions(column)'>" +
                                                          "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
-                                                         "<ui-select-choices repeat='option.Key as option in column.Options | filter: $select.search'>" +
+                                                         "<ui-select-choices repeat='option.Key as option in column.FilteredOptions | filter: $select.search' refresh='refreshOptions($select.search,column)' refresh-delay='0'>" +
                                                          "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
                                                          "</ui-select-choices>" +
                                                      "</ui-select>" +

@@ -622,6 +622,11 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
                             break;
                         case "SelectTagging":
                             columnDefinitions.push({
+                                field: column.Name, editableCellTemplate: '/Views/EasyModal/UiGridSelectTagging.html', editDropdownOptionsArray: column.Options
+                            });
+                            break;
+                        case "SelectKeyValue":
+                            columnDefinitions.push({
                                 field: column.Name, editableCellTemplate: '/Views/EasyModal/UiGridSelect.html', editDropdownOptionsArray: column.Options
                             });
                             break;
@@ -634,7 +639,6 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
                 x.gridOptions = {
                     enableSorting: true,
                     enableGridMenu: false,
-                    flatEntityAccess: true,
                     enableFiltering: false,
                     enableColumnResizing: false,
                     enableColumnMenus: false,
