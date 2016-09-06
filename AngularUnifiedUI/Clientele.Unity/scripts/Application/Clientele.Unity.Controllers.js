@@ -645,6 +645,7 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
             }
         });
 
+
         $scope.option = {};
 
         $scope.tagTransform = function (value) {
@@ -662,6 +663,11 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         };
 
         $scope.addItemToDropdown = function (item, model, column) {
+
+            var index = column.Options.indexOf(item);
+            if (index > -1)
+                return;
+
             column.Options.push(item);
         }
 
