@@ -654,11 +654,23 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
             if (search.length < 3)
                 return [];
 
-            var containsOptions = column.FilteredOptions = Enumerable.From(column.Options)
+            var containsOptions = [];
+
+            Enumerable.From(column.Options)
                  .Where(function (x) {
-                     return x.toLowerCase().indexOf(search.toLowerCase()) > -1;
+                     if (x.toLowerCase().startsWith(search.toLowerCase())) {
+                         containsOptions.push(x);
+                     }
                  }).ToArray();
 
+            Enumerable.From(column.Options)
+                  .Where(function (x) {
+                      if (x.toLowerCase().indexOf(search.toLowerCase()) > 0) {
+                          containsOptions.push(x);
+                      }
+                  }).ToArray();
+
+            column.FilteredOptions = containsOptions;
             return containsOptions;
         }
 
