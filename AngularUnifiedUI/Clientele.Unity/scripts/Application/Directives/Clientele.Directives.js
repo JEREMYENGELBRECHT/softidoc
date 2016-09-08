@@ -601,6 +601,8 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                          "<th ng-repeat='column in field.Columns'>" +
                                              "<div ng-switch='column.Type'>" +
                                              "<div ng-switch-when='Hidden'></div>" +
+                                             "<div ng-if='column.DisplayName == null' style='cursor:pointer;' ng-switch-when='Checkbox' ng-click='selectAll(field,column)'>{{column.Name}}><input type='Checkbox' class='form-control input-sm' ng-model='column.selected'/></div>" +
+                                             "<div ng-if='column.DisplayName != null' style='cursor:pointer;' ng-switch-when='Checkbox' ng-click='selectAll(field,column)'>{{column.DisplayName}}<input type='Checkbox' class='form-control input-sm' ng-model='column.selected'/></div>" +
                                              "<div ng-if='column.DisplayName == null' ng-switch-default>{{column.Name}}</div>" +
                                              "<div ng-if='column.DisplayName != null' ng-switch-default>{{column.DisplayName}}</div>" +
                                              "</div>" +

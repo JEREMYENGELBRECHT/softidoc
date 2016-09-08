@@ -587,6 +587,13 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
             ];
         }
 
+        $scope.selectAll = function (field, column) {
+            Enumerable.From(field.Rows)
+                .ForEach(function (x) {
+                    x[column.Name] = column.selected;
+                });
+        };
+
         Enumerable.From($scope.fields)
             .ForEach(function (x) {
                 if (x.Type === "File") {
