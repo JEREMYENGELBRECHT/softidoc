@@ -641,9 +641,15 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                                                      "<input type='text' class='form-control input-sm' ng-model='row[column.Name]'/>" +
                                                  "</div>" +
                                                   "<div ng-switch-when='SelectKeyValue' style='min-width=50px;'>" +
-                                                     "<ui-select ng-model='row[column.Name]' style='width:200px;' name='fieldControl' reset-search-input='true' ng-click='clearOptions(column)'>" +
+                                                     "<ui-select ng-if='column.Options.length > 50' ng-model='row[column.Name]' style='width:200px;' name='fieldControl' reset-search-input='true' ng-click='clearOptions(column)'>" +
                                                          "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
                                                          "<ui-select-choices repeat='option.Key as option in column.FilteredOptions | filter: $select.search' refresh='refreshOptions($select.search,column)' refresh-delay='0'>" +
+                                                         "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
+                                                         "</ui-select-choices>" +
+                                                     "</ui-select>" +
+                                                       "<ui-select ng-if='column.Options.length <= 50' ng-model='row[column.Name]' style='width:200px;' name='fieldControl' reset-search-input='true' ng-click='clearOptions(column)'>" +
+                                                         "<ui-select-match placeholder='Select'>{{$select.selected.Value}}</ui-select-match>" +
+                                                         "<ui-select-choices repeat='option.Key as option in column.Options | filter: $select.search'>" +
                                                          "<small ng-bind-html='option.Value | highlight: $select.search'></small>" +
                                                          "</ui-select-choices>" +
                                                      "</ui-select>" +
