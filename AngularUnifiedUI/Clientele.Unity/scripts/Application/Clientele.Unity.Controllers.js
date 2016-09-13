@@ -658,7 +658,7 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
 
         $scope.refreshOptions = function (search, column) {
 
-            if (search.length < 3)
+            if (search.length < 2)
                 return [];
 
             var containsOptions = [];
