@@ -317,6 +317,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                 warningHeaderMessage: "=?",
                 enableEdit: '=?',
                 enableEditAvsr: '=?',
+                enableEditAvsrFailedpayment: '=?',
                 isPayable: '=?',
                 loadEvent: '=?',
                 cacheData: '=?',
