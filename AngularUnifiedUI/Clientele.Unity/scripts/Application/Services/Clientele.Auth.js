@@ -57,7 +57,7 @@ angular.module('Clientele.AuthControllers', [])
         $scope.CancelRegister = function () {
             $scope.isRegistering = false;
         };
-
+        
         $scope.LogInWithCredentials = function () {
             if ($scope.username == "" || $scope.password == "") {
                 alert("Please fill in both username and password.");
@@ -65,7 +65,7 @@ angular.module('Clientele.AuthControllers', [])
             }
 
             $scope.loggingIn = true;
-
+            
             authenticationService.Login({ isDomainLogin: false, username: $scope.username, password: $scope.password })
              .then(function (data) {
                  $scope.loggingIn = false;
@@ -210,8 +210,9 @@ angular.module('Clientele.Authentication', [])
         var deferred = $q.defer();
 
         if (loginParameters.isDomainLogin) {
-
+            alert("wwwwwwwwwwwwwww1231213");
             ajaxJsonService.Post(identityServiceApiUrl + "auth/login/windows").success(function (data) {
+                    console.log(data);
                 $rootScope.BearerToken = data.access_token;
                     $rootScope.lastOpenedDate = new Date();
 

@@ -283,6 +283,8 @@ var bootstrap = function () {
                 } else {
                     determineApplicationFromPath();
                 }
+
+                //determineApplicationFromPath();
             });
 
             cssInjector.add("/Content/UiAddons/angular-ui-tree.min.css");
