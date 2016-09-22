@@ -210,7 +210,7 @@ angular.module('Clientele.Authentication', [])
         var deferred = $q.defer();
 
         if (loginParameters.isDomainLogin) {
-            alert("wwwwwwwwwwwwwww1231213");
+            alert("HHHHHHHHHHHHHHHH");
             ajaxJsonService.Post(identityServiceApiUrl + "auth/login/windows").success(function (data) {
                     console.log(data);
                 $rootScope.BearerToken = data.access_token;
