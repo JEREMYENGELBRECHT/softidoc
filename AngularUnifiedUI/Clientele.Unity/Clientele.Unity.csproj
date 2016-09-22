@@ -503,6 +503,7 @@
     <Content Include="Content\UiAddons\ui-grid.woff" />
     <Content Include="Content\UiAddons\ui-grid.ttf" />
     <Content Include="Content\UiAddons\ui-grid.eot" />
+    <None Include="Properties\PublishProfiles\softidoc - Web Deploy.pubxml" />
     <None Include="scripts\JavascriptExtensions\linq-vsdoc.js" />
     <Content Include="scripts\JavascriptExtensions\linq.js" />
     <Content Include="scripts\JavascriptExtensions\linq.min.js" />
