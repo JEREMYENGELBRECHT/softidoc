@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C0C8BC
 		.nuget\NuGet.exe = .nuget\NuGet.exe
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Clientele.Unity", "Clientele.Unity\Clientele.Unity.csproj", "{80637435-8985-4C78-99DE-4FB6347DEE5F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftiDoc", "Clientele.Unity\SoftiDoc.csproj", "{80637435-8985-4C78-99DE-4FB6347DEE5F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
