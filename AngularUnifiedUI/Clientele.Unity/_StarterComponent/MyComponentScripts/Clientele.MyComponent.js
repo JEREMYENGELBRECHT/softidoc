@@ -2,10 +2,10 @@
 /* Component / Module Definition                                                              */
 /**********************************************************************************************/
 
-applicationHost.registerApplication("Clientele.MyComponent");
+applicationHost.registerApplication("SoftiDoc.MyComponent");
 
 /**********************************************************************************************/
-angular.module('Clientele.MyComponent', ['Clientele.MyComponent.Routes'])
+angular.module('SoftiDoc.MyComponent', ['SoftiDoc.MyComponent.Routes'])
     .run(['unityApplicationRepository', function (unityApplicationRepository, cssInjector) {
 
         
@@ -16,28 +16,28 @@ angular.module('Clientele.MyComponent', ['Clientele.MyComponent.Routes'])
         var configuration = {
             Id: myApplicationGuid,
             searchUrl: "/" + componentKey + "/search/",
-            applicationName: "Clientele MyComponent",
+            applicationName: "SoftiDoc MyComponent",
             icon: "/content/images/myComponent.png",
-            IdentityPrefix: "Clientele.MyComponent"
+            IdentityPrefix: "SoftiDoc.MyComponent"
         };
 
         var titleBarNavigation = [];
 
 
-        titleBarNavigation.push({ url: '#/' + componentKey + '/', label: 'MyComponent Home', requiredClaim: "Clientele.MyComponent" });
+        titleBarNavigation.push({ url: '#/' + componentKey + '/', label: 'MyComponent Home', requiredClaim: "SoftiDoc.MyComponent" });
 
         titleBarNavigation.push({
-            url: '#/' + componentKey + '/Documents/', label: 'Documents', requiredClaim: "Clientele.MyComponent",
+            url: '#/' + componentKey + '/Documents/', label: 'Documents', requiredClaim: "SoftiDoc.MyComponent",
             childNavItems:
             [
-                { url: '#/' + componentKey + '/Documents/Upload/', label: 'Upload file', requiredClaim: "Clientele.RecordStore.Upload" },
+                { url: '#/' + componentKey + '/Documents/Upload/', label: 'Upload file', requiredClaim: "SoftiDoc.RecordStore.Upload" },
             ]
         });
         
 
-        titleBarNavigation.push({ url: '#/' + componentKey + '/Administer/', label: 'Administer', requiredClaim: "Clientele.MyComponent.Administer" });
+        titleBarNavigation.push({ url: '#/' + componentKey + '/Administer/', label: 'Administer', requiredClaim: "SoftiDoc.MyComponent.Administer" });
 
         unityApplicationRepository.addApplication(componentKey, titleBarNavigation, configuration);
         
-        //cssInjector.add("/Content/Components/Clientele.MyComponent.css");
+        //cssInjector.add("/Content/Components/SoftiDoc.MyComponent.css");
     }]);

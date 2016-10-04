@@ -11,22 +11,22 @@ Adding my Application
 
 To create a new component or "application" within the Unity host, you will need to do the following:
 1.	Copy and rename the "MyComponentScripts" folder to /scripts/Application/Components/MyNewComponentName/
-2.	 Rename Clientele.MyComponent.js to your component name keeping with the naming convention.
-3.	Rename all other Clientele.MyComponent.*.js files to your component name keeping with the naming conventions.
+2.	 Rename SoftiDoc.MyComponent.js to your component name keeping with the naming convention.
+3.	Rename all other SoftiDoc.MyComponent.*.js files to your component name keeping with the naming conventions.
 4.	 In each of the files, update the names of your modules to match the file names as well as changing the dependency names.
 5.	In the Index.html page in the root of the application host, add the following replacing MyComponent with your component name:
-<script src="/scripts/Application/Components/MyComponent/Clientele.MyComponent.js"></script>
-<script src="/scripts/Application/Components/MyComponent/Clientele.MyComponent.Routes.js"></script>
-<script src="/scripts/Application/Components/MyComponent/Clientele.MyComponent.Controllers.js"></script>
-<script src="/scripts/Application/Components/MyComponent/Clientele.MyComponent.Services.js"></script>
+<script src="/scripts/Application/Components/MyComponent/SoftiDoc.MyComponent.js"></script>
+<script src="/scripts/Application/Components/MyComponent/SoftiDoc.MyComponent.Routes.js"></script>
+<script src="/scripts/Application/Components/MyComponent/SoftiDoc.MyComponent.Controllers.js"></script>
+<script src="/scripts/Application/Components/MyComponent/SoftiDoc.MyComponent.Services.js"></script>
 Note The following in terms of module dependency/hierarchy:
 a.	Your application needs routes to know where to direct uri/urls to.
 b.	Your routes need controllers to know how to control/manage each of the urls.
-c.	Your controllers need Unity ApplicationHost services and/or custom services as defined in Clientele.MyComponent.Services.js
+c.	Your controllers need Unity ApplicationHost services and/or custom services as defined in SoftiDoc.MyComponent.Services.js
  
 
-In Clientele.MyComponent.js ( renamed ) :
-1.	Change registerApplication.registerApplication("Clientele.MyComponent"); to use your component namespace – this will register your component with the applications module - this is crucial for your application module to be included in the application.
+In SoftiDoc.MyComponent.js ( renamed ) :
+1.	Change registerApplication.registerApplication("SoftiDoc.MyComponent"); to use your component namespace – this will register your component with the applications module - this is crucial for your application module to be included in the application.
 2.	Generate a sequential guid and replace the value for myApplicationGuid (The system won't allow duplicates and a first declared approach will take place to keep the application running)
 3.	Change your component key (text not guid or int) to a unique key for your application (The system won't allow duplicates and a first declared approach will take place to keep the application running)
 4.	Change the searchUrl value to match your search functionality ( "" defines no searching capability )
@@ -40,21 +40,21 @@ iii.	 requiredClaim : required claim to access the page/section/area ( could be 
 9.	The "cssInjector" service has been injected for you to be able to add custom CSS files and register them so that they only ever get added once.  If you are adding additional UI component css files, you would do this here as well, so that if another is reusing the css, it only ever gets added once by means of the cssInjector service.
 NB: Your application key must match your paths used in the Routes module.
  
-In Clientele.MyComponent.Routes.js
-1.	Change the component key to match that used in the Clientele.MyComponent.js file
+In SoftiDoc.MyComponent.Routes.js
+1.	Change the component key to match that used in the SoftiDoc.MyComponent.js file
 2.	Define your routes/entry points to parts of your component in the routeProvider sections  DO NOT define an "otherwise" option - this will stop all further route definitions from being added!
 
 Note: Angular is case sensitive to Urls by default - the starter application by default makes it caseInSensitive.
 3.	templareUrl html files are to be placed in /Views/MyComponentKey/
 4.	Define controllers if needs be each of the routes in quotes - the controllers will be defined in the controllers file. The convention is myComponent[View]Controller
-In Clientele.MyComponent.Controllers.js
+In SoftiDoc.MyComponent.Controllers.js
 1.	Change the module name if needs be to match
 2.	Create controllers matching those in the route definitions
 3.	Note: The Array declaration is the angular preferred method of controller declaration
-4.	The Example for the Upload controller shows how inject the current applicationId as you defined in your Clientele.MyComponent.js file as well as an apiUrl defined in the configuration section ( See the "add your api Configuration for deployment" below )
+4.	The Example for the Upload controller shows how inject the current applicationId as you defined in your SoftiDoc.MyComponent.js file as well as an apiUrl defined in the configuration section ( See the "add your api Configuration for deployment" below )
 5.	Certain directives such as the file upload directives explicitly require you to tell it which application is consuming it and where to send the file to. This allows the directives to be more flexible and reusable with other Apis.
 6.	Note the module dependency and injection of the myComponentApiService in myComponentIndexController
-In Clientele.MyComponent.Services.js
+In SoftiDoc.MyComponent.Services.js
 The Starter sample has an Api service for you to start with and you will note the following:
 1.	the ajaxJsonService is injected for you to call the underlying Get, Put, Post and Delete data integration calls
 2.	The $rootScope is only injected to pass the bearer token for XHR file downloading with authentication
@@ -71,16 +71,16 @@ b.	If you only need your service to be initialised on first call through the dep
 c.	Factory and Service both are singletons and they live for the lifetime of the application. The only difference is that "Service" will initialise/construct on declaration and Factory will initialise/construct on construction of the object/controller it is being injected into.
 
 Adding my Views
-1.	Copy the MyComponentViews folder to /Views/MyComponent/ renaming MyComponent to match the urls you defined in your Clientele.MyComponent.Routes.js file
+1.	Copy the MyComponentViews folder to /Views/MyComponent/ renaming MyComponent to match the urls you defined in your SoftiDoc.MyComponent.Routes.js file
 2.	Add corresponding html files to the folder ( no html, body , script or head tags - only those that normally exist in the Body )
 
 How do I add security
 1.	The title navigation and side application navigation are automatically taken care of by the Host using the requiredClaims you configured in the application registration.
 2.	In the html view you can use the "authorise-access" directive as an element for authorisation nesting or as an attribute for a component:
 E.g. 
-<authorise-access sectionname="MyComponent Section" claim-required="Clientele.MyComponent.Upload" redirect="false">    Content in here.. child components </authorise-access>
+<authorise-access sectionname="MyComponent Section" claim-required="SoftiDoc.MyComponent.Upload" redirect="false">    Content in here.. child components </authorise-access>
 or
-<div authorise-access sectionname="MyComponent Section" claim-required="Clientele.MyComponent.Upload" redirect="false"> Content in here.. child components </div>
+<div authorise-access sectionname="MyComponent Section" claim-required="SoftiDoc.MyComponent.Upload" redirect="false"> Content in here.. child components </div>
 
 Directive Options:
 1.	redirect [ false: text will be replaced with section name, true : the entire view is redirected to a noaccess page]
@@ -90,9 +90,9 @@ Directive Options:
  
 Note: if you wish to check multiple types of access with an "And" logic you will need to nest the directives.
 E.g.
-<authorise-access sectionname="MyComponent Section View" claim-required="Clientele.MyComponent.Read" redirect="false">   
+<authorise-access sectionname="MyComponent Section View" claim-required="SoftiDoc.MyComponent.Read" redirect="false">   
  	    First Level Content
-<authorise-access sectionname="MyComponent Section Edit" claim-required="Clientele.MyComponent.Edit" redirect="false"> 
+<authorise-access sectionname="MyComponent Section Edit" claim-required="SoftiDoc.MyComponent.Edit" redirect="false"> 
     Second level content
 </authorise-access>
 </authorise-access>
@@ -100,7 +100,7 @@ How Do I get the my services to know about my api url and how can I get it confi
 
 Add your api Configuration for deployment:
 1.	In the /Configuration/Examples/serverConfiguration.json file add a unique entry for your apiUrl, similar to:
- "identityServiceApiUrl" : http://useridentity.clientele.local/api/"
+ "identityServiceApiUrl" : http://useridentity.SoftiDoc.local/api/"
 2.	Talk to whoever is in charge of deployment to add a corresponding entry and values for test, uat and production to Octopus.
 3.	 In the /Configuration/serverConfiguration.json file (if it is not there copy/paste it from examples) add a unique entry for your api that you will be testing with,  that matches the one you will use in your services.
 

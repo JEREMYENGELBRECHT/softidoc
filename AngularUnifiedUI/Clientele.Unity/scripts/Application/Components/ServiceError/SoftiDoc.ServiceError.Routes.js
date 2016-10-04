@@ -3,7 +3,7 @@
 /* Routing Requires the controllers for assignment to a route - these use the 'lookup' method */
 /**********************************************************************************************/
 
-angular.module('Clientele.ServiceError.Routes', ['Clientele.ServiceError.Controllers'])
+angular.module('SoftiDoc.ServiceError.Routes', ['SoftiDoc.ServiceError.Controllers'])
     .config(function ($routeProvider) {
 
         var componentKey = "ServiceError";

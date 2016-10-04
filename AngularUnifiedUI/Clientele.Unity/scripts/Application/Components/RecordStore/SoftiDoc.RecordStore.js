@@ -3,19 +3,19 @@
 /* Includes the reference to the data API and the route definitions for the component itself  */
 /**********************************************************************************************/
 
-applicationHost.registerApplication("Clientele.RecordStore");
+applicationHost.registerApplication("SoftiDoc.RecordStore");
 
-applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/Clientele.RecordStore.Routes.js");
-applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/Clientele.RecordStore.Services.js");
-applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/Controllers/Clientele.RecordStore.Controllers.AdvancedSearch.js");
-applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/Controllers/Clientele.RecordStore.Controllers.js");
+applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/SoftiDoc.RecordStore.Routes.js");
+applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/SoftiDoc.RecordStore.Services.js");
+applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/Controllers/SoftiDoc.RecordStore.Controllers.AdvancedSearch.js");
+applicationHost.registerJavaScript("/scripts/Application/Components/RecordStore/Controllers/SoftiDoc.RecordStore.Controllers.js");
 
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore', ['Clientele.RecordStore.Routes', 'Clientele.RecordStore.Services'])
+angular.module('SoftiDoc.RecordStore', ['SoftiDoc.RecordStore.Routes', 'SoftiDoc.RecordStore.Services'])
     .run(function (unityApplicationRepository, cssInjector) {
 
         var recordStoreGuid = "a179f72d-dd66-cae9-895d-08d0b96e23c5";
-        var configuration = { Id: recordStoreGuid, searchUrl: "/recordstore/advancedSearch/", applicationName: "Clientèle Record Store", icon: "/content/images/recordStoreIcon.jpg", IdentityPrefix: "Clientele.RecordStore" };
+        var configuration = { Id: recordStoreGuid, searchUrl: "/recordstore/advancedSearch/", applicationName: "Clientèle Record Store", icon: "/content/images/recordStoreIcon.jpg", IdentityPrefix: "SoftiDoc.RecordStore" };
 
         var titleBarNavigation = [];
 

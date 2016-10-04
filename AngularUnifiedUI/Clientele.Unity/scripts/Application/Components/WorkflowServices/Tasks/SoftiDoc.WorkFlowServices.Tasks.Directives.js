@@ -77,7 +77,7 @@
         };
     };
 
-    angular.module('Clientele.WorkFlowServices.Tasks.Directives', [])
+    angular.module('SoftiDoc.WorkFlowServices.Tasks.Directives', [])
     .directive("workflowTaskDashboard", workflowTaskDashboard)
     .directive("workflowAdvancedTaskDashboard", workflowAdvancedTaskDashboard)
     .directive("workflowActions", workflowActions);

@@ -1,4 +1,4 @@
-﻿angular.module('Clientele.Directives.FormFields', [])
+﻿angular.module('SoftiDoc.Directives.FormFields', [])
     .directive('fileUpload', function () {
         return {
             scope: true,        //create a new scope

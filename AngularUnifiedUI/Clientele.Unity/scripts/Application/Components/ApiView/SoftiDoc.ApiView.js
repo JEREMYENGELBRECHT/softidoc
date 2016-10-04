@@ -2,10 +2,10 @@
 /* Component / Module Definition                                                              */
 /**********************************************************************************************/
 
-applicationHost.registerApplication("Clientele.ApiView");
+applicationHost.registerApplication("SoftiDoc.ApiView");
 
 /**********************************************************************************************/
-angular.module('Clientele.ApiView', ['Clientele.ApiView.Routes'])
+angular.module('SoftiDoc.ApiView', ['SoftiDoc.ApiView.Routes'])
     .run(['unityApplicationRepository', function (unityApplicationRepository) {
 
 
@@ -16,11 +16,11 @@ angular.module('Clientele.ApiView', ['Clientele.ApiView.Routes'])
 
         var configuration = {
             Id: myApplicationGuid,
-            applicationName: "Clientele Api View",
+            applicationName: "SoftiDoc Api View",
             icon: "/content/images/apiview.png",
             WorkFlowServiceApiUrl: "http://localhost:52421/api/",
 
-            IdentityPrefix: "Clientele.ApiView"
+            IdentityPrefix: "SoftiDoc.ApiView"
         };
 
         var titleBarNavigation = [];

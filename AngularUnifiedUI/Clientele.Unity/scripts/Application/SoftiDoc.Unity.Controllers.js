@@ -1,7 +1,7 @@
 ﻿/**********************************************************************************************/
 /* Controllers                                                                                */
 /**********************************************************************************************/
-angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
+angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
     .controller("MainUIController", ["$scope", "notificationService", '$location', '$timeout', 'unityApplicationRepository', 'localStorageService', function ($scope, notificationService, $location, $timeout, unityApplicationRepository, localStorageService) {
         $scope.user = { accountName: "", givenName: "", surname: "" };
 
@@ -496,7 +496,7 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         });
 
     }])
-.controller('Clientele.Gsd.Controllers.DepartmentNameSelectController', [
+.controller('SoftiDoc.Gsd.Controllers.DepartmentNameSelectController', [
     '$scope', 'uiLoader', 'ajaxJsonService', '$modal', function ($scope, uiLoader, ajaxJsonService, $modal) {
 
         $scope.open = function () {
@@ -504,11 +504,11 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
         };
 
         function showModal() {
-            var configuration = applicationHost.retrieveApplicationConfigurationById('Clientele.ApplicationFormsCapture');
+            var configuration = applicationHost.retrieveApplicationConfigurationById('SoftiDoc.ApplicationFormsCapture');
 
             var modalInstance = $modal.open({
                 templateUrl: '/Views/Gsd/departmentSelectModal.html',
-                controller: 'Clientele.Gsd.Controllers.DepartmentNameSelectModalController',
+                controller: 'SoftiDoc.Gsd.Controllers.DepartmentNameSelectModalController',
                 size: 'lg',
                 resolve: {
                     model: function () {
@@ -523,7 +523,7 @@ angular.module('Clientele.Unity.Controllers', ['Clientele.AuthControllers'])
             });
         }
     }
-]).controller('Clientele.Gsd.Controllers.DepartmentNameSelectModalController', ['$scope', '$modalInstance', '$http', 'model', 'ajaxJsonService', 'gsdApiUrl',
+]).controller('SoftiDoc.Gsd.Controllers.DepartmentNameSelectModalController', ['$scope', '$modalInstance', '$http', 'model', 'ajaxJsonService', 'gsdApiUrl',
  function ($scope, $modalInstance, $http, model, ajaxJsonService, gsdApiUrl) {
 
      $scope.model = model;

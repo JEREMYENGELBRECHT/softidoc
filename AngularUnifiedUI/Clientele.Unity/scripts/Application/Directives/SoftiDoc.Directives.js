@@ -4,7 +4,7 @@
 
 //var buildNumber = configuration.BuildNumber;
 
-angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
+angular.module('SoftiDoc.Directives', ['SoftiDoc.Directives.FormFields'])
     .directive('applicationMode', function (runningMode) {
         return {
             restrict: 'AE',
@@ -371,7 +371,7 @@ angular.module('Clientele.Directives', ['Clientele.Directives.FormFields'])
                 scope: {
                     sourceDepartment: '='
                 },
-                controller: 'Clientele.Gsd.Controllers.DepartmentNameSelectController',
+                controller: 'SoftiDoc.Gsd.Controllers.DepartmentNameSelectController',
                 template: '<div class="btn btn-default input-group-addon" ng-click="open()"><b>...</b></div>'
             }
         }

@@ -2,7 +2,7 @@
 /* Api Services                                                                                   */
 /* Services to separate our data logic from our view logic                                    */
 /**********************************************************************************************/
-angular.module('Clientele.WorkFlowServices.Services', [])
+angular.module('SoftiDoc.WorkFlowServices.Services', [])
     .factory('workflowServicesManagementApiService', function (ajaxJsonService, unityApplicationRepository, $location) {
 
         var determineApplicationFromPath = function () {

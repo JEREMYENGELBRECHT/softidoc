@@ -90,6 +90,7 @@
     <Content Include="Content\UiAddons\select2x2.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Index.html" />
     <Content Include="scripts\Angular\angular-ui\ui-utils-ieshiv.js" />
     <Content Include="scripts\Angular\angular-ui\ui-utils-ieshiv.min.js" />
     <Content Include="scripts\Angular\angular-ui\ui-utils.js" />
@@ -99,17 +100,17 @@
     <Content Include="scripts\Angular\ng-grid.min.js" />
     <Content Include="scripts\Angular\ng-magnify.js" />
     <Content Include="scripts\Angular\ngDraggable.js" />
-    <Content Include="scripts\Application\Clientele.Unity.Controllers.js" />
-    <Content Include="scripts\Application\Clientele.Unity.EnvironmentConstants.js" />
-    <Content Include="scripts\Application\Clientele.Unity.Routes.js" />
-    <Content Include="scripts\Application\Components\ApiView\Clientele.ApiView.Controllers.js" />
-    <Content Include="scripts\Application\Components\ApiView\Clientele.ApiView.js" />
-    <Content Include="scripts\Application\Components\ApiView\Clientele.ApiView.Routes.js" />
-    <Content Include="scripts\Application\Components\RecordStore\Controllers\Clientele.RecordStore.Controllers.AdvancedSearch.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\Clientele.WorkFlowServices.Tasks.Directives.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\Clientele.WorkFlowServices.Tasks.Services.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\Clientele.WorkFlowServices.Tasks.Controllers.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\Clientele.WorkFlowServices.Tasks.js" />
+    <Content Include="scripts\Application\SoftiDoc.Unity.Controllers.js" />
+    <Content Include="scripts\Application\SoftiDoc.Unity.EnvironmentConstants.js" />
+    <Content Include="scripts\Application\SoftiDoc.Unity.Routes.js" />
+    <Content Include="scripts\Application\Components\ApiView\SoftiDoc.ApiView.Controllers.js" />
+    <Content Include="scripts\Application\Components\ApiView\SoftiDoc.ApiView.js" />
+    <Content Include="scripts\Application\Components\ApiView\SoftiDoc.ApiView.Routes.js" />
+    <Content Include="scripts\Application\Components\RecordStore\Controllers\SoftiDoc.RecordStore.Controllers.AdvancedSearch.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.Directives.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.Services.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.Controllers.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.js" />
     <Content Include="scripts\Application\HelperFunctions.js" />
     <Content Include="scripts\CorsRequests.js" />
     <Content Include="scripts\Application\Directives\VenueModal.html">
@@ -134,19 +135,19 @@
     <Content Include="Views\EasyModal\UiGridSelectTagging.html" />
     <Content Include="Views\EasyModal\UiGridSelect.html" />
     <Content Include="Views\Gsd\departmentSelectModal.html" />
-    <Content Include="scripts\Application\Components\ServiceError\Clientele.ServiceError.js" />
-    <Content Include="scripts\Application\Components\ServiceError\Clientele.ServiceError.Controllers.js" />
-    <Content Include="scripts\Application\Components\ServiceError\Clientele.ServiceError.Routes.js" />
-    <Content Include="scripts\Application\Components\ServiceError\Clientele.ServiceError.Services.js" />
+    <Content Include="scripts\Application\Components\ServiceError\SoftiDoc.ServiceError.js" />
+    <Content Include="scripts\Application\Components\ServiceError\SoftiDoc.ServiceError.Controllers.js" />
+    <Content Include="scripts\Application\Components\ServiceError\SoftiDoc.ServiceError.Routes.js" />
+    <Content Include="scripts\Application\Components\ServiceError\SoftiDoc.ServiceError.Services.js" />
     <Content Include="scripts\Angular\bindonce.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Clientele.WorkFlowServices.Controllers.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Clientele.WorkFlowServices.Directives.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Clientele.WorkFlowServices.Services.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.Controllers.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.Directives.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.Services.js" />
     <Content Include="scripts\Application\SharedObjectDefinitions.js" />
     <Content Include="scripts\jQuery\jquery.signalR-2.0.3.js" />
     <Content Include="scripts\jQuery\jquery.signalR-2.0.3.min.js" />
     <Content Include="scripts\jQuery\jquery.blockUI.js" />
-    <Content Include="scripts\jQuery\jquery.clientele.signalR.js" />
+    <Content Include="scripts\jQuery\jquery.SoftiDoc.signalR.js" />
     <Content Include="scripts\JavascriptExtensions\Date\moment-with-langs.js" />
     <Content Include="scripts\JavascriptExtensions\Date\moment-with-langs.min.js" />
     <Content Include="scripts\JavascriptExtensions\Date\moment.js" />
@@ -235,7 +236,7 @@
     </Content>
     <Content Include="css\jasmine.css" />
     <Content Include="IdentityNotFound.html" />
-    <Content Include="Index.html" />
+    <Content Include="Index1.html" />
     <Content Include="NoAccessRights.html" />
     <Content Include="scripts\Angular\angular-animate.js" />
     <Content Include="scripts\Angular\angular-animate.min.js" />
@@ -244,10 +245,10 @@
     <Content Include="scripts\Angular\angular-csp.css" />
     <Content Include="scripts\Angular\angular-local-storage.js" />
     <Content Include="scripts\Angular\ngCookies.js" />
-    <Content Include="scripts\Application\Components\RecordStore\Clientele.RecordStore.Routes.js" />
-    <Content Include="scripts\Application\Directives\Clientele.Directives.FormFields.js" />
-    <Content Include="scripts\Application\Components\RecordStore\Controllers\Clientele.RecordStore.Controllers.js" />
-    <Content Include="scripts\Application\Components\RecordStore\Clientele.RecordStore.Services.js" />
+    <Content Include="scripts\Application\Components\RecordStore\SoftiDoc.RecordStore.Routes.js" />
+    <Content Include="scripts\Application\Directives\SoftiDoc.Directives.FormFields.js" />
+    <Content Include="scripts\Application\Components\RecordStore\Controllers\SoftiDoc.RecordStore.Controllers.js" />
+    <Content Include="scripts\Application\Components\RecordStore\SoftiDoc.RecordStore.Services.js" />
     <Content Include="PreDeploy.ps1" />
     <Content Include="Configuration\Permissions.json" />
     <Content Include="Configuration\serverConfiguration.json">
@@ -255,7 +256,7 @@
     </Content>
     <Content Include="scripts\Angular\errors.json" />
     <Content Include="scripts\Angular\version.json" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Clientele.WorkFlowServices.js" />
+    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.js" />
     <Content Include="Content\UiAddons\ui-grid.woff" />
     <Content Include="Content\UiAddons\ui-grid.ttf" />
     <Content Include="Content\UiAddons\ui-grid.eot" />
@@ -281,13 +282,13 @@
     <Content Include="scripts\Angular\angular-touch.min.js" />
     <Content Include="scripts\Angular\angular.js" />
     <Content Include="scripts\Angular\angular.min.js" />
-    <Content Include="scripts\Application\Services\Clientele.Services.js" />
+    <Content Include="scripts\Application\Services\SoftiDoc.Services.js" />
     <Content Include="scripts\UI\bootstrap.js" />
     <Content Include="scripts\UI\bootstrap.min.js" />
     <Content Include="scripts\Application\Configuration\startup.js" />
-    <Content Include="scripts\Application\Directives\Clientele.Directives.js" />
-    <Content Include="scripts\Application\Components\RecordStore\Clientele.RecordStore.js" />
-    <Content Include="scripts\Application\Filters\Clientele.Formatting.js" />
+    <Content Include="scripts\Application\Directives\SoftiDoc.Directives.js" />
+    <Content Include="scripts\Application\Components\RecordStore\SoftiDoc.RecordStore.js" />
+    <Content Include="scripts\Application\Filters\SoftiDoc.Formatting.js" />
     <Content Include="Content\UiAddons\fonts\glyphicons-halflings-regular.woff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -306,7 +307,7 @@
     <Content Include="scripts\Angular\angular-loader.min.js.map" />
     <Content Include="scripts\Angular\angular-cookies.min.js.map" />
     <Content Include="scripts\Angular\angular-animate.min.js.map" />
-    <Content Include="scripts\Application\Services\Clientele.Auth.js" />
+    <Content Include="scripts\Application\Services\SoftiDoc.Auth.js" />
     <None Include="scripts\jQuery\jquery-2.1.0.intellisense.js" />
     <Content Include="scripts\Angular\i18n\angular-locale_af-na.js" />
     <Content Include="scripts\Angular\i18n\angular-locale_af-za.js" />
@@ -738,7 +739,7 @@
     <Content Include="scripts\UI\jsPDF\web\viewer.js" />
     <Content Include="scripts\JavascriptExtensions\lodash.js" />
     <Content Include="scripts\JavascriptExtensions\lodash.min.js" />
-    <Content Include="scripts\Application\Clientele.Unity.js" />
+    <Content Include="scripts\Application\SoftiDoc.Unity.js" />
     <Content Include="scripts\UI\ngInclude.js" />
     <Content Include="scripts\Angular\restangular.js" />
     <Content Include="scripts\Angular\route.js" />

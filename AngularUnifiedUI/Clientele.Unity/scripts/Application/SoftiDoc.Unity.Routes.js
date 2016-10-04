@@ -2,7 +2,7 @@
 /* Routing                                                                                    */
 /* Routing Requires the controllers for assignment to a route - these use the 'lookup' method */
 /**********************************************************************************************/
-angular.module('Clientele.Unity.Routes', ['Clientele.Unity.Controllers', 'Clientele.Unity.EnvironmentVariables', 'ngRoute'])
+angular.module('SoftiDoc.Unity.Routes', ['SoftiDoc.Unity.Controllers', 'SoftiDoc.Unity.EnvironmentVariables', 'ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider.
             when("/", { templateUrl: '/Views/Unity/home.html' }).

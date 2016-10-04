@@ -1,7 +1,7 @@
 ﻿/**********************************************************************************************/
 /* Api Services                                                                                   */
 /**********************************************************************************************/
-angular.module('Clientele.ServiceError.Services', [])
+angular.module('SoftiDoc.ServiceError.Services', [])
     .factory('serviceErrorApiService', function (ajaxJsonService, serviceErrorApiUrl) {
         
         var myComponentResourceUrl = serviceErrorApiUrl + "/ServiceErrorResource/";

@@ -2,7 +2,7 @@
 /* Controllers                                                                                */
 /* Controllers require the data API (recordStoreApiService) for JSON calls                    */
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore.Controllers.AdvancedSearch', [])
+angular.module('SoftiDoc.RecordStore.Controllers.AdvancedSearch', [])
     .controller('recordAdvancedSearchController', ['$scope', 'recordStoreApiService', 'recordStoreApplicationApiUrl', 'uiLoader', 'httpResponseService','$routeParams',
         function ($scope, recordStoreApiService, recordStoreApplicationApiUrl, uiLoader, httpResponseService, $routeParams) {
           

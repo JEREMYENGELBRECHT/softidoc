@@ -1,19 +1,19 @@
 ﻿/**********************************************************************************************/
 (function () {
-    angular.module('Clientele.WorkFlowServices.Tasks.Services', [])
-        .service('Clientele.WorkFlowServices.Tasks.Services.ApplicationService',
+    angular.module('SoftiDoc.WorkFlowServices.Tasks.Services', [])
+        .service('SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationService',
         [
-            'Clientele.WorkFlowServices.Tasks.Services.ApplicationRepository',
-            'Clientele.WorkFlowServices.Tasks.SharedData',
+            'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationRepository',
+            'SoftiDoc.WorkFlowServices.Tasks.SharedData',
             'eventBroadcastingService',
             'ajaxJsonService',
             'workflowServicesManagementApiService',
-            'Clientele.WorkFlowServices.Tasks.ModalService',
+            'SoftiDoc.WorkFlowServices.Tasks.ModalService',
             '$filter', '$route',
 
             function (tasksApplicationRepository, sharedTaskData, eventBroadcastingService, ajaxJsonService, workflowServicesManagementApiService, modalService, $filter, $route) {
 
-                //var configuration = applicationHost.retrieveApplicationConfigurationById('Clientele.ApplicationFormsCapture');
+                //var configuration = applicationHost.retrieveApplicationConfigurationById('SoftiDoc.ApplicationFormsCapture');
                 var sourceUrl = "";//configuration.UnityUrl;
 
                 function filterDate(data) {
@@ -45,33 +45,33 @@
                 };
 
                 function delegateTask(taskId, comment, reason, userId) {
-                    eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionStarted');
+                    eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionStarted');
                     ajaxJsonService.Post(workflowServicesManagementApiService.getWorkflowApiUrl() + 'TaskOwnership/' + taskId + '/Delegate', { OwnerId: userId, Comment: comment, Reason: reason })
                             .then(function (result) {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.DelegateSuccess', result);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.DelegateSuccess', result);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Delegate Task', message: 'Task Was Delegated Successfully.', Success: "success" });
                                 $route.reload();
                             })
                             .catch(function (result) {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.DelegateFailed', result);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.DelegateFailed', result);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Delegate Task', message: 'Task Delegation Failed.', Success: "error" });
                             });
                 }
 
                 function closeTask(formId, comment, reason, taskTemplateId, taskId) {
-                    eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionStarted');
+                    eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionStarted');
                     ajaxJsonService.Post(workflowServicesManagementApiService.getWorkflowApiUrl() + 'Tasks/Skip/' + taskId + '/Skip', { Comment: comment, Reason: reason, TaskId: taskId })
                             .then(function (result) {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.CloseSuccess', result);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.CloseSuccess', result);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Close Task', message: 'Task Was Closed Successfully.', Success: "success" });
                                 $route.reload();
                             })
                             .catch(function (result) {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.CloseFailed', result);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.CloseFailed', result);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Close Task', message: 'Close Task Failed.', Success: "error" });
                             });
                 }
@@ -80,17 +80,17 @@
 
                     var workFlowUrl = workflowServicesManagementApiService.getWorkflowApiUrl();
 
-                    eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionStarted');
+                    eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionStarted');
                     ajaxJsonService.Post(workFlowUrl + 'TaskOwnership/' + taskId + '/Revoke', { Comment: comment })
                             .then(function (result) {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.RevokeSuccess', result);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.RevokeSuccess', result);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Task Revoke', message: 'Task Was Revoked Successfully.', Success: "success" });
                                 $route.reload();
                             })
                             .catch(function (result) {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkFlow.Tasks.RevokeFailed', result);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlow.Tasks.RevokeFailed', result);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Task Revoke', message: 'Task Revoke Failed.', Success: "error" });
                             });
                 }
@@ -131,18 +131,18 @@
                 };
 
                 function postponeTask(taskId, dateTime, comment, reason) {
-                    eventBroadcastingService.broadcastEvent('Clientele.WorkFlowServices.TaskActionStarted');
+                    eventBroadcastingService.broadcastEvent('SoftiDoc.WorkFlowServices.TaskActionStarted');
 
                     ajaxJsonService.Post(workflowServicesManagementApiService.getWorkflowApiUrl() + 'Tasks/Postpone/' + taskId + '/Postpone', { DueDate: dateTime, Comment: comment, Reason: reason })
                         .then(function () {
-                            eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
-                            eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.AfterPostponeTaskComplete', null);
+                            eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
+                            eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.AfterPostponeTaskComplete', null);
                             eventBroadcastingService.broadcastEvent('UINotify', { title: 'Postpone Task', message: 'Postpone Task Success.', Success: "success" });
                             $route.reload();
                         })
                         .catch(function () {
-                            eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
-                            eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.AfterPostponeTaskComplete', null);
+                            eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
+                            eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.AfterPostponeTaskComplete', null);
                             eventBroadcastingService.broadcastEvent('UINotify', { title: 'Postpone Task', message: 'Postpone Task Failed.', Success: "error" });
                         });
                 }
@@ -176,66 +176,66 @@
                         });
                     },
                     claimTask: function (task) {
-                        eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionStarted');
+                        eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionStarted');
                         ajaxJsonService.Post(workflowServicesManagementApiService.getWorkflowApiUrl() + 'TaskOwnership/' + task.Id + '/Claim', null).then(function () {
-                            eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
+                            eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
                             eventBroadcastingService.broadcastEvent('UINotify', { title: 'Claim Task', message: 'Task Claimed Successfully', Success: "success" });
-                            eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.ClaimSuccess', task);
+                            eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.ClaimSuccess', task);
                             $route.reload();
                         });
                     },
                     assignTask: function (taskId) {
-                        eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionStarted');
+                        eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionStarted');
                         var success = function (result) {
                             ajaxJsonService.Post(workflowServicesManagementApiService.getWorkflowApiUrl() + 'TaskOwnership/' + taskId + '/Assign', { OwnerId: result })
                                 .then(function () {
-                                    eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
+                                    eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
                                     eventBroadcastingService.broadcastEvent('UINotify', { title: 'Assign Task', message: 'Task Assigned Successfully', Success: "success" });
-                                    eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.AssignSuccess', null);
+                                    eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.AssignSuccess', null);
                                 })
                                 .catch(function () {
-                                    eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
+                                    eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
                                     eventBroadcastingService.broadcastEvent('UINotify', { title: 'Assign Task', message: 'Failed To Assign Task', Success: "error" });
                                 });
                         };
                         modalService.showAssignTaskModal('Assign Task', 'User', workflowServicesManagementApiService.getWorkflowApiUrl() + 'Team', success);
                     },
                     postponeTask: function (task) {
-                        eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionStarted');
+                        eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionStarted');
                         ajaxJsonService.Get(workflowServicesManagementApiService.getWorkflowApiUrl() + task.TaskTemplateId + '/' + 1 + '/Reasons').then(function (result) {
                             var modalUrl = sourceUrl + '/Views/WorkflowServices/Tasks/Templates/postponeCaptureTask.tpl.html';
 
-                            var modal = modalService.showModal('Clientele.Tasks.Controllers.PostponeCaptureTaskController', modalUrl, { TaskId: task.Id, Reasons: result.data });
+                            var modal = modalService.showModal('SoftiDoc.Tasks.Controllers.PostponeCaptureTaskController', modalUrl, { TaskId: task.Id, Reasons: result.data });
                             modal.result.then(function (model) {
                                 postponeTask(task.Id, model.DateTime, model.Comment, model.Reason);
                             }, function () {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
                             });
                         });
                     },
                     escalateCaptureTask: function (taskId) {
-                        var modal = modalService.showModal('Clientele.ApplicationFormsCapture.EscalateCaptureTaskController', '/scripts/Application/Components/ApplicationFormsCapture/Common/Templates/escalateCaptureTask.tpl.html', taskId);
+                        var modal = modalService.showModal('SoftiDoc.ApplicationFormsCapture.EscalateCaptureTaskController', '/scripts/Application/Components/ApplicationFormsCapture/Common/Templates/escalateCaptureTask.tpl.html', taskId);
                         modal.result.then(function () {
-                            eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.AfterEscalateTaskComplete', null);
+                            eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.AfterEscalateTaskComplete', null);
                         }, function () {
 
                         });
                     },
                     acceptTask: function (taskId) {
-                        eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionStarted');
+                        eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionStarted');
                         return ajaxJsonService.Post(workflowServicesManagementApiService.getWorkflowApiUrl() + 'TaskOwnership/' + taskId + '/Accept').then(
                             function () {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.AcceptSuccess', taskId);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.AcceptSuccess', taskId);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Accept', message: 'Task Accepted', Success: "success" });
                             });
                     },
                     resumeTask: function (taskId) {
-                        eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionStarted');
+                        eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionStarted');
                         return ajaxJsonService.Post(workflowServicesManagementApiService.getWorkflowApiUrl() + 'Tasks/Resume/' + taskId + '/Resume').then(
                             function () {
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.TaskActionCompleted');
-                                eventBroadcastingService.broadcastEvent('Clientele.WorkflowServices.ResumeSuccess', taskId);
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.TaskActionCompleted');
+                                eventBroadcastingService.broadcastEvent('SoftiDoc.WorkflowServices.ResumeSuccess', taskId);
                                 eventBroadcastingService.broadcastEvent('UINotify', { title: 'Resume', message: 'Task Resumed', Success: "success" });
                             });
                     },
@@ -276,7 +276,7 @@
                     },
                 }
             }])
-        .service('Clientele.WorkFlowServices.Tasks.SharedData', function () {
+        .service('SoftiDoc.WorkFlowServices.Tasks.SharedData', function () {
 
             var taskActions = [
                 { Name: 'Unknown', Key: 0 },
@@ -300,7 +300,7 @@
                 TaskActions: taskActions
             };
         })
-        .service('Clientele.WorkFlowServices.Tasks.Services.ApplicationRepository', function ($location) {
+        .service('SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationRepository', function ($location) {
             var applicationConfigurations = [];
 
             //var queueRoutes = [{ Key: "InvalidForm", Route: "/ApplicationFormsCapture/InvalidFormTask/" }];
@@ -373,7 +373,7 @@
             }
             };
         })
-        .service('Clientele.WorkFlowServices.Tasks.Services.WebApiService', ['ajaxJsonService', 'workflowServicesManagementApiService', 'eventBroadcastingService', '$filter', function (ajaxJsonService, workflowServicesManagementApiService, eventBroadcastingService, $filter) {
+        .service('SoftiDoc.WorkFlowServices.Tasks.Services.WebApiService', ['ajaxJsonService', 'workflowServicesManagementApiService', 'eventBroadcastingService', '$filter', function (ajaxJsonService, workflowServicesManagementApiService, eventBroadcastingService, $filter) {
 
             function filterDate(data) {
 
@@ -449,13 +449,13 @@
                 }
             };
         }])
-        .service('Clientele.WorkFlowServices.Tasks.ModalService', ['$modal', 'eventBroadcastingService', function ($modal, eventBroadcastingService) {
+        .service('SoftiDoc.WorkFlowServices.Tasks.ModalService', ['$modal', 'eventBroadcastingService', function ($modal, eventBroadcastingService) {
 
-            //var configuration = applicationHost.retrieveApplicationConfigurationById('Clientele.ApplicationFormsCapture');
+            //var configuration = applicationHost.retrieveApplicationConfigurationById('SoftiDoc.ApplicationFormsCapture');
             var sourceUrl = "";//configuration.UnityUrl;
 
             function raiseTaskActionComplete() {
-                eventBroadcastingService.broadcastEvent('Clientele.Capture.TaskActionCompleted');
+                eventBroadcastingService.broadcastEvent('SoftiDoc.Capture.TaskActionCompleted');
             };
 
             return {
@@ -585,7 +585,7 @@
 
                     var modalInstance = $modal.open({
                         templateUrl: sourceUrl + '/Application/Common/Templates/captureMandatoryCommentModal.tpl.html',
-                        controller: 'Clientele.ApplicationFormsCapture.MandatoryCommentModalController',
+                        controller: 'SoftiDoc.ApplicationFormsCapture.MandatoryCommentModalController',
                         size: 'lg',
                         keyboard: false,
                         backdrop: 'static',
@@ -606,7 +606,7 @@
 
                     var modalInstance = $modal.open({
                         templateUrl: sourceUrl + '/Application/Common/Templates/availableTaskActionModal.tpl.html',
-                        controller: "Clientele.ApplicationFormsCapture.AvailableTaskActionModalController",
+                        controller: "SoftiDoc.ApplicationFormsCapture.AvailableTaskActionModalController",
                         resolve: {
                             model: function () {
                                 return { Name: name };

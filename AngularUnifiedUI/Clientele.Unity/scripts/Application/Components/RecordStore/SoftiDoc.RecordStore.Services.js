@@ -2,7 +2,7 @@
 /* Api Services                                                                                   */
 /* Services to separate our data logic from our view logic                                    */
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore.Services', [])
+angular.module('SoftiDoc.RecordStore.Services', [])
     .factory('recordStoreApiService', function (ajaxJsonService, recordStoreApplicationApiUrl, $rootScope) {
         var metaDataActions = {};
 

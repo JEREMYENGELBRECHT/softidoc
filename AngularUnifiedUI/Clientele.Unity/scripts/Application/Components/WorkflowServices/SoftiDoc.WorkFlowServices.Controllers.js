@@ -2,12 +2,12 @@
 /* Controllers                                                                                */
 /**********************************************************************************************/
 (function () {
-angular.module('Clientele.WorkFlowServices.Controllers', [])
+angular.module('SoftiDoc.WorkFlowServices.Controllers', [])
     .controller('workflowTeamListController', ['$scope', '$routeParams', 'workflowServicesManagementApiService', 'uiLoader', 'httpResponseService', 'identityMaintenanceApiService', '$q',
         function ($scope, $routeParams, workflowServicesManagementApiService, uiLoader, httpResponseService, identityMaintenanceApiService, $q) {
             $scope.teams = [];
 
-            $scope.$on('Clientele.Workflow.InitializeComplete', function () {
+            $scope.$on('SoftiDoc.Workflow.InitializeComplete', function () {
                 if ($scope.loadEvent == null)
                     $scope.loadData();
             });

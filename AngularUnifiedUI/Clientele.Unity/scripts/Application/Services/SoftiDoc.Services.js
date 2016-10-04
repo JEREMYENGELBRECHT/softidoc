@@ -1,4 +1,4 @@
-﻿angular.module('Clientele.Services', ['ngResource'])
+﻿angular.module('SoftiDoc.Services', ['ngResource'])
     .service('eventBroadcastingService', function ($rootScope) {
         return {
             broadcastEvent: function (event, message) {

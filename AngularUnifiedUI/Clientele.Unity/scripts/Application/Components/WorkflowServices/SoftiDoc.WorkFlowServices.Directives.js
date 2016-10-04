@@ -1,4 +1,4 @@
-﻿angular.module('Clientele.WorkFlowServices.Directives', [])
+﻿angular.module('SoftiDoc.WorkFlowServices.Directives', [])
     .directive('workflowTeamList', function () {
         return {
             restrict: 'E',
@@ -22,7 +22,7 @@
 
                 return {
                     post: function postLink(scope, iElement, iAttrs, controller) {
-                        scope.$broadcast('Clientele.Workflow.InitializeComplete', null);
+                        scope.$broadcast('SoftiDoc.Workflow.InitializeComplete', null);
                     }
                 };
             }

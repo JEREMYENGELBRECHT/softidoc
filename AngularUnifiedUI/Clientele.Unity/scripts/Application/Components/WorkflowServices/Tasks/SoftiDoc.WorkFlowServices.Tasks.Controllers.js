@@ -307,8 +307,8 @@
     }
 
     dashBoardController.$inject = [
-        '$scope', '$location', 'uiLoader', 'Clientele.WorkFlowServices.Tasks.Services.WebApiService',
-        'Clientele.WorkFlowServices.Tasks.Services.ApplicationService', 'Clientele.WorkFlowServices.Tasks.Services.ApplicationRepository', 'applicationId', 'unityApplicationRepository', 'httpResponseService'];
+        '$scope', '$location', 'uiLoader', 'SoftiDoc.WorkFlowServices.Tasks.Services.WebApiService',
+        'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationService', 'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationRepository', 'applicationId', 'unityApplicationRepository', 'httpResponseService'];
 
     var advancedDashboardController = function ($scope, $location, uiLoader, tasksWebApi, taskService, taskApplicationRepository, applicationId, unityApplicationRepository, httpResponseService) {
 
@@ -589,8 +589,8 @@
     }
 
     advancedDashboardController.$inject = [
-        '$scope', '$location', 'uiLoader', 'Clientele.WorkFlowServices.Tasks.Services.WebApiService',
-        'Clientele.WorkFlowServices.Tasks.Services.ApplicationService', 'Clientele.WorkFlowServices.Tasks.Services.ApplicationRepository', 'applicationId', 'unityApplicationRepository', 'httpResponseService'];
+        '$scope', '$location', 'uiLoader', 'SoftiDoc.WorkFlowServices.Tasks.Services.WebApiService',
+        'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationService', 'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationRepository', 'applicationId', 'unityApplicationRepository', 'httpResponseService'];
 
 
     var unassignedTasksController = function ($scope, $location, uiLoader, tasksWebApi, taskService, taskApplicationRepository, applicationId, unityApplicationRepository, httpResponseService) {
@@ -903,11 +903,11 @@
     }
 
     unassignedTasksController.$inject = [
-        '$scope', '$location', 'uiLoader', 'Clientele.WorkFlowServices.Tasks.Services.WebApiService',
-        'Clientele.WorkFlowServices.Tasks.Services.ApplicationService', 'Clientele.WorkFlowServices.Tasks.Services.ApplicationRepository', 'applicationId', 'unityApplicationRepository', 'httpResponseService'];
+        '$scope', '$location', 'uiLoader', 'SoftiDoc.WorkFlowServices.Tasks.Services.WebApiService',
+        'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationService', 'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationRepository', 'applicationId', 'unityApplicationRepository', 'httpResponseService'];
 
 
-    angular.module('Clientele.WorkFlowServices.Tasks.Controllers', [])
+    angular.module('SoftiDoc.WorkFlowServices.Tasks.Controllers', [])
         .controller("WorkflowServices.Tasks.Controllers.DashboardController", dashBoardController)
         .controller("WorkflowServices.Tasks.Controllers.AdvancedDashboardController", advancedDashboardController)
         .controller("WorkflowServices.Tasks.Controllers.UnassignedTaskController", unassignedTasksController)
@@ -917,12 +917,12 @@
             '$routeParams',
             '$rootScope',
             'recordStoreApplicationApiUrl',
-            'Clientele.WorkFlowServices.Tasks.Services.ApplicationService',
+            'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationService',
             'uiLoader',
             'eventBroadcastingService',
-            'Clientele.WorkFlowServices.Tasks.ModalService',
-            'Clientele.WorkFlowServices.Tasks.Services.WebApiService',
-            'Clientele.WorkFlowServices.Tasks.Services.ApplicationRepository',
+            'SoftiDoc.WorkFlowServices.Tasks.ModalService',
+            'SoftiDoc.WorkFlowServices.Tasks.Services.WebApiService',
+            'SoftiDoc.WorkFlowServices.Tasks.Services.ApplicationRepository',
             function ($scope,
                 $location,
                 $routeParams,
@@ -999,31 +999,31 @@
 
                 $scope.customTasks = customTasks;
 
-                $scope.$on("Clientele.WorkflowServices.ClaimSuccess", function () {
+                $scope.$on("SoftiDoc.WorkflowServices.ClaimSuccess", function () {
                     loadTask();
                 });
 
-                $scope.$on("Clientele.WorkflowServices.AcceptSuccess", function () {
+                $scope.$on("SoftiDoc.WorkflowServices.AcceptSuccess", function () {
                     loadTask();
                 });
 
-                $scope.$on("Clientele.WorkflowServices.ResumeSuccess", function () {
+                $scope.$on("SoftiDoc.WorkflowServices.ResumeSuccess", function () {
                     loadTask();
                 });
 
-                $scope.$on("Clientele.WorkflowServices.AfterPostponeTaskComplete", function () {
+                $scope.$on("SoftiDoc.WorkflowServices.AfterPostponeTaskComplete", function () {
                     loadTask();
                 });
 
-                $scope.$on("Clientele.WorkflowServices.RevokeSuccess", function () {
+                $scope.$on("SoftiDoc.WorkflowServices.RevokeSuccess", function () {
                     loadTask();
                 });
 
-                $scope.$on("Clientele.WorkflowServices.DelegateSuccess", function () {
+                $scope.$on("SoftiDoc.WorkflowServices.DelegateSuccess", function () {
                     loadTask();
                 });
 
-                $scope.$on("Clientele.WorkflowServices.AssignSuccess", function () {
+                $scope.$on("SoftiDoc.WorkflowServices.AssignSuccess", function () {
                     loadTask();
                 });
 
@@ -1099,7 +1099,7 @@
 
                         configureAvailableActions(data.PermittedActions);
 
-                        eventBroadcastingService.broadcastEvent("Clientele.WorkflowServices.TaskLoaded", data);
+                        eventBroadcastingService.broadcastEvent("SoftiDoc.WorkflowServices.TaskLoaded", data);
                     });
                 };
 
@@ -1196,7 +1196,7 @@
             $modalInstance.dismiss('cancel');
         };
     }])
-    .controller('Clientele.Tasks.Controllers.PostponeCaptureTaskController', ['$scope', '$modalInstance', 'model', function ($scope, $modalInstance, model) {
+    .controller('SoftiDoc.Tasks.Controllers.PostponeCaptureTaskController', ['$scope', '$modalInstance', 'model', function ($scope, $modalInstance, model) {
 
         $scope.model = {};
         $scope.model.Comment = "";
@@ -1265,9 +1265,9 @@
 
 })();
 
-//    , 'Clientele.ApplicationFormsCapture.Common.Services.TaskService'
-//    , 'Clientele.ApplicationFormsCapture.Services.RouteManager'
-//    , 'Clientele.ApplicationFormsCapture.Services.TeamMemberService'
-//    , 'Clientele.ApplicationFormsCapture.Services.LocationService'
+//    , 'SoftiDoc.ApplicationFormsCapture.Common.Services.TaskService'
+//    , 'SoftiDoc.ApplicationFormsCapture.Services.RouteManager'
+//    , 'SoftiDoc.ApplicationFormsCapture.Services.TeamMemberService'
+//    , 'SoftiDoc.ApplicationFormsCapture.Services.LocationService'
 
 

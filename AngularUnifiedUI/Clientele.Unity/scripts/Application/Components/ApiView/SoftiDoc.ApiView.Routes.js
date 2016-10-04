@@ -3,7 +3,7 @@
 /* Routing Requires the controllers for assignment to a route - these use the 'lookup' method */
 /**********************************************************************************************/
 
-angular.module('Clientele.ApiView.Routes', ['Clientele.ApiView.Controllers'])
+angular.module('SoftiDoc.ApiView.Routes', ['SoftiDoc.ApiView.Controllers'])
     .config(function ($routeProvider) {
 
         var componentKey = "ApiView";

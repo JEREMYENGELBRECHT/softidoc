@@ -23,7 +23,7 @@ ConfigDobDateTimePicker = function ($scope) {
     $scope.format = $scope.formats[0];
 };
 
-angular.module('Clientele.ApiView.Controllers', [])
+angular.module('SoftiDoc.ApiView.Controllers', [])
     .controller('apiViewPolicyQueryController', ['$scope', '$timeout',
         function ($scope, $timeout) {
             $scope.showPolicyFind = false;

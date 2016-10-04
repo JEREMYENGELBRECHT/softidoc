@@ -1,4 +1,4 @@
 ﻿(function () {
-    angular.module('Clientele.Unity.EnvironmentConstants', [])
+    angular.module('SoftiDoc.Unity.EnvironmentConstants', [])
         .value('DATE_FORMAT', 'dd M yyyy');
 })();

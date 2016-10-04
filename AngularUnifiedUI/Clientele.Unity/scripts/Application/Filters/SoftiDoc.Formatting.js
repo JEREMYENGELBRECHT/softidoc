@@ -5,7 +5,7 @@ function allowOnlyNumbersLettersAndPeriod(e) {
     return ((k > 64 && k < 91) || (k > 96 && k < 123) || k === 8 || k === 32 || k === 46 || (k >= 48 && k <= 57));
 }
 
-angular.module('Clientele.Formatting', ['ReferenceNumbers'])
+angular.module('SoftiDoc.Formatting', ['ReferenceNumbers'])
 .filter('groupResults', ['$parse', function ($parse) {
     return function (list, group_by) {
 

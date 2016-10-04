@@ -1,5 +1,5 @@
 ﻿
-angular.module('Clientele.ServiceError.Controllers', ['Clientele.ServiceError.Services'])
+angular.module('SoftiDoc.ServiceError.Controllers', ['SoftiDoc.ServiceError.Services'])
     .controller('serviceErrorIndexController', ['$scope', '$routeParams', 'serviceErrorApiService', 'uiLoader', '$modal',
         function($scope, $routeParams, serviceErrorApiService, uiLoader, $modal) {
 

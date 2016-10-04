@@ -1,7 +1,7 @@
 ﻿/**********************************************************************************************/
 /* Application Definition                                                                     */
 /**********************************************************************************************/
-var environment = angular.module('Clientele.Unity.EnvironmentVariables', []);
+var environment = angular.module('SoftiDoc.Unity.EnvironmentVariables', []);
 
 var applicationHost = {
     registeredApplications: [],
@@ -78,7 +78,7 @@ var bootstrap = function () {
     angular.module('InstalledApplications', applicationIds);
 
     // register the main module and its dependencies
-    angular.module('Clientele.Unity', ['Clientele.Unity.Routes', 'Clientele.Authentication', 'Clientele.UI', 'InstalledApplications', 'Clientele.Directives', 'Clientele.Services', 'LocalStorageModule', 'ngResource', 'ui.grid', 'ui.grid.edit'])
+    angular.module('SoftiDoc.Unity', ['SoftiDoc.Unity.Routes', 'SoftiDoc.Authentication', 'SoftiDoc.UI', 'InstalledApplications', 'SoftiDoc.Directives', 'SoftiDoc.Services', 'LocalStorageModule', 'ngResource', 'ui.grid', 'ui.grid.edit'])
         .config(window.$QDecorator)
         .config(function ($httpProvider, $provide, uiSelectConfig, $sceDelegateProvider) {
 
@@ -305,13 +305,13 @@ var bootstrap = function () {
         });
 
     // start the app from the html tag
-    angular.bootstrap("html", ['Clientele.Unity']);
+    angular.bootstrap("html", ['SoftiDoc.Unity']);
 };
 
 /**********************************************************************************************/
 /* Additional injected modules that are required and moved compartmentalised for readability  */
 /**********************************************************************************************/
 
-angular.module('Clientele.UI', ['ui.bootstrap', 'xeditable', 'Clientele.Formatting', 'angularFileUpload', 'dialogs', 'angular.css.injector', 'ngGrid', 'ui.select', 'ui.tree', "highcharts-ng", 'Clientele.Unity.EnvironmentConstants', 'monospaced.elastic', 'wysiwyg.module', 'ui.dashboard']);
+angular.module('SoftiDoc.UI', ['ui.bootstrap', 'xeditable', 'SoftiDoc.Formatting', 'angularFileUpload', 'dialogs', 'angular.css.injector', 'ngGrid', 'ui.select', 'ui.tree', "highcharts-ng", 'SoftiDoc.Unity.EnvironmentConstants', 'monospaced.elastic', 'wysiwyg.module', 'ui.dashboard']);
 
 /**********************************************************************************************/

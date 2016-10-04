@@ -2,7 +2,7 @@
 /* Routing                                                                                    */
 /* Routing Requires the controllers for assignment to a route - these use the 'lookup' method */
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore.Routes', ['Clientele.RecordStore.Controllers'])
+angular.module('SoftiDoc.RecordStore.Routes', ['SoftiDoc.RecordStore.Controllers'])
     .config(function ($routeProvider) {
         $routeProvider
             .when("/RecordStore/", { templateUrl: '/Views/RecordStore/Source.html', controller: 'sourceController', caseInsensitiveMatch: true })

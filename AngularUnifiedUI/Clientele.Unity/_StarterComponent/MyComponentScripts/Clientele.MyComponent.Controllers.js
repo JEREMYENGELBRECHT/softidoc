@@ -2,7 +2,7 @@
 /* Controllers                                                                                */
 /**********************************************************************************************/
 
-angular.module('Clientele.MyComponent.Controllers', ['Clientele.MyComponent.Services'])
+angular.module('SoftiDoc.MyComponent.Controllers', ['SoftiDoc.MyComponent.Services'])
 .controller('myComponentIndexController', ['$scope', '$routeParams', 'myComponentApiService',
 function ($scope, $routeParams, myComponentApiService) {
     $scope.$on("$viewContentLoaded", function () {

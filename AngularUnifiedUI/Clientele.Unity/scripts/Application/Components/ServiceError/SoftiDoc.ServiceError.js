@@ -2,10 +2,10 @@
 /* Component / Module Definition                                                              */
 /**********************************************************************************************/
 
-applicationHost.registerApplication("Clientele.ServiceError");
+applicationHost.registerApplication("SoftiDoc.ServiceError");
 
 /**********************************************************************************************/
-angular.module('Clientele.ServiceError', ['Clientele.ServiceError.Routes'])
+angular.module('SoftiDoc.ServiceError', ['SoftiDoc.ServiceError.Routes'])
     .run(['unityApplicationRepository', function (unityApplicationRepository, cssInjector) {
         
         // this is needs to be a sequential guid
@@ -17,7 +17,7 @@ angular.module('Clientele.ServiceError', ['Clientele.ServiceError.Routes'])
             searchUrl: "",
             applicationName: "Clientèle Service Error",
             icon: "/content/images/myComponent.png",
-            IdentityPrefix: "Clientele.ServiceError"
+            IdentityPrefix: "SoftiDoc.ServiceError"
         };
 
         var titleBarNavigation = [];
@@ -39,5 +39,5 @@ angular.module('Clientele.ServiceError', ['Clientele.ServiceError.Routes'])
         //});
         unityApplicationRepository.addApplication(componentKey, titleBarNavigation, configuration);
         
-        //cssInjector.add("/Content/Components/Clientele.MyComponent.css");
+        //cssInjector.add("/Content/Components/SoftiDoc.MyComponent.css");
     }]);

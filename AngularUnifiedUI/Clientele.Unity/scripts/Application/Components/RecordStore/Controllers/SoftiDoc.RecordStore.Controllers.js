@@ -2,13 +2,13 @@
 /* Controllers                                                                                */
 /* Controllers require the data API (recordStoreApiService) for JSON calls                    */
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore.Controllers',
+angular.module('SoftiDoc.RecordStore.Controllers',
     [
-    'Clientele.RecordStore.Services',
-    'Clientele.RecordStore.Controllers.AdvancedSearch',
-    'Clientele.RecordStore.Controllers.MetaData',
-    'Clientele.RecordStore.Controllers.Sources',
-    'Clientele.RecordStore.Controllers.ActivityHistory'
+    'SoftiDoc.RecordStore.Services',
+    'SoftiDoc.RecordStore.Controllers.AdvancedSearch',
+    'SoftiDoc.RecordStore.Controllers.MetaData',
+    'SoftiDoc.RecordStore.Controllers.Sources',
+    'SoftiDoc.RecordStore.Controllers.ActivityHistory'
     ])
     .controller('recordsBySourceController', ['$scope', '$routeParams', 'recordStoreApiService', 'recordStoreApplicationApiUrl', 'uiLoader', 'httpResponseService', '$timeout',
         function ($scope, $routeParams, recordStoreApiService, recordStoreApplicationApiUrl, uiLoader, httpResponseService, $timeout) {
@@ -115,7 +115,7 @@ angular.module('Clientele.RecordStore.Controllers',
     .controller('recordUploadController', ['$scope', '$upload', 'recordStoreApplicationApiUrl', 'notificationService', 'applicationId', 'authenticationService',
         function ($scope, $upload, recordStoreApplicationApiUrl, notificationService, applicationId, authenticationService) {
 
-            //if (!authenticationService.HasClaim("Clientele.RecordStore.Upload")) {
+            //if (!authenticationService.HasClaim("SoftiDoc.RecordStore.Upload")) {
             //    authenticationService.RedirectToNoAccessPage();
             //}
 
@@ -201,7 +201,7 @@ angular.module('Clientele.RecordStore.Controllers',
 /**********************************************************************************************/
 /* Sub division of metadata controllers for readbility sake                                   */
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore.Controllers.MetaData', ['Clientele.RecordStore.Services'])
+angular.module('SoftiDoc.RecordStore.Controllers.MetaData', ['SoftiDoc.RecordStore.Services'])
 
 .controller('metaDataController', ['$scope', '$routeParams', 'recordStoreApiService', 'validationService', 'eventBroadcastingService', 'uiLoader', 'authenticationService', 'resourceService',
     function ($scope, $routeParams, recordStoreApiService, validationService, eventBroadcastingService, uiLoader, authenticationService) {
@@ -245,7 +245,7 @@ angular.module('Clientele.RecordStore.Controllers.MetaData', ['Clientele.RecordS
         $scope.setEdit = function (canEdit) {
             $scope.canEdit = true;
 
-            //if (authenticationService.HasClaim("Clientele.RecordStore.RecordMetaData.Edit")) {
+            //if (authenticationService.HasClaim("SoftiDoc.RecordStore.RecordMetaData.Edit")) {
             //    $scope.canEdit = canEdit;
             //}
         };
@@ -376,7 +376,7 @@ angular.module('Clientele.RecordStore.Controllers.MetaData', ['Clientele.RecordS
 /**********************************************************************************************/
 /* Sub division of source controllers for readbility sake                                     */
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore.Controllers.Sources', ['Clientele.RecordStore.Services'])
+angular.module('SoftiDoc.RecordStore.Controllers.Sources', ['SoftiDoc.RecordStore.Services'])
 .controller('sourceController', ['$scope', 'recordStoreApiService', 'uiLoader', 'httpResponseService',
         function ($scope, recordStoreApiService, uiLoader, httpResponseService) {
             $scope.Sources = [];
@@ -419,7 +419,7 @@ angular.module('Clientele.RecordStore.Controllers.Sources', ['Clientele.RecordSt
 /**********************************************************************************************/
 /* Sub division of activity history controllers for readbility sake                           */
 /**********************************************************************************************/
-angular.module('Clientele.RecordStore.Controllers.ActivityHistory', ['Clientele.RecordStore.Services'])
+angular.module('SoftiDoc.RecordStore.Controllers.ActivityHistory', ['SoftiDoc.RecordStore.Services'])
     .controller('activityHistoryController', ['$scope', '$routeParams', 'recordStoreApiService', 'uiLoader',
         function ($scope, $routeParams, recordStoreApiService, uiLoader) {
             var rand = Math.random();

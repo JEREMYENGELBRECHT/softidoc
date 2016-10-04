@@ -1,5 +1,5 @@
 ﻿
-angular.module('Clientele.AuthControllers', [])
+angular.module('SoftiDoc.AuthControllers', [])
 
     .controller("loginController", ['$scope', '$timeout', 'authenticationService', '$location', '$rootScope', 'noAccessRightsUrl', 'unityApplicationRepository', 'httpResponseService', 'identityServiceApiUrl', 'runningMode', function ($scope, $timeout, authenticationService, $location, $rootScope, noAccessRightsUrl, unityApplicationRepository, httpResponseService, identityServiceApiUrl, runningMode) {
 
@@ -43,7 +43,7 @@ angular.module('Clientele.AuthControllers', [])
         $scope.username = "";
         $scope.password = "";
 
-        $scope.tennant = "Clientele";
+        $scope.tennant = "SoftiDoc";
         $scope.surname = "";
         $scope.givenName = "";
         $scope.emailAddress = "";
@@ -192,7 +192,7 @@ angular.module('Clientele.AuthControllers', [])
 
     }]);
 
-angular.module('Clientele.Authentication', [])
+angular.module('SoftiDoc.Authentication', [])
 .service('authenticationService', ['$q', '$rootScope', '$location', 'ajaxJsonService', 'identityServiceApiUrl', function ($q, $rootScope, $location, ajaxJsonService, identityServiceApiUrl) {
     var authenticationRoute = "/Login";
     var logoutRoute = "/Logout";
