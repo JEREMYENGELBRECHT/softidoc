@@ -218,8 +218,6 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
         $scope.currentApplication = ""; // name : searchUrl
         $scope.currentApplicationKey = ""; // name : searchUrl
 
-        $scope.navItems = "";
-
         //$scope.loggedIn = true;
         //var titleBarNavigation = [];
 
