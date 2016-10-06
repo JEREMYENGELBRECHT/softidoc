@@ -5,7 +5,7 @@
 angular.module('SoftiDoc.Unity.Routes', ['SoftiDoc.Unity.Controllers', 'SoftiDoc.Unity.EnvironmentVariables', 'ngRoute'])
     .config(function ($routeProvider) {
         $routeProvider.
-            when("/", { templateUrl: '/Views/Unity/home.html' }).
+            when("/", { templateUrl: '/Views/Unity/home.html'}).
             when("/noaccess", { templateUrl: '/Views/Unity/accessdenied.html', controller: 'accessDeniedController', caseInsensitiveMatch: true }).
             when("/IdentityNotFound/", { templateUrl: '/IdentityNotFound.html', controller: 'identityNotFoundController', caseInsensitiveMatch: true }).
             when("/NoAccessRights/", { templateUrl: '/NoAccessRights.html', caseInsensitiveMatch: true }).

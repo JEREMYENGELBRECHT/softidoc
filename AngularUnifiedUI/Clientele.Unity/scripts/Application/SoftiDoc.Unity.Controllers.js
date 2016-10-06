@@ -218,17 +218,17 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
         $scope.currentApplication = ""; // name : searchUrl
         $scope.currentApplicationKey = ""; // name : searchUrl
 
-        $scope.loggedIn = true;
-        var titleBarNavigation = [];
+        //$scope.loggedIn = true;
+        //var titleBarNavigation = [];
 
-        titleBarNavigation.push({ url: '#/Encashments/', label: 'Encashments Home', requiredClaim: "" });
-        titleBarNavigation.push({ url: '#/Encashments/Tasks', label: 'My Tasks', requiredClaim: "Encashments.Tasks" });
-        titleBarNavigation.push({ url: '#/Encashments/SpotChecking', label: 'Spot Checking', requiredClaim: "Encashments.SpotChecking" });
-        titleBarNavigation.push({ url: '#/Encashments/TaskManagement', label: 'Task Management', requiredClaim: "Encashments.TaskManagement" });
-        titleBarNavigation.push({ url: '#/Encashments/TeamManagement', label: 'Team Management', requiredClaim: "Encashments.TeamManagement" });
-        titleBarNavigation.push({ url: '#/Encashments/Help', label: 'Help', requiredClaim: "" });
+        //titleBarNavigation.push({ url: '#/Encashments/', label: 'Encashments Home', requiredClaim: "" });
+        //titleBarNavigation.push({ url: '#/Encashments/Tasks', label: 'My Tasks', requiredClaim: "Encashments.Tasks" });
+        //titleBarNavigation.push({ url: '#/Encashments/SpotChecking', label: 'Spot Checking', requiredClaim: "Encashments.SpotChecking" });
+        //titleBarNavigation.push({ url: '#/Encashments/TaskManagement', label: 'Task Management', requiredClaim: "Encashments.TaskManagement" });
+        //titleBarNavigation.push({ url: '#/Encashments/TeamManagement', label: 'Team Management', requiredClaim: "Encashments.TeamManagement" });
+        //titleBarNavigation.push({ url: '#/Encashments/Help', label: 'Help', requiredClaim: "" });
 
-        $scope.navItems = titleBarNavigation;
+        //$scope.navItems = titleBarNavigation;
 
 
 
