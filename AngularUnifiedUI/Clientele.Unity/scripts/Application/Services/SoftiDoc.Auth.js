@@ -223,22 +223,7 @@ angular.module('SoftiDoc.Authentication', [])
                 });
 
                 $rootScope.lastLogin = new Date();
-
-                // on success get claims
-                loadClaims().then(
-                    function (claimsReturnData) {
-
-                        returnObject = { Success: true, claimsCount: claimsReturnData.claimsCount };
-
-                        setTimeout(function () {
-                            if (claimsReturnData) {
-                                deferred.resolve(returnObject);
-                            } else {
-                                deferred.resolve({ Success: false, claimsCount: 0 });
-                            }
-                        }, 5);
-                    });
-
+                
             })
             .catch(function(exception) {
                 alert(exception);
@@ -258,22 +243,7 @@ angular.module('SoftiDoc.Authentication', [])
                             xhr.setRequestHeader("Authorization", "Bearer " + data.access_token);
                         }
                     });
-
-                    // on success get claims
-                    loadClaims().then(
-                        function (claimsReturnData) {
-
-                            returnObject = { Success: true, claimsCount: claimsReturnData.claimsCount };
-
-                            setTimeout(function () {
-                                if (claimsReturnData) {
-                                    deferred.resolve(returnObject);
-                                } else {
-                                    deferred.resolve({ Success: false, claimsCount: 0 });
-                                }
-                            }, 5);
-                        });
-
+                    
                 }).catch(
             function (data) {
                 if (angular.isDefined(data.ExceptionMessage)) {
@@ -286,55 +256,6 @@ angular.module('SoftiDoc.Authentication', [])
 
             return deferred.promise;
         }
-    };
-
-    var hasAnyMatchingClaim = function (identityPrefix) {
-
-        if (identityPrefix == "") {
-            return true;
-        }
-        for (var key in claimsDictionary) {
-            if (key.indexOf(identityPrefix) == 0) {
-                return true;
-            }
-        }
-
-        return false;
-    };
-
-    var loadClaims = function () {
-
-        var deferred = $q.defer();
-
-        ajaxJsonService.Get(identityServiceApiUrl + "users/me/").success(
-            function (data) {
-
-                for (var i = 0; i < data.claims.length; i++) {
-                    claimsDictionary[data.claims[i].Value] = "";
-                }
-
-                loggedInUser = data.user;
-                $rootScope.userId = loggedInUser.id;
-
-                setTimeout(function () {
-                    deferred.resolve({ Success: true, claimsCount: data.claims.length });
-                }, 5);
-
-            }).error(function () {
-                setTimeout(function () {
-                    deferred.resolve({ Success: false, claimsCount: 0 });
-                }, 5);
-            });
-
-        return deferred.promise;
-    };
-
-    var hasClaim = function (requiredClaim) {
-        if (!angular.isUndefined(claimsDictionary[requiredClaim])) {
-            return true;
-        }
-
-        return false;
     };
 
     var registerWithCredentials = function (newUser) {
@@ -351,12 +272,6 @@ angular.module('SoftiDoc.Authentication', [])
         AuthenticationRoute: authenticationRoute,
 
         BearerToken: $rootScope.BearerToken,
-
-        ValidatePageAccessWithClaim: function (requiredClaim) {
-            if (!hasClaim(requiredClaim)) {
-                redirectToNoAccessPage();
-            }
-        },
 
         isAuthenticated: function () {
             return $rootScope.BearerToken != null;
@@ -397,21 +312,10 @@ angular.module('SoftiDoc.Authentication', [])
             redirectToNoAccessPage();
         },
 
-        HasAnyMatchingClaim: function (identityPrefix) {
-            return hasAnyMatchingClaim(identityPrefix);
-        },
-
-        HasClaim: function (requiredClaim) {
-            return (hasClaim(requiredClaim));
-        },
-
         RegisterWithCredentials: function (newUser) {
             return registerWithCredentials(newUser);
-        },
+        }
 
-        retrieveIdentityClaims:
-            function () {
-                return "claims";
-            }
+        
     };
 }]);

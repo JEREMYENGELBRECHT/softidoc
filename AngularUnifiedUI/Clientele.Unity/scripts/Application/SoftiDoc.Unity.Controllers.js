@@ -164,7 +164,7 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
                 $location.path(noAccessRightsUrl);
                 return;
             }
-
+            
             if (applications.length == 1) {
                 if (angular.isUndefined($rootScope.referrerUrl)) {
                     return;
@@ -217,6 +217,20 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
         $scope.navItems = [];
         $scope.currentApplication = ""; // name : searchUrl
         $scope.currentApplicationKey = ""; // name : searchUrl
+
+        $scope.loggedIn = true;
+        var titleBarNavigation = [];
+
+        titleBarNavigation.push({ url: '#/Encashments/', label: 'Encashments Home', requiredClaim: "" });
+        titleBarNavigation.push({ url: '#/Encashments/Tasks', label: 'My Tasks', requiredClaim: "Encashments.Tasks" });
+        titleBarNavigation.push({ url: '#/Encashments/SpotChecking', label: 'Spot Checking', requiredClaim: "Encashments.SpotChecking" });
+        titleBarNavigation.push({ url: '#/Encashments/TaskManagement', label: 'Task Management', requiredClaim: "Encashments.TaskManagement" });
+        titleBarNavigation.push({ url: '#/Encashments/TeamManagement', label: 'Team Management', requiredClaim: "Encashments.TeamManagement" });
+        titleBarNavigation.push({ url: '#/Encashments/Help', label: 'Help', requiredClaim: "" });
+
+        $scope.navItems = titleBarNavigation;
+
+
 
         $scope.canSearch = false;
         $scope.searchText = { text: "" };

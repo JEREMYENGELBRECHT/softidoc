@@ -65,6 +65,12 @@
     <Reference Include="System.EnterpriseServices" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Content\Application\293631.css" />
+    <Content Include="Content\Application\dvAu1.css" />
+    <Content Include="Content\Application\dvAU2.css" />
+    <Content Include="Content\Application\dvAU3.css" />
+    <Content Include="Content\Application\dvAU4.css" />
+    <Content Include="Content\Application\dvAU5.css" />
     <Content Include="Content\Components\Clientele.MembershipMaintenance.css" />
     <Content Include="Content\images\file.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -117,6 +123,7 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="scripts\QDecorator.js" />
+    <Content Include="scripts\UI\modernizer-min.js" />
     <Content Include="scripts\UI\ui-grid.js" />
     <Content Include="scripts\UI\ui-grid.min.js" />
     <Content Include="scripts\UI\angular-ui-dashboard.js" />
@@ -174,6 +181,7 @@
     <Content Include="Views\UnityBankDetails\Modal\AVSRModal.html" />
     <Content Include="Views\UnityBankDetails\Modal\Edit.html" />
     <Content Include="Views\UnityBankDetails\View.html" />
+    <Content Include="Views\Unity\navigation1.html" />
     <Content Include="Views\WorkFlowServices\Tasks\Dashboard\AdvancedDashboard.tpl.html" />
     <Content Include="Views\WorkFlowServices\Tasks\Dashboard\Dashboard.tpl.html" />
     <Content Include="Views\WorkFlowServices\Tasks\Dashboard\teamTaskManagement.tpl.html" />
@@ -214,7 +222,7 @@
     <Content Include="Content\UiAddons\Bootstrap\bootstrap-theme.min.css" />
     <Content Include="Content\UiAddons\Bootstrap\bootstrap.css" />
     <Content Include="Content\UiAddons\Bootstrap\bootstrap.min.css" />
-    <Content Include="Content\Application\Clientele.Unity.css" />
+    <Content Include="Content\Application\SoftiDoc.Unity.css" />
     <Content Include="Content\UiAddons\dialogs.css" />
     <Content Include="Content\UiAddons\dialogs.min.css" />
     <Content Include="Content\images\glyphicons-halflings-white.png">
