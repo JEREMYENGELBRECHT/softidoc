@@ -59,18 +59,18 @@
     <div ng-controller="MainUIController" id="ContentPlaceHolder" style="display: none; height: 100%">
         <application-mode></application-mode>
 
-        <!--<div ng-class="PanelClass" ng-show="MultipleApplications" outside-click="HidePanel()">
+        <div ng-class="PanelClass" ng-show="MultipleApplications" outside-click="HidePanel()">
             <div align="right">
                 <button class="btn btn-primary btn-sm" ng-click="ToggleSidePanel()" title="{{PanelIsOpen ? 'Hide the application list' : 'Show the application list'}}">{{PanelIsOpen ? '&lt;' : '&gt;'}}</button>
             </div>
             <div ng-show="PanelIsOpen" ng-cloak ng-controller="unityNavigationController" src="'/views/Unity/sideNavigation.html'" ng-include></div>
-        </div>-->
-        <!--<div id="center-panel" class="container-fluid" style="height: 100%;">
-            <div class="row-fluid">
+        </div>
+        <div id="center-panel" class="container-fluid" style="height: 100%;">
+            <!--<div class="row-fluid">
                 <div class="span12">
                     <div ng-cloak ng-controller="applicationSpecificNavigationController" src="'/views/Unity/navigation.html'" ng-include></div>
                 </div>
-            </div>
+            </div>-->
             <div class="row-fluid" style="height: 100%;">
                 <div class="col-md-12 " ng-show="user.givenName !=''">
                     <br />
@@ -83,7 +83,7 @@
                     <div ng-view style="height: 99%; display: block"></div>
                 </div>
             </div>
-        </div>-->
+        </div>
     </div>
 
     
