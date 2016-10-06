@@ -263,26 +263,26 @@ var bootstrap = function () {
             };
 
             $rootScope.$on('$routeChangeStart', function (event, next, current) {
-                //if (eval(useAuth)) {
-                //    if (!authenticationService.isAuthenticated()) {
-                //        if (isReloadableRoute($location.path())) {
-                //            $rootScope.referrerUrl = $location.path();
-                //            $route.reload();
-                //            $location.path(authenticationService.AuthenticationRoute);
-                //        }
-                //    } else {
+                if (eval(useAuth)) {
+                    if (!authenticationService.isAuthenticated()) {
+                        if (isReloadableRoute($location.path())) {
+                            $rootScope.referrerUrl = $location.path();
+                            $route.reload();
+                            $location.path(authenticationService.AuthenticationRoute);
+                        }
+                    } else {
 
-                //        determineApplicationFromPath();
+                        determineApplicationFromPath();
 
-                //        var signalRListeners = [];
-                //        signalRListeners.push({ EventName: "notify" });
-                //        signalRService.RegisterHub("SignalRHub", signalRHubUrl, signalRListeners);
+                        var signalRListeners = [];
+                        signalRListeners.push({ EventName: "notify" });
+                        signalRService.RegisterHub("SignalRHub", signalRHubUrl, signalRListeners);
 
-                //        // signalRService.StartAllHubs();
-                //    }
-                //} else {
-                //    determineApplicationFromPath();
-                //}
+                        // signalRService.StartAllHubs();
+                    }
+                } else {
+                    determineApplicationFromPath();
+                }
                 
             });
 
