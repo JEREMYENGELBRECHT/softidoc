@@ -182,6 +182,7 @@
     <Content Include="Views\UnityBankDetails\Modal\Edit.html" />
     <Content Include="Views\UnityBankDetails\View.html" />
     <Content Include="Views\Unity\navigation1.html" />
+    <Content Include="Views\Unity\Shurien.html" />
     <Content Include="Views\WorkFlowServices\Tasks\Dashboard\AdvancedDashboard.tpl.html" />
     <Content Include="Views\WorkFlowServices\Tasks\Dashboard\Dashboard.tpl.html" />
     <Content Include="Views\WorkFlowServices\Tasks\Dashboard\teamTaskManagement.tpl.html" />
