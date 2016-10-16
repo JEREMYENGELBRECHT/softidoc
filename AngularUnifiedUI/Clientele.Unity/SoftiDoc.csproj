@@ -72,6 +72,18 @@
     <Content Include="Content\Application\dvAU4.css" />
     <Content Include="Content\Application\dvAU5.css" />
     <Content Include="Content\Components\Clientele.MembershipMaintenance.css" />
+    <Content Include="Content\images\400dpiLogo.png" />
+    <Content Include="Content\images\400dpiLogoCropped.jpg" />
+    <Content Include="Content\images\400dpiLogoCropped.png" />
+    <Content Include="Content\images\52117474_l.jpg" />
+    <Content Include="Content\images\52117474_l_1_2948x1423.jpg" />
+    <Content Include="Content\images\52117474_l_4_2500x1500.jpg" />
+    <Content Include="Content\images\52117474_l_5_2500x1450.jpg" />
+    <Content Include="Content\images\52117474_l_6_2500x1435.jpg" />
+    <Content Include="Content\images\52117474_l_9_2500x1350.jpg" />
+    <Content Include="Content\images\52117474_m.jpg" />
+    <Content Include="Content\images\52117474_ml.jpg" />
+    <Content Include="Content\images\56358596_l.jpg" />
     <Content Include="Content\images\file.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -81,6 +93,7 @@
     <Content Include="Content\images\folder.png">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
+    <Content Include="Content\images\SmallLogo.png" />
     <Content Include="Content\UiAddons\ui-grid.css" />
     <Content Include="Content\UiAddons\ui-grid.min.css" />
     <Content Include="Content\UiAddons\ui-grid.svg" />
