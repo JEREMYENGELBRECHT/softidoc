@@ -1,4 +1,1027 @@
-﻿#autocomplete{border:1px solid;overflow:hidden;position:absolute;z-index:100}#autocomplete ul{list-style:none;list-style-image:none;margin:0;padding:0}#autocomplete li{background:#fff;color:#000;cursor:default;white-space:pre;zoom:1}html.js input.form-autocomplete{background-image:url(https://www.docusign.com/misc/throbber-inactive.png);background-position:100% center;background-repeat:no-repeat}html.js input.throbbing{background-image:url(https://www.docusign.com/misc/throbber-active.gif);background-position:100% center}html.js fieldset.collapsed{border-bottom-width:0;border-left-width:0;border-right-width:0;height:1em}html.js fieldset.collapsed .fieldset-wrapper{display:none}fieldset.collapsible{position:relative}fieldset.collapsible .fieldset-legend{display:block}.form-textarea-wrapper textarea{display:block;margin:0;width:100%;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}.resizable-textarea .grippie{background:#eee url(https://www.docusign.com/misc/grippie.png) no-repeat center 2px;border:1px solid #ddd;border-top-width:0;cursor:s-resize;height:9px;overflow:hidden}body.drag{cursor:move}.draggable a.tabledrag-handle{cursor:move;float:left;height:1.7em;margin-left:-1em;overflow:hidden;text-decoration:none}a.tabledrag-handle:hover{text-decoration:none}a.tabledrag-handle .handle{background:url(https://www.docusign.com/misc/draggable.png) no-repeat 6px 9px;height:13px;margin:-.4em .5em;padding:.42em .5em;width:13px}a.tabledrag-handle-hover .handle{background-position:6px -11px}div.indentation{float:left;height:1.7em;margin:-.4em .2em -.4em -.4em;padding:.42em 0 .42em .6em;width:20px}div.tree-child{background:url(https://www.docusign.com/misc/tree.png) no-repeat 11px center}div.tree-child-last{background:url(https://www.docusign.com/misc/tree-bottom.png) no-repeat 11px center}div.tree-child-horizontal{background:url(https://www.docusign.com/misc/tree.png) no-repeat -11px center}.tabledrag-toggle-weight-wrapper{text-align:right}table.sticky-header{background-color:#fff;margin-top:0}.progress .bar{background-color:#fff;border:1px solid}.progress .filled{background-color:#000;height:1.5em;width:5px}.progress .percentage{float:right}.ajax-progress{display:inline-block}.ajax-progress .throbber{background:transparent url(https://www.docusign.com/misc/throbber-active.gif) no-repeat 0 center;float:left;height:15px;margin:2px;width:15px}.ajax-progress .message{padding-left:20px}tr .ajax-progress .throbber{margin:0 2px}.ajax-progress-bar{width:16em}.container-inline div,.container-inline label{display:inline}.container-inline .fieldset-wrapper{display:block}.nowrap{white-space:nowrap}html.js .js-hide{display:none}.element-hidden{display:none}.element-invisible{position:absolute !important;clip:rect(1px 1px 1px 1px);clip:rect(1px,1px,1px,1px);overflow:hidden;height:1px}.element-invisible.element-focusable:active,.element-invisible.element-focusable:focus{position:static !important;clip:auto;overflow:visible;height:auto}.clearfix:after{content:".";display:block;height:0;clear:both;visibility:hidden}* html .clearfix{height:1%}*:first-child+html .clearfix{min-height:1%}div.messages{background-position:8px 8px;background-repeat:no-repeat;border:1px solid;margin:6px 0;padding:10px 10px 10px 50px}div.status{background-image:url(https://www.docusign.com/misc/message-24-ok.png);border-color:#be7}div.status,.ok{color:#234600}div.status,table tr.ok{background-color:#f8fff0}div.warning{background-image:url(https://www.docusign.com/misc/message-24-warning.png);border-color:#ed5}div.warning,.warning{color:#840}div.warning,table tr.warning{background-color:#fffce5}div.error{background-image:url(https://www.docusign.com/misc/message-24-error.png);border-color:#ed541d}div.error,.error{color:#8c2e0b}div.error,table tr.error{background-color:#fef5f1}div.error p.error{color:#333}div.messages ul{margin:0 0 0 1em;padding:0}div.messages ul li{list-style-image:none}.chosen-container.error .chosen-single,.chosen-container.error .chosen-single span{line-height:inherit}.chosen-container-single .chosen-search{display:block}
-.chosen-container-multi .chosen-choices li.search-field input[type="text"]{height:auto}.chosen-container{display:inline-block !important}.container-inline div.chosen-container div{display:block}.chosen-container.error .chosen-choices,.chosen-container.error .chosen-single{border:2px solid red}#aggregator .feed-source .feed-title{margin-top:0}#aggregator .feed-source .feed-image img{margin-bottom:.75em}#aggregator .feed-source .feed-icon{float:right;display:block}#aggregator .feed-item{margin-bottom:1.5em}#aggregator .feed-item-title{margin-bottom:0;font-size:1.3em}#aggregator .feed-item-meta,#aggregator .feed-item-body{margin-bottom:.5em}#aggregator .feed-item-categories{font-size:.9em}#aggregator td{vertical-align:bottom}#aggregator td.categorize-item{white-space:nowrap}#aggregator .categorize-item .news-item .body{margin-top:0}#aggregator .categorize-item h3{margin-bottom:1em;margin-top:0}.container-inline-date{clear:both}.container-inline-date .form-item{float:none;margin:0;padding:0}.container-inline-date>.form-item{display:inline-block;margin-right:.5em;vertical-align:top}fieldset.date-combo .container-inline-date>.form-item{margin-bottom:10px}.container-inline-date .form-item .form-item{float:left}.container-inline-date .form-item,.container-inline-date .form-item input{width:auto}.container-inline-date .description{clear:both}.container-inline-date .form-item input,.container-inline-date .form-item select,.container-inline-date .form-item option{margin-right:5px}.container-inline-date .date-spacer{margin-left:-5px}.views-right-60 .container-inline-date div{margin:0;padding:0}.container-inline-date .date-timezone .form-item{clear:both;float:none;width:auto}.container-inline-date .date-padding{float:left}fieldset.date-combo .container-inline-date .date-padding{padding:10px}.views-exposed-form .container-inline-date .date-padding{padding:0}#calendar_div,#calendar_div td,#calendar_div th{margin:0;padding:0}#calendar_div,.calendar_control,.calendar_links,.calendar_header,.calendar{border-collapse:separate;margin:0;width:185px}.calendar td{padding:0}.date-prefix-inline{display:inline-block}.date-clear{clear:both;display:block;float:none}.date-no-float{clear:both;float:none;width:98%}.date-float{clear:none;float:left;width:auto}.date-float .form-type-checkbox{padding-right:1em}.form-type-date-select .form-type-select[class*=hour]{margin-left:.75em}.date-container .date-format-delete{float:left;margin-top:1.8em;margin-left:1.5em}.date-container .date-format-name{float:left}.date-container .date-format-type{float:left;padding-left:10px}.date-container .select-container{clear:left;float:left}div.date-calendar-day{background:#f3f3f3;border-top:1px solid #EEE;border-left:1px solid #EEE;border-right:1px solid #BBB;border-bottom:1px solid #BBB;color:#999;float:left;line-height:1;margin:6px 10px 0 0;text-align:center;width:40px}div.date-calendar-day span{display:block;text-align:center}div.date-calendar-day span.month{background-color:#b5bebe;color:white;font-size:.9em;padding:2px;text-transform:uppercase}div.date-calendar-day span.day{font-size:2em;font-weight:bold}div.date-calendar-day span.year{font-size:.9em;padding:2px}.date-form-element-content-multiline{padding:10px;border:1px solid #CCC}.form-item.form-item-instance-widget-settings-input-format-custom,.form-item.form-item-field-settings-enddate-required{margin-left:1.3em}#edit-field-settings-granularity .form-type-checkbox{margin-right:.6em}.date-year-range-select{margin-right:1em}#ui-datepicker-div{font-size:100%;font-family:Verdana,sans-serif;background:#eee;border-right:2px #666 solid;border-bottom:2px #666 solid;z-index:9999}.ui-datepicker{width:17em;padding:.2em .2em 0}.ui-datepicker .ui-datepicker-header{position:relative;padding:.2em 0}.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next{position:absolute;top:2px;width:1.8em;height:1.8em}.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover{top:1px}.ui-datepicker .ui-datepicker-prev{left:2px}.ui-datepicker .ui-datepicker-next{right:2px}.ui-datepicker .ui-datepicker-prev-hover{left:1px}.ui-datepicker .ui-datepicker-next-hover{right:1px}.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span{display:block;position:absolute;left:50%;margin-left:-8px;top:50%;margin-top:-8px}.ui-datepicker .ui-datepicker-title{margin:0 2.3em;line-height:1.8em;text-align:center}.ui-datepicker .ui-datepicker-title select{float:left;font-size:1em;margin:1px 0}.ui-datepicker select.ui-datepicker-month-year{width:100%}.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year{width:49%}.ui-datepicker .ui-datepicker-title select.ui-datepicker-year{float:right}.ui-datepicker table{width:100%;font-size:.9em;border-collapse:collapse;margin:0 0 .4em}.ui-datepicker th{padding:.7em .3em;text-align:center;font-weight:bold;border:0}.ui-datepicker td{border:0;padding:1px}.ui-datepicker td span,.ui-datepicker td a{display:block;padding:.2em;text-align:right;text-decoration:none}.ui-datepicker .ui-datepicker-buttonpane{background-image:none;margin:.7em 0 0 0;padding:0 .2em;border-left:0;border-right:0;border-bottom:0}.ui-datepicker .ui-datepicker-buttonpane button{float:right;margin:.5em .2em .4em;cursor:pointer;padding:.2em .6em .3em .6em;width:auto;overflow:visible}.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current{float:left}.ui-datepicker.ui-datepicker-multi{width:auto}.ui-datepicker-multi .ui-datepicker-group{float:left}.ui-datepicker-multi .ui-datepicker-group table{width:95%;margin:0 auto .4em}.ui-datepicker-multi-2 .ui-datepicker-group{width:50%}.ui-datepicker-multi-3 .ui-datepicker-group{width:33.3%}.ui-datepicker-multi-4 .ui-datepicker-group{width:25%}.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header{border-left-width:0}.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header{border-left-width:0}.ui-datepicker-multi .ui-datepicker-buttonpane{clear:left}.ui-datepicker-row-break{clear:both;width:100%}.ui-datepicker-rtl{direction:rtl}.ui-datepicker-rtl .ui-datepicker-prev{right:2px;left:auto}.ui-datepicker-rtl .ui-datepicker-next{left:2px;right:auto}.ui-datepicker-rtl .ui-datepicker-prev:hover{right:1px;left:auto}.ui-datepicker-rtl .ui-datepicker-next:hover{left:1px;right:auto}.ui-datepicker-rtl .ui-datepicker-buttonpane{clear:right}.ui-datepicker-rtl .ui-datepicker-buttonpane button{float:left}.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current{float:right}.ui-datepicker-rtl .ui-datepicker-group{float:right}.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header{border-right-width:0;border-left-width:1px}.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header{border-right-width:0;border-left-width:1px}.hljs{display:block;overflow-x:auto;padding:.5em;background:#232323;color:#e6e1dc;-webkit-text-size-adjust:none}.hljs-comment,.hljs-shebang{color:#bc9458;font-style:italic}.hljs-keyword,.ruby .hljs-function .hljs-keyword,.hljs-request,.hljs-status,.nginx .hljs-title,.method,.hljs-list .hljs-title{color:#c26230}.hljs-string,.hljs-number,.hljs-regexp,.hljs-tag .hljs-value,.hljs-cdata,.hljs-filter .hljs-argument,.hljs-attr_selector,.apache .hljs-cbracket,.hljs-date,.tex .hljs-command,.asciidoc .hljs-link_label,.markdown .hljs-link_label{color:#a5c261}
-.hljs-subst{color:#519f50}.hljs-tag,.hljs-tag .hljs-keyword,.hljs-tag .hljs-title,.hljs-doctype,.hljs-sub .hljs-identifier,.hljs-pi,.input_number{color:#e8bf6a}.hljs-identifier{color:#d0d0ff}.hljs-class .hljs-title,.hljs-type,.smalltalk .hljs-class,.hljs-doctag{text-decoration:none}.hljs-constant,.hljs-name{color:#da4939}.hljs-symbol,.hljs-built_in,.ruby .hljs-symbol .hljs-string,.ruby .hljs-symbol .hljs-identifier,.asciidoc .hljs-link_url,.markdown .hljs-link_url,.hljs-attribute{color:#6d9cbe}.asciidoc .hljs-link_url,.markdown .hljs-link_url{text-decoration:underline}.hljs-params,.hljs-variable,.clojure .hljs-attribute{color:#d0d0ff}.css .hljs-tag,.hljs-rule .hljs-property,.hljs-pseudo,.tex .hljs-special{color:#cda869}.css .hljs-class{color:#9b703f}.hljs-rule .hljs-keyword{color:#c5af75}.hljs-rule .hljs-value{color:#cf6a4c}.css .hljs-id{color:#8b98ab}.hljs-annotation,.apache .hljs-sqbracket,.nginx .hljs-built_in{color:#9b859d}.hljs-preprocessor,.hljs-preprocessor *,.hljs-pragma{color:#8996a8 !important}.hljs-hexcolor,.css .hljs-value .hljs-number{color:#a5c261}.hljs-title,.hljs-decorator,.css .hljs-function{color:#ffc66d}.diff .hljs-header,.hljs-chunk{background-color:#2f33ab;color:#e6e1dc;display:inline-block;width:100%}.diff .hljs-change{background-color:#4a410d;color:#f8f8f8;display:inline-block;width:100%}.hljs-addition{background-color:#144212;color:#e6e1dc;display:inline-block;width:100%}.hljs-deletion{background-color:#600;color:#e6e1dc;display:inline-block;width:100%}.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata{opacity:.7}.field .field-label{font-weight:bold}.field-label-inline .field-label,.field-label-inline .field-items{float:left}form .field-multiple-table{margin:0}form .field-multiple-table th.field-label{padding-left:0}form .field-multiple-table td.field-multiple-drag{width:30px;padding-right:0}form .field-multiple-table td.field-multiple-drag a.tabledrag-handle{padding-right:.5em}form .field-add-more-submit{margin:.5em 0 0}.node-unpublished{background-color:#fff4f4}.preview .node{background-color:#ffffea}td.revision-current{background:#ffc}a.edit-mini-panel-link:link,a.edit-mini-panel-link:visited{display:block;background:#000;color:#fff;padding:.75em .5em;margin-bottom:1em;text-align:center;text-transform:uppercase;-webkit-border-radius:10px;-moz-border-radius:10px;border-radius:10px}a.edit-mini-panel-link:hover,a.edit-mini-panel-link:focus,a.edit-mini-panel-link:active{text-decoration:none;background:#999}span[data-picture-align="left"],img[data-picture-align="left"]{float:left}span[data-picture-align="right"],img[data-picture-align="right"]{float:right}span[data-picture-align="center"],img[data-picture-align="center"]{display:block;margin-left:auto;margin-right:auto}.cke_dialog_body tr td:last-child{border-right:0}.search-form{margin-bottom:1em}.search-form input{margin-top:0;margin-bottom:0}.search-results{list-style:none}.search-results p{margin-top:0}.search-results .title{font-size:1.2em}.search-results li{margin-bottom:1em}.search-results .search-snippet-info{padding-left:1em}.search-results .search-info{font-size:.85em}.search-advanced .criterion{float:left;margin-right:2em}.search-advanced .action{float:left;clear:left}#permissions td.module{font-weight:bold}#permissions td.permission{padding-left:1.5em}#permissions tr.odd .form-item,#permissions tr.even .form-item{white-space:normal}#user-admin-settings fieldset .fieldset-description{font-size:.85em;padding-bottom:.5em}#user-admin-roles td.edit-name{clear:both}#user-admin-roles .form-item-name{float:left;margin-right:1em}.password-strength{width:17em;float:right;margin-top:1.4em}.password-strength-title{display:inline}.password-strength-text{float:right;font-weight:bold}.password-indicator{background-color:#c4c4c4;height:.3em;width:100%}.password-indicator div{height:100%;width:0;background-color:#47c965}input.password-confirm,input.password-field{width:16em;margin-bottom:.4em}div.password-confirm{float:right;margin-top:1.5em;visibility:hidden;width:17em}div.form-item div.password-suggestions{padding:.2em .5em;margin:.7em 0;width:38.5em;border:1px solid #b4b4b4}div.password-suggestions ul{margin-bottom:0}.confirm-parent,.password-parent{clear:left;margin:0;width:36.3em}.profile{clear:both;margin:1em 0}.profile .user-picture{float:right;margin:0 1em 1em 0}.profile h3{border-bottom:1px solid #ccc}.profile dl{margin:0 0 1.5em 0}.profile dt{margin:0 0 .2em 0;font-weight:bold}.profile dd{margin:0 0 1em 0}span.ext{background:url(https://www.docusign.com/sites/all/modules/contrib/extlink/extlink_s.png) 2px center no-repeat;width:10px;height:10px;padding-right:12px;text-decoration:none}span.mailto{background:url(https://www.docusign.com/sites/all/modules/contrib/extlink/extlink_s.png) -20px center no-repeat;width:10px;height:10px;padding-right:12px;text-decoration:none}@media print{span.ext,span.mailto{display:none;padding:0}}.views-exposed-form .views-exposed-widget{float:left;padding:.5em 1em 0 0}.views-exposed-form .views-exposed-widget .form-submit{margin-top:1.6em}.views-exposed-form .form-item,.views-exposed-form .form-submit{margin-top:0;margin-bottom:0}.views-exposed-form label{font-weight:bold}.views-exposed-widgets{margin-bottom:.5em}.views-align-left{text-align:left}.views-align-right{text-align:right}.views-align-center{text-align:center}.views-view-grid tbody{border-top:0}.view .progress-disabled{float:none}.ctools-locked{color:red;border:1px solid red;padding:1em}.ctools-owns-lock{background:#ffd none repeat scroll 0 0;border:1px solid #f0c020;padding:1em}a.ctools-ajaxing,input.ctools-ajaxing,button.ctools-ajaxing,select.ctools-ajaxing{padding-right:18px !important;background:url(https://www.docusign.com/sites/all/modules/contrib/ctools/images/status-active.gif) right center no-repeat}div.ctools-ajaxing{float:left;width:18px;background:url(https://www.docusign.com/sites/all/modules/contrib/ctools/images/status-active.gif) center center no-repeat}.fancybox-wrap,.fancybox-skin,.fancybox-outer,.fancybox-inner,.fancybox-image,.fancybox-wrap iframe,.fancybox-wrap object,.fancybox-nav,.fancybox-nav span,.fancybox-tmp{padding:0;margin:0;border:0;outline:0;vertical-align:top}.fancybox-wrap{position:absolute;top:0;left:0;z-index:8020}.fancybox-skin{position:relative;background:#f9f9f9;color:#444;text-shadow:none;-webkit-border-radius:4px;-moz-border-radius:4px;border-radius:4px}.fancybox-opened{z-index:8030}.fancybox-opened .fancybox-skin{-webkit-box-shadow:0 10px 25px rgba(0,0,0,0.5);-moz-box-shadow:0 10px 25px rgba(0,0,0,0.5);box-shadow:0 10px 25px rgba(0,0,0,0.5)}.fancybox-outer,.fancybox-inner{position:relative}.fancybox-inner{overflow:hidden}.fancybox-type-iframe .fancybox-inner{-webkit-overflow-scrolling:touch}.fancybox-error{color:#444;font:14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;margin:0;padding:15px;white-space:nowrap}.fancybox-image,.fancybox-iframe{display:block;width:100%;height:100%}.fancybox-image{max-width:100%;max-height:100%}#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_sprite.png)}#fancybox-loading{position:fixed;top:50%;left:50%;margin-top:-22px;margin-left:-22px;background-position:0 -108px;opacity:.8;cursor:pointer;z-index:8060}
-#fancybox-loading div{width:44px;height:44px;background:url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_loading.gif) center center no-repeat}.fancybox-close{position:absolute;top:-18px;right:-18px;width:36px;height:36px;cursor:pointer;z-index:8040}.fancybox-nav{position:absolute;top:0;width:40%;height:100%;cursor:pointer;text-decoration:none;background:transparent url(https://www.docusign.com/sites/all/libraries/fancybox/source/blank.gif);-webkit-tap-highlight-color:rgba(0,0,0,0);z-index:8040}.fancybox-prev{left:0}.fancybox-next{right:0}.fancybox-nav span{position:absolute;top:50%;width:36px;height:34px;margin-top:-18px;cursor:pointer;z-index:8040;visibility:hidden}.fancybox-prev span{left:10px;background-position:0 -36px}.fancybox-next span{right:10px;background-position:0 -72px}.fancybox-nav:hover span{visibility:visible}.fancybox-tmp{position:absolute;top:-99999px;left:-99999px;visibility:hidden;max-width:99999px;max-height:99999px;overflow:visible !important}.fancybox-lock{overflow:hidden !important;width:auto}.fancybox-lock body{overflow:hidden !important}.fancybox-lock-test{overflow-y:hidden !important}.fancybox-overlay{position:absolute;top:0;left:0;overflow:hidden;display:none;z-index:8010;background:url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_overlay.png)}.fancybox-overlay-fixed{position:fixed;bottom:0;right:0}.fancybox-lock .fancybox-overlay{overflow:auto;overflow-y:scroll}.fancybox-title{visibility:hidden;font:normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;position:relative;text-shadow:none;z-index:8050}.fancybox-opened .fancybox-title{visibility:visible}.fancybox-title-float-wrap{position:absolute;bottom:0;right:50%;margin-bottom:-35px;z-index:8050;text-align:center}.fancybox-title-float-wrap .child{display:inline-block;margin-right:-100%;padding:2px 20px;background:transparent;background:rgba(0,0,0,0.8);-webkit-border-radius:15px;-moz-border-radius:15px;border-radius:15px;text-shadow:0 1px 2px #222;color:#FFF;font-weight:bold;line-height:24px;white-space:nowrap}.fancybox-title-outside-wrap{position:relative;margin-top:10px;color:#fff}.fancybox-title-inside-wrap{padding-top:10px}.fancybox-title-over-wrap{position:absolute;bottom:0;left:0;color:#fff;padding:10px;background:#000;background:rgba(0,0,0,.8)}@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5){#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span{background-image:url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_sprite%402x.png);background-size:44px 152px}#fancybox-loading div{background-image:url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_loading%402x.gif);background-size:24px 24px}}div.panel-pane div.admin-links{font-size:xx-small;margin-right:1em}div.panel-pane div.admin-links li a{color:#ccc}div.panel-pane div.admin-links li{padding-bottom:2px;background:white;z-index:201}div.panel-pane div.admin-links:hover a,div.panel-pane div.admin-links-hover a{color:#000}div.panel-pane div.admin-links a:before{content:"["}div.panel-pane div.admin-links a:after{content:"]"}div.panel-pane div.panel-hide{display:none}div.panel-pane div.panel-hide-hover,div.panel-pane:hover div.panel-hide{display:block;position:absolute;z-index:200;margin-top:-1.5em}div.panel-pane div.feed a{float:right}#panels-dnd-main .panel-panel:before,#panels-dnd-main .panel-panel:after{content:'';display:table}#panels-dnd-main .panel-panel:after{clear:both}#panels-dnd-main .panel-panel{padding:5px;-moz-box-sizing:border-box;-webkit-box-sizing:border-box;box-sizing:border-box}#panels-dnd-main .panel-pane{margin:5px !important;width:auto !important;display:block !important}
+﻿#autocomplete {
+	border: 1px solid;
+	overflow: hidden;
+	position: absolute;
+	z-index: 100
+ }
+ 
+	#autocomplete ul {
+		list-style: none;
+		list-style-image: none;
+		margin: 0;
+		padding: 0
+	 }
+ 
+	#autocomplete li {
+		background: #fff;
+		color: #000;
+		cursor: default;
+		white-space: pre;
+		zoom: 1
+	 }
+ 
+html.js input.form-autocomplete {
+	background-image: url(https://www.docusign.com/misc/throbber-inactive.png);
+	background-position: 100% center;
+	background-repeat: no-repeat
+ }
+ 
+html.js input.throbbing {background-image: url(https://www.docusign.com/misc/throbber-active.gif);background-position:100% center}
+ 
+html.js fieldset.collapsed {
+	border-bottom-width: 0;
+	border-left-width: 0;
+	border-right-width: 0;
+	height: 1em
+ }
+ 
+	html.js fieldset.collapsed .fieldset-wrapper {display: none}
+ 
+fieldset.collapsible {position: relative}
+ 
+	fieldset.collapsible .fieldset-legend {display: block}
+ 
+.form-textarea-wrapper textarea {
+	display: block;
+	margin: 0;
+	width: 100%;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+ }
+ 
+.resizable-textarea .grippie {
+	background: #eee url(https://www.docusign.com/misc/grippie.png) no-repeat center 2px;
+	border: 1px solid #ddd;
+	border-top-width: 0;
+	cursor: s-resize;
+	height: 9px;
+	overflow: hidden
+ }
+ 
+body.drag {cursor: move}
+ 
+.draggable a.tabledrag-handle {
+	cursor: move;
+	float: left;
+	height: 1.7em;
+	margin-left: -1em;
+	overflow: hidden;
+	text-decoration: none
+ }
+ 
+a.tabledrag-handle:hover {text-decoration: none}
+ 
+a.tabledrag-handle .handle {
+	background: url(https://www.docusign.com/misc/draggable.png) no-repeat 6px 9px;
+	height: 13px;
+	margin: -.4em .5em;
+	padding: .42em .5em;
+	width: 13px
+ }
+ 
+a.tabledrag-handle-hover .handle {background-position: 6px -11px}
+ 
+div.indentation {
+	float: left;
+	height: 1.7em;
+	margin: -.4em .2em -.4em -.4em;
+	padding: .42em 0 .42em .6em;
+	width: 20px
+ }
+ 
+div.tree-child {background: url(https://www.docusign.com/misc/tree.png) no-repeat 11px center}
+ 
+div.tree-child-last {background: url(https://www.docusign.com/misc/tree-bottom.png) no-repeat 11px center}
+ 
+div.tree-child-horizontal {background: url(https://www.docusign.com/misc/tree.png) no-repeat -11px center}
+ 
+.tabledrag-toggle-weight-wrapper {text-align: right}
+ 
+table.sticky-header {background-color: #fff;margin-top:0}
+ 
+.progress .bar {background-color: #fff;border:1px solid}
+ 
+.progress .filled {
+	background-color: #000;
+	height: 1.5em;
+	width: 5px
+ }
+ 
+.progress .percentage {float: right}
+ 
+.ajax-progress {display: inline-block}
+ 
+	.ajax-progress .throbber {
+		background: transparent url(https://www.docusign.com/misc/throbber-active.gif) no-repeat 0 center;
+		float: left;
+		height: 15px;
+		margin: 2px;
+		width: 15px
+	 }
+ 
+	.ajax-progress .message {padding-left: 20px}
+ 
+tr .ajax-progress .throbber {margin: 0 2px}
+ 
+.ajax-progress-bar {width: 16em}
+ 
+.container-inline div,.container-inline label {display: inline}
+ 
+.container-inline .fieldset-wrapper {display: block}
+ 
+.nowrap {white-space: nowrap}
+ 
+html.js .js-hide {display: none}
+ 
+.element-hidden {display: none}
+ 
+.element-invisible {
+	position: absolute !important;
+	clip: rect(1px 1px 1px 1px);
+	clip: rect(1px,1px,1px,1px);
+	overflow: hidden;
+	height: 1px
+ }
+ 
+	.element-invisible.element-focusable:active,.element-invisible.element-focusable:focus {
+		position: static !important;
+		clip: auto;
+		overflow: visible;
+		height: auto
+	 }
+ 
+.clearfix:after {
+	content: ".";
+	display: block;
+	height: 0;
+	clear: both;
+	visibility: hidden
+ }
+ 
+* html .clearfix {height: 1%}
+ 
+*:first-child+html .clearfix {min-height: 1%}
+ 
+div.messages {
+	background-position: 8px 8px;
+	background-repeat: no-repeat;
+	border: 1px solid;
+	margin: 6px 0;
+	padding: 10px 10px 10px 50px
+ }
+ 
+div.status {background-image: url(https://www.docusign.com/misc/message-24-ok.png);border-color:#be7}
+ 
+div.status,.ok {color: #234600}
+ 
+div.status,table tr.ok {background-color: #f8fff0}
+ 
+div.warning {background-image: url(https://www.docusign.com/misc/message-24-warning.png);border-color:#ed5}
+ 
+div.warning,.warning {color: #840}
+ 
+div.warning,table tr.warning {background-color: #fffce5}
+ 
+div.error {background-image: url(https://www.docusign.com/misc/message-24-error.png);border-color:#ed541d}
+ 
+div.error,.error {color: #8c2e0b}
+ 
+div.error,table tr.error {background-color: #fef5f1}
+ 
+div.error p.error {color: #333}
+ 
+div.messages ul {margin: 0 0 0 1em;padding:0}
+ 
+	div.messages ul li {list-style-image: none}
+ 
+.chosen-container.error .chosen-single,.chosen-container.error .chosen-single span {line-height: inherit}
+ 
+.chosen-container-single .chosen-search {display: block}
+ 
+.chosen-container-multi .chosen-choices li.search-field input[type="text"] {height: auto}
+ 
+.chosen-container {display: inline-block !important}
+ 
+.container-inline div.chosen-container div {display: block}
+ 
+.chosen-container.error .chosen-choices,.chosen-container.error .chosen-single {border: 2px solid red}
+ 
+#aggregator .feed-source .feed-title {margin-top: 0}
+ 
+#aggregator .feed-source .feed-image img {margin-bottom: .75em}
+ 
+#aggregator .feed-source .feed-icon {float: right;display:block}
+ 
+#aggregator .feed-item {margin-bottom: 1.5em}
+ 
+#aggregator .feed-item-title {margin-bottom: 0;font-size:1.3em}
+ 
+#aggregator .feed-item-meta,#aggregator .feed-item-body {margin-bottom: .5em}
+ 
+#aggregator .feed-item-categories {font-size: .9em}
+ 
+#aggregator td {vertical-align: bottom}
+ 
+	#aggregator td.categorize-item {white-space: nowrap}
+ 
+#aggregator .categorize-item .news-item .body {margin-top: 0}
+ 
+#aggregator .categorize-item h3 {margin-bottom: 1em;margin-top:0}
+ 
+.container-inline-date {clear: both}
+ 
+	.container-inline-date .form-item {
+		float: none;
+		margin: 0;
+		padding: 0
+	 }
+ 
+	.container-inline-date>.form-item {
+		display: inline-block;
+		margin-right: .5em;
+		vertical-align: top
+	 }
+ 
+fieldset.date-combo .container-inline-date>.form-item {margin-bottom: 10px}
+ 
+.container-inline-date .form-item .form-item {float: left}
+ 
+.container-inline-date .form-item,.container-inline-date .form-item input {width: auto}
+ 
+.container-inline-date .description {clear: both}
+ 
+.container-inline-date .form-item input,.container-inline-date .form-item select,.container-inline-date .form-item option {margin-right: 5px}
+ 
+.container-inline-date .date-spacer {margin-left: -5px}
+ 
+.views-right-60 .container-inline-date div {margin: 0;padding:0}
+ 
+.container-inline-date .date-timezone .form-item {
+	clear: both;
+	float: none;
+	width: auto
+ }
+ 
+.container-inline-date .date-padding {float: left}
+ 
+fieldset.date-combo .container-inline-date .date-padding {padding: 10px}
+ 
+.views-exposed-form .container-inline-date .date-padding {padding: 0}
+ 
+#calendar_div,#calendar_div td,#calendar_div th {margin: 0;padding:0}
+ 
+#calendar_div,.calendar_control,.calendar_links,.calendar_header,.calendar {
+	border-collapse: separate;
+	margin: 0;
+	width: 185px
+ }
+ 
+.calendar td {padding: 0}
+ 
+.date-prefix-inline {display: inline-block}
+ 
+.date-clear {
+	clear: both;
+	display: block;
+	float: none
+ }
+ 
+.date-no-float {
+	clear: both;
+	float: none;
+	width: 98%
+ }
+ 
+.date-float {
+	clear: none;
+	float: left;
+	width: auto
+ }
+ 
+	.date-float .form-type-checkbox {padding-right: 1em}
+ 
+.form-type-date-select .form-type-select[class*=hour] {margin-left: .75em}
+ 
+.date-container .date-format-delete {
+	float: left;
+	margin-top: 1.8em;
+	margin-left: 1.5em
+ }
+ 
+.date-container .date-format-name {float: left}
+ 
+.date-container .date-format-type {float: left;padding-left:10px}
+ 
+.date-container .select-container {clear: left;float:left}
+ 
+div.date-calendar-day {
+	background: #f3f3f3;
+	border-top: 1px solid #EEE;
+	border-left: 1px solid #EEE;
+	border-right: 1px solid #BBB;
+	border-bottom: 1px solid #BBB;
+	color: #999;
+	float: left;
+	line-height: 1;
+	margin: 6px 10px 0 0;
+	text-align: center;
+	width: 40px
+ }
+ 
+	div.date-calendar-day span {display: block;text-align:center}
+ 
+		div.date-calendar-day span.month {
+			background-color: #b5bebe;
+			color: white;
+			font-size: .9em;
+			padding: 2px;
+			text-transform: uppercase
+		 }
+ 
+		div.date-calendar-day span.day {font-size: 2em;font-weight:bold}
+ 
+		div.date-calendar-day span.year {font-size: .9em;padding:2px}
+ 
+.date-form-element-content-multiline {padding: 10px;border:1px solid #CCC}
+ 
+.form-item.form-item-instance-widget-settings-input-format-custom,.form-item.form-item-field-settings-enddate-required {margin-left: 1.3em}
+ 
+#edit-field-settings-granularity .form-type-checkbox {margin-right: .6em}
+ 
+.date-year-range-select {margin-right: 1em}
+ 
+#ui-datepicker-div {
+	font-size: 100%;
+	font-family: Verdana,sans-serif;
+	background: #eee;
+	border-right: 2px #666 solid;
+	border-bottom: 2px #666 solid;
+	z-index: 9999
+ }
+ 
+.ui-datepicker {width: 17em;padding:.2em .2em 0}
+ 
+	.ui-datepicker .ui-datepicker-header {position: relative;padding:.2em 0}
+ 
+	.ui-datepicker .ui-datepicker-prev,.ui-datepicker .ui-datepicker-next {
+		position: absolute;
+		top: 2px;
+		width: 1.8em;
+		height: 1.8em
+	 }
+ 
+	.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover {top: 1px}
+ 
+	.ui-datepicker .ui-datepicker-prev {left: 2px}
+ 
+	.ui-datepicker .ui-datepicker-next {right: 2px}
+ 
+	.ui-datepicker .ui-datepicker-prev-hover {left: 1px}
+ 
+	.ui-datepicker .ui-datepicker-next-hover {right: 1px}
+ 
+	.ui-datepicker .ui-datepicker-prev span,.ui-datepicker .ui-datepicker-next span {
+		display: block;
+		position: absolute;
+		left: 50%;
+		margin-left: -8px;
+		top: 50%;
+		margin-top: -8px
+	 }
+ 
+	.ui-datepicker .ui-datepicker-title {
+		margin: 0 2.3em;
+		line-height: 1.8em;
+		text-align: center
+	 }
+ 
+		.ui-datepicker .ui-datepicker-title select {
+			float: left;
+			font-size: 1em;
+			margin: 1px 0
+		 }
+ 
+	.ui-datepicker select.ui-datepicker-month-year {width: 100%}
+ 
+	.ui-datepicker select.ui-datepicker-month,.ui-datepicker select.ui-datepicker-year {width: 49%}
+ 
+	.ui-datepicker .ui-datepicker-title select.ui-datepicker-year {float: right}
+ 
+	.ui-datepicker table {
+		width: 100%;
+		font-size: .9em;
+		border-collapse: collapse;
+		margin: 0 0 .4em
+	 }
+ 
+	.ui-datepicker th {
+		padding: .7em .3em;
+		text-align: center;
+		font-weight: bold;
+		border: 0
+	 }
+ 
+	.ui-datepicker td {border: 0;padding:1px}
+ 
+		.ui-datepicker td span,.ui-datepicker td a {
+			display: block;
+			padding: .2em;
+			text-align: right;
+			text-decoration: none
+		 }
+ 
+	.ui-datepicker .ui-datepicker-buttonpane {
+		background-image: none;
+		margin: .7em 0 0 0;
+		padding: 0 .2em;
+		border-left: 0;
+		border-right: 0;
+		border-bottom: 0
+	 }
+ 
+		.ui-datepicker .ui-datepicker-buttonpane button {
+			float: right;
+			margin: .5em .2em .4em;
+			cursor: pointer;
+			padding: .2em .6em .3em .6em;
+			width: auto;
+			overflow: visible
+		 }
+ 
+			.ui-datepicker .ui-datepicker-buttonpane button.ui-datepicker-current {float: left}
+ 
+	.ui-datepicker.ui-datepicker-multi {width: auto}
+ 
+.ui-datepicker-multi .ui-datepicker-group {float: left}
+ 
+	.ui-datepicker-multi .ui-datepicker-group table {width: 95%;margin:0 auto .4em}
+ 
+.ui-datepicker-multi-2 .ui-datepicker-group {width: 50%}
+ 
+.ui-datepicker-multi-3 .ui-datepicker-group {width: 33.3%}
+ 
+.ui-datepicker-multi-4 .ui-datepicker-group {width: 25%}
+ 
+.ui-datepicker-multi .ui-datepicker-group-last .ui-datepicker-header {border-left-width: 0}
+ 
+.ui-datepicker-multi .ui-datepicker-group-middle .ui-datepicker-header {border-left-width: 0}
+ 
+.ui-datepicker-multi .ui-datepicker-buttonpane {clear: left}
+ 
+.ui-datepicker-row-break {clear: both;width:100%}
+ 
+.ui-datepicker-rtl {direction: rtl}
+ 
+	.ui-datepicker-rtl .ui-datepicker-prev {right: 2px;left:auto}
+ 
+	.ui-datepicker-rtl .ui-datepicker-next {left: 2px;right:auto}
+ 
+	.ui-datepicker-rtl .ui-datepicker-prev:hover {right: 1px;left:auto}
+ 
+	.ui-datepicker-rtl .ui-datepicker-next:hover {left: 1px;right:auto}
+ 
+	.ui-datepicker-rtl .ui-datepicker-buttonpane {clear: right}
+ 
+		.ui-datepicker-rtl .ui-datepicker-buttonpane button {float: left}
+ 
+			.ui-datepicker-rtl .ui-datepicker-buttonpane button.ui-datepicker-current {float: right}
+ 
+	.ui-datepicker-rtl .ui-datepicker-group {float: right}
+ 
+	.ui-datepicker-rtl .ui-datepicker-group-last .ui-datepicker-header {border-right-width: 0;border-left-width:1px}
+ 
+	.ui-datepicker-rtl .ui-datepicker-group-middle .ui-datepicker-header {border-right-width: 0;border-left-width:1px}
+ 
+.hljs {
+	display: block;
+	overflow-x: auto;
+	padding: .5em;
+	background: #232323;
+	color: #e6e1dc;
+	-webkit-text-size-adjust: none
+ }
+ 
+.hljs-comment,.hljs-shebang {color: #bc9458;font-style:italic}
+ 
+.hljs-keyword,.ruby .hljs-function .hljs-keyword,.hljs-request,.hljs-status,.nginx .hljs-title,.method,.hljs-list .hljs-title {color: #c26230}
+ 
+.hljs-string,.hljs-number,.hljs-regexp,.hljs-tag .hljs-value,.hljs-cdata,.hljs-filter .hljs-argument,.hljs-attr_selector,.apache .hljs-cbracket,.hljs-date,.tex .hljs-command,.asciidoc .hljs-link_label,.markdown .hljs-link_label {color: #a5c261}
+ 
+.hljs-subst {color: #519f50}
+ 
+.hljs-tag,.hljs-tag .hljs-keyword,.hljs-tag .hljs-title,.hljs-doctype,.hljs-sub .hljs-identifier,.hljs-pi,.input_number {color: #e8bf6a}
+ 
+.hljs-identifier {color: #d0d0ff}
+ 
+.hljs-class .hljs-title,.hljs-type,.smalltalk .hljs-class,.hljs-doctag {text-decoration: none}
+ 
+.hljs-constant,.hljs-name {color: #da4939}
+ 
+.hljs-symbol,.hljs-built_in,.ruby .hljs-symbol .hljs-string,.ruby .hljs-symbol .hljs-identifier,.asciidoc .hljs-link_url,.markdown .hljs-link_url,.hljs-attribute {color: #6d9cbe}
+ 
+.asciidoc .hljs-link_url,.markdown .hljs-link_url {text-decoration: underline}
+ 
+.hljs-params,.hljs-variable,.clojure .hljs-attribute {color: #d0d0ff}
+ 
+.css .hljs-tag,.hljs-rule .hljs-property,.hljs-pseudo,.tex .hljs-special {color: #cda869}
+ 
+.css .hljs-class {color: #9b703f}
+ 
+.hljs-rule .hljs-keyword {color: #c5af75}
+ 
+.hljs-rule .hljs-value {color: #cf6a4c}
+ 
+.css .hljs-id {color: #8b98ab}
+ 
+.hljs-annotation,.apache .hljs-sqbracket,.nginx .hljs-built_in {color: #9b859d}
+ 
+.hljs-preprocessor,.hljs-preprocessor *,.hljs-pragma {color: #8996a8 !important}
+ 
+.hljs-hexcolor,.css .hljs-value .hljs-number {color: #a5c261}
+ 
+.hljs-title,.hljs-decorator,.css .hljs-function {color: #ffc66d}
+ 
+.diff .hljs-header,.hljs-chunk {
+	background-color: #2f33ab;
+	color: #e6e1dc;
+	display: inline-block;
+	width: 100%
+ }
+ 
+.diff .hljs-change {
+	background-color: #4a410d;
+	color: #f8f8f8;
+	display: inline-block;
+	width: 100%
+ }
+ 
+.hljs-addition {
+	background-color: #144212;
+	color: #e6e1dc;
+	display: inline-block;
+	width: 100%
+ }
+ 
+.hljs-deletion {
+	background-color: #600;
+	color: #e6e1dc;
+	display: inline-block;
+	width: 100%
+ }
+ 
+.coffeescript .javascript,.javascript .xml,.tex .hljs-formula,.xml .javascript,.xml .vbscript,.xml .css,.xml .hljs-cdata {opacity: .7}
+ 
+.field .field-label {font-weight: bold}
+ 
+.field-label-inline .field-label,.field-label-inline .field-items {float: left}
+ 
+form .field-multiple-table {margin: 0}
+ 
+	form .field-multiple-table th.field-label {padding-left: 0}
+ 
+	form .field-multiple-table td.field-multiple-drag {width: 30px;padding-right:0}
+ 
+		form .field-multiple-table td.field-multiple-drag a.tabledrag-handle {padding-right: .5em}
+ 
+form .field-add-more-submit {margin: .5em 0 0}
+ 
+.node-unpublished {background-color: #fff4f4}
+ 
+.preview .node {background-color: #ffffea}
+ 
+td.revision-current {background: #ffc}
+ 
+a.edit-mini-panel-link:link,a.edit-mini-panel-link:visited {
+	display: block;
+	background: #000;
+	color: #fff;
+	padding: .75em .5em;
+	margin-bottom: 1em;
+	text-align: center;
+	text-transform: uppercase;
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px
+ }
+ 
+a.edit-mini-panel-link:hover,a.edit-mini-panel-link:focus,a.edit-mini-panel-link:active {text-decoration: none;background:#999}
+ 
+span[data-picture-align="left"],img[data-picture-align="left"] {float: left}
+ 
+span[data-picture-align="right"],img[data-picture-align="right"] {float: right}
+ 
+span[data-picture-align="center"],img[data-picture-align="center"] {
+	display: block;
+	margin-left: auto;
+	margin-right: auto
+ }
+ 
+.cke_dialog_body tr td:last-child {border-right: 0}
+ 
+.search-form {margin-bottom: 1em}
+ 
+	.search-form input {margin-top: 0;margin-bottom:0}
+ 
+.search-results {list-style: none}
+ 
+	.search-results p {margin-top: 0}
+ 
+	.search-results .title {font-size: 1.2em}
+ 
+	.search-results li {margin-bottom: 1em}
+ 
+	.search-results .search-snippet-info {padding-left: 1em}
+ 
+	.search-results .search-info {font-size: .85em}
+ 
+.search-advanced .criterion {float: left;margin-right:2em}
+ 
+.search-advanced .action {float: left;clear:left}
+ 
+#permissions td.module {font-weight: bold}
+ 
+#permissions td.permission {padding-left: 1.5em}
+ 
+#permissions tr.odd .form-item,#permissions tr.even .form-item {white-space: normal}
+ 
+#user-admin-settings fieldset .fieldset-description {font-size: .85em;padding-bottom:.5em}
+ 
+#user-admin-roles td.edit-name {clear: both}
+ 
+#user-admin-roles .form-item-name {float: left;margin-right:1em}
+ 
+.password-strength {
+	width: 17em;
+	float: right;
+	margin-top: 1.4em
+ }
+ 
+.password-strength-title {display: inline}
+ 
+.password-strength-text {float: right;font-weight:bold}
+ 
+.password-indicator {
+	background-color: #c4c4c4;
+	height: .3em;
+	width: 100%
+ }
+ 
+	.password-indicator div {
+		height: 100%;
+		width: 0;
+		background-color: #47c965
+	 }
+ 
+input.password-confirm,input.password-field {width: 16em;margin-bottom:.4em}
+ 
+div.password-confirm {
+	float: right;
+	margin-top: 1.5em;
+	visibility: hidden;
+	width: 17em
+ }
+ 
+div.form-item div.password-suggestions {
+	padding: .2em .5em;
+	margin: .7em 0;
+	width: 38.5em;
+	border: 1px solid #b4b4b4
+ }
+ 
+div.password-suggestions ul {margin-bottom: 0}
+ 
+.confirm-parent,.password-parent {
+	clear: left;
+	margin: 0;
+	width: 36.3em
+ }
+ 
+.profile {clear: both;margin:1em 0}
+ 
+	.profile .user-picture {float: right;margin:0 1em 1em 0}
+ 
+	.profile h3 {border-bottom: 1px solid #ccc}
+ 
+	.profile dl {margin: 0 0 1.5em 0}
+ 
+	.profile dt {margin: 0 0 .2em 0;font-weight:bold}
+ 
+	.profile dd {margin: 0 0 1em 0}
+ 
+span.ext {
+	background: url(https://www.docusign.com/sites/all/modules/contrib/extlink/extlink_s.png) 2px center no-repeat;
+	width: 10px;
+	height: 10px;
+	padding-right: 12px;
+	text-decoration: none
+ }
+ 
+span.mailto {
+	background: url(https://www.docusign.com/sites/all/modules/contrib/extlink/extlink_s.png) -20px center no-repeat;
+	width: 10px;
+	height: 10px;
+	padding-right: 12px;
+	text-decoration: none
+ }
+ 
+@media print {span.ext,span.mailto}
+ 
+{}
+ 
+	.views-exposed-form .views-exposed-widget {float: left;padding:.5em 1em 0 0}
+ 
+		.views-exposed-form .views-exposed-widget .form-submit {margin-top: 1.6em}
+ 
+	.views-exposed-form .form-item,.views-exposed-form .form-submit {margin-top: 0;margin-bottom:0}
+ 
+	.views-exposed-form label {font-weight: bold}
+ 
+	.views-exposed-widgets {margin-bottom: .5em}
+ 
+	.views-align-left {text-align: left}
+ 
+	.views-align-right {text-align: right}
+ 
+	.views-align-center {text-align: center}
+ 
+	.views-view-grid tbody {border-top: 0}
+ 
+	.view .progress-disabled {float: none}
+ 
+	.ctools-locked {
+		color: red;
+		border: 1px solid red;
+		padding: 1em
+	 }
+ 
+	.ctools-owns-lock {
+		background: #ffd none repeat scroll 0 0;
+		border: 1px solid #f0c020;
+		padding: 1em
+	 }
+ 
+a.ctools-ajaxing,input.ctools-ajaxing,button.ctools-ajaxing,select.ctools-ajaxing {padding-right: 18px !important;background:url(https://www.docusign.com/sites/all/modules/contrib/ctools/images/status-active.gif) right center no-repeat}
+ 
+div.ctools-ajaxing {
+	float: left;
+	width: 18px;
+	background: url(https://www.docusign.com/sites/all/modules/contrib/ctools/images/status-active.gif) center center no-repeat
+ }
+ 
+.fancybox-wrap,.fancybox-skin,.fancybox-outer,.fancybox-inner,.fancybox-image,.fancybox-wrap iframe,.fancybox-wrap object,.fancybox-nav,.fancybox-nav span,.fancybox-tmp {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	outline: 0;
+	vertical-align: top
+ }
+ 
+.fancybox-wrap {
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 8020
+ }
+ 
+.fancybox-skin {
+	position: relative;
+	background: #f9f9f9;
+	color: #444;
+	text-shadow: none;
+	-webkit-border-radius: 4px;
+	-moz-border-radius: 4px;
+	border-radius: 4px
+ }
+ 
+.fancybox-opened {z-index: 8030}
+ 
+	.fancybox-opened .fancybox-skin {
+		-webkit-box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+		-moz-box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+		box-shadow: 0 10px 25px rgba(0,0,0,0.5)
+	 }
+ 
+.fancybox-outer,.fancybox-inner {position: relative}
+ 
+.fancybox-inner {overflow: hidden}
+ 
+.fancybox-type-iframe .fancybox-inner {-webkit-overflow-scrolling: touch}
+ 
+.fancybox-error {
+	color: #444;
+	font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	margin: 0;
+	padding: 15px;
+	white-space: nowrap
+ }
+ 
+.fancybox-image,.fancybox-iframe {
+	display: block;
+	width: 100%;
+	height: 100%
+ }
+ 
+.fancybox-image {max-width: 100%;max-height:100%}
+ 
+#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span {background-image: url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_sprite.png)}
+ 
+#fancybox-loading {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	margin-top: -22px;
+	margin-left: -22px;
+	background-position: 0 -108px;
+	opacity: .8;
+	cursor: pointer;
+	z-index: 8060
+ }
+ 
+	#fancybox-loading div {
+		width: 44px;
+		height: 44px;
+		background: url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_loading.gif) center center no-repeat
+	 }
+ 
+.fancybox-close {
+	position: absolute;
+	top: -18px;
+	right: -18px;
+	width: 36px;
+	height: 36px;
+	cursor: pointer;
+	z-index: 8040
+ }
+ 
+.fancybox-nav {
+	position: absolute;
+	top: 0;
+	width: 40%;
+	height: 100%;
+	cursor: pointer;
+	text-decoration: none;
+	background: transparent url(https://www.docusign.com/sites/all/libraries/fancybox/source/blank.gif);
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+	z-index: 8040
+ }
+ 
+.fancybox-prev {left: 0}
+ 
+.fancybox-next {right: 0}
+ 
+.fancybox-nav span {
+	position: absolute;
+	top: 50%;
+	width: 36px;
+	height: 34px;
+	margin-top: -18px;
+	cursor: pointer;
+	z-index: 8040;
+	visibility: hidden
+ }
+ 
+.fancybox-prev span {left: 10px;background-position:0 -36px}
+ 
+.fancybox-next span {right: 10px;background-position:0 -72px}
+ 
+.fancybox-nav:hover span {visibility: visible}
+ 
+.fancybox-tmp {
+	position: absolute;
+	top: -99999px;
+	left: -99999px;
+	visibility: hidden;
+	max-width: 99999px;
+	max-height: 99999px;
+	overflow: visible !important
+ }
+ 
+.fancybox-lock {overflow: hidden !important;width:auto}
+ 
+	.fancybox-lock body {overflow: hidden !important}
+ 
+.fancybox-lock-test {overflow-y: hidden !important}
+ 
+.fancybox-overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	display: none;
+	z-index: 8010;
+	background: url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_overlay.png)
+ }
+ 
+.fancybox-overlay-fixed {
+	position: fixed;
+	bottom: 0;
+	right: 0
+ }
+ 
+.fancybox-lock .fancybox-overlay {overflow: auto;overflow-y:scroll}
+ 
+.fancybox-title {
+	visibility: hidden;
+	font: normal 13px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+	position: relative;
+	text-shadow: none;
+	z-index: 8050
+ }
+ 
+.fancybox-opened .fancybox-title {visibility: visible}
+ 
+.fancybox-title-float-wrap {
+	position: absolute;
+	bottom: 0;
+	right: 50%;
+	margin-bottom: -35px;
+	z-index: 8050;
+	text-align: center
+ }
+ 
+	.fancybox-title-float-wrap .child {
+		display: inline-block;
+		margin-right: -100%;
+		padding: 2px 20px;
+		background: transparent;
+		background: rgba(0,0,0,0.8);
+		-webkit-border-radius: 15px;
+		-moz-border-radius: 15px;
+		border-radius: 15px;
+		text-shadow: 0 1px 2px #222;
+		color: #FFF;
+		font-weight: bold;
+		line-height: 24px;
+		white-space: nowrap
+	 }
+ 
+.fancybox-title-outside-wrap {
+	position: relative;
+	margin-top: 10px;
+	color: #fff
+ }
+ 
+.fancybox-title-inside-wrap {padding-top: 10px}
+ 
+.fancybox-title-over-wrap {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	color: #fff;
+	padding: 10px;
+	background: #000;
+	background: rgba(0,0,0,.8)
+ }
+ 
+@media only screen and (-webkit-min-device-pixel-ratio:1.5),only screen and (min--moz-device-pixel-ratio:1.5),only screen and (min-device-pixel-ratio:1.5) {#fancybox-loading,.fancybox-close,.fancybox-prev span,.fancybox-next span}
+ 
+#fancybox-loading div {background-image: url(https://www.docusign.com/sites/all/libraries/fancybox/source/fancybox_loading%402x.gif);background-size:24px 24px}
+ 
+{}
+ 
+div.panel-pane div.admin-links {font-size: xx-small;margin-right:1em}
+ 
+	div.panel-pane div.admin-links li a {color: #ccc}
+ 
+	div.panel-pane div.admin-links li {
+		padding-bottom: 2px;
+		background: white;
+		z-index: 201
+	 }
+ 
+	div.panel-pane div.admin-links:hover a,div.panel-pane div.admin-links-hover a {color: #000}
+ 
+	div.panel-pane div.admin-links a:before {content: "["}
+ 
+	div.panel-pane div.admin-links a:after {content: "]"}
+ 
+div.panel-pane div.panel-hide {display: none}
+ 
+div.panel-pane div.panel-hide-hover,div.panel-pane:hover div.panel-hide {
+	display: block;
+	position: absolute;
+	z-index: 200;
+	margin-top: -1.5em
+ }
+ 
+div.panel-pane div.feed a {float: right}
+ 
+#panels-dnd-main .panel-panel:before,#panels-dnd-main .panel-panel:after {content: '';display:table}
+ 
+#panels-dnd-main .panel-panel:after {clear: both}
+ 
+#panels-dnd-main .panel-panel {
+	padding: 5px;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box
+ }
+ 
+#panels-dnd-main .panel-pane {
+	margin: 5px !important;
+	width: auto !important;
+	display: block !important
+ }
+ 
+ 

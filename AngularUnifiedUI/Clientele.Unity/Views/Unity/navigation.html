@@ -11,7 +11,9 @@
         </div>
         <div ng-cloak class="navbar-collapse collapse">
             <ul class="navbar-nav nav navbar" style="width: 100%;">
-                <li><a ng-show="loggedIn" class="navbar-brand" href="#/">Clientèle UNITY</a></li>
+                <li>
+                    <img src="../../Content/images/SmallLogo.png" /></li>
+                <!--<li><a ng-show="loggedIn" class="navbar-brand" href="#/">Clientèle UNITY</a></li>-->
                 <li ng-cloak ng-repeat-start="navItem in navItems"></li>
                 <li ng-if="navItem.childNavItems !== undefined">
                     <a ng-href="{{navItem.url}}" class="dropdown-toggle">{{navItem.label}}<b class="caret"></b></a>
