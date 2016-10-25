@@ -4074,11 +4074,11 @@ footer.footer-dev {
 }
 
 @media(min-width:62.5em) {
-    .js-search .i18n-en.front .video-bg-block, .js-search .i18n-fr.front .video-bg-block, .js-search .i18n-en-gb.front .video-bg-block, .js-search .i18n-de.front .video-bg-block, .js-search .i18n-en-CA.front .video-bg-block, .js-search .i18n-en-AU.front .video-bg-block, .js-search .transparent-nav .video-bg-block {
+    .js-search .i18n-en.front .video-bg-block1, .js-search .i18n-fr.front .video-bg-block1, .js-search .i18n-en-gb.front .video-bg-block1, .js-search .i18n-de.front .video-bg-block1, .js-search .i18n-en-CA.front .video-bg-block1, .js-search .i18n-en-AU.front .video-bg-block1, .js-search .transparent-nav .video-bg-block1 {
         margin-top: 8.125rem;
     }
 
-    .i18n-en.front .video-bg-block .text-wrapper, .i18n-fr.front .video-bg-block .text-wrapper, .i18n-en-gb.front .video-bg-block .text-wrapper, .i18n-de.front .video-bg-block .text-wrapper, .i18n-en-CA.front .video-bg-block .text-wrapper, .i18n-en-AU.front .video-bg-block .text-wrapper, .transparent-nav .video-bg-block .text-wrapper {
+    .i18n-en.front .video-bg-block1 .text-wrapper, .i18n-fr.front .video-bg-block1 .text-wrapper, .i18n-en-gb.front .video-bg-block1 .text-wrapper, .i18n-de.front .video-bg-block1 .text-wrapper, .i18n-en-CA.front .video-bg-block1 .text-wrapper, .i18n-en-AU.front .video-bg-block1 .text-wrapper, .transparent-nav .video-bg-block1 .text-wrapper {
         padding-top: 5.8125rem;
     }
 }
