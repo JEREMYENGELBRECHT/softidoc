@@ -12691,7 +12691,7 @@ pre.url {
 
 @media(min-width:48em) {
     .touch .video-bg-block {
-        background-image: url(https://www.docusign.com/sites/all/themes/custom/docusign/img/DocuSign-Frontpage-mobile%402x.jpg);
+       
         height: 22.8125rem;
     }
 }
