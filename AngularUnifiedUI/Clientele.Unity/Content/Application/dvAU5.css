@@ -4074,11 +4074,11 @@ footer.footer-dev {
 }
 
 @media(min-width:62.5em) {
-    .js-search .i18n-en.front .video-bg-block1, .js-search .i18n-fr.front .video-bg-block1, .js-search .i18n-en-gb.front .video-bg-block1, .js-search .i18n-de.front .video-bg-block1, .js-search .i18n-en-CA.front .video-bg-block1, .js-search .i18n-en-AU.front .video-bg-block1, .js-search .transparent-nav .video-bg-block1 {
+    .js-search .i18n-en.front .video-bg-block, .js-search .i18n-fr.front .video-bg-block, .js-search .i18n-en-gb.front .video-bg-block, .js-search .i18n-de.front .video-bg-block, .js-search .i18n-en-CA.front .video-bg-block, .js-search .i18n-en-AU.front .video-bg-block, .js-search .transparent-nav .video-bg-block {
         margin-top: 8.125rem;
     }
 
-    .i18n-en.front .video-bg-block1 .text-wrapper, .i18n-fr.front .video-bg-block1 .text-wrapper, .i18n-en-gb.front .video-bg-block1 .text-wrapper, .i18n-de.front .video-bg-block1 .text-wrapper, .i18n-en-CA.front .video-bg-block1 .text-wrapper, .i18n-en-AU.front .video-bg-block1 .text-wrapper, .transparent-nav .video-bg-block1 .text-wrapper {
+    .i18n-en.front .video-bg-block .text-wrapper, .i18n-fr.front .video-bg-block .text-wrapper, .i18n-en-gb.front .video-bg-block .text-wrapper, .i18n-de.front .video-bg-block .text-wrapper, .i18n-en-CA.front .video-bg-block .text-wrapper, .i18n-en-AU.front .video-bg-block .text-wrapper, .transparent-nav .video-bg-block .text-wrapper {
         padding-top: 5.8125rem;
     }
 }
@@ -12654,7 +12654,7 @@ pre.url {
     white-space: pre-wrap;
 }
 
-.video-bg-block1 {
+.video-bg-block {
     -moz-transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
     transform-style: preserve-3d;
@@ -12662,19 +12662,19 @@ pre.url {
     overflow: hidden;
 }
 
-    .video-bg-block1 video {
+    .video-bg-block video {
         display: block;
         width: 100%;
         height: auto;
     }
 
 @media screen and (max-width:29.9375em) {
-    .video-bg-block1 video {
+    .video-bg-block video {
         min-width: 30rem;
     }
 }
 
-.touch .video-bg-block1 {
+.touch .video-bg-block {
     
     background-position: center center;
     background-repeat: no-repeat;
@@ -12683,24 +12683,24 @@ pre.url {
 }
 
 @media(-webkit-min-device-pixel-ratio:2),(-moz-min-device-pixel-ratio:2) {
-    .touch .video-bg-block1 {
+    .touch .video-bg-block {
         
         -webkit-background-size: "100%" "100%";
     }
 }
 
 @media(min-width:48em) {
-    .touch .video-bg-block1 {
+    .touch .video-bg-block {
        
         height: 22.8125rem;
     }
 }
 
-.touch .video-bg-block1 video {
+.touch .video-bg-block video {
     display: none;
 }
 
-.video-bg-block1 .text-wrapper {
+.video-bg-block .text-wrapper {
     -moz-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
@@ -12712,12 +12712,12 @@ pre.url {
 }
 
 @media(min-width:48em) {
-    .video-bg-block1 .text-wrapper {
+    .video-bg-block .text-wrapper {
         text-align: left;
     }
 }
 
-.video-bg-block1 .text-wrapper p {
+.video-bg-block .text-wrapper p {
     text-shadow: 1px 1px 1px #000;
     color: #fff;
     font-size: 1.5rem;
@@ -12725,7 +12725,7 @@ pre.url {
 }
 
 @media screen and (max-width:47.9375em) {
-    .video-bg-block1 .text-wrapper p {
+    .video-bg-block .text-wrapper p {
         max-width: 21.5625rem;
         margin-left: auto;
         margin-right: auto;
@@ -12733,7 +12733,7 @@ pre.url {
 }
 
 @media(min-width:48em) {
-    .video-bg-block1 .text-wrapper p {
+    .video-bg-block .text-wrapper p {
         font-family: "maven_prolight",sans-serif;
         font-size: 2rem;
         line-height: 2.5rem;
@@ -12741,18 +12741,18 @@ pre.url {
 }
 
 @media(min-width:62.5em) {
-    .video-bg-block1 .text-wrapper p {
+    .video-bg-block .text-wrapper p {
         font-size: 3rem;
         line-height: 3.375rem;
     }
 }
 
-.video-bg-block1 .buttons-wrapper {
+.video-bg-block .buttons-wrapper {
     margin-top: 2.1875rem;
 }
 
 @media(min-width:48em) {
-    .video-bg-block1 .buttons-wrapper {
+    .video-bg-block .buttons-wrapper {
         margin-top: 1.875rem;
     }
 }

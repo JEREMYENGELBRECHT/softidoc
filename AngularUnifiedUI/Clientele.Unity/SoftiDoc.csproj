@@ -71,6 +71,12 @@
     <Content Include="Content\Application\dvAU3.css" />
     <Content Include="Content\Application\dvAU4.css" />
     <Content Include="Content\Application\dvAU5.css" />
+    <Content Include="scripts\Application\SoftiDoc_Script10.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script11.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script12.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script13.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script2.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script1.js" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
     <Content Include="Content\bootstrap.css" />
@@ -172,6 +178,13 @@
     <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.Controllers.js" />
     <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.js" />
     <Content Include="scripts\Application\HelperFunctions.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script3.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script4.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script5.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script6.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script7.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script8.js" />
+    <Content Include="scripts\Application\SoftiDoc_Script9.js" />
     <Content Include="scripts\bootstrap.js" />
     <Content Include="scripts\bootstrap.min.js" />
     <Content Include="scripts\CorsRequests.js" />
