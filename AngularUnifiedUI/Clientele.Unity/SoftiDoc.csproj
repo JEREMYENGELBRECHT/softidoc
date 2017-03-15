@@ -173,10 +173,6 @@
     <Content Include="scripts\Application\Components\ApiView\SoftiDoc.ApiView.js" />
     <Content Include="scripts\Application\Components\ApiView\SoftiDoc.ApiView.Routes.js" />
     <Content Include="scripts\Application\Components\RecordStore\Controllers\SoftiDoc.RecordStore.Controllers.AdvancedSearch.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.Directives.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.Services.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.Controllers.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\Tasks\SoftiDoc.WorkFlowServices.Tasks.js" />
     <Content Include="scripts\Application\HelperFunctions.js" />
     <Content Include="scripts\Application\SoftiDoc_Script3.js" />
     <Content Include="scripts\Application\SoftiDoc_Script4.js" />
@@ -981,9 +977,6 @@
     <Content Include="scripts\Application\Components\ServiceError\SoftiDoc.ServiceError.Routes.js" />
     <Content Include="scripts\Application\Components\ServiceError\SoftiDoc.ServiceError.Services.js" />
     <Content Include="scripts\Angular\bindonce.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.Controllers.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.Directives.js" />
-    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.Services.js" />
     <Content Include="scripts\Application\SharedObjectDefinitions.js" />
     <Content Include="scripts\jQuery\jquery.signalR-2.0.3.js" />
     <Content Include="scripts\jQuery\jquery.signalR-2.0.3.min.js" />
@@ -1007,33 +1000,6 @@
     <Content Include="Views\RecordStore\AdvancedSearch.html" />
     <Content Include="Views\RecordStore\RecordListBySearch.html" />
     <Content Include="Views\RecordStore\Template\RecordList.html" />
-    <Content Include="Views\ServiceError\DetailedErrorModal.html" />
-    <Content Include="Views\ServiceError\Errors.html" />
-    <Content Include="Views\ServiceError\Index.html" />
-    <Content Include="Views\UnityAddress\Modal\Edit.html" />
-    <Content Include="Views\UnityAddress\View.html" />
-    <Content Include="Views\UnityBankDetails\Modal\AVSRModal.html" />
-    <Content Include="Views\UnityBankDetails\Modal\Edit.html" />
-    <Content Include="Views\UnityBankDetails\View.html" />
-    <Content Include="Views\Unity\navigation1.html" />
-    <Content Include="Views\Unity\Shurien.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Dashboard\AdvancedDashboard.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Dashboard\Dashboard.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Dashboard\teamTaskManagement.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Dashboard\unassignedTaskManagement.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\DelegateTaskModal.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\CloseTaskModal.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\genericInputModal.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\postponeCaptureTask.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\TaskActionMenu.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\captureAssignTaskModal.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\TaskStatusHistory.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\genericModal.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\ViewTaskComments.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\TaskOwnershipHistory.tpl.html" />
-    <Content Include="Views\WorkFlowServices\Tasks\Templates\TaskCommentModal.tpl.html" />
-    <Content Include="Views\WorkFlowServices\TeamManagement\WorkFlowTeamList.html" />
-    <Content Include="Views\WorkFlowServices\TeamManagement\WorkflowTeamMemberList.html" />
     <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.js" />
     <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.Routes.js" />
     <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.Services.js" />
@@ -1073,7 +1039,6 @@
     </Content>
     <Content Include="css\jasmine.css" />
     <Content Include="IdentityNotFound.html" />
-    <Content Include="Index1.html" />
     <Content Include="NoAccessRights.html" />
     <Content Include="scripts\Angular\angular-animate.js" />
     <Content Include="scripts\Angular\angular-animate.min.js" />
@@ -1093,7 +1058,6 @@
     </Content>
     <Content Include="scripts\Angular\errors.json" />
     <Content Include="scripts\Angular\version.json" />
-    <Content Include="scripts\Application\Components\WorkflowServices\SoftiDoc.WorkFlowServices.js" />
     <Content Include="Content\UiAddons\ui-grid.woff" />
     <Content Include="Content\UiAddons\ui-grid.ttf" />
     <Content Include="Content\UiAddons\ui-grid.eot" />
@@ -1614,12 +1578,6 @@
     <Content Include="Tests\jasmine.js" />
     <Content Include="Tests\Math.js" />
     <Content Include="Tests\SampleTest.js" />
-    <Content Include="Views\Claims\Administer.html" />
-    <Content Include="Views\Claims\Documents.html" />
-    <Content Include="Views\Claims\Index.html" />
-    <Content Include="Views\Claims\Manage.html" />
-    <Content Include="Views\Claims\Payments.html" />
-    <Content Include="Views\Claims\Search.html" />
     <Content Include="Views\Unity\accessdenied.html" />
     <Content Include="Views\Unity\Login.html" />
     <Content Include="Views\Unity\Logout.html" />
@@ -1753,10 +1711,6 @@
     <Folder Include="scripts\Application\Components\Commisions\" />
     <Folder Include="template\dialog\" />
     <Folder Include="template\select2\" />
-    <Folder Include="Views\SearchService\" />
-  </ItemGroup>
-  <ItemGroup>
-    <WCFMetadata Include="Service References\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

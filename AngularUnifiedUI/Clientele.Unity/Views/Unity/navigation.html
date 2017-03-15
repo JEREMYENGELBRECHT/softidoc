@@ -1,19 +1,52 @@
-﻿
-<div class="navbar navbar-left navbar-fixed-top navbar-inverse" role="navigation">
+﻿<style>
+    
+    .navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
+    .navbar {min-height:30px !important}
+    /*.navbar{
+      min-height:20px; 
+    }*/
+
+    @media (max-width: 767px) { 
+    /*.navbar-brand {
+        padding: 0;
+        min-height:40px !important
+    }
+
+    .navbar-brand img {
+        margin-top: 5px;
+        margin-left: 5px;
+    }*/
+    
+    .navbar-brand,
+    .navbar-nav li a {
+        margin-top: 10px;
+        margin-left: 5px;
+        height: 45px;
+        line-height: 45px;
+        padding-top: 0;
+    }
+
+}
+
+</style>
+<nav class="navbar navbar-left navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <button type="button" class="navbar-toggle navbar-link" data-toggle="collapse" data-target=".navbar-collapse">
+            <!--<button type="button" class="navbar-toggle navbar-link" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only btn btn-primary">Toggle navigation</span>
                 <span class="icon-bar navbar-inverse"></span>
                 <span class="icon-bar navbar-inverse"></span>
                 <span class="icon-bar navbar-inverse"></span>
-            </button>
+            </button>-->
+            <a class="navbar-brand" href="#">
+                <img class="hidden-xs" src="../../Content/images/400dpiLogoCropped_5_5.png" alt=""/>
+                <img class="visible-xs" src="../../Content/images/400dpiLogoCropped_5_5.png" alt=""/>
+                <!--<img src="../../Content/images/400dpiLogoCropped_5_5.png" alt="" />-->
+                
+            </a>
         </div>
         <div ng-cloak class="navbar-collapse collapse">
             <ul class="navbar-nav nav navbar" style="width: 100%;">
-                <li>
-                    <img src="../../Content/images/SmallLogo.png" /></li>
-                <!--<li><a ng-show="loggedIn" class="navbar-brand" href="#/">Clientèle UNITY</a></li>-->
                 <li ng-cloak ng-repeat-start="navItem in navItems"></li>
                 <li ng-if="navItem.childNavItems !== undefined">
                     <a ng-href="{{navItem.url}}" class="dropdown-toggle">{{navItem.label}}<b class="caret"></b></a>
@@ -38,7 +71,7 @@
             </ul>
         </div>
     </div>
-</div>
+</nav>
 
 
 
