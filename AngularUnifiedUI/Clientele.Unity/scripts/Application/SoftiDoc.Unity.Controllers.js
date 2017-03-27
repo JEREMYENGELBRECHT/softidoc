@@ -1,89 +1,196 @@
 ﻿/**********************************************************************************************/
 /* Controllers                                                                                */
 /**********************************************************************************************/
-angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
-    .controller("MainUIController", ["$scope", "notificationService", '$location', '$timeout', 'unityApplicationRepository', 'localStorageService', function ($scope, notificationService, $location, $timeout, unityApplicationRepository, localStorageService) {
-        $scope.user = { accountName: "", givenName: "", surname: "" };
+angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers', 'SoftiDoc.CentrePanel.Controller', 'SoftiDoc.OuterPanel.Controller'])
+    .controller("MainUIController",[
+        "$scope", "notificationService", '$location', '$timeout', 'unityApplicationRepository', 'localStorageService',
+        function($scope, notificationService, $location, $timeout, unityApplicationRepository, localStorageService) {
+            $scope.user = { accountName: "", givenName: "", surname: "" };
 
-        $scope.show = function (e) {
-            $scope.sho = true;
-            e.stopPropagation();
-        }
-
-        $scope.hide = function (e) {
-            $scope.sho = false;
-        }
-
-        var currentApplication = "";
-        $scope.loggedIn = false;
-        $scope.MultipleApplications = false;
-
-        $scope.PanelIsOpen = true;
-        $scope.PanelClass = $scope.PanelIsOpen ? 'PanelOpen' : 'PanelClosed';
-
-        $scope.ChangeUrl = function (application) {
-            if (application.target == "_blank") {
-                window.open(application.url);
-                return;
+            $scope.show = function(e) {
+                $scope.sho = true;
+                e.stopPropagation();
             }
 
-            $location.path(application.url.replace("#", ""));
-        };
+            $scope.hide = function(e) {
+                $scope.sho = false;
+            }
 
-        $scope.HidePanel = function () {
-            $scope.PanelIsOpen = false;
-            $scope.PanelClass = 'PanelClosed';
-        }
-
-        $scope.ToggleSidePanel = function () {
-            $timeout(function () {
-                $scope.PanelIsOpen = $scope.PanelIsOpen ? false : true;
-                $scope.PanelClass = $scope.PanelIsOpen ? 'PanelOpen' : 'PanelClosed';
-            });
-        };
-
-        $scope.Logout = function () {
+            var currentApplication = "";
             $scope.loggedIn = false;
-            $location.path("/logout/");
-        };
+            $scope.MultipleApplications = false;
 
-        $scope.$on('ApplicationsLoaded', function (event, eventArgs) {
-            $scope.MultipleApplications = unityApplicationRepository.GetApplications().length > 1;
-        });
+            $scope.PanelIsOpen = true;
+            $scope.PanelClass = $scope.PanelIsOpen ? 'PanelOpen' : 'PanelClosed';
 
-        $scope.$on('UserLoggedIn', function (event, message) {
-            $scope.loggedIn = true;
-            if (angular.isDefined(applicationHost.user)) {
-                $scope.user = applicationHost.user;
-            }
-        });
-
-        $scope.$on('UserLoggedOut', function (event, message) {
-            $timeout(function () {
-                $scope.user = { accountName: "", givenName: "", surname: "" };
-            });
-        });
-
-        $scope.$on("UINotify", function (event, data) {
-            notificationService.notify(data.title, data.message, data.Success ? "success" : "error");
-        });
-
-        $scope.$on('ApplicationChanged', function (event, message) {
-            if (angular.isDefined(message.applicationKey)) {
-
-                if (message.applicationKey == "Root" || message.applicationKey == "" || message.applicationKey == message.referrer) {
-                    $scope.PanelIsOpen = false;
-                    $scope.PanelClass = 'PanelClosed';
+            $scope.ChangeUrl = function(application) {
+                if (application.target == "_blank") {
+                    window.open(application.url);
                     return;
                 }
 
-                if (message.applicationKey.toLowerCase() != currentApplication.toLowerCase()) {
-                    $scope.ToggleSidePanel();
-                    currentApplication = message.applicationKey;
-                }
-            }
-        });
+                $location.path(application.url.replace("#", ""));
+            };
 
+            $scope.HidePanel = function() {
+                $scope.PanelIsOpen = false;
+                $scope.PanelClass = 'PanelClosed';
+            }
+
+            $scope.ToggleSidePanel = function() {
+                $timeout(function() {
+                    $scope.PanelIsOpen = $scope.PanelIsOpen ? false : true;
+                    $scope.PanelClass = $scope.PanelIsOpen ? 'PanelOpen' : 'PanelClosed';
+                });
+            };
+
+            $scope.Logout = function() {
+                $scope.loggedIn = false;
+                $location.path("/logout/");
+            };
+
+            $scope.$on('ApplicationsLoaded',
+                function(event, eventArgs) {
+                    $scope.MultipleApplications = unityApplicationRepository.GetApplications().length > 1;
+                });
+
+            $scope.$on('UserLoggedIn',
+                function(event, message) {
+                    $scope.loggedIn = true;
+                    if (angular.isDefined(applicationHost.user)) {
+                        $scope.user = applicationHost.user;
+                    }
+                });
+
+            $scope.$on('UserLoggedOut',
+                function(event, message) {
+                    $timeout(function() {
+                        $scope.user = { accountName: "", givenName: "", surname: "" };
+                    });
+                });
+
+            $scope.$on("UINotify",
+                function(event, data) {
+                    notificationService.notify(data.title, data.message, data.Success ? "success" : "error");
+                });
+
+            $scope.$on('ApplicationChanged',
+                function(event, message) {
+                    if (angular.isDefined(message.applicationKey)) {
+
+                        if (message.applicationKey == "Root" ||
+                            message.applicationKey == "" ||
+                            message.applicationKey == message.referrer) {
+                            $scope.PanelIsOpen = false;
+                            $scope.PanelClass = 'PanelClosed';
+                            return;
+                        }
+
+                        if (message.applicationKey.toLowerCase() != currentApplication.toLowerCase()) {
+                            $scope.ToggleSidePanel();
+                            currentApplication = message.applicationKey;
+                        }
+                    }
+                });
+
+        }
+    ])
+    .controller("MainPageController", ["$scope", "authenticationService", "$location", "$route", "$timeout", "$rootScope", 'uiLoader', 'ajaxJsonService', function ($scope, authenticationService, $location, $route, $timeout, $rootScope, uiLoader, ajaxJsonService) {
+            
+        $scope.remove = function (scope) {
+            scope.remove();
+        };
+
+        $scope.toggle = function (scope) {
+            scope.toggle();
+        };
+
+        $scope.moveLastToTheBeginning = function () {
+            var a = $scope.data.pop();
+            $scope.data.splice(0, 0, a);
+        };
+
+        $scope.newSubItem = function (scope) {
+            var nodeData = scope.$modelValue;
+            nodeData.nodes.push({
+                id: nodeData.id * 10 + nodeData.nodes.length,
+                title: nodeData.title + '.' + (nodeData.nodes.length + 1),
+                nodes: []
+            });
+        };
+
+        $scope.collapseAll = function () {
+            $scope.$broadcast('angular-ui-tree:collapse-all');
+        };
+
+        $scope.expandAll = function () {
+            $scope.$broadcast('angular-ui-tree:expand-all');
+        };
+
+        $scope.dataclick = function() {
+
+            var action = function () {
+                return ajaxJsonService.Get("http://localhost:42050/api/softidoc/getDatabases/", null);
+            };
+
+            var success = function(data) {
+                debugger;
+                alert(data);
+
+            };
+
+            uiLoader.UseWithLoader($scope, action, success);
+        }
+
+        $scope.data = [{
+            'id': 1,
+            'title': 'node1',
+            'nodes': [
+              {
+                  'id': 11,
+                  'title': 'node1.1',
+                  'nodes': [
+                    {
+                        'id': 111,
+                        'title': 'node1.1.1',
+                        'nodes': []
+                    }
+                  ]
+              },
+              {
+                  'id': 12,
+                  'title': 'node1.2',
+                  'nodes': []
+              }
+            ]
+        }, {
+            'id': 2,
+            'title': 'node2',
+            'nodrop': true, // An arbitrary property to check in custom template for nodrop-enabled
+            'nodes': [
+              {
+                  'id': 21,
+                  'title': 'node2.1',
+                  'nodes': []
+              },
+              {
+                  'id': 22,
+                  'title': 'node2.2',
+                  'nodes': []
+              }
+            ]
+        }, {
+            'id': 3,
+            'title': 'node3',
+            'nodes': [
+              {
+                  'id': 31,
+                  'title': 'node3.1',
+                  'nodes': []
+              }
+            ]
+        }];
+    
     }])
     .controller("identityNotFoundController", ["$scope", "authenticationService", "$location", "$route", "$timeout", "$rootScope", function ($scope, authenticationService, $location, $route, $timeout, $rootScope) {
 
@@ -400,117 +507,7 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
             });
         };
     }])
-    .controller("UnityBankDetailViewController", ['$scope', '$modal', function ($scope, $modal) {
-
-        $scope.updateBankDetails = function () {
-
-            $scope.validationParameters = {
-                CheckSoftyComp: $scope.checkSoftyComp,
-                CheckFraudster: $scope.checkFraudster,
-                CheckD3: $scope.checkD3,
-                AllowDebitsStoppedOnAccount: $scope.allowDebitsStoppedOnAccount,
-                SkipD3ForDebitsStoppedOnAccount: $scope.skipD3ForDebitsStoppedOnAccount
-            };
-
-            $scope.bankAcc = {
-                accountType: $scope.accountType,
-                accountName: $scope.accountName,
-                accountNumber: $scope.accountNumber,
-                bankName: $scope.bankName,
-                branchCode: $scope.branchCode,
-                branchCodeName: $scope.branchCodeName,
-                AccountValidationParameters: $scope.validationParameters
-            };
-
-            var modalInstance = $modal.open({
-                templateUrl: 'Views/UnityBankDetails/Modal/Edit.html',
-                controller: 'BankDetailEditModalInstanceCtrl',
-                size: 'modal-lg',
-                resolve: {
-                    bankAcc: function () {
-                        return $scope.bankAcc;
-                    }
-                }
-            });
-
-            modalInstance.result.then(function (bankAcc) {
-                $scope.$emit("BankDetailsUpdated", bankAcc);
-            });
-        };
-
-        $scope.doAVSRCheck = function () {
-            $scope.bankAcc = {
-                bankAccountId: $scope.bankAccountId,
-                AVSRResults: null
-            };
-
-            var modalInstance = $modal.open({
-                templateUrl: 'Views/UnityBankDetails/Modal/AVSRModal.html',
-                controller: 'AVSRCheckModalInstanceCtrl',
-                size: 'modal-lg',
-                resolve: {
-                    bankAcc: function () {
-                        return $scope.bankAcc;
-                    }
-                }
-            });
-
-            modalInstance.result.then(function (eventData) {
-                console.log(eventData);
-                $scope.$emit("AVSRCheckCompleted", { event: eventData });
-            });
-
-
-        };
-
-
-    }])
-    .controller("BankDetailEditModalInstanceCtrl", ['$scope', '$modalInstance', 'bankAcc', function ($scope, $modalInstance, bankAcc) {
-        $scope.bankAcc = bankAcc;
-        $scope.bankAcc.isValid = false;
-
-        $scope.resetValidation = function () {
-            $scope.bankAcc.isValid = false;
-        };
-
-        $scope.resetValidation();
-
-        $scope.ok = function () {
-            $modalInstance.close($scope.bankAcc);
-        };
-
-        $scope.cancel = function () {
-            $modalInstance.dismiss('cancel');
-        };
-
-        $scope.$on("registerBankDetailsSuccess", function (event, eventData) {
-            $modalInstance.close(eventData);
-        });
-
-        $scope.$on("registerBankDetailsFail", function (event, eventData) {
-            alert(eventData.data.Message);
-
-        });
-
-    }])
-    .controller("AVSRCheckModalInstanceCtrl", ['$scope', '$modalInstance', 'bankAcc', function ($scope, $modalInstance, bankAcc) {
-        $scope.bankAcc = bankAcc;
-
-        $scope.ok = function () {
-            $modalInstance.close($scope.bankAcc);
-        };
-
-        $scope.cancel = function () {
-            $modalInstance.dismiss("cancel");
-        };
-
-
-        $scope.$on("avsrCheck", function (event, eventData) {
-            $modalInstance.close(eventData);
-        });
-
-    }])
-.controller('SoftiDoc.Gsd.Controllers.DepartmentNameSelectController', [
+    .controller('SoftiDoc.Gsd.Controllers.DepartmentNameSelectController', [
     '$scope', 'uiLoader', 'ajaxJsonService', '$modal', function ($scope, uiLoader, ajaxJsonService, $modal) {
 
         $scope.open = function () {
@@ -537,7 +534,8 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
             });
         }
     }
-]).controller('SoftiDoc.Gsd.Controllers.DepartmentNameSelectModalController', ['$scope', '$modalInstance', '$http', 'model', 'ajaxJsonService', 'gsdApiUrl',
+])
+    .controller('SoftiDoc.Gsd.Controllers.DepartmentNameSelectModalController', ['$scope', '$modalInstance', '$http', 'model', 'ajaxJsonService', 'gsdApiUrl',
  function ($scope, $modalInstance, $http, model, ajaxJsonService, gsdApiUrl) {
 
      $scope.model = model;
@@ -577,7 +575,7 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers'])
          $modalInstance.dismiss('cancel');
      };
  }])
-  .controller("EasyModalAsyncController", [
+    .controller("EasyModalAsyncController", [
     '$scope',
     '$modalInstance',
     "model",

@@ -71,6 +71,8 @@
     <Content Include="Content\Application\dvAU3.css" />
     <Content Include="Content\Application\dvAU4.css" />
     <Content Include="Content\Application\dvAU5.css" />
+    <Content Include="scripts\Application\Controllers\SoftiDoc.CentrePanel.Controller.js" />
+    <Content Include="scripts\Application\Controllers\SoftiDoc.OuterPanel.Controller.js" />
     <Content Include="scripts\Application\SoftiDoc_Script10.js" />
     <Content Include="scripts\Application\SoftiDoc_Script11.js" />
     <Content Include="scripts\Application\SoftiDoc_Script12.js" />
@@ -931,6 +933,10 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="scripts\jquery-3.1.1.intellisense.js" />
     <Content Include="scripts\jquery-3.1.1.js" />
     <Content Include="scripts\jquery-3.1.1.min.js" />
@@ -997,9 +1003,12 @@
     <Content Include="Views\ApiView\Index.html" />
     <Content Include="Views\ApiView\PolicyQuery.html" />
     <Content Include="Views\ApiView\WorkflowServices.html" />
+    <Content Include="Views\MainPageDetails\CentrePanel.html" />
+    <Content Include="Views\MainPageDetails\OuterPanel.html" />
     <Content Include="Views\RecordStore\AdvancedSearch.html" />
     <Content Include="Views\RecordStore\RecordListBySearch.html" />
     <Content Include="Views\RecordStore\Template\RecordList.html" />
+    <Content Include="Views\Unity\MainPage.html" />
     <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.js" />
     <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.Routes.js" />
     <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.Services.js" />
@@ -1627,6 +1636,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <Content Include="scripts\Angular\angular.min.js.map" />
@@ -1711,6 +1730,12 @@
     <Folder Include="scripts\Application\Components\Commisions\" />
     <Folder Include="template\dialog\" />
     <Folder Include="template\select2\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

@@ -1,43 +1,35 @@
 ﻿<style>
     
-    .navbar-nav > li > a {padding-top:5px !important; padding-bottom:5px !important;}
-    .navbar {min-height:30px !important}
-    /*.navbar{
-      min-height:20px; 
-    }*/
+    .navbar-nav > li > a {padding-top:20px !important; padding-bottom:20px !important;}
+    .navbar {min-height:60px !important}
 
-    @media (max-width: 767px) { 
-    /*.navbar-brand {
-        padding: 0;
-        min-height:40px !important
+    .navbar.navbar-inverse.navbar-fixed-top li > a:hover {
+        color: cyan;
     }
-
-    .navbar-brand img {
-        margin-top: 5px;
-        margin-left: 5px;
-    }*/
     
-    .navbar-brand,
+    @media (max-width: 767px) { 
+   .navbar-brand,
     .navbar-nav li a {
         margin-top: 10px;
+        padding-bottom: 10px;
         margin-left: 5px;
         height: 45px;
-        line-height: 45px;
+        line-height: 0px;
         padding-top: 0;
     }
 
 }
 
 </style>
-<nav class="navbar navbar-left navbar-fixed-top navbar-inverse" role="navigation">
+<nav class="navbar navbar-fixed-top navbar-inverse" role="navigation">
     <div class="container-fluid">
         <div class="navbar-header">
-            <!--<button type="button" class="navbar-toggle navbar-link" data-toggle="collapse" data-target=".navbar-collapse">
+            <button type="button" class="navbar-toggle navbar-link" data-toggle="collapse" data-target=".navbar-collapse">
                 <span class="sr-only btn btn-primary">Toggle navigation</span>
                 <span class="icon-bar navbar-inverse"></span>
                 <span class="icon-bar navbar-inverse"></span>
                 <span class="icon-bar navbar-inverse"></span>
-            </button>-->
+            </button>
             <a class="navbar-brand" href="#">
                 <img class="hidden-xs" src="../../Content/images/400dpiLogoCropped_5_5.png" alt=""/>
                 <img class="visible-xs" src="../../Content/images/400dpiLogoCropped_5_5.png" alt=""/>
@@ -46,7 +38,7 @@
             </a>
         </div>
         <div ng-cloak class="navbar-collapse collapse">
-            <ul class="navbar-nav nav navbar" style="width: 100%;">
+            <!--<ul class="navbar-nav nav navbar" style="width: 100%;">
                 <li ng-cloak ng-repeat-start="navItem in navItems"></li>
                 <li ng-if="navItem.childNavItems !== undefined">
                     <a ng-href="{{navItem.url}}" class="dropdown-toggle">{{navItem.label}}<b class="caret"></b></a>
@@ -66,6 +58,23 @@
                     <form class="navbar-form navbar-right" ng-cloak ng-show="loggedIn">
                         <input ng-show="canSearch" type="text" class="form-control" ng-model="searchText.text" placeholder="Search...">
                         <button ng-show="canSearch" ng-click="search()" class="btn btn-primary">Go</button>
+                    </form>
+                </li>
+            </ul>-->
+            <ul class="navbar-nav nav navbar">
+                <li class="active"><a href="#">Home</a></li>
+                <li><a href="#">Page 1</a></li>
+                <li><a href="#">Page 2</a></li>
+                <li><a href="#">Page 3</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li><a ng-click="Logout()">Logout</a></li>
+                <li>
+                    <form class="navbar-form navbar-right" ng-cloak>
+                        <input type="text" class="form-control" ng-model="searchText.text" placeholder="Search...">
+                        <button ng-click="search()" class="btn btn-primary">Go</button>
                     </form>
                 </li>
             </ul>

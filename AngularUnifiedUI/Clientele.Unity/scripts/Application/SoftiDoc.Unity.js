@@ -263,6 +263,7 @@ var bootstrap = function () {
             };
 
             $rootScope.$on('$routeChangeStart', function (event, next, current) {
+                debugger;
                 if (eval(useAuth)) {
                     if (!authenticationService.isAuthenticated()) {
                         if (isReloadableRoute($location.path())) {
