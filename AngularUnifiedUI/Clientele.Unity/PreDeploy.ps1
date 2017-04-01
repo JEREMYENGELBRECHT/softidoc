@@ -8,7 +8,7 @@ $workflowServicesUrl = $OctopusWorkflowServicesUrl
 $policyQueryApiUrl = $OctopusPolicyQueryApiUrl
 $applicationFormsUrl = $OctopusApplicationFormsUrl
 $serviceErrorApiUrl = $OctopusServiceErrorUrl
-$applicationformssearchapiurl = $OctopusSearchUrl
+$applicationformssearchapiurl = $OctopusSearchUrl 
 $investmentsUrl = $OctopusInvestmentsUrl
 $hermesMessagingMonitorApiUrl  = $OctopusHermesMessagingMonitorApiUrl
 $hermesMessagingMonitorUnityUrl = $OctopusHermesMessagingMonitorUnityUrl
@@ -36,8 +36,8 @@ $OcrRecordIndexerApplicationUrl = $OctopusOcrRecordIndexerApplicationUrl
 $RecordIndexerApiUrl = $OctopusRecordIndexerApiUrl
 $BankValUrl = $OctopusBankValUrl
 $BankValApiUrl = $OctopusBankValApiUrl
-$ClienteleGatewayUnityUrl = $OctopusClienteleGatewayUnityUrl
-$ClienteleGatewayApiUrl = $OctopusClienteleGatewayApiUrl
+$SoftiDocGatewayUnityUrl = $OctopusSoftiDocGatewayUnityUrl
+$SoftiDocGatewayApiUrl = $OctopusSoftiDocGatewayApiUrl
 $DocumentDigitizerUnityUrl = $OctopusDocumentDigitizerUnityUrl
 $DocumentDigitizerApiUrl = $OctopusDocumentDigitizerApiUrl
 $policyOdsQueryApiUrl = $OctopusPolicyOdsQueryApiUrl
@@ -56,6 +56,11 @@ $MediaManagementApiUrl = $OctopusMediaManagementApiUrl
 $MediaManagementApplicationUrl = $OctopusMediaManagementApplicationUrl
 $FraudRiskApiUrl = $OctopusFraudRiskUrl
 $FraudRiskUnityUrl = $OctupusFraudRiskUnityUrl
+$OutboundCommunicationApiUrl = $OctopusOutboundCommunicationApiUrl
+$OutboundCommunicationUnityUrl = $OctopusOutboundCommunicationUnityUrl
+$QualityAssuranceApplicationUrl= $OctopusQualityAssuranceApplicationUrl
+$QualityAssuranceApiUrl= $OctopusQualityAssuranceApiUrl
+
 
 set-content Configuration/serverConfiguration.json "`
 {`
@@ -76,46 +81,50 @@ set-content Configuration/serverConfiguration.json "`
 ""hermesMessagingMonitorApiUrl"":""$hermesMessagingMonitorApiUrl"",`
 ""encashmentApiUrl"":""$encashmentsApiUrl"",`
 ""hermesMessagingMonitorUnityUrl"": { ""ApplicationId"": ""Hermes.MessagingMonitor"", ""UnityUrl"": ""$hermesMessagingMonitorUnityUrl""},`
-""encashmentsUnityUrl"": { ""ApplicationId"": ""Clientele.Encashments"", ""UnityUrl"": ""$encashmentsUnityUrl""}, `
-""policyUnityUrl"": { ""ApplicationId"": ""Clientele.Policy"", ""UnityUrl"": ""$policyUnityUrl""}, `
-""identityMaintenanceUnityUrl"": { ""ApplicationId"": ""Clientele.IdentityMaintenance"", ""UnityUrl"": ""$identityMaintenanceUnityUrl""}, `
-""investmentsIntegrationUrl"": { ""ApplicationId"": ""Clientele.Investments"", ""UnityUrl"": ""$investmentsIntegrationUrl""}, `
-""outboundSmsUnityUrl"": { ""ApplicationId"": ""Clientele.OutboundSms"", ""UnityUrl"": ""$outboundSmsUnityUrl""}, `
+""encashmentsUnityUrl"": { ""ApplicationId"": ""SoftiDoc.Encashments"", ""UnityUrl"": ""$encashmentsUnityUrl""}, `
+""policyUnityUrl"": { ""ApplicationId"": ""SoftiDoc.Policy"", ""UnityUrl"": ""$policyUnityUrl""}, `
+""identityMaintenanceUnityUrl"": { ""ApplicationId"": ""SoftiDoc.IdentityMaintenance"", ""UnityUrl"": ""$identityMaintenanceUnityUrl""}, `
+""investmentsIntegrationUrl"": { ""ApplicationId"": ""SoftiDoc.Investments"", ""UnityUrl"": ""$investmentsIntegrationUrl""}, `
+""outboundSmsUnityUrl"": { ""ApplicationId"": ""SoftiDoc.OutboundSms"", ""UnityUrl"": ""$outboundSmsUnityUrl""}, `
 ""outboundSmsApiUrl"":""$outboundSmsApiUrl"",`
-""venueIntegrationLocationUrl"": { ""ApplicationId"": ""Clientele.VenueLocation"", ""UnityUrl"": ""$presentationVenueUnityUrl"" }, `
-""applicationFormSearchIntegrationUrl"": { ""ApplicationId"": ""Clientele.Search.SearchService"", ""UnityUrl"": ""$applicationFormSearchUnityUrl"" }, `
-""applicationFormsCapturePresentationUrl"": { ""ApplicationId"": ""Clientele.ApplicationFormsCapture"", ""UnityUrl"": ""$applicationFormCapturePresentationUrl"" }, `
-""communicationUnityUrl"": { ""ApplicationId"": ""Clientele.Communication"", ""UnityUrl"": ""$communicationUnityUrl""}, `
+""venueIntegrationLocationUrl"": { ""ApplicationId"": ""SoftiDoc.VenueLocation"", ""UnityUrl"": ""$presentationVenueUnityUrl"" }, `
+""applicationFormSearchIntegrationUrl"": { ""ApplicationId"": ""SoftiDoc.Search.SearchService"", ""UnityUrl"": ""$applicationFormSearchUnityUrl"" }, `
+""applicationFormsCapturePresentationUrl"": { ""ApplicationId"": ""SoftiDoc.ApplicationFormsCapture"", ""UnityUrl"": ""$applicationFormCapturePresentationUrl"" }, `
+""communicationUnityUrl"": { ""ApplicationId"": ""SoftiDoc.Communication"", ""UnityUrl"": ""$communicationUnityUrl""}, `
 ""emsUnityUrl"": { ""ApplicationId"": ""EMS"", ""UnityUrl"": ""$emsUnityUrl""}, `
 ""emsApiUrl"":""$emsApiUrl"",`
-""trainingUnityUrl"": { ""ApplicationId"": ""Clientele.Training"", ""UnityUrl"": ""$trainingUnityUrl""}, `
+""trainingUnityUrl"": { ""ApplicationId"": ""SoftiDoc.Training"", ""UnityUrl"": ""$trainingUnityUrl""}, `
 ""trainingApiUrl"":""$trainingApiUrl"",`
-""financeUnityUrl"": { ""ApplicationId"": ""Clientele.Finance"", ""UnityUrl"": ""$financeUnityUrl""}, `
+""financeUnityUrl"": { ""ApplicationId"": ""SoftiDoc.Finance"", ""UnityUrl"": ""$financeUnityUrl""}, `
 ""financeApiUrl"":""$financeApiUrl"",`
 ""financeWorkflowApiUrl"":""$financeWorkflowApiUrl"",`
-""ocrRecordIndexerApplicationUrl"": { ""ApplicationId"": ""Clientele.OcrRecordIndexer"", ""UnityUrl"": ""$OcrRecordIndexerApplicationUrl""}, `
+""ocrRecordIndexerApplicationUrl"": { ""ApplicationId"": ""SoftiDoc.OcrRecordIndexer"", ""UnityUrl"": ""$OcrRecordIndexerApplicationUrl""}, `
 ""recordIndexerApiUrl"":""$RecordIndexerApiUrl"",`
 ""BuildNumber"" : ""$buildNumber"",`
-""clienteleGatewayUnityUrl"": { ""ApplicationId"": ""Clientele.ClienteleGateway"", ""UnityUrl"": ""$ClienteleGatewayUnityUrl""},`
-""clienteleGatewayApiUrl"":""$ClienteleGatewayApiUrl"",`
-""bankValidationUnityUrl"": { ""ApplicationId"": ""Clientele.BankAccountValidation"", ""UnityUrl"": ""$BankValUrl""}, `
+""SoftiDocGatewayUnityUrl"": { ""ApplicationId"": ""SoftiDoc.SoftiDocGateway"", ""UnityUrl"": ""$SoftiDocGatewayUnityUrl""},`
+""SoftiDocGatewayApiUrl"":""$SoftiDocGatewayApiUrl"",`
+""bankValidationUnityUrl"": { ""ApplicationId"": ""SoftiDoc.BankAccountValidation"", ""UnityUrl"": ""$BankValUrl""}, `
 ""bankAccountValidationApiUrl"":""$BankValApiUrl"", `
-""documentDigitizerApplicationUrl"": { ""ApplicationId"": ""Clientele.DocumentDigitizer"", ""UnityUrl"": ""$DocumentDigitizerUnityUrl"" }, `
+""documentDigitizerApplicationUrl"": { ""ApplicationId"": ""SoftiDoc.DocumentDigitizer"", ""UnityUrl"": ""$DocumentDigitizerUnityUrl"" },
 ""documentDigitizerApiUrl"": ""$DocumentDigitizerApiUrl"", `
-""policyAdministrationApplicationUrl"": { ""ApplicationId"": ""Clientele.PolicyAdministration"", ""UnityUrl"": ""$PolicyAdministrationApplicationUrl"" }, `
+""policyAdministrationApplicationUrl"": { ""ApplicationId"": ""SoftiDoc.PolicyAdministration"", ""UnityUrl"": ""$PolicyAdministrationApplicationUrl"" }, `
 ""policyAdministrationApiUrl"": ""$PolicyAdministrationApiUrl"",`
-""clienteleClaimsApiUrl"": ""$ClaimsApiUrl"",`
-""clienteleClaimsUnityUrl"": { ""ApplicationId"": ""Clientele.LifeClaims"", ""UnityUrl"": ""$ClaimsApplicationUrl"", ""CacheFlushUrl"": ""$ClaimsCacheFlushUrl"" }, `
-""attendanceRegisterUrl"": { ""ApplicationId"": ""Clientele.AttendanceRegisters"", ""UnityUrl"": ""$AttendanceRegistersApplicationUrl"" }, `
+""SoftiDocClaimsApiUrl"": ""$ClaimsApiUrl"",`
+""SoftiDocClaimsUnityUrl"": { ""ApplicationId"": ""SoftiDoc.LifeClaims"", ""UnityUrl"": ""$ClaimsApplicationUrl"", ""CacheFlushUrl"": ""$ClaimsCacheFlushUrl"" }, `
+""attendanceRegisterUrl"": { ""ApplicationId"": ""SoftiDoc.AttendanceRegisters"", ""UnityUrl"": ""$AttendanceRegistersApplicationUrl"" }, `
 ""attendanceRegisterApiUrl"": ""$AttendanceRegisterApiUrl""`,
 ""supplierUnityUrl"": { ""ApplicationId"": ""Suppliers"", ""UnityUrl"": ""$supplierUnityUrl""}, `
 ""supplierApiUrl"":""$supplierApiUrl""`,
 ""gsdApiUrl"":""$GsdApiUrl""`,
-""gsdAdminUnityUrl"": { ""ApplicationId"": ""Clientele.GsdAdmin"", ""UnityUrl"": ""$GsdAdminUnityUrl""}, `
+""gsdAdminUnityUrl"": { ""ApplicationId"": ""SoftiDoc.GsdAdmin"", ""UnityUrl"": ""$GsdAdminUnityUrl""}, `
 ""mediaManagementApiUrl"":""$MediaManagementApiUrl""`,
-""mediaManagementApplicationUrl"": { ""ApplicationId"": ""Clientele.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""}, `
+""mediaManagementApplicationUrl"": { ""ApplicationId"": ""SoftiDoc.MediaManagement"", ""UnityUrl"": ""$MediaManagementApplicationUrl""},`
+""qualityAssuranceApiUrl"":""$QualityAssuranceApiUrl""`,
+""qualityAssuranceApplicationUrl"": { ""ApplicationId"": ""SoftiDoc.QualityAssurance"", ""UnityUrl"": ""$QualityAssuranceApplicationUrl""}, `
 ""fraudRiskApiUrl"":""$FraudRiskApiUrl""`,
-""fraudRiskUnityUrl"": { ""ApplicationId"": ""Clientele.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} `,
-""outboundCommunicationApplicationUrl"":""$OutboundCommunicationApiUrl""`,
-""outboundCommunicationApiUrl"": { ""ApplicationId"": ""ApplicationId": "Clientele.OutboundCommunication"", ""UnityUrl"": ""$OutboundCommunicationUnityUrl""} `
+""fraudRiskUnityUrl"": { ""ApplicationId"": ""SoftiDoc.FraudRisk"", ""UnityUrl"": ""$FraudRiskUnityUrl""} ,`
+""outboundCommunicationApiUrl"": ""$OutboundCommunicationApiUrl""`,
+""outboundCommunicationApplicationUrl"": { ""ApplicationId"": ""SoftiDoc.OutboundCommunication"", ""UnityUrl"" : ""$OutboundCommunicationUnityUrl"" }`
+
+
 }"

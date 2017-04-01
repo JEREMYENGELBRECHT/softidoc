@@ -80,7 +80,7 @@ var ThumbnailView = function thumbnailView(container, id, defaultViewport, selec
         var actualCb = document.createElement('input');
         actualCb.setAttribute("type", "checkbox");
         actualCb.setAttribute("value", id);
-        actualCb.setAttribute("class", "clienteleCheckbox");
+        actualCb.setAttribute("class", "SoftiDocCheckbox");
         actualCb.onclick = function (event) {
             selectCheckBox(event, this);
         }

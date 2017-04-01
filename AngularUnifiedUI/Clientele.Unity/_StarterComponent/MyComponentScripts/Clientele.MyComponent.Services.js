@@ -1,7 +1,7 @@
 ﻿/**********************************************************************************************/
 /* Api Services                                                                                   */
 /**********************************************************************************************/
-angular.module('Clientele.MyComponent.Services', [])
+angular.module('SoftiDoc.MyComponent.Services', [])
     .factory('myComponentApiService', function (ajaxJsonService, myComponentApiUrl, $rootScope) {
         
         var myComponentResourceUrl = myComponentApiUrl + "/MyComponentResource/";

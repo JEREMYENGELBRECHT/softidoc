@@ -1,176 +1,676 @@
 ﻿<!DOCTYPE html>
-<html xmlns:ng="http://angularjs.org" id="ng-app">
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
 <head>
-    <!--[if lte IE 9]>
-            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.js"></script>
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/es5-shim/2.2.0/es5-shim.js"></script>
-    <script>
-      document.createElement('ui-select');
-      document.createElement('match');
-      document.createElement('choices');
-    </script>
-      <script>
-        document.createElement('ng-include');
-        document.createElement('ng-pluralize');
-        document.createElement('ng-view');
-
-        // Optionally these for CSS
-        document.createElement('ng:include');
-        document.createElement('ng:pluralize');
-        document.createElement('ng:view');
-      </script>
-    <![endif]-->
 
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <script type="text/javascript" src="https://cdn.optimizely.com/js/275532918.js"></script>
+
+    <link href="/Content/Application/dvAu5.css" rel="stylesheet" />
+
+    <link href="/Content/Application/293631.css?oekyld" rel="stylesheet" />
+    <script src="/scripts/UI/modernizer-min.js?oekyld"></script>
+
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Clientele Unity Framework">
-    <meta name="author" content="Clientele">
-    <script src="/scripts/jQuery/jquery-2.1.0.js"></script>
-    <script src="/scripts/Angular/angular.js"></script>
-    <script src="/scripts/lazyload.js"></script>
-    <script src="/scripts/QDecorator.js"></script>
-    <script src="/scripts/CorsRequests.js"></script>
-    <script src="/scripts/Angular/ngDraggable.js"></script>
-    <script src="/scripts/Angular/ng-magnify.js"></script>
-    <link href="Content/UiAddons/Bootstrap/bootstrap.css" rel="stylesheet" />
-    <link href="Content/Application/Clientele.Unity.css" rel="stylesheet" />
-    <title>Clientèle Unity</title>
+
+    <style type="text/css" media="all">
+        /* <![CDATA[ */
+        #sliding-popup.sliding-popup-bottom {
+            background: #0779bf;
+        }
+
+        #sliding-popup .popup-content #popup-text h2, #sliding-popup .popup-content #popup-text p {
+            color: #fff !important;
+        }
+        /* ]]> */
+    </style>
 
 </head>
+<body class="html front not-logged-in no-sidebars page-node page-node- page-node-100291 node-type-landing-page i18n-en no-breadcrumb">
 
-<body>
-    <!-- Loading placeholder - used prior to application bootstrap-->
-    <div align="center" id="LoadingPlaceHolder">
-        <img src="Content/images/logo-admin.png" /><h1 style="font-family: verdana;">
-            <img src="/Content/ajax-loader.gif" />&nbsp;Loading Clientèle Unity
-        </h1>
-    </div>
 
-    <!-- Error placeholder - used if application fails to load-->
-    <div align="center" class="container-fluid" id="ErrorPlaceHolder" style="display: none;" style="font-weight: bold;">
-        <img src="Content/images/logo-admin.png" /><br />
-        <br />
-        <b>There was an error loading Clientèle Unity - please contact an administrator.</b>
-    </div>
+    <div class="panel-display">
+        <div class="panel-panel">
+            <div class="panel-pane pane-panels-mini pane-global-header-new-us">
 
-    <div ng-controller="MainUIController" id="ContentPlaceHolder" style="display: none; height: 100%">
-        <application-mode></application-mode>
 
-        <div ng-class="PanelClass" ng-show="MultipleApplications" outside-click="HidePanel()">
-            <div align="right">
-                <button class="btn btn-primary btn-sm" ng-click="ToggleSidePanel()" title="{{PanelIsOpen ? 'Hide the application list' : 'Show the application list'}}">{{PanelIsOpen ? '&lt;' : '&gt;'}}</button>
-            </div>
-            <div ng-show="PanelIsOpen" ng-cloak ng-controller="unityNavigationController" src="'/views/Unity/sideNavigation.html'" ng-include></div>
-        </div>
-        <div id="center-panel" class="container-fluid" style="height: 100%;">
-            <div class="row-fluid">
-                <div class="span12">
-                    <div ng-cloak ng-controller="applicationSpecificNavigationController" src="'/views/Unity/navigation.html'" ng-include></div>
-                </div>
-            </div>
-            <div class="row-fluid" style="height: 100%;">
-                <div class="col-md-12 " ng-show="user.givenName !=''">
-                    <br />
-                    <div class="pull-right">
-                        {{user.givenName + " " + user.surname + " you are logged in with: "}} <b>{{user.accountName }}</b>
+
+                <div class="pane-content">
+
+                <header class="main new-header">
+
+                    <div id="sticky-navigation" class="sticky-bar" style="display: none">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-12">
+                                    <div class="logo">
+                                        <div class="panel-pane pane-pane-header">
+
+
+
+                                            <div class="pane-content">
+                                                <a href="https://www.docusign.com/" title="Home" rel="home">
+                                                    <img src="Content/images/400dpiLogoCropped_5_5.png" />
+                                                </a>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+
+                                    <div class="sticky-container panel-panel">
+                                        <div class="panel-pane pane-fieldable-panels-pane pane-uuid-89da0102-fc59-4443-9000-1b39aa1c9c25 pane-bundle-mini-cta">
+
+
+
+                                            <div class="pane-content">
+                                                <div class="fieldable-panels-pane">
+                                                    <a href="https://secure.docusign.com/trial?tgr=com-trial-Header" class="btn btn-small" data-ga="trial|navbutton">Free Trial</a>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                        <div class="panel-separator"></div><div class="panel-pane pane-fieldable-panels-pane pane-uuid-752eff4e-b5b9-4989-aa87-ca5482b5afef pane-bundle-mini-cta">
+
+
+
+                                            <div class="pane-content">
+                                                <div class="fieldable-panels-pane">
+                                                    <a href="https://www.docusign.com/products-and-pricing" class="btn-white btn btn-small" data-ga="buy|navbutton">Pricing</a>
+                                                </div>
+                                            </div>
+
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                </div><br>
 
-                <div class="span12 col-md-12" style="height: 90%;">
-                    <div ng-view style="height: 99%; display: block"></div>
+                <div class="search-form-container panel-panel">
+                    <div class="container">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <div class="panel-pane pane-block pane-dcs-search-search">
+
+
+
+                                    <div class="pane-content">
+                                        <div class="searchbox">
+                                            <form action="/" method="post" id="dcs-search-searchbox" accept-charset="UTF-8">
+                                                <div>
+                                                    <div class="form-item form-type-textfield form-item-searchboxip">
+                                                        <input placeholder="Search" class="form-control form-text search-box search-stuff form-text" type="text" id="edit-searchboxip" name="searchboxip" value="" size="15" maxlength="128"/>
+                                                    </div>
+                                                    <input class="form-submit search-submit form-submit" type="submit" id="edit-submit--2" name="op" value="Go"/><input type="hidden" name="form_build_id" value="form-WP-72K7X-9sZeNP5CsNsR9nTlzyVa6XKdbtpTUGGNxo"/>
+                                                    <input type="hidden" name="form_id" value="dcs_search_searchbox"/>
+                                                </div>
+                                            </form>
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                                <div id="search-close-btn" class="icon-close-thin show-desktop" style="display: none">Search</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
+
+                <div class="header-top-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="secondary-menu-container col-md-12 show-desktop" style="display: none">
+                                <div class="secondary-menu panel-panel">
+                                    <div class="panel-pane pane-block pane-menu-menu-secondary-menu-new">
+
+
+
+                                        <div class="pane-content">
+                                            <ul class="menu">
+                                                <li class="first leaf parent-item"><a href="/views/Unity/home.html">Access Documents</a></li>
+                                                <li class="last leaf parent-item"><a href="https://www.SoftiDoc.com/company/contact-us">Contact Us</a></li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-bottom-bar">
+                    <div class="container">
+                        <div class="row">
+                            <div class="logo col-md-2 panel-panel">
+                                <div class="panel-pane pane-pane-header">
+
+
+
+                                    <div class="pane-content">
+                                        <a href="https://www.SoftiDoc.com/" title="Home" rel="home">
+                                            <img src="Content/images/400dpiLogoCropped_6_7.png"/>
+                                            
+                                        </a>
+                                    </div>
+
+
+                                </div>
+                            </div>
+
+                            <div id="hamburger" class="hamburger icon-menu">Menu</div>
+
+                            <div class="col-xs-12 navigation-bar">
+                                <div class="commercial-buttons panel-panel">
+                                    <div class="panel-pane pane-fieldable-panels-pane pane-uuid-433dee99-c2df-4eea-b51e-3f58bf8e21c8 pane-bundle-mini-cta">
+
+
+
+                                        <div class="pane-content">
+                                            <div class="fieldable-panels-pane">
+                                                <a href="https://secure.SoftiDoc.com/trial?tgr=com-trial-Header" class="btn btn-small" data-ga="trial|navbutton">Free Trial</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="panel-separator"></div>
+                                    <div class="panel-pane pane-fieldable-panels-pane pane-uuid-484fbb21-c27e-4bb1-962a-6b0300bb99d9 pane-bundle-mini-cta">
+
+
+
+                                        <div class="pane-content">
+                                            <div class="fieldable-panels-pane">
+                                                <a href="/views/Unity/home.html" class="btn-transparent btn btn-cyan btn-small" data-ga="login">Log In</a>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                    <div class="panel-separator"></div>
+                                    <div class="panel-pane pane-ctools-custom-link">
+
+
+
+                                        <div class="pane-content">
+                                            <a href="https://www.SoftiDoc.net/Member/authenticate.aspx" class="access-link hide-desktop">Access Documents</a>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                                <div id="search-button" class="search-button icon-search show-desktop" style="display: none">Search</div>
+                            </div>
+
+                            <div class="col-xs-12 navigation-container show-desktop" style="display: none">
+                                <div class="primary-menu panel-panel no-submenu">
+                                    <div class="panel-pane pane-block pane-menu-menu-main-menu-new">
+
+
+
+                                        <div class="pane-content">
+                                            <ul class="menu">
+                                                <li class="parent-item">
+                                                    <a href="https://www.SoftiDoc.com/products/electronic-signature">Products</a><ul class="menu">
+                                                        <li class="first leaf"><a href="https://www.SoftiDoc.com/products/electronic-signature">Electronic Signature</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/features-and-benefits/mobile">Mobile</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/products/integrations">Partner Integrations</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/products/rooms">Transaction Rooms</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/products/signature-appliance">Signature Appliance</a></li>
+                                                        <li class="last leaf"><a href="https://www.SoftiDoc.com/features-and-benefits/services-support">Services</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="expanded parent-item">
+                                                    <a href="https://www.SoftiDoc.com/solutions">Industries</a><ul class="menu">
+                                                        <li class="first leaf"><a href="https://www.SoftiDoc.com/industries/financial-services">Financial Services</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/solutions/industries/government">Government</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/solutions/industries/healthcare">Healthcare</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/solutions/industries/insurance">Insurance</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/solutions/industries/life-sciences">Life Sciences</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/solutions/industries/real-estate">Real Estate</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/solutions/industries/technology">Technology</a></li>
+                                                        <li class="last leaf"><a href="https://www.SoftiDoc.com/solutions">See All</a></li>
+                                                    </ul>
+                                                </li>
+                                               <li class="expanded parent-item">
+                                                    <a href="https://support.SoftiDoc.com/">Support</a><ul class="menu">
+                                                        <li class="first leaf"><a href="https://support.SoftiDoc.com/">Support Center</a></li>
+                                                        <li class="leaf"><a href="https://support.SoftiDoc.com/en/community">Community</a></li>
+                                                        <li class="last leaf"><a href="https://www.SoftiDoc.com/support/SoftiDoc-university">SoftiDoc University</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="expanded parent-item">
+                                                    <a href="https://www.SoftiDoc.com/products-and-pricing">Pricing</a><ul class="menu">
+                                                        <li class="first leaf"><a href="https://www.SoftiDoc.com/products-and-pricing">General Plans</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/products-and-pricing/real-estate-editions">Real Estate Plans</a></li>
+                                                        <li class="last leaf"><a href="https://secure.SoftiDoc.com/developer">API Plans</a></li>
+                                                    </ul>
+                                                </li>
+                                                <li class="last expanded parent-item">
+                                                    <a class="nolink">More</a><ul class="menu">
+                                                        <li class="first leaf"><a href="https://www.SoftiDoc.com/company">About Us</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/customers">Customers</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/partners">Partners</a></li>
+                                                        <li class="leaf"><a href="https://trust.SoftiDoc.com/en-us/">Security &amp; Trust</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/company/careers">Careers</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/company/events">Events</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/company/press-room">Press Room</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/blog/">Blog</a></li>
+                                                        <li class="leaf"><a href="https://www.SoftiDoc.com/resources">Resource Center</a></li>
+                                                        <li class="last leaf"><a href="https://www.SoftiDoc.com/company/contact-us">Contact Us</a></li>
+                                                    </ul>
+                                                </li>
+                                            </ul>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="commercial-buttons panel-panel" style="display: none">
+                        <div class="panel-pane pane-fieldable-panels-pane pane-uuid-433dee99-c2df-4eea-b51e-3f58bf8e21c8 pane-bundle-mini-cta">
+
+
+
+                            <div class="pane-content">
+                                <div class="fieldable-panels-pane">
+                                    <a href="https://secure.SoftiDoc.com/trial?tgr=com-trial-Header" class="btn-yellow btn btn-small" data-ga="trial|navbutton">Free Trial</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="panel-separator"></div>
+                        <div class="panel-pane pane-fieldable-panels-pane pane-uuid-484fbb21-c27e-4bb1-962a-6b0300bb99d9 pane-bundle-mini-cta">
+
+
+
+                            <div class="pane-content">
+                                <div class="fieldable-panels-pane">
+                                    <a href="/views/Unity/home.html" class="btn-transparent btn btn-small" data-ga="login">Log In</a>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="panel-separator"></div>
+                        <div class="panel-pane pane-ctools-custom-link">
+
+
+
+                            <div class="pane-content">
+                                <a href="https://www.SoftiDoc.net/Member/authenticate.aspx" class="access-link hide-desktop">Access Documents</a>
+                            </div>
+
+
+                        </div>
+                    </div>-->
+
+                </div>
+                </header>
+                </div>
+
+
             </div>
         </div>
+
+        <aside class="system-messages">
+            <div class="container">
+            </div>
+        </aside>
+
+        <main role="main">
+            <div class="panel-panel">
+                <div class="panel-pane pane-page-content">
+
+
+
+                    <div class="pane-content">
+
+                        <div class="panelizer-view-mode node node-full node-landing-page node-100291">
+
+                            <div class="top-html-wrapper">
+                                <div class="container">
+
+
+                                </div>
+                            </div>
+
+                            <div class="main-content-region">
+                                <div class="panel-panel">
+                                    <div class="panel-pane pane-entity-view pane-node">
+
+
+
+                                        <div class="pane-content">
+                                            <div id="node-100291" class="node node-landing-page clearfix">
+
+
+
+
+                                                <div class="content">
+                                                    <div class="field field-name-field-body field-type-text-long field-label-hidden">
+                                                        <div class="field-items">
+                                                            <div class="field-item even">
+                                                                <div  class="video-bg-block">
+                                                                    <img style="max-height:100%; max-width:100%;" src="Content/images/52117474_l_9_2500x1350.jpg" />
+                                                                    <div class="text-wrapper">
+                                                                        <div class="container">
+                                                                            <div class="row">
+                                                                                <div class="col-sm-7 col-md-7">
+                                                                                    <p>Upload, access and manage documents in the cloud</p>
+
+                                                                                    <div class="buttons-wrapper"><a class="btn btn-big" data-ga="demo|home-hero" href="https://secure.SoftiDoc.com/demo">Get Started</a></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="home-promo"> </div>
+
+                                                                <div class="signature-section">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-md-12">
+                                                                                <h2 class="fp-title">Meet SoftiDoc: the easiest way to get things done</h2>
+
+                                                                                <p>Electronic signatures are just the beginning. SoftiDoc makes any workflow or approval simple, secure and fully digital, so you can get on with your business, and your life.</p>
+
+                                                                                <div class="buttons-wrapper"><a class="btn btn-video fancybox-media fancybox.iframe" data-fancybox-title="&lt;h3&gt;Electronic signatures are just the beginning. SoftiDoc makes any workflow or approval simple, secure and fully digital, so you can get on with your business, and your life.&lt;/h3&gt;" data-ga="hiw-video|hp-meet-SoftiDoc" href="https://fast.wistia.net/embed/iframe/40ahlqu09z"><span class="icon-triangle-right"></span><span>Video: how it works</span></a></div>
+                                                                            </div>
+
+                                                                            <!--<div class="col-md-8 hide show-desktop">
+                                                                                <div class="signature-block" id="signature"><img alt="SoftiDoc mobile electronic signature app" title="SoftiDoc mobile electronic signature app" height="511" width="765" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/esignature-mobile-app.png" /> <svg id="Layer_1" version="1.1" viewbox="0 0 500 300" x="0px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" y="0px"><path class="stroke" d="M101.8,137.2c0,4-39.8,67.8-42.5,72.2S115.5,123,116,125s-19,87,3.8,82.8"></path><path class="stroke" d="M50,190.8c0,0,54.2-11.5,56.5-11.8"></path><path class="stroke" d="M158,101.8c-3.3,2.3-14.8,32.3-20.8,55.3c-14.3,49.6,22.8,40,42.4,14.9c33.1-55.6-18.9-29.9-8.3,0.7&#10;&#9;c2.9,7,12.4,9.2,33.7-2.8c64-39,66.8-59.5,73.5-62.2c3.2-3-60.8,73.8-57.8,79.5"></path><path class="stroke" d="M240.4,116.7c-2.6,4.7,6.3,50.2,24.5,61.7"></path><path class="stroke" d="M347.8,58.5c-3.2,5.5-16.7,33.4-25.4,58.5c-27.5,76.2,22,64.7,49.9-4.7c14.7-38.5-43,16.2-18.2,45.6&#10;&#9;c22.6,20,54.7-19.3,65.7-45.9c13.9-35.8-26.4-3-16.6,26.2c8.2,20.8,37.1,2.2,42.9-1.3"></path><path class="stroke" d="M396.5,190.8"></path></svg></div>
+                                                                            </div>-->
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="advantages-section">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="icon-text-block left-align">
+                                                                                    <div class="icon-wrapper"><img height="68" width="66" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/fp_doc_icon.svg" alt="" /></div>
+
+                                                                                    <div class="text-wrapper">
+                                                                                        <h3>Get it done, faster than ever</h3>
+
+                                                                                        <p>Easy to use, quick to learn and a snap to implement, approvals and agreements are simple and convenient for everyone involved.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-sm-6">
+                                                                                <div class="icon-text-block left-align">
+                                                                                    <div class="icon-wrapper"><img height="68" width="66" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/fp_display_icon.svg" alt="" /></div>
+
+                                                                                    <div class="text-wrapper">
+                                                                                        <h3>Anywhere, anytime, any device</h3>
+
+                                                                                        <p>Access, sign and send important documents from your desk, on the road or everywhere in between.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row">
+                                                                            <div class="col-sm-6">
+                                                                                <div class="icon-text-block left-align">
+                                                                                    <div class="icon-wrapper"><img height="68" width="66" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/fp_calendar_icon.svg" alt="" /></div>
+
+                                                                                    <div class="text-wrapper">
+                                                                                        <h3>Works with your favorite apps</h3>
+
+                                                                                        <p>SoftiDoc works with the services, applications, and devices you already use: <a href="/solutions/microsoft">Microsoft</a>, <a href="/solutions/salesforce">Salesforce</a>, <a href="/solutions/google">Google</a>, <a href="/solutions/apple">Apple</a> and many more.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-sm-6">
+                                                                                <div class="icon-text-block left-align">
+                                                                                    <div class="icon-wrapper"><img height="68" width="66" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/fp_users_icon.svg" alt="" /></div>
+
+                                                                                    <div class="text-wrapper">
+                                                                                        <h3>Over 100 million users worldwide</h3>
+
+                                                                                        <p>SoftiDoc is the most reliable and globally trusted service for electronic signatures and approvals.</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="discovery-block bg-blue">
+                                                                    <div class="container">
+                                                                        <h2 class="fp-title centered color-white">Discover the SoftiDoc that’s right for you</h2>
+
+                                                                        <div class="clearfix">
+                                                                            <div class="icon-text-block icon-underline">
+                                                                                <div class="icon-wrapper"><img height="65" width="124" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/fp_house_icon.svg" alt="" /><hr class="hr-white" /></div>
+
+                                                                                <div class="text-wrapper">
+                                                                                    <h3 class="color-white">For individuals</h3>
+
+                                                                                    <p class="color-white">From school permission slips to business contracts, take charge of your digital life. Electronically sign and manage all your documents from one place so you can focus on what truly matters.</p>
+                                                                                </div>
+                                                                                <a class="learn-more-link color-white" data-ga="individual|hp-discover" href="/features-and-benefits/individuals">Learn about SoftiDoc for individuals</a>
+                                                                            </div>
+
+                                                                            <div class="icon-text-block icon-underline">
+                                                                                <div class="icon-wrapper"><img height="80" width="178" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/fp_building_icon.svg" alt="" /><hr class="hr-white" /></div>
+
+                                                                                <div class="text-wrapper">
+                                                                                    <h3 class="color-white">For small &amp; medium businesses</h3>
+
+                                                                                    <p class="color-white">Delight customers with an easier way to work together. Save valuable time and keep your business moving from anywhere.</p>
+                                                                                </div>
+                                                                                <a class="learn-more-link color-white" data-ga="smb|hp-discover" href="/features-and-benefits/small-and-medium-sized-businesses">Learn about SoftiDoc for SMB</a>
+                                                                            </div>
+
+                                                                            <div class="icon-text-block icon-underline">
+                                                                                <div class="icon-wrapper"><img height="108" width="164" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/fp_city_icon.svg" alt="" /><hr class="hr-white" /></div>
+
+                                                                                <div class="text-wrapper">
+                                                                                    <h3 class="color-white">For enterprises</h3>
+
+                                                                                    <p class="color-white">Make your business processes secure and compliant with our global and amazingly flexible service. Your employees and customers will be up and running in minutes.</p>
+                                                                                </div>
+                                                                                <a class="learn-more-link color-white" data-ga="enterprise|hp-discover" href="/features-and-benefits/enterprises">Learn about SoftiDoc for enterprises</a>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row">
+                                                                            <div class="col-md-6">
+                                                                                <div class="devices-image"><img height="187" width="422" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/devices.svg" alt="" /></div>
+                                                                            </div>
+
+                                                                            <div class="col-md-6">
+                                                                                <div class="developer-center">
+                                                                                    <h3 class="color-white">Add the power of eSignature to your app or website with the SoftiDoc API</h3>
+                                                                                    <a class="btn btn-fp color-white" data-ga="dev-center|home-button" href="/developer-center">Visit developer center</a>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="worldwide-block bg-dark-blue">
+                                                                    <h2 class="fp-title centered color-white">Trusted and loved by over 100 million people worldwide.</h2>
+
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-sm-4 col-sm-offset-2 col-md-offset-0">
+                                                                                <div class="logo-text-testimonial">
+                                                                                    <div class="image-wrapper"><img alt="Comcast uses SoftiDoc for global electronic signatures" title="Comcast uses SoftiDoc for global electronic signatures" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/hp-global-esign_1.png" /></div>
+
+                                                                                    <div class="text-wrapper">
+                                                                                        <p class="quote">“Our field sales team now closes deals on the spot, increasing the number of sales closed and revenue booked.”</p>
+
+                                                                                        <p class="author">Todd Goodbinder, VP, Comcast Business Services</p>
+                                                                                    </div>
+
+                                                                                    <div class="footer-region"><a class="learn-more-link fancybox-media fancybox.iframe" data-fancybox-title="&lt;h3&gt;Comcast Business Services and SoftiDoc&lt;/h3&gt;&lt;p&gt;Comcast Business Service's digital transformation with SoftiDoc&lt;/p&gt;" data-ga="left-promo|hp-video-promos" href="https://youtu.be/JGYuCRYFxew">Watch the Video</a></div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-sm-4">
+                                                                                <div class="logo-text-testimonial hide show-tablet">
+                                                                                    <div class="image-wrapper"><img alt="MISYS uses SoftiDoc for financial services eSignatures" title="MISYS uses SoftiDoc for financial services eSignatures" height="288" width="576" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/misys-esignature.png" /></div>
+
+                                                                                    <div class="text-wrapper">
+                                                                                        <p class="quote">“SoftiDoc is crucial in our journey to becoming the world's #1 global software for financial services.”</p>
+
+                                                                                        <p class="author">Simon Dowler, General Counsel, Misys</p>
+                                                                                    </div>
+
+                                                                                    <div class="footer-region"><a class="learn-more-link fancybox-media fancybox.iframe" data-fancybox-title="&lt;h3&gt;Misys&lt;/h3&gt;&lt;p&gt;Misys, a global financial services software company, implemented SoftiDoc to help them achieve their goal of being the global premier vendor of software for the financial services’ market.&lt;/p&gt;" data-ga="middle-promo|hp-video-promos" href="https://youtu.be/dnfLr9gz5GA">Watch the Video</a></div>
+                                                                                </div>
+                                                                            </div>
+
+                                                                            <div class="col-md-4 hide show-desktop">
+                                                                                <div class="logo-text-testimonial hide show-tablet">
+                                                                                    <div class="image-wrapper"><img alt="Special Olympics uses SoftiDoc eSignature solutions" title="Special Olympics uses SoftiDoc eSignature solutions" height="288" width="576" class="media-element file-default" src="https://www.SoftiDoc.com/sites/default/files/special-olympics-esign.png" /></div>
+
+                                                                                    <div class="text-wrapper">
+                                                                                        <p class="quote">“Return on investment with SoftiDoc, it's about being smart about how we run our business, how we support our athletes.”</p>
+
+                                                                                        <p class="author">Lonnie Snyder, VP of Information Technology</p>
+                                                                                    </div>
+
+                                                                                    <div class="footer-region"><a class="learn-more-link fancybox-media fancybox.iframe" data-fancybox-title="&lt;h3&gt;SoftiDoc Helps Special Olympics Digitize Business Operations&lt;/h3&gt;&lt;p&gt;SoftiDoc is working with the Special Olympics to help minimize the hassles of paperwork. As part of the relationship announced on March 11, SoftiDoc has provided Special Olympics with its Digital Transaction Management (DTM) platform and eSignature solution to empower athletes, guardians, coaches, and doctors to electronically sign required documents like medical releases and participation forms – anytime, anywhere, on any device, securely.&lt;/p&gt;" data-ga="right-promo|hp-video-promos" href="https://youtu.be/11NKixx5jKY">Watch the Video</a></div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+
+                                                                        <div class="row hide show-desktop">
+                                                                            <div class="col-md-12">
+                                                                                <div class="counter">
+                                                                                    <div class="count-block">
+                                                                                        <p class="digits"><span class="d-lang">43</span></p>
+
+                                                                                        <p class="label">languages</p>
+                                                                                    </div>
+
+                                                                                    <div class="count-block">
+                                                                                        <p class="digits"><span class="d-countries">188</span></p>
+
+                                                                                        <p class="label">countries</p>
+                                                                                    </div>
+
+                                                                                    <div class="count-block">
+                                                                                        <p class="digits"><span class="companies">250,000</span></p>
+
+                                                                                        <p class="label">companies</p>
+                                                                                    </div>
+                                                                                </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="learn-more-section">
+                                                                    <div class="container">
+                                                                        <div class="row">
+                                                                            <div class="col-md-4 simple-text-block">
+                                                                                <h3>SoftiDoc Summer '16 Release</h3>
+
+                                                                                <p>Learn about our latest production innovations</p>
+                                                                                <a class="learn-more-link" href="/blog/dive-into-the-SoftiDoc-summer16-release/">Find out more</a>
+                                                                            </div>
+
+                                                                            <div class="col-md-4 simple-text-block">
+                                                                                <h3>Forrester study</h3>
+
+                                                                                <p>Digital Transforms The Game of Business: Digital Transaction Management Emerging As Key Solution</p>
+                                                                                <a class="learn-more-link" href="/whitepapers/forrester-report-digital-transforms-the-game-of-business-digital-transaction-management">Download study now</a>
+                                                                            </div>
+
+                                                                            <div class="col-md-4 simple-text-block">
+                                                                                <h3>Click, sign, drive</h3>
+
+                                                                                <p>SoftiDoc Labs and Visa Innovation Labs collaborate on the future of car leasing</p>
+                                                                                <a class="learn-more-link fancybox-media fancybox.iframe" data-fancybox-title="&lt;h3&gt;SoftiDoc &amp; Visa's Smart Contracts &amp; Payments Prototype&lt;/h3&gt;&lt;p&gt;In this video, watch how the the SoftiDoc proof-of-concept app, embedded into the dashboard of a connected car prototype developed by Visa for car-based commerce, simplifies the process of leasing or buying a car by automating all the steps into a seamless, completely secure electronic environment.&lt;/p&gt;" href="https://www.youtube.com/embed/2rLNbd6MQXg">View video</a>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+
+                                                                <div class="bottom-block bg-dark-blue centered">
+                                                                    <div class="container">
+                                                                        <h2 class="color-white">Ready to get started with SoftiDoc?</h2>
+
+                                                                        <div class="buttons-wrapper"><a class="btn btn-fp btn-yellow" data-ga="trial|home-getstarted" href="https://secure.SoftiDoc.com/trial?tgr=com-trial-Home">Free Trial</a> <a class="btn btn-fp btn-white" data-ga="contact|home-getstarted" href="/company/contact-us#sales">Contact Sales</a></div>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </main>
+
+        
     </div>
-
-    <!-- jQuery and Angular extensions -->
-    <script src="/scripts/Angular/angular-sanitize.js"></script>
-    <script src="/scripts/Angular/angular-route.js"></script>
-    <script src="/scripts/Angular/angular-local-storage.js"></script>
-    <script src="/scripts/Angular/angular-resource.js"></script>
-    <script src="/scripts/Angular/angular-ui/ui-utils.js"></script>
-    <script src="/scripts/jQuery/jquery.clientele.signalR.js"></script>
-    <script src="/scripts/jQuery/jquery.signalR-2.0.3.js"></script>
-    <script src="/scripts/JavascriptExtensions/linq.js"></script>
-    <script src="/scripts/jQuery/jquery.blockUI.js"></script>
-    <script src="/scripts/Angular/bindonce.js"></script>
-    <script src="/scripts/JavascriptExtensions/Date/moment.min.js"></script>
-
-    <script src="/scripts/Angular/elastic.js"></script>
-    <!-- Bootstrap UI -->
-    <script src="/scripts/UI/bootstrap.js"></script>
-    <script src="/scripts/UI/ui-bootstrap-0.10.0.min.js"></script>
-    <script src="/scripts/Application/SharedObjectDefinitions.js"></script>
-    <script src="/scripts/UI/angular-ui-tree.js"></script>
-    <script src="/scripts/UI/ng-grid.js"></script>
-    <script src="/scripts/UI/ui-grid.js"></script>
-    <script src="scripts/UI/bootstrap-datepicker.js"></script>
-
-
-    <!-- ui dashboard -->
-    <script src="/scripts/UI/ui-sortable.js"></script>
-    <script src="/scripts/UI/angular-ui-dashboard.js"></script>
-
-    <!-- In place editing -->
-    <script src="/scripts/UI/xeditable.min.js"></script>
-    <script src="/scripts/UI/select.js"></script>
-    <script src="/scripts/UI/angular-wysiwyg.js"></script>
-    <script src="/scripts/UI/colorpicker.js"></script>
-
-    <!-- Page notification mechanism -->
-    <script src="/Scripts/UI/jquery.pnotify.js"></script>
-    <script src="/Scripts/UI/Highstock.src.js"></script>
-    <script src="/Scripts/UI/highcharts-ng.js"></script>
-    <!-- Dialog component used for custom dialogs such as confirm override -->
-    <script src="/Scripts/UI/dialogs.js"></script>
-    <!-- Unique css file dependency injection -->
-    <script src="/Scripts/UI/angular-css-injector.js"></script>
-    <!-- File upload directive -->
-    <script src="/scripts/UI/angular-file-upload.js"></script>
-    <script src="/scripts/UI/SaveBlob.js"></script>
-
-    <!-- Application module and configuration -->
-    <script src="/scripts/Application/Clientele.Unity.js"></script>
-    <script src="/scripts/Application/Clientele.Unity.Routes.js"></script>
-    <script src="/scripts/Application/Clientele.Unity.Controllers.js"></script>
-    <script src="/scripts/Application/Configuration/startup.js"></script>
-
-    <!-- Authentication and authorisation -->
-    <script src="/scripts/Application/Services/Clientele.Auth.js"></script>
-    <!-- Application wide injectable services -->
-    <script src="/scripts/Application/Services/Clientele.Services.js"></script>
-    <!-- Application wide directives -->
-    <script src="/scripts/Application/Directives/Clientele.Directives.js"></script>
-    <script src="/scripts/Application/Directives/Clientele.Directives.FormFields.js"></script>
-    <!-- Application wide filters -->
-    <script src="/scripts/Application/Filters/Clientele.Formatting.js"></script>
-    <script src="/scripts/Application/Clientele.Unity.EnvironmentConstants.js"></script>
-
-    <!--Custom Applications-->
-
-    <script src="/scripts/Application/Components/WorkflowServices/Clientele.WorkFlowServices.js"></script>
-    <script src="/scripts/Application/Components/RecordStore/Clientele.RecordStore.js"></script>
-
-    <script src="/scripts/Application/Components/ApiView/Clientele.ApiView.js"></script>
-    <script src="/scripts/Application/Components/ApiView/Clientele.ApiView.Routes.js"></script>
-    <script src="/scripts/Application/Components/ApiView/Clientele.ApiView.Controllers.js"></script>
-
-    <script src="/scripts/Application/Components/ServiceError/Clientele.ServiceError.js"></script>
-    <script src="/scripts/Application/Components/ServiceError/Clientele.ServiceError.Routes.js"></script>
-    <script src="/scripts/Application/Components/ServiceError/Clientele.ServiceError.Controllers.js"></script>
-    <script src="/scripts/Application/Components/ServiceError/Clientele.ServiceError.Services.js"></script>
-
-
-    <!--Helper Functions-->
-    <script src="/scripts/Application/HelperFunctions.js"></script>
-
-    <style>
-        .select2 > .select2-choice.ui-select-match {
-            /* Because of the inclusion of Bootstrap */
-            height: 29px;
-        }
-    </style>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script1.js"></script>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.migrateMute=true;jQuery.migrateTrace=false;
+//--><!]]>
+    </script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script2.js"></script>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+var _tcaq=_tcaq||[];var _tcwq=_tcwq||[];_tcaq.push(['setAccount','DOCUSIGN','docusign_prod']);
+//--><!]]>
+    </script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script3.js"></script>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+document.createElement("picture");
+//--><!]]>
+    </script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script4.js"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script13.js?of2j02"></script>
+    <script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings,{"basePath":"\/","pathPrefix":"","ajaxPageState":{"theme":"docusign","theme_token":"jin-u8VRnozpf_UpAybcx-Be4MF3PKC-fmOF26pota4","jquery_version":"1.10","css":{"sites\/all\/themes\/custom\/docusign\/css\/styles.css":1,"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/contrib\/chosen\/css\/chosen-drupal.css":1,"modules\/aggregator\/aggregator.css":1,"sites\/all\/modules\/patched\/date\/date_api\/date.css":1,"sites\/all\/modules\/patched\/date\/date_popup\/themes\/datepicker.1.7.css":1,"sites\/all\/modules\/custom\/dcs_style_guide\/sg-styles\/railscasts.css":1,"modules\/field\/theme\/field.css":1,"modules\/node\/node.css":1,"sites\/all\/modules\/patched\/panels_mini_ipe\/panels-mini-ipe.css":1,"sites\/all\/modules\/patched\/picture\/picture_wysiwyg.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/contrib\/extlink\/extlink.css":1,"sites\/all\/modules\/contrib\/views\/css\/views.css":1,"sites\/all\/modules\/contrib\/ctools\/css\/ctools.css":1,"sites\/all\/libraries\/fancybox\/source\/jquery.fancybox.css":1,"sites\/all\/modules\/patched\/panels\/css\/panels.css":1,"sites\/all\/themes\/custom\/docusign\/plugins\/layouts\/one_column_html_page\/..\/..\/..\/css\/plugins\/layouts\/one_column_html_page\/one_column_html_page.css":1,"0":1,"sites\/all\/modules\/contrib\/eu_cookie_compliance\/css\/eu_cookie_compliance.css":1,"sites\/all\/modules\/contrib\/menu_minipanels\/css\/menu_minipanels.css":1,"sites\/all\/themes\/custom\/docusign\/plugins\/layouts\/default_template\/..\/..\/..\/css\/plugins\/layouts\/default_template\/default_template.css":1,"sites\/all\/themes\/custom\/docusign\/plugins\/layouts\/footer\/..\/..\/..\/css\/plugins\/layouts\/footer\/footer.css":1,"sites\/all\/modules\/patched\/lang_dropdown\/lang_dropdown.css":1,"sites\/all\/themes\/custom\/docusign\/plugins\/layouts\/header_new\/..\/..\/..\/css\/plugins\/layouts\/header_new\/header_new.css":1,"sites\/all\/themes\/custom\/docusign\/system.menus.css":1,"sites\/all\/themes\/custom\/docusign\/system.theme.css":1,"sites\/all\/themes\/custom\/docusign\/quicktabs.css":1,"cpn_node_293631":1},"js":{"https:\/\/cdn.optimizely.com\/js\/275532918.js":1,"sites\/all\/libraries\/modernizr\/modernizr-min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery\/1.10\/jquery.min.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/jquery-migrate\/1.2.1\/jquery-migrate.min.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"sites\/all\/modules\/contrib\/visitor_actions\/modules\/visitor_actions_ui\/js\/jquery\/alias.js":1,"misc\/jquery.ba-bbq.js":1,"sites\/all\/modules\/contrib\/jquery_update\/replace\/ui\/external\/jquery.cookie.js":1,"sites\/all\/modules\/contrib\/visitor_actions\/modules\/visitor_actions_ui\/js\/jquery\/ducktape.events.js":1,"misc\/ajax.js":1,"sites\/all\/modules\/contrib\/jquery_update\/js\/jquery_update.js":1,"sites\/all\/modules\/custom\/dcs_style_guide\/sg-js\/highlight.pack.min.js":1,"sites\/all\/modules\/contrib\/extlink\/extlink.js":1,"sites\/all\/modules\/patched\/acquia_lift\/acquia_lift_profiles\/js\/acquia_lift_profiles.js":1,"sites\/all\/modules\/patched\/demandbase\/js\/demandbase_storage.js":1,"sites\/all\/modules\/contrib\/fancybox\/fancybox.js":1,"sites\/all\/libraries\/fancybox\/source\/jquery.fancybox.pack.js":1,"sites\/all\/libraries\/fancybox\/lib\/jquery.mousewheel-3.0.6.pack.js":1,"sites\/all\/libraries\/fancybox\/source\/helpers\/jquery.fancybox-media.js":1,"sites\/all\/modules\/patched\/lang_dropdown\/lang_dropdown.js":1,"misc\/progress.js":1,"sites\/all\/modules\/contrib\/personalize_demandbase\/js\/personalize_demandbase.js":1,"sites\/all\/modules\/contrib\/personalize\/modules\/personalize_elements\/js\/personalize_elements.js":1,"sites\/all\/modules\/contrib\/personalize\/modules\/personalize_taxonomy_context\/js\/personalize_taxonomy_context.js":1,"sites\/all\/modules\/contrib\/chosen\/chosen.js":1,"sites\/all\/libraries\/chosen\/chosen.jquery.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/jquery-scrolltofixed-min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/media.match.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/jquery.browser.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/jquery.validate.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/jquery.flexslider.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/slick.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/garlic.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/enquire.min.js":1,"sites\/all\/themes\/custom\/docusign\/js\/script.js":1,"public:\/\/cpn\/293631.js":1}},"demandBase":{"getIpPath":"\/sites\/all\/modules\/patched\/demandbase\/demandbase_getip.php","qRewrite":"force_ip"},"fancybox":{"options":{"width":680,"maxWidth":680},"helpers":{"title":{"type":"inside"},"media":[]},"selectors":[".fancybox"]},"eu_cookie_compliance":{"popup_enabled":1,"popup_agreed_enabled":0,"popup_hide_agreed":0,"popup_clicking_confirmation":1,"popup_html_info":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content info\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Cp\u003EThis site uses cookies, some of which are required for the operation of the site.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022\u003ELearn More\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022agree-button\u0022\u003EOK\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E\n","popup_html_agreed":"\u003Cdiv\u003E\n  \u003Cdiv class =\u0022popup-content agreed\u0022\u003E\n    \u003Cdiv id=\u0022popup-text\u0022\u003E\n      \u003Ch2\u003EThank you for accepting cookies\u003C\/h2\u003E\u003Cp\u003EYou can now hide this message or find out more about cookies.\u003C\/p\u003E    \u003C\/div\u003E\n    \u003Cdiv id=\u0022popup-buttons\u0022\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022hide-popup-button\u0022\u003EHide\u003C\/button\u003E\n      \u003Cbutton type=\u0022button\u0022 class=\u0022find-more-button\u0022 \u003EMore info\u003C\/button\u003E\n    \u003C\/div\u003E\n  \u003C\/div\u003E\n\u003C\/div\u003E","popup_height":"auto","popup_width":"100%","popup_delay":1000,"popup_link":"https:\/\/www.docusign.com\/company\/privacy-policy","popup_link_new_window":1,"popup_position":null,"popup_language":"en","domain":""},"redirectDomain":{"en-AU":{"host":"www.docusign.com.au","current":false},"pt-br":{"host":"www.docyousign.com.br","current":false},"en-CA":{"host":"www.docusign.ca","current":false},"fr":{"host":"www.docusign.fr","current":false},"en-IN":{"host":"www.docusign.in","current":false},"en-gb":{"host":"www.docusign.co.uk","current":false},"en":{"host":"www.docusign.com","current":true},"nl":{"host":"www.docusign.nl","current":false},"ja":{"host":"www.docusign.jp","current":false},"de":{"host":"www.docusign.de","current":false}},"extlink":{"extTarget":"_blank","extClass":0,"extLabel":"(link is external)","extImgClass":0,"extSubdomains":1,"extExclude":"http.*(docusign|docyousign).*\\..*","extInclude":"","extCssExclude":"","extCssExplicit":"","extAlert":0,"extAlertText":"This link will take you to an external web site.","mailtoClass":0,"mailtoLabel":"(link sends e-mail)"},"chosen":{"selector":"select#lang-dropdown-select-language, .countries-yellow-selector select#edit-jump, select#edit-field-acquia-lift-personas-und, select#edit-field-acquia-lift-sections-und, select#edit-field-acquia-lift-keywords-und, .form-resource-event select#edit-term-node-tid-depth, .form-resource-event  select#edit-all-industry-department","minimum_single":0,"minimum_multiple":0,"minimum_width":130,"options":{"disable_search":true,"disable_search_threshold":0,"search_contains":false,"placeholder_text_multiple":"Choose some options","placeholder_text_single":"Choose an option","no_results_text":"No results match","inherit_select_classes":true}},"urlIsAjaxTrusted":{"\/":true},"pathToTheme":"sites\/all\/themes\/custom\/docusign","acquia_lift_profiles":{"request_url":"https:\/\/www.docusign.com\/","available_segments":["DB Software \u0026 Technology","clicked-login-link","EMEA Visitors","db_industry_real_estate","db_industry_financial_services","brazil_users","location_region_massachusetts_and_surrounding","location_region_new_york","location_region_pennsylvania","location_region_new_south_wales","location_city_los_angeles","location_city_seattle","location_region_rhode_island","location_region_new_hampshire","location_region_new_york_and_surrounding","location_country_united_states","location_country_france","location_country_united_kingdom","db_audience_mid_market_enterprise_businesses","location_country_australia","location_dma_code_819_seattle_tacoma","db_audience_enterprise","docusign_qa_ips","db_audience_mid_market","db_audience_smb","location_dma_code_803_los_angeles"],"apiUrl":"api-liftweb-us1.lift.acquia.com","currentPath":"node\/100291","captureIdentity":0,"mappings":{"person":{"person_udf4":"demandbase_context__company_name","person_udf6":"demandbase_context__audience","person_udf7":"demandbase_context__audience_segment","person_udf8":"demandbase_context__company_name","person_udf9":"demandbase_context__marketing_alias","person_udf10":"demandbase_context__industry","person_udf11":"demandbase_context__sub_industry","person_udf12":"demandbase_context__primary_sic","person_udf13":"demandbase_context__employee_range","person_udf14":"demandbase_context__country","person_udf15":"demandbase_context__country_name","person_udf16":"demandbase_context__web_site","person_udf17":"demandbase_context__stock_ticker","person_udf18":"demandbase_context__isp","person_udf19":"demandbase_context__ip","person_udf20":"demandbase_context__information_level"},"field":{"content_section":"taxonomy_context__acquia_lift_sections","content_keywords":"taxonomy_context__acquia_lift_keywords","persona":"taxonomy_context__acquia_lift_personas"}},"mappingContextSeparator":"__","pageContext":{"content_type":"landing_page","content_title":"Front","published_date":"1442309979","post_id":"100291","author":"webteamops","page_type":"node page","thumbnail_url":""},"tracked_actions":["scroll_to_bottom","clicks_au_homepage_promos_blue_bar","clicks_docusign_and_go_cta_button","clicks_fr_homepage_promos_blue_bar","clicks_hero_cta","clicks_hero_cta_2","clicks_hero_cta_3","clicks_hero_cta_4","clicks_hero_cta_5","clicks_hero_cta_6","clicks_hero_cta_7","clicks_hero_cta_8","clicks_hero_cta_9","clicks_mobile_hero_cta","clicks_top_of_page_cta","clicks_uk_homepage_promos_blue_bar","desktop_register_now_button_click","download_study_now_link_action","get_the_analyst_report_link_action","homepage_hero_enterprise_learn_more_cta","mobile_register_now_link_click"],"engagement_scores":{"scroll_to_bottom":1,"clicks_au_homepage_promos_blue_bar":1,"clicks_docusign_and_go_cta_button":1,"clicks_fr_homepage_promos_blue_bar":1,"clicks_hero_cta":1,"clicks_hero_cta_2":1,"clicks_hero_cta_3":1,"clicks_hero_cta_4":1,"clicks_hero_cta_5":1,"clicks_hero_cta_6":1,"clicks_hero_cta_7":1,"clicks_hero_cta_8":1,"clicks_hero_cta_9":1,"clicks_mobile_hero_cta":1,"clicks_top_of_page_cta":1,"clicks_uk_homepage_promos_blue_bar":1,"desktop_register_now_button_click":1,"download_study_now_link_action":1,"get_the_analyst_report_link_action":1,"homepage_hero_enterprise_learn_more_cta":1,"mobile_register_now_link_click":1},"global_values":{"scroll_to_bottom":1,"clicks_au_homepage_promos_blue_bar":1,"clicks_docusign_and_go_cta_button":1,"clicks_fr_homepage_promos_blue_bar":1,"clicks_hero_cta":1,"clicks_hero_cta_2":1,"clicks_hero_cta_3":1,"clicks_hero_cta_4":1,"clicks_hero_cta_5":1,"clicks_hero_cta_6":1,"clicks_hero_cta_7":1,"clicks_hero_cta_8":1,"clicks_hero_cta_9":1,"clicks_mobile_hero_cta":1,"clicks_top_of_page_cta":1,"clicks_uk_homepage_promos_blue_bar":1,"desktop_register_now_button_click":1,"download_study_now_link_action":1,"get_the_analyst_report_link_action":1,"homepage_hero_enterprise_learn_more_cta":1,"mobile_register_now_link_click":1}},"personalize":{"optionPreselectParam":"personalize-preselection","controlOptionName":"control-variation","controlOptionLabel":"Control variation","cacheExpiration":{"visitor_context:acquia_lift_profiles_context:location_country_australia":"none","visitor_context:acquia_lift_profiles_context:db_audience_smb":"none","visitor_context:acquia_lift_profiles_context:db_audience_mid_market_enterprise_businesses":"none","visitor_context:acquia_lift_profiles_context:location_country_france":"none","visitor_context:acquia_lift_profiles_context:db_industry_financial_services":"none","visitor_context:acquia_lift_profiles_context:location_country_united_kingdom":"none","visitor_context:acquia_lift_profiles_context:location_region_massachusetts_and_surrounding":"none","visitor_context:acquia_lift_profiles_context:location_region_new_york_and_surrounding":"none","visitor_context:acquia_lift_profiles_context:location_region_pennsylvania":"none","visitor_context:acquia_lift_profiles_context:location_dma_code_819_seattle_tacoma":"none","visitor_context:acquia_lift_profiles_context:location_dma_code_803_los_angeles":"none","decisions":"session","lift":"session"},"debugMode":true,"agent_map":{"idg-digital-banking-hp-promo":{"type":"acquia_lift_target","label":"US Homepage Promo - Bottom Left","active":true,"enabled_contexts":{"acquia_lift_profiles_context":{"db_industry_financial_services":"db_industry_financial_services"}},"cache_decisions":false},"us-wwwr-4199-momentumx-homepage-promos-v2":{"type":"acquia_lift_target","label":"US Homepage Promos - Blue Bar","active":true,"enabled_contexts":{"acquia_lift_profiles_context":{"location_region_massachusetts_and_surrounding":"location_region_massachusetts_and_surrounding","location_region_new_york_and_surrounding":"location_region_new_york_and_surrounding","location_region_pennsylvania":"location_region_pennsylvania","location_dma_code_819_seattle_tacoma":"location_dma_code_819_seattle_tacoma","location_dma_code_803_los_angeles":"location_dma_code_803_los_angeles","db_audience_smb":"db_audience_smb","db_audience_mid_market_enterprise_businesses":"db_audience_mid_market_enterprise_businesses"}},"cache_decisions":false},"fr-homepage-promos-blue-bar":{"type":"acquia_lift_target","label":"FR Homepage Promos - Blue Bar","active":true,"enabled_contexts":{"acquia_lift_profiles_context":{"location_country_france":"location_country_france"}},"cache_decisions":false},"uk-homepage-promos-blue-bar":{"type":"acquia_lift_target","label":"UK Homepage Promos - Blue Bar","active":true,"enabled_contexts":{"acquia_lift_profiles_context":{"db_audience_smb":"db_audience_smb","db_audience_mid_market_enterprise_businesses":"db_audience_mid_market_enterprise_businesses","location_country_united_kingdom":"location_country_united_kingdom"}},"cache_decisions":false},"au-homepage-promos-blue-bar":{"type":"acquia_lift_target","label":"AU Homepage Promos - Blue Bar","active":true,"enabled_contexts":{"acquia_lift_profiles_context":{"location_country_australia":"location_country_australia","db_audience_smb":"db_audience_smb","db_audience_mid_market_enterprise_businesses":"db_audience_mid_market_enterprise_businesses"}},"cache_decisions":false},"us-homepage-promo-bottom-middle":{"type":"acquia_lift_target","label":"US Homepage Promo - Bottom Middle","active":true,"enabled_contexts":{"acquia_lift_profiles_context":{"db_audience_mid_market_enterprise_businesses":"db_audience_mid_market_enterprise_businesses"}},"cache_decisions":false},"us-features-and-benefits-enterprises-page":{"type":"acquia_lift_target","label":"US Enterprise WWWR-4381","active":false,"enabled_contexts":{"acquia_lift_profiles_context":{"docusign_qa_ips":"docusign_qa_ips","db_audience_enterprise":"db_audience_enterprise"}},"cache_decisions":false},"us-ctas-for-smb-enterprise":{"type":"acquia_lift_target"},"us-digital-signature-faq-page":{"type":"acquia_lift_target"},"us-financial-services-industry-page":{"type":"acquia_lift_target"},"us-life-sciences-industry-page":{"type":"acquia_lift_target"},"us-government-industry-page":{"type":"acquia_lift_target"},"us-insurance-industry-page":{"type":"acquia_lift_target"},"us-technology-industry-page":{"type":"acquia_lift_target"},"us-healthcare-industry-page":{"type":"acquia_lift_target"},"us-electronic-signature-page":{"type":"acquia_lift_target"}},"option_sets":{"osid-46":{"osid":"osid-46","plugin":"elements","label":"Homepage Promos (Bottom)","agent":"idg-digital-banking-hp-promo","mvt":"","decision_name":"idg-digital-banking-hp-promo","executor":"personalizeElements","options":[{"option_label":"Control variation","option_id":"control-variation","personalize_elements_content":""},{"option_id":"idg-banking-financial-services","option_label":"IDG Banking (Financial Services)","personalize_elements_content":"\u003Cdiv class=\u0022col-md-4 simple-text-block\u0022\u003E\r\n\t\t\t\t\u003Ch3\u003EIDG Report: Digital Transactions Drive the Future of Banking\u003C\/h3\u003E\r\n\r\n\t\t\t\t\u003Cp\u003ELearn how financial institutions can stay competitive by going paperless\r\n\u003C\/p\u003E\r\n\t\t\t\t\u003Ca class=\u0022learn-more-link idg-banking-promo\u0022 data-ga=\u0022IDG-banking|homepage-promo\u0022href=\u0022\/white-papers\/digital-transactions-drive-the-future-of-banking\u0022\u003EGet the Analyst Report\u003C\/a\u003E\u003C\/div\u003E"}],"winner":null,"stateful":"0","data":{"personalize_elements_selector":".learn-more-section \u003E .container \u003E div:eq(0) \u003E div:eq(0)","personalize_elements_type":"editHtml","pages":"node\/100291"},"preview_link":"node\/100291","targeting":[{"label":"Financial Services - DB Industry","weight":"50","targeting_features":["db_industry_financial_services::1"],"targeting_rules":{"db_industry_financial_services::1":{"context":"db_industry_financial_services","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"idg-banking-financial-services","name":"financial-services-db-industry"},{"label":"Everyone else","weight":60,"targeting_features":[],"targeting_rules":[],"targeting_strategy":"OR","option_id":"control-variation","name":"everyone-else"}],"entity_type":"personalize_option_set","decision_point":"idg-digital-banking-hp-promo","selector":".learn-more-section \u003E .container \u003E div:eq(0) \u003E div:eq(0)","option_names":["control-variation","idg-banking-financial-services"]},"osid-71":{"osid":"osid-71","plugin":"elements","label":"Homepage Promos","agent":"us-wwwr-4199-momentumx-homepage-promos-v2","mvt":"","decision_name":"us-wwwr-4199-momentumx-homepage-promos-v2","executor":"personalizeElements","options":[{"option_id":"control-variation","option_label":"Control variation","personalize_elements_content":""},{"option_id":"boston","option_label":"MoX Boston Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo hp-boston display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-5 col-sm-4 col-md-4 title\u0022\u003E\u003Cspan\u003EDocuSign\u0027s Digital City Tour\u003C\/span\u003E \u003Cimg src=\u0022\/sites\/default\/files\/momentumX_logo.svg\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-xs-7 col-sm-8 col-md-8\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-8 col-md-8 location\u0022\u003EBoston - September 22nd\u003C\/div\u003E\r\n\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-4 col-md-4 button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022MomentumX-Boston|HomePromoDesktop\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxBoston?channel=DDCUS000017689564\u0022\u003EREGISTER NOW\u003C\/a\u003E \u003Ca class=\u0022mobile-cta\u0022 data-ga=\u0022MomentumX-Boston|HomePromoMobile\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxBoston?channel=DDCUS000017689564\u0022\u003E\u0026gt; Register Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"new-york","option_label":"MoX New York Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo hp-new-york display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-5 col-sm-4 col-md-4 title\u0022\u003E\u003Cspan\u003EDocuSign\u0027s Digital City Tour\u003C\/span\u003E \u003Cimg src=\u0022\/sites\/default\/files\/momentumX_logo.svg\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-xs-7 col-sm-8 col-md-8\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-8 col-md-8 location\u0022\u003ENew York - September 27th\u003C\/div\u003E\r\n\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-4 col-md-4 button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022MomentumX-NewYork|HomePromoDesktop\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxNewYork?channel=DDCUS000017689564\u0022\u003EREGISTER NOW\u003C\/a\u003E \u003Ca class=\u0022mobile-cta\u0022 data-ga=\u0022MomentumX-NewYork|HomePromoMobile\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxNewYork?channel=DDCUS000017689564\u0022\u003E\u0026gt; Register Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"philadelphia","option_label":"MoX Philadelphia Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo hp-philadelphia display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-5 col-sm-4 col-md-4 title\u0022\u003E\u003Cspan\u003EDocuSign\u0027s Digital City Tour\u003C\/span\u003E \u003Cimg src=\u0022\/sites\/default\/files\/momentumX_logo.svg\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-xs-7 col-sm-8 col-md-8\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-8 col-md-8 location\u0022\u003EPhiladelphia - September 29th\u003C\/div\u003E\r\n\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-4 col-md-4 button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022MomentumX-Philadelphia|HomePromoDesktop\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxPhiladelphia?channel=DDCUS000017689564\u0022\u003EREGISTER NOW\u003C\/a\u003E \u003Ca class=\u0022mobile-cta\u0022 data-ga=\u0022MomentumX-Philadelphia|HomePromoMobile\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxPhiladelphia?channel=DDCUS000017689564\u0022\u003E\u0026gt; Register Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"eidas-us","option_label":"eIDAS Promo (US)","personalize_elements_content":"\u003Cdiv class=\u0022home-promo global-promo display-promo\u0022 \u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-sm-2 hide-mobile-tablet title\u0022\u003E \u003Cimg src=\u0022\/sites\/default\/files\/globe.png\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-sm-12 col-md-10\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-sm-12 col-md-8 location\u0022\u003E\u003Cstrong\u003EDoing business in the EU?\u003C\/strong\u003E\u003Cbr\u003EThe rules have changed under eIDAS, but DocuSign still has you covered. \u003Ca class=\u0022mobile-cta hide-desktop\u0022 data-ga=\u0022US-eIDAS|HomePromoMobile\u0022 href=\u0022\/how-it-works\/electronic-signature\/digital-signature\u0022\u003ELearn about our eIDAS Solutions\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-sm-3 hide-mobile-tablet button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022US-eIDAS|HomePromoDesktop\u0022 href=\u0022\/how-it-works\/electronic-signature\/digital-signature\u0022\u003EEIDAS SOLUTIONS\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"forrester-report-promo","option_label":"Forrester Report Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo icon-promo display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg src=\u0022\/sites\/default\/files\/white_paper.svg\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-9 location\u0022\u003E\u003Cstrong\u003EJust released: 2016 Forrester Study\u003C\/strong\u003E\u003Cbr\u003EAccelerate Your Digital Transformation: Seven Best Practices for Implementing Digital Transaction Management\u003Cbr\u003E\u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022Forrester-Study|HomePromoMobile\u0022 href=\u0022\/white-papers\/accelerate-your-digital-transformation-7-best-practices-for-implementing-digital\u0022\u003EDownload Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022Forrester-Study|HomePromoDesktop\u0022 href=\u0022\/white-papers\/accelerate-your-digital-transformation-7-best-practices-for-implementing-digital\u0022\u003EDownload now\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"mox-seattle-promo","option_label":"MoX Seattle Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo hp-seattle display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-5 col-sm-4 col-md-4 title\u0022\u003E\u003Cspan\u003EDocuSign\u0027s Digital City Tour\u003C\/span\u003E \u003Cimg src=\u0022\/sites\/default\/files\/momentumX_logo.svg\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-xs-7 col-sm-8 col-md-8\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-8 col-md-8 location\u0022\u003ESeattle - November 17th\u003C\/div\u003E\r\n\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-4 col-md-4 button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022MomentumX-Seattle|HomePromoDesktop\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxSeattle?channel=DDCUS000017689564\u0022\u003EREGISTER NOW\u003C\/a\u003E \u003Ca class=\u0022mobile-cta\u0022 data-ga=\u0022MomentumX-Seattle|HomePromoMobile\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxSeattle?channel=DDCUS000017689564\u0022\u003E\u0026gt; Register Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"salesforce-lightning","option_label":"Salesforce Lightning","personalize_elements_content":"\u003Cdiv class=\u0022home-promo icon-promo display-promo\u0022 style=\u0022min-height:90px;\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg src=\u0022\/sites\/default\/files\/LightningWhitePaper.svg\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-9 location\u0022 style=\u0022margin-top:18px;\u0022\u003E\u003Cstrong\u003ELightning ready!\u003C\/strong\u003E\u003Cbr\u003EDocuSign, the App Exchange\u2019s #1 app, meets the latest Salesforce technology.\u003Cbr\u003E\u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022DFS-lightning|HomePromoMobile\u0022 href=\u0022\/solutions\/salesforce\u0022\u003ELearn more\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022DFS-lightning|HomePromoDesktop\u0022 href=\u0022\/solutions\/salesforce\u0022\u003ELearn more\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_label":"MoX Los Angeles Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo hp-los-angeles display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-5 col-sm-4 col-md-4 title\u0022\u003E\u003Cspan\u003EDocuSign\u0027s Digital City Tour\u003C\/span\u003E \u003Cimg src=\u0022\/sites\/default\/files\/momentumX_logo.svg\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-xs-7 col-sm-8 col-md-8\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-8 col-md-8 location\u0022\u003ELos Angeles - November 15th\u003C\/div\u003E\r\n\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-4 col-md-4 button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022MomentumX-LosAngeles|HomePromoDesktop\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxLosangeles?channel=DDCUS000017689564\u0022\u003EREGISTER NOW\u003C\/a\u003E \u003Ca class=\u0022mobile-cta\u0022 data-ga=\u0022MomentumX-LosAngeles|HomePromoMobile\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxLosangeles?channel=DDCUS000017689564\u0022\u003E\u0026gt; Register Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E","option_id":"mox-los-angeles-promo"}],"winner":null,"stateful":"0","data":{"personalize_elements_selector":".home-promo","personalize_elements_type":"editHtml","pages":"\u003Cfront\u003E"},"preview_link":"","targeting":[{"label":"Massachusetts and Surrounding Area","weight":"10","targeting_features":["location_region_massachusetts_and_surrounding::1"],"targeting_rules":{"location_region_massachusetts_and_surrounding::1":{"context":"location_region_massachusetts_and_surrounding","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","name":"masachusetts"},{"label":"New York and Surrounding Area","weight":"20","targeting_features":["location_region_new_york_and_surrounding::1"],"targeting_rules":{"location_region_new_york_and_surrounding::1":{"context":"location_region_new_york_and_surrounding","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","name":"new-york"},{"label":"Pennsylvania","weight":"30","targeting_features":["location_region_pennsylvania::1"],"targeting_rules":{"location_region_pennsylvania::1":{"context":"location_region_pennsylvania","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","name":"pennsylvania"},{"label":"Seattle and Surrounding Area","weight":"40","targeting_features":["location_dma_code_819_seattle_tacoma::1"],"targeting_rules":{"location_dma_code_819_seattle_tacoma::1":{"context":"location_dma_code_819_seattle_tacoma","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"mox-seattle-promo","name":"seattle-and-surrounding-area"},{"label":"Los Angeles and Surround Area","weight":"50","targeting_features":["location_dma_code_803_los_angeles::1"],"targeting_rules":{"location_dma_code_803_los_angeles::1":{"context":"location_dma_code_803_los_angeles","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"mox-los-angeles-promo","name":"los-angeles-and-surround-area"},{"label":"SMB","weight":"50","targeting_features":["db_audience_smb::1"],"targeting_rules":{"db_audience_smb::1":{"context":"db_audience_smb","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"salesforce-lightning","name":"mid-market-companies"},{"label":"Mid-Market and Enterprise Companies","weight":"60","targeting_features":["db_audience_mid_market_enterprise_businesses::1"],"targeting_rules":{"db_audience_mid_market_enterprise_businesses::1":{"context":"db_audience_mid_market_enterprise_businesses","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"forrester-report-promo","name":"mid-market-and-enterprise-companies"},{"label":"Everyone else","weight":70,"targeting_features":[],"targeting_rules":[],"targeting_strategy":"OR","option_id":"control-variation","name":"everyone-else"}],"entity_type":"personalize_option_set","decision_point":"us-wwwr-4199-momentumx-homepage-promos-v2","selector":".home-promo","option_names":["control-variation","boston","new-york","philadelphia","eidas-us","forrester-report-promo","mox-seattle-promo","salesforce-lightning","mox-los-angeles-promo"]},"osid-76":{"osid":"osid-76","plugin":"elements","label":"FR Homepage Promos - Blue Bar","agent":"fr-homepage-promos-blue-bar","mvt":"","decision_name":"fr-homepage-promos-blue-bar","executor":"personalizeElements","options":[{"option_id":"control-variation","option_label":"Control variation","personalize_elements_content":""},{"option_id":"esignature-event-paris","option_label":"eSignature Event - Paris","personalize_elements_content":"\u003Cdiv class=\u0022home-promo display-promo display-fr-event\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg src=\u0022\/sites\/default\/files\/sign_icon.svg\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-8 col-sm-6 location\u0022\u003E\u003Cstrong\u003ED\u00e9couvrez la Signature Electronique\u003C\/strong\u003E\u003Cbr\u003EPetit d\u00e9jeuner d\u00e9di\u00e9 entreprises de taille interm\u00e9diaire. \u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022HP-FR-01|HomePromoMobile\u0022 href=\u0022https:\/\/www.eventbrite.com\/e\/docusign-approuvez-et-signez-vos-documents-en-toute-simplicite-tickets-26971485439?aff=homepagesiteweb\u0022\u003EInscrivez-vous\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-4 col-sm-3 location\u0022\u003E20 septembre\u003Cbr\u003Ehotel R\u00e9gina, Paris 1er\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022HP-FR-01|HomePromoDesktop\u0022 href=\u0022https:\/\/www.eventbrite.com\/e\/docusign-approuvez-et-signez-vos-documents-en-toute-simplicite-tickets-26971485439?aff=homepagesiteweb\u0022\u003EInscrivez-vous\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"mox-france-promo","option_label":"MoX France Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo hp-paris display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-5 col-sm-4 col-md-4 title\u0022\u003E\u003Cspan\u003EDocuSign Digital City Tour\u003C\/span\u003E \u003Cimg src=\u0022\/sites\/default\/files\/momentumX_logo.svg\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-xs-7 col-sm-8 col-md-8\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-8 col-md-8 location\u0022\u003EA Paris, le 24 novembre 2016\u003C\/div\u003E\r\n\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-4 col-md-4 button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022MomentumX-Paris|HomePromoDesktop\u0022 href=\u0022https:\/\/momentum.docusign.com\/fr\/momentumxParis?channel=DDCUS000017689564\u0022\u003EInscrivez-vous\u003C\/a\u003E \u003Ca class=\u0022mobile-cta\u0022 data-ga=\u0022MomentumX-Paris|HomePromoMobile\u0022 href=\u0022https:\/\/momentum.docusign.com\/fr\/momentumxParis?channel=DDCUS000017689564\u0022\u003E\u0026gt; Inscrivez-vous\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"}],"winner":null,"stateful":"0","data":{"personalize_elements_selector":".home-promo-fr","personalize_elements_type":"editHtml","pages":"\u003Cfront\u003E"},"preview_link":"","targeting":[{"label":"France","weight":"50","targeting_features":["location_country_france::1"],"targeting_rules":{"location_country_france::1":{"context":"location_country_france","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"mox-france-promo","name":"france"},{"label":"Everyone else","weight":60,"targeting_features":[],"targeting_rules":[],"targeting_strategy":"OR","option_id":"control-variation","name":"everyone-else"}],"entity_type":"personalize_option_set","decision_point":"fr-homepage-promos-blue-bar","selector":".home-promo-fr","option_names":["control-variation","esignature-event-paris","mox-france-promo"]},"osid-81":{"osid":"osid-81","plugin":"elements","label":"UK Homepage Promos - Blue Bar","agent":"uk-homepage-promos-blue-bar","mvt":"","decision_name":"uk-homepage-promos-blue-bar","executor":"personalizeElements","options":[{"option_id":"control-variation","option_label":"Control variation","personalize_elements_content":""},{"option_id":"cocktail-reception-london","option_label":"Cocktail Reception - London","personalize_elements_content":"\u003Cdiv class=\u0022home-promo-uk display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-sm-12\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-sm-12 col-md-9 location\u0022\u003E\u003Cstrong\u003ECOCKTAIL RECEPTION IN LONDON\u003C\/strong\u003E\u003Cbr\u003EeSignature: Legal Changes and What It Means for Business. \u003Ca class=\u0022mobile-cta hide-desktop\u0022 data-ga=\u0022UK-reception|HomePromoMobile\u0022 target=\u0022_blank\u0022 href=\u0022http:\/\/www.eventbrite.com\/e\/esignature-legal-changes-and-what-it-means-for-business-tickets-26879398003?aff=WebSiteBanner\u0022\u003ERegister Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-sm-3 hide-mobile-tablet button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 target=\u0022_blank\u0022 data-ga=\u0022UK-reception|HomePromoDesktop\u0022 href=\u0022http:\/\/www.eventbrite.com\/e\/esignature-legal-changes-and-what-it-means-for-business-tickets-26879398003?aff=WebSiteBanner\u0022\u003ERegister Now\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"forrester-report-promo","option_label":"Forrester Report Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo-uk icon-promo display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg src=\u0022\/sites\/default\/files\/white_paper.svg\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-9 location\u0022\u003E\u003Cstrong\u003EJust released: 2016 Forrester Study\u003C\/strong\u003E\u003Cbr\u003EAccelerate Your Digital Transformation: Seven Best Practices for Implementing Digital Transaction Management\u003Cbr\u003E\u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022Forrester-Study|HomePromoMobile\u0022 href=\u0022http:\/\/esign.docusign.com\/EMEA_DigitalTransforms?Channel=DDCUS000016968056\u0026Offer=DDCUS000017735829\u0026ECID=11690\u0026LS=EMEA_Dem_Both_IC_Forrester%20DTM%20Analyst%20Report_2016-09\u0022\u003EDownload Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022Forrester-Study|HomePromoDesktop\u0022 href=\u0022http:\/\/esign.docusign.com\/EMEA_DigitalTransforms?Channel=DDCUS000016968056\u0026Offer=DDCUS000017735829\u0026ECID=11690\u0026LS=EMEA_Dem_Both_IC_Forrester%20DTM%20Analyst%20Report_2016-09\u0022\u003EDownload now\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"salesforce-lightning","option_label":"Salesforce Lightning","personalize_elements_content":"\u003Cdiv class=\u0022home-promo-uk icon-promo display-promo\u0022 style=\u0022min-height:90px;\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg style=\u0022float:right;\u0022 src=\u0022\/sites\/default\/files\/LightningWhitePaper.svg\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-9 location\u0022 style=\u0022margin-top:18px;\u0022\u003E\u003Cstrong\u003ELightning ready!\u003C\/strong\u003E\u003Cbr\u003EDocuSign, the App Exchange\u2019s #1 app, meets the latest Salesforce technology.\u003Cbr\u003E\u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022DFS-lightning|HomePromoMobile\u0022 href=\u0022\/solutions\/salesforce\u0022\u003ELearn more\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022DFS-lightning|HomePromoDesktop\u0022 href=\u0022\/solutions\/salesforce\u0022\u003ELearn more\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"live-webinar-making-docusign-work-for-you","option_label":"Live Webinar: Making DocuSign Work for You","personalize_elements_content":"\u003Cdiv class=\u0022home-promo-uk icon-promo display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg src=\u0022\/sites\/default\/files\/white_paper.svg\u0022 style=\u0022width:30px;margin-top:13px;float:right;\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-9 location\u0022 style=\u0022margin-top:14px;\u0022\u003E\u003Cstrong\u003ELIVE WEBINAR\u003C\/strong\u003E\u003Cbr\u003EMaking DocuSign Work for You: Use Cases and ROI\u003Cbr\u003E\u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022Live-Webinar|HomePromoMobile\u0022 href=\u0022https:\/\/www.docusign.co.uk\/live-webinar\/making-docusign-work-for-you-use-cases-and-roi?Channel=DDCUS000017780229\u0026cName=DocuSign.com_Homepage%20Banner\u0026Offer=\u0026ECID=11553\u0026LS=EMEA_Mktg_Cust_WBR_eSignature%20Use%20Cases%20_2016-09\u0022\u003ERegister Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022 style=\u0022margin-top:15px;\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022Live-Webinar|HomePromoDesktop\u0022 href=\u0022https:\/\/www.docusign.co.uk\/live-webinar\/making-docusign-work-for-you-use-cases-and-roi?Channel=DDCUS000017780229\u0026cName=DocuSign.com_Homepage%20Banner\u0026Offer=\u0026ECID=11553\u0026LS=EMEA_Mktg_Cust_WBR_eSignature%20Use%20Cases%20_2016-09\u0022\u003ERegister now\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"}],"winner":null,"stateful":"0","data":{"personalize_elements_selector":".home-promo-uk","personalize_elements_type":"editHtml","pages":"\u003Cfront\u003E"},"preview_link":"","targeting":[{"label":"SMB","weight":"10","targeting_features":["db_audience_smb::1"],"targeting_rules":{"db_audience_smb::1":{"context":"db_audience_smb","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","name":"smb"},{"label":"Mid-Market and Enterprise Companies","weight":"20","targeting_features":["db_audience_mid_market_enterprise_businesses::1"],"targeting_rules":{"db_audience_mid_market_enterprise_businesses::1":{"context":"db_audience_mid_market_enterprise_businesses","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"forrester-report-promo","name":"mid-market-and-enterprise-companies"},{"label":"United Kingdom","weight":"30","targeting_features":["location_country_united_kingdom::1"],"targeting_rules":{"location_country_united_kingdom::1":{"context":"location_country_united_kingdom","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"live-webinar-making-docusign-work-for-you","name":"united-kingdom"},{"label":"Everyone else","weight":40,"targeting_features":[],"targeting_rules":[],"targeting_strategy":"OR","option_id":"control-variation","name":"everyone-else"}],"entity_type":"personalize_option_set","decision_point":"uk-homepage-promos-blue-bar","selector":".home-promo-uk","option_names":["control-variation","cocktail-reception-london","forrester-report-promo","salesforce-lightning","live-webinar-making-docusign-work-for-you"]},"osid-86":{"osid":"osid-86","plugin":"elements","label":"AU Homepage Promos - Blue Bar","agent":"au-homepage-promos-blue-bar","mvt":"","decision_name":"au-homepage-promos-blue-bar","executor":"personalizeElements","options":[{"option_id":"control-variation","option_label":"Control variation","personalize_elements_content":""},{"option_id":"docusign-s","option_label":"MoX Sydney Promo","personalize_elements_content":"\u003Cdiv class=\u0022home-promo-au hp-sydney display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-5 col-sm-4 col-md-4 title\u0022\u003E\u003Cspan\u003EDocuSign\u0027s Digital City Tour\u003C\/span\u003E \u003Cimg src=\u0022\/sites\/default\/files\/momentumX_logo.svg\u0022\u003E\u003C\/div\u003E\r\n\r\n\t\t\t\u003Cdiv class=\u0022col-xs-7 col-sm-8 col-md-8\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-8 col-md-8 location\u0022\u003ESydney - November 8th\u003C\/div\u003E\r\n\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-4 col-md-4 button\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-white desktop-cta\u0022 data-ga=\u0022MomentumX-Sydney|HomePromoDesktop\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxSydney?channel=DDCUS000017689564\u0022\u003EREGISTER NOW\u003C\/a\u003E \u003Ca class=\u0022mobile-cta\u0022 data-ga=\u0022MomentumX-Sydney|HomePromoMobile\u0022 href=\u0022https:\/\/momentum.docusign.com\/en\/momentumxSydney?channel=DDCUS000017689564\u0022\u003E\u0026gt; Register Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"forrester-report-promo","option_label":"\tForrester Report Promo\t\t\t\t","personalize_elements_content":"\u003Cdiv class=\u0022home-promo-au icon-promo display-promo\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg src=\u0022\/sites\/default\/files\/white_paper.svg\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-9 location\u0022\u003E\u003Cstrong\u003EJust released: 2016 Forrester Study\u003C\/strong\u003E\u003Cbr\u003EAccelerate Your Digital Transformation: Seven Best Practices for Implementing Digital Transaction Management\u003Cbr\u003E\u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022Forrester-Study|HomePromoMobile\u0022 href=\u0022\/white-papers\/accelerate-your-digital-transformation-7-best-practices-for-implementing-digital\u0022\u003EDownload Now\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022Forrester-Study|HomePromoDesktop\u0022 href=\u0022\/white-papers\/accelerate-your-digital-transformation-7-best-practices-for-implementing-digital\u0022\u003EDownload now\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"},{"option_id":"salesforce-lightning","option_label":"Salesforce Lightning","personalize_elements_content":"\u003Cdiv class=\u0022home-promo-au icon-promo display-promo\u0022 style=\u0022min-height:90px;\u0022\u003E\r\n\t\u003Cdiv class=\u0022container\u0022\u003E\r\n\t\t\u003Cdiv class=\u0022row\u0022\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-1 hide-mobile-tablet title\u0022\u003E \r\n\t\t\t\t\u003Cimg style=\u0022float:right;\u0022 src=\u0022\/sites\/default\/files\/LightningWhitePaper.svg\u0022\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\t\u003Cdiv class=\u0022col-xs-11\u0022\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-12 col-sm-9 location\u0022 style=\u0022margin-top:18px;\u0022\u003E\u003Cstrong\u003ELightning ready!\u003C\/strong\u003E\u003Cbr\u003EDocuSign, the App Exchange\u2019s #1 app, meets the latest Salesforce technology.\u003Cbr\u003E\u003Ca class=\u0022mobile-cta hide-desktop hide-tablet\u0022 data-ga=\u0022DFS-lightning|HomePromoMobile\u0022 href=\u0022\/solutions\/salesforce\u0022\u003ELearn more\u003C\/a\u003E\u003C\/div\u003E\r\n\t\t\t\t\u003Cdiv class=\u0022col-xs-3 hide-mobile button\u0022\u003E\u003Ca class=\u0022btn btn-fp hide-mobile btn-white desktop-cta\u0022 data-ga=\u0022DFS-lightning|HomePromoDesktop\u0022 href=\u0022\/solutions\/salesforce\u0022\u003ELearn more\u003C\/a\u003E \u003C\/div\u003E\r\n\t\t\t\u003C\/div\u003E\r\n\t\t\u003C\/div\u003E\r\n\t\u003C\/div\u003E\r\n\u003C\/div\u003E"}],"winner":null,"stateful":"0","data":{"personalize_elements_selector":".home-promo-au","personalize_elements_type":"editHtml","pages":"\u003Cfront\u003E"},"preview_link":"","targeting":[{"label":"Australia","weight":"10","targeting_features":["location_country_australia::1"],"targeting_rules":{"location_country_australia::1":{"context":"location_country_australia","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","name":"australia"},{"label":"SMB","weight":"20","targeting_features":["db_audience_smb::1"],"targeting_rules":{"db_audience_smb::1":{"context":"db_audience_smb","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"salesforce-lightning","name":"smb"},{"label":"Mid-Market and Enterprise Companies","weight":"30","targeting_features":["db_audience_mid_market_enterprise_businesses::1"],"targeting_rules":{"db_audience_mid_market_enterprise_businesses::1":{"context":"db_audience_mid_market_enterprise_businesses","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"forrester-report-promo","name":"mid-market-and-enterprise-companies"},{"label":"Everyone else","weight":40,"targeting_features":[],"targeting_rules":[],"targeting_strategy":"OR","option_id":"control-variation","name":"everyone-else"}],"entity_type":"personalize_option_set","decision_point":"au-homepage-promos-blue-bar","selector":".home-promo-au","option_names":["control-variation","docusign-s","forrester-report-promo","salesforce-lightning"]},"osid-91":{"osid":"osid-91","plugin":"elements","label":"Homepage Promo Bottom Middle","agent":"us-homepage-promo-bottom-middle","mvt":"","decision_name":"us-homepage-promo-bottom-middle","executor":"personalizeElements","options":[{"option_label":"Control variation","option_id":"control-variation","personalize_elements_content":""},{"option_label":"2016 Forrester Study","personalize_elements_content":"\u003Cdiv class=\u0022col-md-4 simple-text-block\u0022\u003E\n\t\t\t\t\u003Ch3\u003E2016 Forrester study\u003C\/h3\u003E\n\n\t\t\t\t\u003Cp\u003EAccelerate Your Digital Transformation: Seven Best Practices for Implementing Digital Transaction Management\u003C\/p\u003E\n\t\t\t\t\u003Ca class=\u0022learn-more-link\u0022 href=\u0022\/white-papers\/accelerate-your-digital-transformation-7-best-practices-for-implementing-digital\u0022\u003EDownload study now\u003C\/a\u003E\u003C\/div\u003E","option_id":"2016-forrester-study"}],"winner":null,"stateful":"0","data":{"personalize_elements_selector":".learn-more-section \u003E .container \u003E div:eq(0) \u003E div:eq(1)","personalize_elements_type":"editHtml","pages":"node\/100291"},"preview_link":"node\/100291","targeting":[{"label":"Mid-Market and Enterprise Companies","weight":"50","targeting_features":["db_audience_mid_market_enterprise_businesses::1"],"targeting_rules":{"db_audience_mid_market_enterprise_businesses::1":{"context":"db_audience_mid_market_enterprise_businesses","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"2016-forrester-study","name":"mid-market-and-enterprise-companies"},{"label":"Everyone else","weight":60,"targeting_features":[],"targeting_rules":[],"targeting_strategy":"OR","option_id":"control-variation","name":"everyone-else"}],"entity_type":"personalize_option_set","decision_point":"us-homepage-promo-bottom-middle","selector":".learn-more-section \u003E .container \u003E div:eq(0) \u003E div:eq(1)","option_names":["control-variation","2016-forrester-study"]},"osid-261":{"osid":"osid-261","plugin":"elements","label":"Homepage Hero (Enterprise)","agent":"us-features-and-benefits-enterprises-page","mvt":"","decision_name":"us-features-and-benefits-enterprises-page","executor":"personalizeElements","options":[{"option_label":"Control variation","option_id":"control-variation","personalize_elements_content":""},{"option_label":"Hero Copy and CTA","personalize_elements_content":"\u003Cdiv class=\u0022text-wrapper\u0022\u003E\n\t\t\u003Cdiv class=\u0022container\u0022\u003E\n\t\t\t\u003Cdiv class=\u0022row\u0022\u003E\n\t\t\t\t\u003Cdiv class=\u0022col-sm-7 col-md-8\u0022\u003E\n\t\t\t\t\t\u003Cp\u003EYour digital transformation starts with a signature\u003C\/p\u003E\n\n\t\t\t\t\t\u003Cdiv class=\u0022buttons-wrapper\u0022\u003E\u003Ca class=\u0022btn btn-fp btn-yellow\u0022 data-ga=\u0022fb-enterprise-learn-more|home-hero\u0022 href=\u0022https:\/\/www.docusign.com\/features-and-benefits\/enterprises\u0022\u003ELearn more\u003C\/a\u003E\u003C\/div\u003E\n\t\t\t\t\u003C\/div\u003E\n\t\t\t\u003C\/div\u003E\n\t\t\u003C\/div\u003E\n\t\u003C\/div\u003E","option_id":"hero-image-and-cta"}],"winner":null,"stateful":"0","data":{"personalize_elements_selector":".video-bg-block \u003E .text-wrapper","personalize_elements_type":"editHtml","pages":"node\/100291"},"preview_link":"node\/100291","targeting":[{"label":"QA and test","weight":"50","targeting_features":["docusign_qa_ips::1"],"targeting_rules":{"docusign_qa_ips::1":{"context":"docusign_qa_ips","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","option_id":"hero-image-and-cta","name":"qa-and-test"},{"label":"Enterprise","weight":"50","targeting_features":["db_audience_enterprise::1"],"targeting_rules":{"db_audience_enterprise::1":{"context":"db_audience_enterprise","match":"1","operator":"equals","plugin":"acquia_lift_profiles_context"}},"targeting_strategy":"OR","name":"enterprise"},{"label":"Everyone else","weight":60,"targeting_features":[],"targeting_rules":[],"targeting_strategy":"OR","option_id":"control-variation","name":"everyone-else"}],"entity_type":"personalize_option_set","decision_point":"us-features-and-benefits-enterprises-page","selector":".video-bg-block \u003E .text-wrapper","option_names":["control-variation","hero-image-and-cta"]}},"actionListeners":{"clicks_au_homepage_promos_blue_bar":[{"agent":"au-homepage-promos-blue-bar","value":"1"}],"clicks_fr_homepage_promos_blue_bar":[{"agent":"fr-homepage-promos-blue-bar","value":"1"}],"clicks_hero_cta":[{"agent":"us-ctas-for-smb-enterprise","value":"1"}],"clicks_hero_cta_2":[{"agent":"us-digital-signature-faq-page","value":"1"}],"clicks_hero_cta_3":[{"agent":"us-financial-services-industry-page","value":"1"}],"clicks_hero_cta_4":[{"agent":"us-life-sciences-industry-page","value":"1"}],"clicks_hero_cta_5":[{"agent":"us-government-industry-page","value":"1"}],"clicks_hero_cta_6":[{"agent":"us-insurance-industry-page","value":"1"}],"clicks_hero_cta_7":[{"agent":"us-technology-industry-page","value":"1"}],"clicks_hero_cta_8":[{"agent":"us-healthcare-industry-page","value":"1"}],"clicks_hero_cta_9":[{"agent":"us-electronic-signature-page","value":"1"}],"clicks_mobile_hero_cta":[{"agent":"us-ctas-for-smb-enterprise","value":"1"}],"clicks_uk_homepage_promos_blue_bar":[{"agent":"uk-homepage-promos-blue-bar","value":"1"}],"desktop_register_now_button_click":[{"agent":"us-wwwr-4199-momentumx-homepage-promos-v2","value":"1"}],"download_study_now_link_action":[{"agent":"us-homepage-promo-bottom-middle","value":"1"}],"get_the_analyst_report_link_action":[{"agent":"idg-digital-banking-hp-promo","value":"1"}],"mobile_register_now_link_click":[{"agent":"us-wwwr-4199-momentumx-homepage-promos-v2","value":"1"}]}},"personalize_demandbase":{"api_key":"84e410ecc65c06011997db80b4142a19e8e6f2d7","api_url":"https:\/\/api.demandbase.com\/api\/v2\/ip.json"},"personalize_elements":{"elements":{"osid-46":{"selector":".learn-more-section \u003E .container \u003E div:eq(0) \u003E div:eq(0)","variation_type":"editHtml","previewable":true},"osid-71":{"selector":".home-promo","variation_type":"editHtml","previewable":true},"osid-76":{"selector":".home-promo-fr","variation_type":"editHtml","previewable":true},"osid-81":{"selector":".home-promo-uk","variation_type":"editHtml","previewable":true},"osid-86":{"selector":".home-promo-au","variation_type":"editHtml","previewable":true},"osid-91":{"selector":".learn-more-section \u003E .container \u003E div:eq(0) \u003E div:eq(1)","variation_type":"editHtml","previewable":true},"osid-261":{"selector":".video-bg-block \u003E .text-wrapper","variation_type":"editHtml","previewable":true}}},"acquia_lift_target":{"default_target":"everyone-else","test_agent_plugin":"acquia_lift_learn","agent_map":[],"option_sets":[],"nested_tests":{"idg-digital-banking-hp-promo":[],"us-wwwr-4199-momentumx-homepage-promos-v2":[],"fr-homepage-promos-blue-bar":[],"uk-homepage-promos-blue-bar":[],"au-homepage-promos-blue-bar":[],"us-homepage-promo-bottom-middle":[],"us-features-and-benefits-enterprises-page":[],"us-ctas-for-smb-enterprise":[],"us-digital-signature-faq-page":[],"us-financial-services-industry-page":[],"us-life-sciences-industry-page":[],"us-government-industry-page":[],"us-insurance-industry-page":[],"us-technology-industry-page":[],"us-healthcare-industry-page":[],"us-electronic-signature-page":[]}},"personalize_taxonomy_context":{"vocabularies":[]},"visitor_actions":{"currentPath":"node\/100291","actions":{"scroll_to_bottom":{"event":"scrollToBottom","actionable_element":"page"},"clicks_au_homepage_promos_blue_bar":{"identifier":".desktop-cta","event":"click","actionable_element":"link","options":[]},"clicks_docusign_and_go_cta_button":{"identifier":".btn-big","event":"click","actionable_element":"link","options":{"auto_created":"31"}},"clicks_fr_homepage_promos_blue_bar":{"identifier":".desktop-cta","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_2":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_3":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_4":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_5":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_6":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_7":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_8":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_hero_cta_9":{"identifier":".hero-contact","event":"click","actionable_element":"link","options":[]},"clicks_mobile_hero_cta":{"identifier":".btn-medium","event":"click","actionable_element":"link","options":{"auto_created":"181"}},"clicks_top_of_page_cta":{"identifier":"#cta-pricing-sales","event":"click","actionable_element":"link","options":[]},"clicks_uk_homepage_promos_blue_bar":{"identifier":".desktop-cta","event":"click","actionable_element":"link","options":[]},"desktop_register_now_button_click":{"identifier":".desktop-cta","event":"click","actionable_element":"link","options":[]},"download_study_now_link_action":{"identifier":".learn-more-section \u003E .container \u003E div:eq(0) \u003E div:eq(1) \u003E a:eq(0)","event":"click","actionable_element":"link","options":[]},"get_the_analyst_report_link_action":{"identifier":".idg-banking-promo","event":"click","actionable_element":"link","options":[]},"homepage_hero_enterprise_learn_more_cta":{"identifier":".col-sm-7 \u003E .buttons-wrapper \u003E a:eq(0)","event":"click","actionable_element":"link","options":[]},"mobile_register_now_link_click":{"identifier":".mobile-cta","event":"click","actionable_element":"link","options":[]}},"actionableElementTypes":[{"type":"page","selector":null},{"type":"form","selector":"form[action]"},{"type":"base_form","selector":"form[action]"},{"type":"link","selector":"a[href]"}],"pageContext":{"InternalPath":"node\/100291","RequestPath":"","Taxonomy":[],"ContentType":"landing_page"}},"acquia_lift_learn":{"baseUrl":"https:\/\/us-east-1-decision.lift.acquia.com","clientId":"b24f9f56-80ea-4c84-a0ba-492366c31579","applicationHash":"docusign_prod"},"acquia_lift":{"api_class":"acquiaLiftAPI","account_name":"DOCUSIGN","customer_site":"docusign_prod"}});
+//--><!]]>
+    </script>
+    <!-- wkejf2j9348fh3498fh37wed823j0r8u238uf823j9r7y4r -->
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script5.js"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script6.js?v=7.50"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script7.js" defer="defer"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script8.js"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script9.js" defer="defer"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script10.js" async="async"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script11.js"></script>
+    <script type="text/javascript" src="scripts/Application/SoftiDoc_Script12.js" defer="defer"></script>
 </body>
 </html>

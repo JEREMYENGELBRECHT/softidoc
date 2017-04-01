@@ -1740,7 +1740,7 @@ document.addEventListener('DOMContentLoaded', function webViewerLoad(evt) {
 }, true);
 
 function ResetChecboxes() {
-    var myCheckboxList = document.getElementsByClassName("clienteleCheckbox");
+    var myCheckboxList = document.getElementsByClassName("SoftiDocCheckbox");
     var allowMultipleAllocation = PDF_ALLOW_MULTIPLE_ALLOCATION;
     for (var i = 0; i < myCheckboxList.length; i++) {
         if (allowMultipleAllocation == false && (myCheckboxList[i].checked)) {

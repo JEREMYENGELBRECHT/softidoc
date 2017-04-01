@@ -3,7 +3,7 @@
 /* Routing Requires the controllers for assignment to a route - these use the 'lookup' method */
 /**********************************************************************************************/
 
-angular.module('Clientele.MyComponent.Routes', ['Clientele.MyComponent.Controllers'])
+angular.module('SoftiDoc.MyComponent.Routes', ['SoftiDoc.MyComponent.Controllers'])
     .config(function ($routeProvider) {
 
         var componentKey = "MyComponent";

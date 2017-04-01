@@ -5,7 +5,8 @@
         <img width="80" height="80" src="{{iconSource}}" />
     </li>
     <!-- Navigation for applications in the system -->
-    <li ng-repeat="application in applications" class="btn-sm">
+    <li style="margin: 10px;" ng-show="applications.length > 10"><input class="form-control" ng-model="search" /></li>
+    <li ng-repeat="application in applications | orderBy : 'applicationName' | filter:search" class="btn-sm">
         <div class="btn-link btn-default" ng-click="ChangeUrl(application);">{{application.applicationName}}</div>
     </li>
 </ul>

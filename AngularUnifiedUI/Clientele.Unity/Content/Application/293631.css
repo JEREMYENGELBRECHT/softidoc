@@ -1,0 +1,187 @@
+﻿/* Momentum Promos Blue Bar */
+.home-promo,.home-promo .button .mobile-cta{display:none}.hp-boston{background:url(/sites/default/files/momentumx-boston.jpg) no-repeat}.hp-new-york{background:url(/sites/default/files/momentumx-new-york.jpg) no-repeat}.hp-philadelphia{background:url(/sites/default/files/momentumx-philadelphia.jpg) no-repeat}.hp-los-angeles{background:url(/sites/default/files/momentumx-los-angeles.jpg) no-repeat}.hp-seattle{background:url(/sites/default/files/momentumx-seattle.jpg) no-repeat}.home-promo{background-size:cover;min-height:90px;height:100%;color:#fff;font-size:25px;padding:5px;background-color:#1b49a0}.home-promo .title{padding-left:3%;text-align:right}.home-promo .title span{font-size:18px}.home-promo .title img{width:226px;float:right}.home-promo .button{text-align:left;margin-top:20px}.home-promo .location{margin-top:28px;font-size:18px;text-align:center}@media (max-width:900px){.home-promo .title img{width:201px;float:left}.home-promo .title{text-align:left}.home-promo .title span{font-size:16px}.home-promo .button .btn{min-width:100%}}@media (max-width:767px){.home-promo .button{text-align:left;margin-top:5px}.home-promo .title span{font-size:10px;display:inherit}.home-promo .location{font-size:10px;text-align:center;margin-top:0}.home-promo .title img{width:124px;margin-top:2px}.home-promo{min-height:65px;padding:15px;font-size:16px;text-align:left}.home-promo .button,.home-promo .title{padding:0}.home-promo .btn-white{display:none}.home-promo .button .mobile-cta{text-align:center;color:#fff;display:block}.home-promo-button .mobile-cta:hover{text-decoration:underline}.mobile-cta{font-size:14px;margin:0}}
+
+/* Display Promos */
+.display-promo {
+    display: block;
+}
+
+/* eIDAS Promo Blue Bar */
+.global-promo{overflow:hidden;height:80px;min-height:inherit}.global-promo .title img{width:110px;margin-top:15px}.global-promo .location{margin:15px 0;font-size:15px;text-align:left}.global-promo .button{margin-top:15px;text-align:right}.global-promo .mobile-cta{color:#fff;text-decoration:underline}@media (max-width:999px){.global-promo{padding:5px;height:auto}}@media (max-width:768px){.global-promo .mobile-cta{font-size:11px}.global-promo .location{margin:10px 0;font-size:11px;padding:0}}
+
+/* Icon Promo */
+.icon-promo{overflow:hidden;min-height:55px}.icon-promo .title img{width:40px;margin-top:14px}.icon-promo .location{margin:10px 0;font-size:16px;text-align:left;font-family:maven_prolight}.icon-promo .button{margin-top:20px;text-align:right}.icon-promo .mobile-cta{color:#fff;text-decoration:underline}@media (min-width:768px) and (max-width:999px){.icon-promo .location,.icon-promo .mobile-cta{font-size:14px}}@media (max-width:767px){.icon-promo .location,.icon-promo .mobile-cta{font-size:12px}.icon-promo{padding:5px;height:auto}}
+
+
+
+
+ .signature-block {
+        position: relative;
+    }
+    .signature-block .stroke {
+        display: none;
+        fill: none;
+        stroke: #000;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+
+        /* Use px for stroke-width */
+        stroke-width: 7px;
+    }
+    .signature-block img {
+        max-width: inherit;
+        position: absolute;
+        right: -12.75rem;
+        top: -11.5rem;
+    }
+    .signature-block svg {
+        -moz-transform: rotate(-6.5deg);
+        -ms-transform: rotate(-6.5deg);
+        -webkit-transform: rotate(-6.5deg);
+        transform: rotate(-6.5deg);
+        height: 15.1875rem;
+        top: -1.8125rem;
+        position: absolute;
+        right: -1.9375rem;
+        width: 25.6875rem;
+    }
+
+    .signature-section {
+        overflow: hidden;
+        padding: 3.125rem 0 4.6875rem;
+        text-align: center;
+    }
+    @media (min-width: 48em) {
+        .signature-section {
+            padding: 3.125rem 0 3.4375rem;
+        }
+    }
+    @media (min-width: 62.5em) {
+        .signature-section {
+            padding: 5.3125rem 0;
+            text-align: left;
+        }
+    }
+    .signature-section .fp-title {
+        margin-bottom: 1.25rem;
+    }
+    @media (min-width: 62.5em) {
+        .signature-section .fp-title {
+            margin-bottom: 1.5625rem;
+        }
+    }
+    .signature-section .buttons-wrapper {
+        margin-top: 1.875rem;
+    }
+
+    .advantages-section {
+        margin-bottom: 1.25rem;
+    }
+    @media (min-width: 62.5em) {
+        .advantages-section {
+            margin-bottom: 2.8125rem;
+        }
+    }
+
+    .bottom-block {
+        padding: 3.125rem 0;
+    }
+    @media (min-width: 48em) {
+        .bottom-block {
+            padding: 3.4375rem 0;
+        }
+    }
+    @media (min-width: 62.5em) {
+        .bottom-block {
+            padding: 5.75rem 0;
+        }
+    }
+
+    .bottom-block .btn {
+        margin-bottom: 1.5625rem;
+    }
+    @media (min-width: 48em) {
+        .bottom-block .btn {
+            margin-bottom: 0;
+        }
+    }
+    @media (min-width: 48em) {
+        .bottom-block .btn:first-child {
+            margin-right: 1.25rem;
+        }
+    }
+
+    .bottom-block h2 {
+      font-size: 1.5rem;
+line-height: 2rem;
+ margin-bottom: 1.8125rem;
+    }
+
+@media (min-width: 48em) {
+ .bottom-block h2 {
+   font-size: 1.875rem;
+   line-height: 2.375rem;
+ }
+}
+@media (min-width: 65.2em) {
+ .bottom-block h2 {
+   font-size: 2.25rem;
+   line-height: 2.75rem;
+ }
+}
+
+    .developer-center {
+        padding-left: 2.5rem;
+    }
+    .developer-center h3 {
+        font-family: "maven_proregular", sans-serif;
+        font-size: 1.5rem;
+        line-height: 1.9375rem;
+        margin: 0.625rem 0 1.5625rem;
+    }
+
+    .discovery-block {
+        padding: 2.5rem 0 0;
+    }
+    @media (min-width: 48em) {
+        .discovery-block {
+            padding: 3.4375rem 0 0;
+        }
+    }
+    @media (min-width: 62.5em) {
+        .discovery-block {
+            padding: 4.6875rem 0 0;
+        }
+    }
+
+    .learn-more-section {
+        margin-bottom: 1.25rem;
+    }
+    @media (min-width: 48em) {
+        .learn-more-section {
+            margin-bottom: 1.5625rem;
+        }
+    }
+    @media (min-width: 62.5em) {
+        .learn-more-section {
+            margin-bottom: 1.5rem;
+        }
+    }
+
+    @media screen and (max-width: 47.9375em) {
+        .worldwide-block .col-sm-4 {
+            max-width: 18rem;
+            margin: 0 auto;
+        }
+    }
+
+    @media screen and (max-width: 62.4375em) {
+        .signature-section,
+        .advantages-section,
+        .discovery-block,
+        .learn-more-section,
+        .worldwide-block .fp-title {
+            padding-left: 1.3125rem;
+            padding-right: 1.3125rem;
+        }
+    }

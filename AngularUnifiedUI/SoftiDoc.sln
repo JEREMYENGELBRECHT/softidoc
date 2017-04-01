@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+VisualStudioVersion = 14.0.25420.1
+>>>>>>> develop:AngularUnifiedUI/SoftiDoc.sln
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = ".nuget", ".nuget", "{C0C8BC32-B2BC-43BE-B26C-F339897CE777}"
+	ProjectSection(SolutionItems) = preProject
+		.nuget\NuGet.Config = .nuget\NuGet.Config
+		.nuget\NuGet.exe = .nuget\NuGet.exe
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftiDoc", "Clientele.Unity\SoftiDoc.csproj", "{80637435-8985-4C78-99DE-4FB6347DEE5F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SoftiDoc.Web.Api", "SoftiDoc.Web.Api\SoftiDoc.Web.Api.csproj", "{1045571C-F2F5-4F63-8216-CFE810CCE1F4}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{80637435-8985-4C78-99DE-4FB6347DEE5F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80637435-8985-4C78-99DE-4FB6347DEE5F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80637435-8985-4C78-99DE-4FB6347DEE5F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80637435-8985-4C78-99DE-4FB6347DEE5F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1045571C-F2F5-4F63-8216-CFE810CCE1F4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1045571C-F2F5-4F63-8216-CFE810CCE1F4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1045571C-F2F5-4F63-8216-CFE810CCE1F4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1045571C-F2F5-4F63-8216-CFE810CCE1F4}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
