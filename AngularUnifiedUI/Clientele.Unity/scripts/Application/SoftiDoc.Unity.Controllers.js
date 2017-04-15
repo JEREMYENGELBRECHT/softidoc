@@ -111,10 +111,11 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers', 'Softi
         };
 
         $scope.newSubItem = function (scope) {
+            debugger;
             var nodeData = scope.$modelValue;
             nodeData.nodes.push({
                 id: nodeData.id * 10 + nodeData.nodes.length,
-                title: nodeData.title + '.' + (nodeData.nodes.length + 1),
+                Name: nodeData.title + '.' + (nodeData.nodes.length + 1),
                 nodes: []
             });
         };
@@ -127,70 +128,28 @@ angular.module('SoftiDoc.Unity.Controllers', ['SoftiDoc.AuthControllers', 'Softi
             $scope.$broadcast('angular-ui-tree:expand-all');
         };
 
-        $scope.dataclick = function() {
-
+        var loadTree = function() {
             var action = function () {
+                //return ajaxJsonService.Get("http://softidocwebapi.azurewebsites.net/api/softidoc/getDatabases/", null);
                 return ajaxJsonService.Get("http://localhost:42050/api/softidoc/getDatabases/", null);
             };
 
-            var success = function(data) {
+            var success = function (data) {
                 debugger;
-                alert(data);
+                //alert(data);
+                $scope.data = data;
 
+                
             };
 
             uiLoader.UseWithLoader($scope, action, success);
-        }
+        };
 
-        $scope.data = [{
-            'id': 1,
-            'title': 'node1',
-            'nodes': [
-              {
-                  'id': 11,
-                  'title': 'node1.1',
-                  'nodes': [
-                    {
-                        'id': 111,
-                        'title': 'node1.1.1',
-                        'nodes': []
-                    }
-                  ]
-              },
-              {
-                  'id': 12,
-                  'title': 'node1.2',
-                  'nodes': []
-              }
-            ]
-        }, {
-            'id': 2,
-            'title': 'node2',
-            'nodrop': true, // An arbitrary property to check in custom template for nodrop-enabled
-            'nodes': [
-              {
-                  'id': 21,
-                  'title': 'node2.1',
-                  'nodes': []
-              },
-              {
-                  'id': 22,
-                  'title': 'node2.2',
-                  'nodes': []
-              }
-            ]
-        }, {
-            'id': 3,
-            'title': 'node3',
-            'nodes': [
-              {
-                  'id': 31,
-                  'title': 'node3.1',
-                  'nodes': []
-              }
-            ]
-        }];
-    
+        $scope.$on('$viewContentLoaded', function () {
+            debugger;
+            loadTree();
+        });
+
     }])
     .controller("identityNotFoundController", ["$scope", "authenticationService", "$location", "$route", "$timeout", "$rootScope", function ($scope, authenticationService, $location, $route, $timeout, $rootScope) {
 

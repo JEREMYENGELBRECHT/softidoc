@@ -81,13 +81,13 @@ tr.angular-ui-tree-empty {
           'glyphicon-chevron-down': !collapsed
         }"></span>
         </a>
-        {{node.title}}
-        <!--<a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="remove(this)">
+        {{node.Name}}
+        <a class="pull-right btn btn-danger btn-xs" data-nodrag ng-click="remove(this)">
             <span class="glyphicon glyphicon-remove"></span>
         </a>
         <a class="pull-right btn btn-primary btn-xs" data-nodrag ng-click="newSubItem(this)" style="margin-right: 8px;">
             <span class="glyphicon glyphicon-plus"></span>
-        </a>-->
+        </a>
     </div>
     <ol ui-tree-nodes="" ng-model="node.nodes" ng-class="{hidden: collapsed}">
         <li ng-repeat="node in node.nodes" ui-tree-node ng-include="'nodes_renderer.html'">
@@ -98,11 +98,10 @@ tr.angular-ui-tree-empty {
     <div class="col-sm-2" style="border-right: 2px solid grey;">
         <div style="text-align: center; height: 40px; border-bottom: 1px solid grey;">
             <h3>Cabinets</h3>
-            <a class="btn btn-primary form-control" ng-click="dataclick()"></a>
         </div>
         <div ui-tree id="tree-root" style="height: 800px">
             <ol ui-tree-nodes ng-model="data">
-                <li ng-repeat="node in data" ui-tree-node ng-include="'nodes_renderer.html'"></li>
+                <li ng-repeat="node in data" ui-tree-node collapsed="true;" ng-include="'nodes_renderer.html'"></li>
             </ol>
         </div>
     </div>
