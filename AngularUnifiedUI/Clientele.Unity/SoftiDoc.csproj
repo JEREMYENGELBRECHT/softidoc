@@ -932,7 +932,9 @@
     <Content Include="scripts\i18n\angular-locale_zh.js" />
     <Content Include="scripts\i18n\angular-locale_zu-za.js" />
     <Content Include="scripts\i18n\angular-locale_zu.js" />
-    <Content Include="package.json" />
+    <Content Include="package.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
