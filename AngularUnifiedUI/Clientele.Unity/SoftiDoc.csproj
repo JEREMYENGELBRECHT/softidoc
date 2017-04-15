@@ -995,13 +995,6 @@
     <Content Include="Views\MainPageDetails\CentrePanel.html" />
     <Content Include="Views\MainPageDetails\OuterPanel.html" />
     <Content Include="Views\Unity\MainPage.html" />
-    <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.js" />
-    <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.Routes.js" />
-    <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.Services.js" />
-    <Content Include="_StarterComponent\MyComponentScripts\Clientele.MyComponent.Controllers.js" />
-    <Content Include="_StarterComponent\MyComponentViews\Upload.html" />
-    <Content Include="_StarterComponent\MyComponentViews\Index.html" />
-    <Content Include="_StarterComponent\readme.txt" />
     <Content Include="Configuration\CreateConfigsFromExamples.ps1">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1104,7 +1097,6 @@
     <Content Include="scripts\UI\bootstrap.min.js" />
     <Content Include="scripts\Application\Configuration\startup.js" />
     <Content Include="scripts\Application\Directives\SoftiDoc.Directives.js" />
-    <Content Include="scripts\Application\Filters\SoftiDoc.Formatting.js" />
     <Content Include="Content\UiAddons\fonts\glyphicons-halflings-regular.woff">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
@@ -1686,6 +1678,9 @@
   </ItemGroup>
   <ItemGroup>
     <Service Include="{4A0DDDB5-7A95-4FBF-97CC-616D07737A77}" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="scripts\Application\Filters\" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
