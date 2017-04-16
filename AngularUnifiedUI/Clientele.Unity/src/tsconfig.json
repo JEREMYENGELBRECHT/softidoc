@@ -10,11 +10,8 @@
     "noImplicitAny": false,
     "typeRoots": [
       "../node_modules/@types"
-    ],
-    "types" : [
-      "core-js"
     ]
-  },
+ },
   "exclude": [
     "node_modules"
   ]
