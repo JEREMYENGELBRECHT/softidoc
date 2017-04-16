@@ -12,6 +12,10 @@
   },
   "exclude": [
     "node_modules",
-    "wwwroot"
-  ]
+    "dist",
+    "typings/browser.d.ts",
+    "typings/browser",
+    "src"
+  ],
+  "compileOnSave": false
 }
