@@ -1661,6 +1661,7 @@
     <Content Include="scripts\version.json" />
     <Content Include="src\main.js.map" />
     <Content Include="src\tsconfig.json" />
+    <Content Include="typings.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
