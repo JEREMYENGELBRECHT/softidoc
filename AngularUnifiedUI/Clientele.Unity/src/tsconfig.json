@@ -1,21 +1,43 @@
 {
   "compilerOptions": {
-    "declaration": false,
-    "emitDecoratorMetadata": true,
-    "experimentalDecorators": true,
-    "mapRoot": "./",
+    "target": "es5",
     "module": "es6",
     "moduleResolution": "node",
-    "noEmitOnError": true,
-    "noImplicitAny": false,
-    "outDir": "../dist/out-tsc",
     "sourceMap": true,
-    "target": "es5",
-    "typeRoots": [
-      "../node_modules/@types"
-    ],
-    "types": [
-      "core-js"
-    ]
-  }
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "lib": [ "es2015", "dom" ],
+    "noImplicitAny": true,
+    "suppressImplicitAnyIndexErrors": true
+  },
+  "exclude": [
+    "node_modules",
+    "dist",
+    "typings/browser.d.ts",
+    "typings/browser",
+    "src"
+  ],
+  "compileOnSave": false
 }
+
+//{
+//  "compilerOptions": {
+//    "target": "es5",
+//    "module": "es6",
+//    "moduleResolution": "node",
+//    "sourceMap": true,
+//    "emitDecoratorMetadata": true,
+//    "experimentalDecorators": true,
+//    "removeComments": false,
+//    "noImplicitAny": false,
+//    "typeRoots": [
+//      "../node_modules/@types"
+//    ],
+//    "types" : [
+//      "core-js"
+//    ]
+//  },
+//  "exclude": [
+//    "node_modules"
+//  ]
+//}
