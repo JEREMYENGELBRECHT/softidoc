@@ -75,6 +75,8 @@
     <Content Include="Content\Application\dvAU3.css" />
     <Content Include="Content\Application\dvAU4.css" />
     <Content Include="Content\Application\dvAU5.css" />
+    <Content Include="Content\images\bitmap1.png" />
+    <Content Include="Content\images\g65.png" />
     <Content Include="Content\UiAddons\angular-ui-tree.css" />
     <Content Include="scripts\Application\Controllers\SoftiDoc.CentrePanel.Controller.js" />
     <Content Include="scripts\Application\Controllers\SoftiDoc.OuterPanel.Controller.js" />
@@ -990,6 +992,11 @@
     <Content Include="scripts\UI\ng-grid.min.js" />
     <Content Include="scripts\UI\select.js" />
     <Content Include="src\app\about.component.html" />
+    <Content Include="src\app\app.component.css" />
+    <Content Include="src\app\common\auth.guard.js" />
+    <Content Include="src\app\common\headers.js" />
+    <Content Include="src\app\common\httpClient.factory.js" />
+    <Content Include="src\app\common\httpClient.service.js" />
     <Content Include="src\app\courses.component.html" />
     <Content Include="src\app\integralui\components\integralui.accordion.js" />
     <Content Include="src\app\integralui\components\integralui.base.grid.js" />
@@ -1181,9 +1188,13 @@
     <Content Include="src\app\integralui\services\integralui.common.service.js" />
     <Content Include="src\app\integralui\services\integralui.data.service.js" />
     <Content Include="src\app\integralui\services\integralui.dragdrop.service.js" />
+    <Content Include="src\app\login\login.css" />
+    <Content Include="src\app\login\login.html" />
+    <Content Include="src\app\login\login.js" />
     <Content Include="src\app\navbar.component.html" />
     <Content Include="src\app\treeview.component.css" />
     <Content Include="src\app\treeview.component.html" />
+    <Content Include="src\app\capsule-app-theme.css" />
     <Content Include="src\favicon.ico" />
     <Content Include="src\index.html" />
     <Content Include="src\main.js" />
@@ -1200,9 +1211,6 @@
     </Content>
     <None Include="Configuration\Examples\serverConfiguration.json" />
     <Content Include="Content\ajax-loader.gif" />
-    <Content Include="Content\images\logo-admin.png">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="Content\UiAddons\ng-grid.css" />
     <Content Include="Content\UiAddons\ng-grid.min.css" />
     <Content Include="Content\UiAddons\Bootstrap\bootstrap-responsive.css" />
@@ -1853,6 +1861,14 @@
     <Content Include="scripts\version.json" />
     <Content Include="src\tsconfig.json" />
     <Content Include="typings.json" />
+    <Content Include="src\app\theme.scss" />
+    <Content Include="src\app\login\login.js.map" />
+    <Content Include="src\app\common\auth.guard.js.map" />
+    <Content Include="src\app\common\headers.js.map" />
+    <Content Include="src\app\common\httpClient.factory.js.map" />
+    <Content Include="src\app\common\httpClient.service.js.map" />
+    <Content Include="src\app\resources\cars-small.json" />
+    <Content Include="src\app\treeview\files.json" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -1866,6 +1882,14 @@
     <TypeScriptCompile Include="src\app\app.component.spec.ts" />
     <TypeScriptCompile Include="src\app\app.component.ts" />
     <TypeScriptCompile Include="src\app\app.module.ts" />
+    <TypeScriptCompile Include="src\app\cars.ts" />
+    <TypeScriptCompile Include="src\app\carservice.ts" />
+    <TypeScriptCompile Include="src\app\common\auth.guard.ts" />
+    <TypeScriptCompile Include="src\app\common\headers.ts" />
+    <TypeScriptCompile Include="src\app\common\httpClient.factory.ts" />
+    <TypeScriptCompile Include="src\app\common\httpClient.service.ts" />
+    <TypeScriptCompile Include="src\app\common\navigation\navigation.ts" />
+    <TypeScriptCompile Include="src\app\common\notificationService\notification.service.ts" />
     <TypeScriptCompile Include="src\app\courses.component.ts" />
     <TypeScriptCompile Include="src\app\integralui\components\integralui.accordion.d.ts" />
     <TypeScriptCompile Include="src\app\integralui\components\integralui.base.grid.d.ts" />
@@ -1914,8 +1938,10 @@
     <TypeScriptCompile Include="src\app\integralui\services\integralui.common.service.d.ts" />
     <TypeScriptCompile Include="src\app\integralui\services\integralui.data.service.d.ts" />
     <TypeScriptCompile Include="src\app\integralui\services\integralui.dragdrop.service.d.ts" />
+    <TypeScriptCompile Include="src\app\login\login.ts" />
     <TypeScriptCompile Include="src\app\navbar.component.ts" />
     <TypeScriptCompile Include="src\app\treeview.component.ts" />
+    <TypeScriptCompile Include="src\app\treeview\NodeService.ts" />
     <TypeScriptCompile Include="src\main.ts" />
   </ItemGroup>
   <ItemGroup>

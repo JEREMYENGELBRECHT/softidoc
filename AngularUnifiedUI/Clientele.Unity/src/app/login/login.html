@@ -1,0 +1,56 @@
+<div>
+    <md-toolbar color="primary">
+    </md-toolbar>
+    
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12 row">
+            <div class="col-md-4"></div>
+
+            <div class="col-md-4">
+                <div class="col-md-12" style="height: 100px"></div>
+                <div align="center">
+                    <img src="../../../Content/images/bitmap1.png" />
+                </div>
+
+                <div class="col-md-12" style="height: 20px"></div>
+                
+                <div class="col-md-12">
+                    <div align="center">
+                        <md-input-container class="example-full-width">
+                            <input mdInput placeholder="Username">
+                        </md-input-container>
+                    </div>
+                    <div  align="center">
+                        <md-input-container class="example-full-width">
+                            <input mdInput placeholder="Password">
+                        </md-input-container>
+                    </div>
+                    <div class="col-md-12" style="height: 20px"></div>
+                    <div class="example-section" align="left">
+                        <md-checkbox class="primary" [(ngModel)]="checked" color="primary">Remember Username</md-checkbox>
+                    </div>
+                    <div class="col-md-12" style="height: 20px"></div>
+                    <div class="col-md-12" class="row">
+                        <div class="col-md-6" align="left">
+                            <a href="">Forgot password</a>
+                        </div>
+                        <div class="col-md-6" align="right">
+                            <!--<button class="btn btn-primary" (click)="login()">Login</button>-->
+                            <button md-raised-button (click)="login()">Login</button>
+                        </div>
+                    </div>
+                    
+                </div>
+              
+            </div>
+            <div class="col-md-4"></div>
+        </div>
+    </div>
+
+    
+
+</div>
+
+

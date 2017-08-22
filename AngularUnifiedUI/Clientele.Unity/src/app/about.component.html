@@ -1,10 +1,23 @@
-﻿<!DOCTYPE html>
-<html>
-<head>
-    <title></title>
-	<meta charset="utf-8" />
-</head>
-<body>
-    home
-</body>
-</html>
+﻿<div style="padding: 0px">
+    <md-toolbar style="min-height:56px; max-height: 56px; position: relative; border:1px solid darkgray ;">
+        <button routerLink="/" routerLinkActive="active" md-icon-button>
+            <md-icon>home</md-icon>
+        </button>
+        <button md-button routerLink="/about" routerLinkActive="active">Images</button>
+        <button md-button routerLink="/about" routerLinkActive="active">MultiView</button>
+        <button md-button routerLink="/courses" routerLinkActive="active">Text</button>
+        <button md-button routerLink="/courses" routerLinkActive="active">Attachments</button>
+        <button md-button routerLink="/courses" routerLinkActive="active">Email</button>
+        
+        <span class="example-fill-remaining-space"></span>
+        
+    </md-toolbar>
+</div>
+<div style="font-size:small ">
+    <p-dataTable [value]="cars">
+        <p-column field="vin" header="Vin"></p-column>
+        <p-column field="year" header="Year"></p-column>
+        <p-column field="brand" header="Brand"></p-column>
+        <p-column field="color" header="Color"></p-column>
+    </p-dataTable>
+</div>

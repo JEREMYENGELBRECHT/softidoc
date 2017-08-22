@@ -1,8 +1,14 @@
 ﻿.iui-treeview
 {
-    width: 350px;
-    height: 600px;
+    height: calc(100vh - 50px);
 }
+
+.ui-tree {
+    width: 250px;
+    height: calc(100vh - 50px);
+    font-size: small;
+}
+
 .iui-treeitem-content
 {
     margin: 1px 0 !important;

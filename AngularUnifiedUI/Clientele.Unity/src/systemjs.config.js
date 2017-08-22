@@ -23,7 +23,13 @@
       '@angular/router': 'npm:@angular/router/bundles/router.umd.js',
       '@angular/forms': 'npm:@angular/forms/bundles/forms.umd.js',
       'angular-tree-component': 'node_modules/angular-tree-component/dist/angular-tree-component.umd.js',
+      '@angular/material': 'npm:@angular/material/bundles/material.umd.js',
+      '@angular/animations': 'npm:@angular/animations/bundles/animations.umd.js',
+      '@angular/animations/browser': 'npm:@angular/animations/bundles/animations-browser.umd.js',
+      '@angular/platform-browser/animations': 'npm:@angular/platform-browser/bundles/platform-browser-animations.umd.js',
       
+      'angular-2-local-storage': 'npm:angular-2-local-storage/dist/',
+      'primeng': 'npm:primeng',
       // other libraries
       'rxjs':                      'npm:rxjs',
       'angular-in-memory-web-api': 'npm:angular-in-memory-web-api/bundles/in-memory-web-api.umd.js'
@@ -37,6 +43,10 @@
             loader: 'systemjs-angular-loader.js'
           }
         }
+      },
+      'angular-2-local-storage': { main: 'index.js', defaultExtension: 'js' },
+      primeng: {
+          defaultExtension: 'js'
       },
       rxjs: {
         defaultExtension: 'js'

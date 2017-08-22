@@ -1,14 +1,11 @@
-﻿<div #application>
-    <iui-treeview [items]="items" [appRef]="applicationRef" (beforeSelect)="onItemClick($event)" #treeview>
-        <template let-item>
-            <div (mouseenter)="hoverItem=item" (mouseleave)="hoverItem=null">
-                <span [ngClass]="item.icon"></span>
-                <span *ngIf="item!=editItem">{{item.text}}</span>
-                <input *ngIf="item==editItem" type="text" [(ngModel)]="item.text" (keydown)="editorKeyDown($event)" (blur)="editorLostFocus()" [iuiFocus]="editorFocused" onFocus="this.setSelectionRange(0, this.value.length)" />
-                <div class="toolbar" *ngIf="item==hoverItem">
-                    <span class="item-button item-button-edit" (click)="showEditor(item)"></span>
-                </div>
-            </div>
-        </template>
-    </iui-treeview>
+﻿<div  >
+    
+    <div [hidden]="false" align="center" style="color: #336699; padding-top: 15px; "><h5>Home</h5></div>
+    <div [hidden]="false" class="col-md-12" style="height: 10px;"></div>
+
+    <p-tree class="ui-tree" [value]="files" selectionMode="single" [(selection)]="selectedFile"></p-tree>
+
+    
+
 </div>
+

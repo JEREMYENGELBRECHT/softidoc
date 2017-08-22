@@ -1,11 +1,20 @@
-﻿import { Component } from '@angular/core';
+﻿import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
     selector: 'navbar',
-    templateUrl: './navbar.component.html'
+    templateUrl: './navbar.component.html',
+    styleUrls: ['./app.component.css', './capsule-app-theme.css']
     
 })
 export class NavbarComponent {
 
-    name = 'Angular123';
+    @Output() onLoggedOut = new EventEmitter<boolean>();
+
+    constructor() {
+        
+    }
+
+    logout() {
+        this.onLoggedOut.emit(true);
+    }
 }
