@@ -45,7 +45,8 @@
     "primeui": "^4.1.15",
     "rxjs": "5.0.1",
     "systemjs": "0.19.40",
-    "zone.js": "^0.8.4"
+    "zone.js": "^0.8.4",
+    "webpack-node-externals": "^1.4.3"
   },
   "devDependencies": {
     "concurrently": "^3.2.0",
