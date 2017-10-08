@@ -12,18 +12,17 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var http_1 = require("@angular/http");
-var angular_2_local_storage_1 = require("angular-2-local-storage");
+//import { LocalStorageService } from 'angular-2-local-storage';
 var Notificationservice = require("../common/notificationService/notification.service");
 var NotificationService = Notificationservice.NotificationService;
 var HttpClientservice = require("../common/httpClient.service");
 var HttpClient = HttpClientservice.HttpClient;
 //import { AppConfig } from '../config/app.config';
 var Login = (function () {
-    function Login(router, http, notificationService, localStorageService, httpClient) {
+    function Login(router, http, notificationService, httpClient) {
         this.router = router;
         this.http = http;
         this.notificationService = notificationService;
-        this.localStorageService = localStorageService;
         this.httpClient = httpClient;
         this.onLoggedIn = new core_1.EventEmitter();
     }
@@ -71,7 +70,7 @@ Login = __decorate([
         templateUrl: './login.html',
         styleUrls: ['../../capsule-app-theme.css', './login.css']
     }),
-    __metadata("design:paramtypes", [router_1.Router, http_1.Http, NotificationService, angular_2_local_storage_1.LocalStorageService, HttpClient])
+    __metadata("design:paramtypes", [router_1.Router, http_1.Http, NotificationService, HttpClient])
 ], Login);
 exports.Login = Login;
 //# sourceMappingURL=login.js.map
