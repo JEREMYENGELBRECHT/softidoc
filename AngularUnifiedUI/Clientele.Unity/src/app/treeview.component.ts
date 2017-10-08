@@ -30,7 +30,6 @@ export class TreeviewComponent implements OnInit {
     ngOnInit() {
         //this.nodeService.getFiles().then(files => this.files = <TreeNode[]>files);
         this.nodeService.getFiles().subscribe(files => this.files = <TreeNode[]>files);
-
     }
     
 }
